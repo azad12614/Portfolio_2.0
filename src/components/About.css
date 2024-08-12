@@ -1,0 +1,121 @@
+@keyframes About {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.about {
+    padding-top: 7rem;
+    animation: About linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+}
+
+.about .info {
+    padding-inline: 16rem;
+}
+
+.about .info .highlight {
+    color: var(--highlight);
+    /* font-family: "Cormorant Garamond", serif; */
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    text-decoration: none;
+    padding-left: 0.5vw;
+}
+
+.about .info .highlight:hover {
+    filter: brightness(var(--bright));
+    text-shadow: 0 0 3px var(--highlight), 0 0 6px var(--highlight);
+}
+
+.about .info .details {
+    color: var(--text);
+    font-family: "Cormorant Garamond", serif;
+    /* font-family: "Playfair Display", serif; */
+    font-size: 1.6rem;
+    line-height: 1.3;
+    text-align: justify;
+    padding-block: 0.2rem;
+    padding-inline: 0;
+}
+
+.about .info .details:hover {
+    filter: brightness(var(--bright));
+    text-shadow: 0 0 3px var(--text), 0 0 6px var(--subText);
+}
+
+.about .info form {
+    display: inline;
+}
+
+@media (max-width: 1080px) {
+    .about {
+        animation-range: entry 0% cover 35%;
+    }
+
+    .about .info {
+        padding-inline: 8rem;
+    }
+}
+
+@media (max-width: 798px) {
+    .about {
+        animation-range: entry 0% cover 35%;
+    }
+
+    .about .info {
+        padding-inline: 4rem;
+    }
+
+    .about .info .details {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+
+    .about .info .highlight {
+        font-size: 1.25rem;
+        padding-left: 1vw;
+        line-height: 1.2;
+    }
+}
+
+
+@media (max-width: 520px) {
+    .about {
+        padding-top: 6rem;
+        animation-range: entry 0% cover 30%;
+    }
+
+    .about .info {
+        padding-inline: 2rem;
+        text-align: center;
+    }
+
+    .about .info .details {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+
+    .about .info .highlight {
+        font-size: 1.25rem;
+        padding-left: 1.5vw;
+    }
+}
+
+@media (min-height: 1080px) {
+    .about {
+        animation-range: entry 0% cover 40%;
+    }
+}

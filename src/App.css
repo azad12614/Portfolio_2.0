@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kaushan+Script&family=Monoton&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Glitch&family=Silkscreen:wght@400;700&family=Splash&display=swap');
+/* 
+font-family: "Jost", sans-serif;
+font-family: "Permanent Marker", cursive;
+font-family: "Rubik Glitch", system-ui;
+font-family: "Silkscreen", sans-serif;
+font-family: "Splash", cursive;
+font-family: "Cormorant Garamond", serif;
+font-family: "Kaushan Script", cursive;
+font-family: "Dancing Script", cursive;
+font-family: "Playfair Display", serif; 
+font-family: "Monoton", sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+#root {
+    background-color: var(--bg);
+}
+
+html {
+    cursor: url(./cursor1.png), auto;
+    overflow-x: hidden;
+}
+
+a {
+    cursor: url(./cursor2.png), pointer;
+}
+
+li {
+    list-style: none;
+    cursor: url(./cursor2.png), pointer;
+}
+
+button {
+    cursor: url(./cursor2.png), pointer;
+}
+
+.pointer {
+    cursor: url(./cursor2.png), pointer;
+}
+
+.header {
+    font-family: "Monoton", sans-serif;
+    color: var(--header);
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.title {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--title);
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.2rem 8rem 1.2rem 8rem;
+    line-height: 1.2;
+}
+
+@media (max-width: 1080px) {
+    .header {
+        font-size: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin: 0.2rem 8rem 1.2rem 8rem;
+    }
+}
+
+@media (max-width: 798px) {
+    .header {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+        margin: 0.2rem 4rem 1.2rem 4rem;
+    }
+}
+
+
+@media (max-width: 520px) {
+    .header {
+        font-size: 1.75rem;
+    }
+
+    .title {
+        font-size: 1.15rem;
+        margin: 0.2rem 2rem 1.2rem 2rem;
+    }
+}

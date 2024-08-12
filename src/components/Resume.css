@@ -1,0 +1,643 @@
+/* @keyframes Resume {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateX(0%);
+    }
+} */
+
+@keyframes Edu1 {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes Edu2 {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes ScrollLeft {
+    to {
+        left: var(--Right);
+    }
+}
+
+.resume {
+    padding-top: 7rem;
+    animation: Resume ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+
+.resume h4 {
+    color: var(--subHeader);
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.gridinfo {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 2rem;
+    column-gap: 3rem;
+    margin-inline: clamp(8rem, 16%, 16rem);
+    margin-block: 2rem;
+    align-content: center;
+}
+
+.gridi {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    color: var(--text);
+    border-radius: 10px;
+    padding: 3%;
+    box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+}
+
+.gridi:nth-child(1n):hover {
+    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+}
+
+.gridi h4 {
+    /* font-family: "Silkscreen", sans-serif; */
+    font-family: "Kaushan Script", cursive;
+    color: var(--number);
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.gridskills {
+    position: relative;
+    width: 70%;
+    height: 200px;
+    margin-inline: clamp(8rem, 12%, 16rem);
+    margin-block: 2rem;
+    overflow-x: hidden;
+}
+
+.gridlang {
+    position: absolute;
+    /* font-family: "Permanent Marker", cursive;
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--hoverText);
+    background-color: var(--hoverBg);
+    border: 2px solid var(--hoverBorder);
+    border-radius: 50%; */
+    text-align: center;
+    align-content: center;
+    left: var(--Left);
+    animation: ScrollLeft var(--Duration) linear var(--Delays) infinite;
+}
+
+.gridlang>img {
+    width: 120px;
+    aspect-ratio: 1/1;
+}
+
+/*Could not debug the easy way.*/
+.gridlang:nth-child(1) {
+    /*>1080px*/
+    --Delays: calc(-0s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridlang:nth-child(2) {
+    /*>1080px*/
+    --Delays: calc(-3s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridlang:nth-child(3) {
+    /*>1080px*/
+    --Delays: calc(-6s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridlang:nth-child(4) {
+    /*>1080px*/
+    --Delays: calc(-9s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridlang:nth-child(5) {
+    /*>1080px*/
+    --Delays: calc(-12s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridlang:nth-child(6) {
+    /*>1080px*/
+    --Delays: calc(-15s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridlang:nth-child(7) {
+    /*>1080px*/
+    --Delays: calc(-18s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridlang:nth-child(8) {
+    /*>1080px*/
+    --Delays: calc(-21s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridlang:nth-child(9) {
+    /*>1080px*/
+    --Delays: calc(-24s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridlang:nth-child(10) {
+    /*>1080px*/
+    --Delays: calc(-27s);
+    --Duration: calc(30s);
+    --Left: calc(100%);
+    --Right: calc(-1 * (20%));
+}
+
+.gridedu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+    padding-left: clamp(4rem, 12vw, 12rem);
+    padding-right: clamp(2rem, 8vw, 8rem);
+    padding-top: 1rem;
+}
+
+.gride {
+    margin-block: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.gride:hover {
+    transform:
+        perspective(75em) rotateX(18deg);
+    box-shadow:
+        var(--border) 10px 60px 100px -25px,
+        var(--hoverBorder) 10px 30px 75px -35px;
+    border-color: transparent;
+}
+
+.gride:nth-child(1n) {
+    animation: Edu1 ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.gride:nth-child(2n) {
+    animation: Edu2 ease-in;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}
+
+.gride .date {
+    text-align: left;
+    /* font-family: "Jost", sans-serif; */
+    font-family: "Kaushan Script", cursive;
+    font-size: 1.4rem;
+    border-left: 1px dashed var(--border);
+    color: var(--number);
+    padding-left: 0.5rem;
+}
+
+.gride .tittle {
+    text-align: left;
+    /* font-family: "Silkscreen", sans-serif; */
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    font-size: 1.75rem;
+    /* letter-spacing: -0.25rem; */
+    color: var(--title);
+    padding-left: 0.5rem;
+}
+
+.gride .tittle span {
+    text-align: left;
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--text);
+}
+
+.gride .details {
+    text-align: left;
+    /* font-family: "Jost", sans-serif; */
+    font-family: "Cormorant Garamond", serif;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: var(--subText);
+    padding-left: 0.5rem;
+}
+
+.gride .date:hover {
+    text-shadow: 0 0 6px var(--number);
+}
+
+.gride .tittle:hover {
+    filter: contrast(var(--bright));
+}
+
+.gride .details:hover {
+    filter: brightness(var(--bright));
+    text-shadow: 0 0 6px var(--text);
+}
+
+@media (max-width: 1080px) {
+    .resume {
+        animation-range: entry 0% cover 20%;
+    }
+
+    .gridinfo {
+        row-gap: 1.5rem;
+        column-gap: 2.5rem;
+        margin-inline: clamp(8rem, 16%, 16rem);
+        margin-block: 2rem;
+    }
+
+    .gridi {
+        font-size: 1rem;
+    }
+
+    .gridi h4 {
+        font-size: 2rem;
+    }
+
+    .gridskills {
+        width: 80%;
+        margin-inline: clamp(6rem, 10%, 12rem);
+    }
+
+    .gridlang {
+        left: var(--Left);
+        animation: ScrollLeft var(--Duration) linear var(--Delays) infinite;
+    }
+
+    /*Could not debug the easy way.*/
+    .gridlang:nth-child(1) {
+        /*1080px*/
+        --Delays: calc(-0s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(2) {
+        /*1080px*/
+        --Delays: calc(-3s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(3) {
+        /*1080px*/
+        --Delays: calc(-6s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(4) {
+        /*1080px*/
+        --Delays: calc(-9s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(5) {
+        /*1080px*/
+        --Delays: calc(-12s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(6) {
+        /*1080px*/
+        --Delays: calc(-15s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(7) {
+        /*1080px*/
+        --Delays: calc(-18s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(8) {
+        /*1080px*/
+        --Delays: calc(-21s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(9) {
+        /*1080px*/
+        --Delays: calc(-24s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(10) {
+        /*1080px*/
+        --Delays: calc(-27s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridedu {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem 1rem;
+        padding-left: clamp(4rem, 8vw, 8rem);
+        padding-right: clamp(2rem, 4vw, 4rem);
+        padding-top: 1rem;
+    }
+
+    .gride {
+        margin-block: 1rem;
+    }
+
+    .gride:nth-child(1n) {
+        animation-range: entry 0% cover 50%;
+    }
+
+    .gride:nth-child(2n) {
+        animation-range: entry 0% cover 50%;
+    }
+
+    .date {
+        font-size: 1.4rem;
+        padding-left: 0.5rem;
+    }
+
+    .tittle {
+        font-size: 1.75rem;
+        padding-left: 0.5rem;
+    }
+
+    .tittle span {
+        font-size: 1.75;
+    }
+
+    .details {
+        font-size: 1.2rem;
+        padding-left: 0.5rem;
+    }
+}
+
+@media (max-width: 798px) {
+    .resume {
+        animation-range: entry 0% cover 15%;
+    }
+
+    .resume h4 {
+        font-size: 1.5rem;
+    }
+
+    .gridinfo {
+        row-gap: 1rem;
+        column-gap: 1.5rem;
+        margin-inline: clamp(2rem, 4%, 8rem);
+        margin-block: 1.5rem;
+    }
+
+    .gridskills {
+        width: 90%;
+        margin-inline: clamp(3rem, 5%, 6rem);
+    }
+
+    .gridedu {
+        grid-template-columns: 1fr 1fr;
+        gap: 0rem 1rem;
+        padding-left: clamp(2rem, 4vw, 4rem);
+        padding-right: clamp(1rem, 2vw, 2rem);
+        padding-top: 1rem;
+    }
+
+    .gride {
+        margin-block: 1rem;
+    }
+
+    .date {
+        font-size: 1.25rem;
+        padding-left: 0.5rem;
+    }
+
+    .tittle {
+        font-size: 1.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .tittle span {
+        font-size: 1.5;
+    }
+
+    .details {
+        font-size: 1.1rem;
+        padding-left: 0.5rem;
+    }
+}
+
+
+@media (max-width: 520px) {
+    .resume {
+        padding-top: 6rem;
+        animation-range: entry 0% cover 10%;
+    }
+
+    .gridinfo {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 0.5rem;
+        column-gap: 1rem;
+        margin-inline: clamp(1rem, 8%, 8rem);
+        margin-block: 1rem;
+    }
+
+    .gridskills {
+        width: 99vw;
+        height: 150px;
+        margin-inline: 1rem;
+    }
+
+    .gridlang {
+        left: var(--Left);
+        animation: ScrollLeft var(--Duration) linear var(--Delays) infinite;
+    }
+
+    .gridlang>img {
+        width: 75px;
+        aspect-ratio: 1/1;
+    }
+
+    /*Could not debug the easy way.*/
+    .gridlang:nth-child(1) {
+        /*520px*/
+        --Delays: calc(-0s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(2) {
+        /*520px*/
+        --Delays: calc(-3s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(3) {
+        /*520px*/
+        --Delays: calc(-6s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(4) {
+        /*520px*/
+        --Delays: calc(-9s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(5) {
+        /*520px*/
+        --Delays: calc(-12s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(6) {
+        /*520px*/
+        --Delays: calc(-15s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(7) {
+        /*520px*/
+        --Delays: calc(-18s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(8) {
+        /*520px*/
+        --Delays: calc(-21s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(9) {
+        /*520px*/
+        --Delays: calc(-24s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridlang:nth-child(10) {
+        /*520px*/
+        --Delays: calc(-27s);
+        --Duration: calc(30s);
+        --Left: calc(200%);
+        --Right: calc(-1 * (20%));
+    }
+
+    .gridedu {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding-inline: clamp(0.5rem, 2vw, 1.5rem);
+        padding-top: 1rem;
+    }
+
+    .gride {
+        margin-block: 0rem;
+    }
+
+    .date {
+        font-size: 1.2rem;
+        padding-left: 0.25rem;
+        line-height: 1.3;
+    }
+
+    .tittle {
+        font-size: 1.4rem;
+        padding-left: 0.25rem;
+        line-height: 1.3;
+    }
+
+    .tittle span {
+        font-size: 1.4;
+    }
+
+    .details {
+        font-size: 1rem;
+        padding-left: 0.25rem;
+        line-height: 1.3;
+    }
+}
