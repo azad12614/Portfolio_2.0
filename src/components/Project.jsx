@@ -21,7 +21,7 @@ const Project = () => {
                 <div class="items">
                     <img src={Portfolio} alt="" />
                     <div class="dis">
-                        <a href="https://azad12614.github.io/Portfolio/" target="_blank">Portfolio 2.0</a>
+                        <a href="https://azad12614.onrender.com/" target="_blank">Portfolio 2.0</a>
                         <span>WEBSITE</span>
                         <p>This is my 2nd updated Portfolio Site.</p>
 
