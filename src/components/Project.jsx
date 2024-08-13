@@ -7,6 +7,7 @@ import Ladder from "../assets/Ladder.png";
 import pic from "../assets/pic.png";
 import Portfolio from "../assets/Portfolio.png";
 import Rating from "../assets/Rating.png";
+import Sleepyheads from "../assets/Sleepyheads.png";
 
 const Project = () => {
     return (
@@ -18,6 +19,15 @@ const Project = () => {
             </p>
             <div class="info">
                 <div class="items">
+                    <img src={Portfolio} alt="" />
+                    <div class="dis">
+                        <a href="https://azad12614.github.io/Portfolio/" target="_blank">Portfolio 2.0</a>
+                        <span>WEBSITE</span>
+                        <p>This is my 2nd updated Portfolio Site.</p>
+
+                    </div>
+                </div>
+                <div class="items">
                     <img src={Cloud_Campus} alt="" />
                     <div class="dis">
                         <a href="https://cloud-campus.onrender.com/" target="_blank">Cloud Campus</a>
@@ -25,39 +35,22 @@ const Project = () => {
                         <p>This is a website about the CSE dept. of IIUC.</p>
 
                     </div>
-                </div><div class="items">
-                    <img src={Ladder} alt="" />
-                    <div class="dis">
-                        <a href="https://cf-ladder.onrender.com/" target="_blank">CF Ladder</a>
-                        <span>WEBSITE</span>
-                        <p>This is a website of Codeforces Problemset.</p>
-
-                    </div>
                 </div>
                 <div class="items">
-                    <img src={Rating} alt="" />
+                    <img src={Sleepyheads} alt="" />
                     <div class="dis">
-                        <a href="https://azad12614.github.io/CF_Rating_IIUC/" target="_blank">CF Rating</a>
-                        <span>WEBPAGE</span>
-                        <p>This is a website on the CSE department students' rating at IIUC in Codeforces.</p>
+                        <a href="https://github.com/azad12614/SleepyHeads" target="_blank">Sleepy Heads</a>
+                        <span>Machine Learning Project/Website</span>
+                        <p>This is a Sleep Health Prediction Site.</p>
 
                     </div>
                 </div>
                 <div class="items">
                     <img src={Gaming} alt="" />
                     <div class="dis">
-                        <a href="https://azad12614.github.io/12614/game.html" target="_blank">Color Match</a>
-                        <span>GAME</span>
+                        <a href="https://azad12614.github.io/Game-Vault/Index.html" target="_blank">Game Vault</a>
+                        <span>WEB-BASED GAME</span>
                         <p>This is my first game project.</p>
-
-                    </div>
-                </div>
-                <div class="items">
-                    <img src={Portfolio} alt="" />
-                    <div class="dis">
-                        <a href="https://azad12614.github.io/Portfolio/" target="_blank">Portfolio</a>
-                        <span>WEBSITE</span>
-                        <p>This is my 2nd updated Portfolio Site.</p>
 
                     </div>
                 </div>
@@ -73,18 +66,27 @@ const Project = () => {
                 <div class="items">
                     <img src={pic} alt="" />
                     <div class="dis">
-                        <a href="https://azad12614.github.io/islam/" target="_blank">Islam</a>
+                        <a href="https://azad12614.github.io/Islamic_Site/" target="_blank">Islam</a>
                         <span>WEBPAGE</span>
-                        <p>Islam is a website with info on Islam.</p>
+                        <p>This is a Religious Website with info on Islam.</p>
 
                     </div>
                 </div>
                 <div class="items">
-                    <img src={pic} alt="" />
+                    <img src={Ladder} alt="" />
                     <div class="dis">
-                        <a href="https://azad12614.github.io/12614/" target="_blank">Assignment</a>
+                        <a href="https://cf-ladder.onrender.com/" target="_blank">CF Ladder</a>
+                        <span>WEBSITE</span>
+                        <p>This is a website of Codeforces Problemset.</p>
+
+                    </div>
+                </div>
+                <div class="items">
+                    <img src={Rating} alt="" />
+                    <div class="dis">
+                        <a href="https://azad12614.github.io/CF_Rating_IIUC/" target="_blank">CF Rating</a>
                         <span>WEBPAGE</span>
-                        <p>This is my first web project.</p>
+                        <p>This is a website on the CSE department students' rating at IIUC in Codeforces.</p>
 
                     </div>
                 </div>

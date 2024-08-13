@@ -100,7 +100,8 @@
     color: var(--text);
     display: block;
     font-size: 2rem;
-    text-transform: capitalize;
+    font-weight: bold;
+    text-transform: uppercase;
     margin-bottom: 0.3rem;
     line-height: 1.1;
 }
@@ -133,22 +134,18 @@
 
     .project .dis a {
         font-size: 2.5rem;
-        font-style: oblique;
-        text-transform: uppercase;
         margin-bottom: 0.3rem;
         line-height: 1.3;
     }
 
     .project .dis span {
         font-size: 1.75rem;
-        text-transform: capitalize;
         margin-bottom: 0.3rem;
         line-height: 1.2;
     }
 
     .project .dis p {
         font-size: 1.5rem;
-        font-style: italic;
         line-height: 1.1;
     }
 }
@@ -175,22 +172,18 @@
 
     .project .dis a {
         font-size: 2rem;
-        font-style: oblique;
-        text-transform: uppercase;
         margin-bottom: 0.2rem;
         line-height: 1.3;
     }
 
     .project .dis span {
         font-size: 1.5rem;
-        text-transform: capitalize;
         margin-bottom: 0.3rem;
         line-height: 1.2;
     }
 
     .project .dis p {
         font-size: 1.25rem;
-        font-style: italic;
         line-height: 1.1;
     }
 }
@@ -219,15 +212,12 @@
 
     .project .dis a {
         font-size: 1.5rem;
-        font-style: oblique;
-        text-transform: uppercase;
         margin-bottom: 0.1rem;
         line-height: 1.2;
     }
 
     .project .dis span {
         font-size: 1.2rem;
-        text-transform: capitalize;
         margin-bottom: 0.2rem;
         line-height: 1.1;
     }
