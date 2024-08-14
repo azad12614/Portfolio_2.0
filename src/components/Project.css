@@ -38,7 +38,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-content: space-evenly;
-    width: clamp(40rem, 70vw, 80rem);
+    width: clamp(60rem, 80vw, 90rem);
     gap: 1.5rem;
     margin: auto;
     padding-block: 1.5rem;
@@ -123,7 +123,7 @@
     .project .info {
         grid-template-columns: auto;
         align-content: space-evenly;
-        width: clamp(40rem, 50vw, 60rem);
+        width: clamp(30rem, 70vw, 70rem);
         margin: auto;
     }
 
@@ -159,7 +159,7 @@
         display: grid;
         grid-template-columns: auto;
         align-content: space-evenly;
-        width: clamp(30rem, 50vw, 60rem);
+        width: clamp(30rem, 90vw, 50rem);
         gap: 1rem;
         margin: auto;
         padding-block: 1rem;
@@ -199,7 +199,7 @@
         display: grid;
         grid-template-columns: auto;
         align-content: space-evenly;
-        width: clamp(20rem, 90vw, 60rem);
+        width: 90vw;
         gap: 0.5rem;
         margin: auto;
         padding-block: 0.5rem;

@@ -47,7 +47,7 @@ button {
 
 .header {
     font-family: "Monoton", sans-serif;
-    color: var(--header);
+    color: var(--subHeader);
     font-size: 3rem;
     font-weight: normal;
     text-align: center;
@@ -86,12 +86,7 @@ button {
 
 
 @media (max-width: 520px) {
-    .header {
-        font-size: 1.75rem;
-    }
-
     .title {
-        font-size: 1.15rem;
         margin: 0.2rem 2rem 1.2rem 2rem;
     }
 }

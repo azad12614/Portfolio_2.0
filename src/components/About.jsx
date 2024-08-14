@@ -23,7 +23,7 @@ const About = () => {
                     Beyond technical expertise, I'm fluent in both Bangla and English, allowing me to effectively communicate across diverse audiences. When I'm not coding, you'll likely find me diving into exciting new projects.
                 </div>
                 <div class="details">
-                    I've gained hands-on experience building projects using a variety of technologies, including C++, MERN stack, MySQL, HTML, CSS, and Javascript.  Some of these projects are even available as open-source on GitHub! You can find more details about them in the portfolio section of this website or on my GitHub profile.
+                    I've gained hands-on experience building projects using a variety of technologies, including C, C++, HTML, CSS, Javascript, MERN Stack, and Python.  Some of these projects are even available as open-source on GitHub! You can find more details about them in the portfolio section of this website or on my GitHub profile.
                 </div>
                 <div class="details">
                     I'm eager to leverage my technical skills and creative vision to bring unique online initiatives to life.

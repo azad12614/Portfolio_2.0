@@ -4,11 +4,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import DarkMode from "./DarkMode.jsx";
 import "./Navbar.css";
 
-import git from "../assets/icongit.png";
-import lin from "../assets/iconin.png";
-import fb from "../assets/iconfb.png";
-import tw from "../assets/icont.png";
-
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (

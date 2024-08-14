@@ -8,25 +8,42 @@ const Resume = () => {
             <p class="title">
                 “Living, learning, & leveling up one day at a time.”
             </p>
+            <h4>Coding Profiles 🎯</h4>
             <div class="gridinfo">
                 <div class="gridi">
-                    <h4>3+</h4>
-                    YEARS OF EXPERIENCE
+                    <h4>Codeforces</h4>
+                    <h3>Rating: 1313(max)</h3>
+                    <h2>Rank: Pupil</h2>
+                    <p>
+                        1100+ Problem Solves
+                    </p>
                 </div>
                 <div class="gridi">
-                    <h4>12+</h4>
-                    COMPLETED PROJECTS
+                    <h4>CodeChef</h4>
+                    <h3>Rating: 1463(max)</h3>
+                    <h2>Rank: 2 Star</h2>
+                    <p>
+                        55+ Problem Solves
+                    </p>
                 </div>
                 <div class="gridi">
-                    <h4>1313+</h4>
-                    RATING IN CODEFORCES
+                    <h4>Atcoder</h4>
+                    <h3>Rating: 155(max)</h3>
+                    <h2>Rank: 40k+</h2>
+                    <p>
+                        100+ Problem Solves
+                    </p>
                 </div>
                 <div class="gridi">
-                    <h4>5+</h4>
-                    AWAEDS WON
+                    <h4>Leetcode</h4>
+                    <h3>Rating: 1467(max)</h3>
+                    <h2>Rank: </h2>
+                    <p>
+                        60+ Problem Solves
+                    </p>
                 </div>
             </div>
-            <h4>MY SKILLS</h4>
+            <h4>MY SKILLS 👩‍💻</h4>
             <div class="gridskills">
                 <div class="gridlang">
                     <img alt_text="Python" src="https://github.com/user-attachments/assets/7b411a54-df86-4218-b2eb-abd55264a87c" />
@@ -59,7 +76,45 @@ const Resume = () => {
                     <img alt_text="C" src="https://github.com/user-attachments/assets/3aa3514b-019e-422e-bd8a-c19c637951a1" />
                 </div>
             </div>
-            <h4>EXPERIENCE & EDUCATION</h4>
+            <h4>EDUCATION 🎓</h4>
+            <div class="gridedu">
+                <div class="gride">
+                    <p class="date">Jul 2021 - Jul 2025</p>
+                    <p class="tittle">
+                        B.Sc. DEGREE <span>- <a href='https://www.iiuc.ac.bd/'>IIUC</a></span>
+                    </p>
+                    <p class="details">I will get my degree from International Islamic University Chittagong in 2025.</p>
+                </div>
+                <div class="gride">
+                    <p class="date">Apr 2018 - Apr 2020</p>
+                    <p class="tittle">
+                        H.S.C. Exam <span>- <a href='https://www.idc.w3schoolbd.org/'>Islamia Degree College</a></span>
+                    </p>
+                    <p class="details">I registered for the Higher Secondary Certificate Exam at Islamia Degree College.</p>
+                </div>
+                <div class="gride">
+                    <p class="date">Jan 2015 - Feb 2018</p>
+                    <p class="tittle">
+                        J.S.C. & S.S.C. Exam <span>- <a href='http://www.kascc.edu.bd/'>Kazem Ali High School</a></span>
+                    </p>
+                    <p class="details">I took the J.S.C. & S.S.C. Exam from Kazem Ali High School.</p>
+                </div>
+                <div class="gride">
+                    <p class="date">Jan 2013 - Dec 2014</p>
+                    <p class="tittle">
+                        7th Class <span>- <a href='https://www.facebook.com/Harualchari.h.school/'>Harualchari High School</a></span>
+                    </p>
+                    <p class="details">I studied in Harualchari High School from 6th class to 7th class.</p>
+                </div>
+                <div class="gride">
+                    <p class="date">Jan 2008 - Dec 2012</p>
+                    <p class="tittle">
+                        P.S.C. <span>- <a href='https://www.facebook.com/people/%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0-%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A7%9F%E0%A6%BE%E0%A6%B2%E0%A6%9B%E0%A7%9C%E0%A6%BF-%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A5%E0%A6%AE%E0%A6%BF%E0%A6%95-%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F/100057411851391/'>North Harualchari Govt. Primary School</a></span>
+                    </p>
+                    <p class="details">I took the P.S.C. Exam from N.H.G.P. School and studied from 1st class to 5th class.</p>
+                </div>
+            </div>
+            <h4>EXPERIENCE 🚀</h4>
             <div class="gridedu">
                 <div class="gride">
                     <p class="date">2023 - PRESENT</p>
@@ -79,19 +134,9 @@ const Resume = () => {
                     <p class="details">This was a divisional programming contest by Chittagong University Scientific Society.</p>
                 </div>
                 <div class="gride">
-                    <p class="date">2025</p>
-                    <p class="tittle">B.Sc. DEGREE <span>- IIUC</span></p>
-                    <p class="details">I will get my degree from International Islamic University Chittagong in 2025.</p>
-                </div>
-                <div class="gride">
                     <p class="date">JAN 2024</p>
                     <p class="tittle">PU CSE IT FEST<span>- PU</span></p>
                     <p class="details">This was a divisional programming contest by Premier University.</p>
-                </div>
-                <div class="gride">
-                    <p class="date">2020</p>
-                    <p class="tittle">H.S.C. <span>- Islamia Degree College</span></p>
-                    <p class="details">This was a board exam.</p>
                 </div>
                 <div class="gride">
                     <p class="date">SEP 2023</p>
@@ -99,31 +144,14 @@ const Resume = () => {
                     <p class="details">This was a divisional programming contest by IIUC Computer Club & IIUCCPS.</p>
                 </div>
                 <div class="gride">
-                    <p class="date">2018</p>
-                    <p class="tittle">S.S.C. <span>- Kazem Ali High School</span></p>
-                    <p class="details">This was a board exam.</p>
-                </div>
-                <div class="gride">
                     <p class="date">2022</p>
                     <p class="tittle">ICPC Preliminary Contest <span>- ICPC</span></p>
                     <p class="details">This was an international programming contest.</p>
                 </div>
                 <div class="gride">
-                    <p class="date">2015</p>
-                    <p class="tittle">J.S.C <span>- Harualchari High School</span></p>
-                    <p class="details">This was a board exam.</p>
-                </div>
-                <div class="gride">
                     <p class="date">2021</p>
                     <p class="tittle">ICPC Preliminary Contest <span>- ICPC</span></p>
                     <p class="details">This was an international programming contest.</p>
-                </div>
-                <div class="gride">
-                    <p class="date">2012</p>
-                    <p class="tittle">
-                        P.S.C. <span>- North Harualchari Govt. Primary School</span>
-                    </p>
-                    <p class="details">This was a board exam.</p>
                 </div>
             </div>
         </div>

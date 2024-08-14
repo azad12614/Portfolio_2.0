@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Contact.css";
 
-import git from "../assets/icongit.png";
-import fb from "../assets/iconfb.png";
-import tw from "../assets/icont.png";
-import ln from "../assets/iconin.png";
+import git from "../assets/Social/Github.png";
+import fb from "../assets/Social/FB.png";
+import tw from "../assets/Social/X.png";
+import ln from "../assets/Social/Linkdin.png";
 
 function Contact() {
     return (
