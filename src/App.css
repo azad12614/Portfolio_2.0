@@ -90,3 +90,31 @@ button {
         margin: 0.2rem 2rem 1.2rem 2rem;
     }
 }
+
+@supports(scrollbar-color: var(--header) var(--btnText)) {
+    * {
+        scrollbar-color: var(--header) var(--btnText);
+        scrollbar-width: thin;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0.75rem;
+    height: auto;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--header);
+    border-radius: 100vw;
+    margin-block: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--btnText);
+    border: 0.1rem solid var(--logo);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--subHeader);
+}

@@ -35,7 +35,6 @@
 
 .about .info .highlight:hover {
     filter: brightness(var(--bright));
-    text-shadow: 0 0 3px var(--highlight), 0 0 6px var(--highlight);
 }
 
 .about .info .details {
@@ -51,7 +50,7 @@
 
 .about .info .details:hover {
     filter: brightness(var(--bright));
-    text-shadow: 0 0 3px var(--text), 0 0 6px var(--subText);
+    text-shadow: 0 0 1.5px var(--text), 0 0 3px var(--subText);
 }
 
 .about .info form {

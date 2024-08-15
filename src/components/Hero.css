@@ -19,7 +19,7 @@
     animation: Hero;
     animation-duration: 1s;
 
-    border-top: 1rem solid var(--logo);
+    border-top: 0.5rem solid var(--logo);
     height: 100vh;
 }
 
