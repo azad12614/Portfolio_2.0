@@ -146,6 +146,7 @@ textarea {
 .social-media-list a li img {
     aspect-ratio: 1/1;
     width: 40px;
+    border-radius: 50%;
 }
 
 .copyright {

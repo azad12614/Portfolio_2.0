@@ -13,7 +13,7 @@ const Hero = () => {
               Abdullah <br /> Al Azad
             </h1>
             <p class="hero-description">
-              A computer science student passionate about programming and web development.
+              A <strong>CSE</strong> student passionate about <strong>programming</strong> and <strong>web development</strong>.
             </p>
             <div class="hero-btn">
               <a href={pdf} target="_blank" class="cv">

@@ -86,10 +86,13 @@
     font-family: "Kaushan Script", cursive;
     font-size: 3rem;
     font-weight: bolder;
-    text-decoration: wavy underline var(--title) 2px;
     color: var(--title);
     padding: 0;
     padding-bottom: 1rem;
+}
+
+.gridi h4:hover {
+    text-decoration: wavy underline var(--title) 2px;
 }
 
 .gridi h3 {

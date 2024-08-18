@@ -15,7 +15,7 @@ const DarkMode = () => {
     }
 
     return (
-        <div className="h-12 w-12 p-2 rounded-full drop-shadow">
+        <div className="h-10 w-10 p-1 rounded-full drop-shadow">
             <label className="swap swap-rotate">
                 {/* // this hidden checkbox controls the state */}
                 <input

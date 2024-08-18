@@ -74,7 +74,7 @@
 
 .hero-description {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(1rem, 2vw, 3rem);
+    font-size: clamp(2rem, 2vw, 3rem);
     line-height: 1.2;
     padding-bottom: 4rem;
     color: var(--title);
@@ -83,7 +83,11 @@
 
 .hero-description:hover {
     filter: brightness(var(--bright));
-    text-shadow: 0 0 3px var(--title), 0 0 6px var(--title);
+    text-shadow: 0 0 1.5px var(--title), 0 0 3px var(--title);
+}
+
+.hero-description strong {
+    text-decoration: underline wavy 2px var(--title);
 }
 
 .hero-img-box {
@@ -168,7 +172,6 @@
     }
 
     .hero-description {
-        font-size: clamp(1.5rem, 1.5vw, 2rem);
         line-height: 1.1;
         padding-bottom: 2rem;
     }
@@ -280,7 +283,7 @@
 
 @media (max-width: 520px) {
     .section-hero {
-        padding-top: clamp(9rem, 12vh, 15rem);
+        padding-top: clamp(8rem, 10vh, 15rem);
     }
 
     .heros {
@@ -302,6 +305,26 @@
         line-height: 0.9;
         padding-bottom: 1.5rem;
         text-align: center;
+        transform:
+            perspective(75em) rotateX(25deg);
+        text-shadow:
+            var(--subHeader) 1px 1px,
+            var(--subHeader) 2px 2px,
+            var(--subHeader) 3px 3px,
+            var(--subHeader) 4px 4px,
+            var(--subHeader) 5px 5px,
+            var(--subHeader) 6px 6px,
+            var(--subHeader) 0px 25px 50px;
+    }
+
+    .heading-primary:hover {
+        text-shadow:
+            var(--subHeader) 1px 1px,
+            var(--subHeader) 2px 2px,
+            var(--subHeader) 3px 3px,
+            var(--subHeader) 4px 4px,
+            var(--subHeader) 5px 5px,
+            var(--subHeader) 6px 6px;
     }
 
     .hero-description {

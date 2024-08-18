@@ -206,12 +206,16 @@
 /* -----------responsive css style Mobile----------- */
 @media (max-width: 520px) {
     .main-nav {
-        grid-template-columns: 1.5rem 1fr 1fr 1fr 1.5rem;
+        width: 100vw;
+        height: 5rem;
+        padding-top: 1.5rem;
+        grid-template-columns: 1rem 1fr 1fr 1fr 1rem;
         justify-items: center;
+        position: fixed;
     }
 
     .logo {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .menu-link ul li {
@@ -227,6 +231,6 @@
     }
 
     .hamburger-menu {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }

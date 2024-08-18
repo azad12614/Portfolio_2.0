@@ -18,7 +18,7 @@ function Contact() {
 
                     {/* <!-- Left contact page --> */}
 
-                    <form action='mailto:c213106@ugrad.iiuc.ac.bd' id="contact-form" class="form-horizontal" method='POST'>
+                    <form action='mailto:azad.jishan2003@gmail.com' id="contact-form" class="form-horizontal" method='POST'>
                         <div class="group">
                             <div class="col-sm-12">
                                 <input type="text" class="form-control" id="name" placeholder="NAME" name="name" required="y"></input>
@@ -43,11 +43,11 @@ function Contact() {
 
                     <div class="direct-contact-container">
                         <ul class="contact-list">
-                            <li class="list-item"><span class="contact-text place"><a href='' title='Take me to a ride' target='_blank'>Oxygen, Chattogram-4213</a></span></li>
+                            <li class="list-item"><span class="contact-text place"><a href='https://maps.app.goo.gl/A8Bz35Qhx7oBV9RV7' title='Take me to a ride' target='_blank'>Oxygen, Chattogram-4213</a></span></li>
 
-                            <li class="list-item"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call" target='_blank'>01630440005</a></span></li>
+                            <li class="list-item"><span class="contact-text phone"><a href="tel:01630440005" title="Give me a call" target='_blank'>01630440005</a></span></li>
 
-                            <li class="list-item"><span class="contact-text gmail"><a href="mailto:mjamalpatiya@gmail.com" title="Send me an email" target='_blank'>azad.jishan2003@gmail.com</a></span></li>
+                            <li class="list-item"><span class="contact-text gmail"><a href="mailto:azad.jishan2003@gmail.com" title="Send me an email" target='_blank'>azad.jishan2003@gmail.com</a></span></li>
                         </ul>
 
                         <ul class="social-media-list">

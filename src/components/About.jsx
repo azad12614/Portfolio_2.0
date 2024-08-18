@@ -10,29 +10,29 @@ const About = () => {
                 matters to me.”
             </p>
             <div class="info">
-                <div class="highlight">
-                    Hi there! I'm Abdullah Al Azad, a Programmer and Web Developer with a strong foundation in computer science fundamentals.
+                <div class="details">
+                    Hi there! I'm <p class="highlight">Abdullah Al Azad</p>, a <p class="highlight">Programmer</p> and <p class="highlight">Web Developer</p> with a strong foundation in computer science fundamentals.
                 </div>
                 <div class="details">
-                    Currently, I'm pursuing a Bachelor of Science in Computer Science Engineering at the International Islamic University Chittagong (IIUC), Bangladesh. My passion for coding extends beyond academics, with a strong proficiency in the MERN stack (MongoDB, Express.js, React.js, and Node.js) and a solid grasp of the web development essentials – HTML, CSS, and JavaScript.
+                    Currently, I'm pursuing a <strong>Bachelor of Science</strong> in <strong>Computer Science Engineering</strong> at the<strong> International Islamic University Chittagong (IIUC)</strong>, Bangladesh. My passion for coding extends beyond academics, with a strong proficiency in the <p class="highlight">MERN stack (MongoDB, Express.js, React.js, and Node.js)</p> and a solid grasp of the web development essentials – <p class="highlight">HTML, CSS, and JavaScript</p>.
                 </div>
                 <div class="details">
-                    But my interests don't stop there! I'm also well-versed in C++ for competitive programming and Python for delving into the world of machine learning. Platforms like Codeforces and LeetCode have been instrumental in honing my problem-solving skills and algorithmic thinking.
+                    I'm also well-versed in <p class="highlight">C++</p> for <strong>Competitive Programming</strong> and <p class="highlight">Python</p> for delving into the world of <strong>Machine Learning</strong>. Platforms like <strong>Codeforces and LeetCode</strong> are the sites for my problem-solving skills and algorithmic thinking.
                 </div>
-                <div class="details">
+                {/* <div class="details">
                     Beyond technical expertise, I'm fluent in both Bangla and English, allowing me to effectively communicate across diverse audiences. When I'm not coding, you'll likely find me diving into exciting new projects.
-                </div>
+                </div> */}
                 <div class="details">
-                    I've gained hands-on experience building projects using a variety of technologies, including C, C++, HTML, CSS, Javascript, MERN Stack, and Python.  Some of these projects are even available as open-source on GitHub! You can find more details about them in the portfolio section of this website or on my GitHub profile.
+                    I've gained hands-on experience building projects using a variety of technologies. Some of these projects are even available as open-source on GitHub! You can find more details about them in the portfolio section of this website or on my GitHub profile.
                 </div>
-                <div class="details">
+                {/* <div class="details">
                     I'm eager to leverage my technical skills and creative vision to bring unique online initiatives to life.
-                </div>
+                </div> */}
                 <div class="details">
-                    Interested in collaborating? To reach me
+                    <strong>Interested in collaborating? To reach me</strong>
                     <form action='mailto:azad.jishan2003@gmail.com' method='POST' class='highlight'>
                         <button type="submit" value="Click!" class="pointer">
-                            click!
+                            &nbsp;Click!
                         </button>
                     </form>
                 </div>
