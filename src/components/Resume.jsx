@@ -23,7 +23,7 @@ const Resume = () => {
             <div class="gridinfo">
                 <div class="gridi">
                     <h4><a href='https://codeforces.com/profile/azad12614' target='_blank'>Codeforces</a></h4>
-                    <h3>Rating: 1313(max)</h3>
+                    <h3>Rating: 1313(Max)</h3>
                     <h2>Rank: Pupil</h2>
                     <p>
                         1100+ Problem Solves
@@ -31,7 +31,7 @@ const Resume = () => {
                 </div>
                 <div class="gridi">
                     <h4><a href='https://www.codechef.com/users/azad12614' target='_blank'>CodeChef</a></h4>
-                    <h3>Rating: 1463(max)</h3>
+                    <h3>Rating: 1463(Max)</h3>
                     <h2>Rank: 2 Star(Div 3)</h2>
                     <p>
                         80+ Problem Solves
@@ -39,7 +39,7 @@ const Resume = () => {
                 </div>
                 <div class="gridi">
                     <h4><a href='https://atcoder.jp/users/azad12614' target='_blank'>Atcoder</a></h4>
-                    <h3>Rating: 155(max)</h3>
+                    <h3>Rating: 155(Max)</h3>
                     <h2>Rank: 10 Kyu</h2>
                     <p>
                         100+ Problem Solves
@@ -47,8 +47,8 @@ const Resume = () => {
                 </div>
                 <div class="gridi">
                     <h4><a href='https://leetcode.com/u/azad12614/' target='_blank'>Leetcode</a></h4>
-                    <h3>Rating: 1467(max)</h3>
-                    <h2>Rank: Top 54%</h2>
+                    <h3>Rating: 1551(Max)</h3>
+                    <h2>Rank: Top 30%</h2>
                     <p>
                         70+ Problem Solves
                     </p>
