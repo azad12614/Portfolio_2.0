@@ -31,7 +31,7 @@ const Resume = () => {
                 </div>
                 <div class="gridi">
                     <h4><a href='https://www.codechef.com/users/azad12614' target='_blank'>CodeChef</a></h4>
-                    <h3>Rating: 1463(Max)</h3>
+                    <h3>Rating: 1507(Max)</h3>
                     <h2>Rank: 2 Star(Div 3)</h2>
                     <p>
                         80+ Problem Solves
@@ -47,8 +47,8 @@ const Resume = () => {
                 </div>
                 <div class="gridi">
                     <h4><a href='https://leetcode.com/u/azad12614/' target='_blank'>Leetcode</a></h4>
-                    <h3>Rating: 1551(Max)</h3>
-                    <h2>Rank: Top 30%</h2>
+                    <h3>Rating: 1567(Max)</h3>
+                    <h2>Rank: Top 27%</h2>
                     <p>
                         70+ Problem Solves
                     </p>
