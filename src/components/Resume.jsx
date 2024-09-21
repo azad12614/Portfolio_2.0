@@ -34,13 +34,13 @@ const Resume = () => {
                     <h3>Rating: 1507(Max)</h3>
                     <h2>Rank: 2 Star(Div 3)</h2>
                     <p>
-                        80+ Problem Solves
+                        85+ Problem Solves
                     </p>
                 </div>
                 <div class="gridi">
                     <h4><a href='https://atcoder.jp/users/azad12614' target='_blank'>Atcoder</a></h4>
-                    <h3>Rating: 155(Max)</h3>
-                    <h2>Rank: 10 Kyu</h2>
+                    <h3>Rating: 170(Max)</h3>
+                    <h2>Rank: 46957th</h2>
                     <p>
                         100+ Problem Solves
                     </p>
