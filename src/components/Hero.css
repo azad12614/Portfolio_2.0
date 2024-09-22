@@ -97,7 +97,7 @@
 
 .hero-img {
     width: clamp(30rem, 100%, 35rem);
-    border-radius: 50%;
+    border-radius: 10%;
     box-shadow: 0px 0px 30px var(--text);
 }
 

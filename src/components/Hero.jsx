@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Hero.css";
 import pdf from "../assets/Resume.pdf";
-import av from "../assets/Avatar.jpg";
+import av from "../assets/Abdullah Al Azad.jpeg";
 
 const Hero = () => {
   return (
