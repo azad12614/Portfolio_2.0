@@ -31,18 +31,10 @@ const Resume = () => {
                 </div>
                 <div class="gridi">
                     <h4><a href='https://www.codechef.com/users/azad12614' target='_blank'>CodeChef</a></h4>
-                    <h3>Rating: 1507(Max)</h3>
+                    <h3>Rating: 1526(Max)</h3>
                     <h2>Rank: 2 Star(Div 3)</h2>
                     <p>
-                        85+ Problem Solves
-                    </p>
-                </div>
-                <div class="gridi">
-                    <h4><a href='https://atcoder.jp/users/azad12614' target='_blank'>Atcoder</a></h4>
-                    <h3>Rating: 170(Max)</h3>
-                    <h2>Rank: 46957th</h2>
-                    <p>
-                        100+ Problem Solves
+                        90+ Problem Solves
                     </p>
                 </div>
                 <div class="gridi">
@@ -51,6 +43,14 @@ const Resume = () => {
                     <h2>Rank: Top 27%</h2>
                     <p>
                         70+ Problem Solves
+                    </p>
+                </div>
+                <div class="gridi">
+                    <h4><a href='https://atcoder.jp/users/azad12614' target='_blank'>Atcoder</a></h4>
+                    <h3>Rating: 170(Max)</h3>
+                    <h2>Rank: 46957th</h2>
+                    <p>
+                        50+ Problem Solves
                     </p>
                 </div>
             </div>
