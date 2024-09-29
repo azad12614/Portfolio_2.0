@@ -100,7 +100,13 @@ const Resume = () => {
             <h4>EXPERIENCE 🚀</h4>
             <div class="gridedu">
                 <div class="gride">
-                    <p class="date">2023 - PRESENT</p>
+                    <p class="date">JUL 2024 - PRESENT</p>
+                    <p class="tittle">Teaching Assistant <span>- IIUC</span></p>
+                    <p class="details">Working as a Teaching Assistant in International Islamic University
+                        Chittagong.</p>
+                </div>
+                <div class="gride">
+                    <p class="date">JUL 2023 - PRESENT</p>
                     <p class="tittle">MENTOR <span>- IIUCCPS</span></p>
                     <p class="details">This is a non-profit competitive programming society of International Islamic University
                         Chittagong.</p>

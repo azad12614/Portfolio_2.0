@@ -6,6 +6,7 @@ import Gaming from "../assets/Gaming.png";
 import Ladder from "../assets/Ladder.png";
 import pic from "../assets/pic.png";
 import Portfolio from "../assets/Portfolio.png";
+import NASA from "../assets/NASA.jpeg";
 import Rating from "../assets/Rating.png";
 import Sleepyheads from "../assets/Sleepyheads.png";
 
@@ -25,6 +26,16 @@ const Project = () => {
                         <span>WEBSITE</span>
                         <span>MERN STACK</span>
                         <p>This is my 2nd updated Portfolio Site.</p>
+
+                    </div>
+                </div>
+                <div class="items">
+                    <img src={NASA} alt="" />
+                    <div class="dis">
+                        <a href="https://learn4climate.onrender.com/" target="_blank">Portfolio 2.0</a>
+                        <span>WEBSITE</span>
+                        <span>Front-end</span>
+                        <p>This is website for the NASA International Space Apps Challenge.</p>
 
                     </div>
                 </div>

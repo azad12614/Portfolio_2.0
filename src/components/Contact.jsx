@@ -59,24 +59,17 @@ function Contact() {
                                 </li>
                             </a>
                             <a
-                                href="http://www.facebook.com/azad"
-                                target="_blank" class="contact-icon">
-                                <li>
-                                    <img src={fb} />
-                                </li>
-                            </a>
-                            <a
-                                href="http://www.x.com/azad"
-                                target="_blank" class="contact-icon">
-                                <li>
-                                    <img src={tw} />
-                                </li>
-                            </a>
-                            <a
-                                href="http://www.linkedin.com/in/azad"
+                                href="https://www.linkedin.com/in/abdullah-al-azad-12614-jishan"
                                 target="_blank" class="contact-icon">
                                 <li>
                                     <img src={ln} />
+                                </li>
+                            </a>
+                            <a
+                                href="https://www.facebook.com/abdullah.2003.azad/"
+                                target="_blank" class="contact-icon">
+                                <li>
+                                    <img src={fb} />
                                 </li>
                             </a>
                         </ul>
