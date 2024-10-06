@@ -15,12 +15,12 @@ _**Live Demo: [The Portfolio Site](https://azad12614.onrender.com/)**_
 - Skills Section
 - Experience Section
 - Education Section
-- Achivement Section
+- Achievement Section
 - Project Section
 - Blog Section
 - Contact Form
 
 Feel free to explore my work and connect with me!
 
-# MIT License
-# Copyright (c) 2024 Abdullah Al Azad
+**MIT License**
+**Copyright (c) 2024 Abdullah Al Azad**
