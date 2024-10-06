@@ -1,6 +1,5 @@
-# My 2nd/Updated Portfolio (MERN STACK)
-This repository contains the source code for my 2nd portfolio website, built using MERN STACK. 
-This website is made to showcase my work/project and skills.
+# My Portfolio (MERN STACK)
+The repository contains the source code for my portfolio website, which was developed using the MERN stack. This platform serves as a showcase for my professional projects and skills.
 
 _**Live Demo: [The Portfolio Site](https://azad12614.onrender.com/)**_
 
@@ -21,7 +20,3 @@ _**Live Demo: [The Portfolio Site](https://azad12614.onrender.com/)**_
 - Contact Form
 
 Feel free to explore my work and connect with me!
-
-# MIT License
-
-**Copyright (c) 2024 Abdullah Al Azad**
