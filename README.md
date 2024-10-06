@@ -21,3 +21,6 @@ _**Live Demo: [The Portfolio Site](https://azad12614.onrender.com/)**_
 - Contact Form
 
 Feel free to explore my work and connect with me!
+
+# MIT License
+# Copyright (c) 2024 Abdullah Al Azad
