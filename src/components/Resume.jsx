@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import "./Resume.css"
 
 import c from "../assets/Lang/c.svg"
@@ -13,6 +13,19 @@ import node from "../assets/Lang/node.svg"
 import python from "../assets/Lang/python.svg"
 
 const Resume = () => {
+    /*
+    <a href="https://ibb.co.com/ZgWz2Vf"><img src="https://i.ibb.co.com/my65NGR/u-https-image-pngaaa-com-134-6179134-middle.png" alt="u-https-image-pngaaa-com-134-6179134-middle" border="0"></a>
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/s3vTfrV/u-https-i-pinimg-com-736x-b4-6e-54-b46e546a3ee4d410f961e81d4a8cae0f.jpg" alt="u-https-i-pinimg-com-736x-b4-6e-54-b46e546a3ee4d410f961e81d4a8cae0f" border="0"></a>
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/qNkCTgw/u-https-avatars-githubusercontent.png" alt="u-https-avatars-githubusercontent" border="0"></a>
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/rdvQVHg/u-https-leetcode-com-static-images-Leet-Code-logo.png" alt="u-https-leetcode-com-static-images-Leet-Code-logo" border="0"></a>
+    */
+    /*
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/PskdWmt/u-https-tse4-mm-bing-net-th-id-OIP.jpg" alt="u-https-tse4-mm-bing-net-th-id-OIP" border="0"></a>
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/jHWttkC/u-https-tse1-mm-bing-net-th-id-OIP.jpg" alt="u-https-tse1-mm-bing-net-th-id-OIP" border="0"></a>
+    <a href="https://ibb.co.com/yfWxtkg"><img src="https://i.ibb.co.com/Lknsmg9/u-https-tse1-mm-bing-net-th-id-OIP.jpg" alt="u-https-tse1-mm-bing-net-th-id-OIP" border="0"></a>
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/Fs0v3Rf/u-https-www-tdcbd-net-cloud-uploads-default-clients-202010-1603211996-puc.png" alt="u-https-www-tdcbd-net-cloud-uploads-default-clients-202010-1603211996-puc" border="0"></a>
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co.com/926hsFG/u-https-icpc-global-regionals-abouticpc-foundationlogo.png" alt="u-https-icpc-global-regionals-abouticpc-foundationlogo" border="0"></a>
+    */
     return (
         <div class="resume" id="Resume">
             <h2 class="header">RESUME</h2>
@@ -31,7 +44,7 @@ const Resume = () => {
                 </div>
                 <div class="gridi">
                     <h4><a href='https://www.codechef.com/users/azad12614' target='_blank'>CodeChef</a></h4>
-                    <h3>Rating: 1526(Max)</h3>
+                    <h3>Rating: 1568(Max)</h3>
                     <h2>Rank: 2 Star(Div 3)</h2>
                     <p>
                         90+ Problem Solves
@@ -40,15 +53,15 @@ const Resume = () => {
                 <div class="gridi">
                     <h4><a href='https://leetcode.com/u/azad12614/' target='_blank'>Leetcode</a></h4>
                     <h3>Rating: 1567(Max)</h3>
-                    <h2>Rank: Top 27%</h2>
+                    <h2>Rank: Top 30%</h2>
                     <p>
-                        70+ Problem Solves
+                        80+ Problem Solves
                     </p>
                 </div>
                 <div class="gridi">
                     <h4><a href='https://atcoder.jp/users/azad12614' target='_blank'>Atcoder</a></h4>
-                    <h3>Rating: 170(Max)</h3>
-                    <h2>Rank: 46957th</h2>
+                    <h3>Rating: 180(Max)</h3>
+                    <h2>Rank: 46000+th</h2>
                     <p>
                         50+ Problem Solves
                     </p>
@@ -102,45 +115,45 @@ const Resume = () => {
                 <div class="gride">
                     <p class="date">JUL 2024 - PRESENT</p>
                     <p class="tittle">Teaching Assistant <span>- IIUC</span></p>
-                    <p class="details">Working as a Teaching Assistant in International Islamic University
-                        Chittagong.</p>
+                    <p class="details">Serving as a <strong>Teaching Assistant</strong> at <strong>International Islamic University
+                        Chittagong.</strong></p>
                 </div>
                 <div class="gride">
                     <p class="date">JUL 2023 - PRESENT</p>
                     <p class="tittle">MENTOR <span>- IIUCCPS</span></p>
-                    <p class="details">This is a non-profit competitive programming society of International Islamic University
-                        Chittagong.</p>
+                    <p class="details">Serving as a <strong>Mentor</strong> for the Competitive Programming Society at <strong>International Islamic University
+                        Chittagong.</strong></p>
                 </div>
                 <div class="gride">
                     <p class="date">JUL 2023 - DEC 2023</p>
                     <p class="tittle">TRAINER <span>- IIUCCPS</span></p>
-                    <p class="details">This is a non-profit competitive programming society of International Islamic University
-                        Chittagong.</p>
+                    <p class="details">Serving as a <strong>Trainer</strong> for the Competitive Programming Society at <strong>International Islamic University
+                        Chittagong.</strong></p>
                 </div>
                 <div class="gride">
                     <p class="date">JUL 2024</p>
                     <p class="tittle">Inter University Programming Contest<span>- CU</span></p>
-                    <p class="details">This was a divisional programming contest by Chittagong University Scientific Society.</p>
+                    <p class="details">Participate in the divisional programming contest organized by the <strong>Chittagong University Scientific Society.</strong></p>
                 </div>
                 <div class="gride">
                     <p class="date">JAN 2024</p>
                     <p class="tittle">PU CSE IT FEST<span>- PU</span></p>
-                    <p class="details">This was a divisional programming contest by Premier University.</p>
+                    <p class="details">Participate in the divisional programming contest organized by the <strong>Premier University.</strong></p>
                 </div>
                 <div class="gride">
                     <p class="date">SEP 2023</p>
                     <p class="tittle">Inter University Programming Contest<span>- IIUC</span></p>
-                    <p class="details">This was a divisional programming contest by IIUC Computer Club & IIUCCPS.</p>
+                    <p class="details">Participate in the divisional programming contest organized by the <strong>IIUC Computer Club & IIUCCPS.</strong></p>
                 </div>
                 <div class="gride">
                     <p class="date">2022</p>
                     <p class="tittle">ICPC Preliminary Contest <span>- ICPC</span></p>
-                    <p class="details">This was an international programming contest.</p>
+                    <p class="details">Competed in the Regional Programming Contest of the <strong>International Collegiate Programming Contest (ICPC).</strong></p>
                 </div>
                 <div class="gride">
                     <p class="date">2021</p>
                     <p class="tittle">ICPC Preliminary Contest <span>- ICPC</span></p>
-                    <p class="details">This was an international programming contest.</p>
+                    <p class="details">Competed in the Regional Programming Contest of the <strong>International Collegiate Programming Contest (ICPC).</strong></p>
                 </div>
             </div>
             <h4>EDUCATION 🎓</h4>
