@@ -19,21 +19,62 @@
     animation-range: entry 0% cover 25%;
 }
 
+.blog .arrow {
+    position: absolute;
+    bottom: -2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.blog .arrow .btn {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    padding: 0px;
+    border: 0;
+    border-radius: 50%;
+    color: var(--header);
+    background-color: var(--subBg);
+    transition: all .2s ease-in-out;
+    box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+    cursor: url(../cursor2.png), pointer;
+}
+
+.blog .arrow .btn:hover {
+    color: var(--hoverText);
+    background-color: var(--hoverBg);
+    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+}
+
+.blog .arrow .btn span {
+    font-size: 35px;
+    border-radius: 50%;
+}
+
+.blog .arrow .btn:hover span {
+    transform: scale(1.12);
+}
+
 .blog .info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-content: space-evenly;
-    width: clamp(40rem, 70vw, 80rem);
+    width: clamp(40rem, 50vw, 80rem);
     gap: 1.5rem;
     margin: auto;
     padding-block: 1.5rem;
+    overflow: hidden;
 }
 
 .blog .info .items {
     display: grid;
     grid-template-columns: 55% 45%;
     padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 80px;
     gap: 1rem;
+    border-radius: 10px;
     align-content: space-evenly;
     background-color: var(--subBg);
 }
@@ -42,14 +83,34 @@
     box-shadow: 1px 1px 10px var(--header), -1px -1px 10px var(--header);
 }
 
-.blog .info .items img {
-    width: 100%;
+.blog .info .items .imgs {
+    width: 50%;
     aspect-ratio: 1/1;
-    border-radius: 100%;
-    align-self: center;
+    border-radius: 50%;
+    margin: auto;
+    margin-block: 1rem;
+    transition: all .2s ease-in-out;
+    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+    justify-items: center;
+    align-content: center;
+}
+
+.blog .info .items .imgs:hover {
+    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+}
+
+.blog .info .items img {
+    width: 90%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.blog .info .items .imgs:hover img {
+    transform: scale(1.12);
 }
 
 .blog .info .items .dis {
+    height: 7rem;
     text-align: center;
     margin-block: auto;
 }
@@ -79,6 +140,9 @@
     line-height: 1.0;
 }
 
+.blog .info .items:not(.items:first-child) {
+    display: none;
+}
 
 @media (max-width: 1080px) {
     .blog .info {

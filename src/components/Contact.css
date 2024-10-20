@@ -1,5 +1,5 @@
 #Contact {
-    padding-top: 7rem;
+    padding-block: 5rem;
 }
 
 .contact-wrapper {
@@ -33,11 +33,11 @@ textarea {
     font-size: medium;
     border-radius: 10px;
     margin-bottom: 0.5rem;
-    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+    box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
 }
 
 .form-control:hover {
-    box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
 }
 
 .send-button {
@@ -50,12 +50,14 @@ textarea {
     align-content: center;
     font-size: 1.5rem;
     font-weight: bolder;
-    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+    box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+    cursor: url(../cursor2.png), pointer;
 }
 
 .send-button:hover {
     color: var(--highlight);
-    box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+    cursor: url(../cursor2.png), pointer;
 }
 
 /* Begin Right Contact Page */
@@ -99,6 +101,7 @@ textarea {
     width: 100%;
     margin: 0 auto;
     padding: 0;
+    cursor: url(../cursor2.png), pointer;
 }
 
 .social-media-list a li {
@@ -112,9 +115,9 @@ textarea {
     color: var(--text);
     background-color: var(--subBg);
     padding: 10px;
-    cursor: pointer;
     transition: all .2s ease-in-out;
     box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+    cursor: url(../cursor2.png), pointer;
 }
 
 .social-media-list a li:after {
@@ -147,6 +150,12 @@ textarea {
     aspect-ratio: 1/1;
     width: 40px;
     border-radius: 50%;
+}
+
+.social-media-list a li:hover img {
+    opacity: 1;
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
 }
 
 .copyright {
