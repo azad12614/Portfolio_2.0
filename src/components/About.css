@@ -1,0 +1,106 @@
+@keyframes About {
+    from {
+        opacity: 0.5;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.about {
+    padding-top: 7rem;
+    animation: About linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+}
+
+.about .info {
+    padding-inline: 16rem;
+}
+
+.about .info .highlight {
+    display: inline;
+    color: var(--highlight);
+    /* font-family: "Cormorant Garamond", serif; */
+    /* font-family: "Playfair Display", serif; */
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.about .info .highlight:hover {
+    filter: brightness(var(--bright));
+}
+
+.about .info .details {
+    color: var(--text);
+    font-family: "Cormorant Garamond", serif;
+    /* font-family: "Playfair Display", serif; */
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 1.2;
+    padding-block: 0.4rem;
+    padding-inline: 0;
+}
+
+.about .info .details:hover {
+    filter: brightness(var(--bright));
+    text-shadow: 0 0 1.5px var(--text), 0 0 3px var(--subText);
+}
+
+.about .info form {
+    display: inline;
+}
+
+@media (max-width: 1080px) {
+    .about {
+        animation-range: entry 0% cover 35%;
+    }
+
+    .about .info {
+        padding-inline: 8rem;
+    }
+}
+
+@media (max-width: 798px) {
+    .about {
+        animation-range: entry 0% cover 35%;
+    }
+
+    .about .info {
+        padding-inline: 4rem;
+    }
+
+    .about .info .details {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (max-width: 520px) {
+    .about {
+        padding-top: 6rem;
+        animation-range: entry 0% cover 30%;
+    }
+
+    .about .info {
+        padding-inline: 2rem;
+        text-align: center;
+    }
+
+    .about .info .details {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-height: 1080px) {
+    .about {
+        animation-range: entry 0% cover 40%;
+    }
+}

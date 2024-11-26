@@ -1,0 +1,345 @@
+/* ----------- navbar style start ----------- */
+
+.main-nav {
+    position: fixed;
+    display: grid;
+    /* grid-template-columns: 5rem 1.5fr 5fr 1.5fr 5rem; */
+    grid-template-columns: 2rem 1.5fr 5fr 1fr 2rem;
+    width: 798px;
+    height: 5rem;
+    top: 9px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    align-content: center;
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    /* background-color: var(--nav); */
+    border-radius: 5rem;
+    /* box-shadow: 0rem 0.5rem 1rem var(--text); */
+    z-index: 99;
+}
+
+/* ----------- logo part start ----------- */
+
+.logo {
+    display: grid;
+    grid-column: 2/3;
+    align-items: center;
+    justify-content: left;
+    color: var(--header);
+    font-family: "Saira Stencil One", sans-serif;
+    /* font-family: "Rubik Glitch", system-ui; */
+    /* font-family: "Kaushan Script", cursive; */
+    /* font-size: 3rem; */
+    font-size: 2.5rem;
+    text-shadow:
+        var(--subHeader) 1px 1px,
+        var(--subHeader) 2px 2px,
+        var(--subHeader) 3px 3px,
+        var(--subHeader) 4px 4px,
+        var(--subHeader) 5px 5px,
+        var(--subHeader) 6px 6px;
+    letter-spacing: 0.2rem;
+}
+
+/* ----------- Main Link part start ----------- */
+
+.menu-link {
+    grid-column: 3/4;
+    font-family: "Cormorant Garamond", serif;
+    color: var(--text);
+    margin-block: auto;
+}
+
+.menu-link ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-link ul li {
+    /* font-size: 2rem; */
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0;
+}
+
+.menu-link ul li a {
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.menu-link ul li:hover>a,
+.menu-link ul li:hover {
+    color: var(--text);
+    transform: translateZ(10px);
+    transition-duration: 1s;
+    text-shadow: 0 0 10px var(--text), 0 0 20px var(--highlight), 0 0 30px var(--text), 0 0 40px var(--highlight), 0 0 50px var(--text);
+}
+
+/* ----------- Social Media ----------- */
+
+.menu-3 {
+    grid-column: 4/5;
+    color: var(--text);
+    margin-block: auto;
+    margin-inline: auto;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 2.5rem;
+    color: var(--text);
+}
+
+.theme_box {
+    align-items: end;
+    background-color: var(--highlight);
+    border-radius: 50%;
+}
+
+/* -----------responsive css style Tablet----------- */
+/* @media (max-width: 1080px) {
+    .main-nav {
+        grid-template-columns: 5rem 2fr 6fr 2fr 5rem;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .menu-link {
+        display: none;
+    }
+
+    .mobile-menu-link {
+        position: absolute;
+        display: grid;
+        grid-column: 4/6;
+        height: 25rem;
+        padding-inline: 1rem;
+        margin-top: 5rem;
+        background-color: var(--navMbl);
+        transition: all 1s linear;
+        box-shadow: 1rem 1rem 1rem var(--text);
+        z-index: 100;
+    }
+
+    .mobile-menu-link ul {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: baseline;
+        margin-top: 1rem;
+    }
+
+    .mobile-menu-link ul li {
+        position: relative;
+        list-style: none;
+    }
+
+    .mobile-menu-link ul li a {
+        font-size: 2rem;
+        text-decoration: none;
+        letter-spacing: 2px;
+        line-height: 1rem;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--text);
+    }
+
+    .mobile-menu-link ul li a::before {
+        content: attr(data-text);
+        position: absolute;
+        color: var(--text);
+        width: 0;
+        height: 2rem;
+        overflow: hidden;
+        transition: 2s;
+        border-right: 0.2rem solid var(--text);
+        -webkit-text-stroke: 1px var(--text);
+        margin-top: 0.4rem;
+        padding-top: 0.55rem;
+    }
+
+    .mobile-menu-link ul li a:hover::before {
+        width: 100%;
+        filter: drop-shadow(0 0 25px var(--text));
+    }
+
+    .menu-3 {
+        grid-column: 4/5;
+        transition: all 1s linear;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: space-evenly;
+        column-gap: 1rem;
+    }
+
+    .menu-3 .hamburger-menu {
+        display: block;
+    }
+
+} */
+
+/* -----------responsive css style i-pad----------- */
+@media (max-width: 798px) {
+    .main-nav {
+        width: 98vw;
+        grid-template-columns: 3rem 1fr 1fr 0.5fr 3rem;
+        justify-items: left;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .menu-link {
+        display: none;
+    }
+
+    .mobile-menu-link {
+        position: absolute;
+        display: grid;
+        grid-column: 4/6;
+        height: 25rem;
+        padding-inline: 1rem;
+        margin-top: 5rem;
+        border: 1px solid var(--text);
+        border-radius: 10px;
+        background-color: var(--navMbl);
+        box-shadow: 0.25rem 0.5rem 0.75rem var(--text);
+        backdrop-filter: blur(4rem);
+        -webkit-backdrop-filter: blur(4rem);
+        z-index: 100;
+        transition: all 2s linear;
+    }
+
+    .mobile-menu-link ul {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: baseline;
+        margin-top: 1rem;
+    }
+
+    .mobile-menu-link ul li {
+        position: relative;
+        list-style: none;
+    }
+
+    .mobile-menu-link ul li a {
+        /* font-size: 2rem; */
+        font-size: 1.5rem;
+        text-decoration: none;
+        letter-spacing: 2px;
+        line-height: 1rem;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--text);
+    }
+
+    /*
+    .mobile-menu-link ul li a::before {
+        content: attr(data-text);
+        position: absolute;
+        color: var(--text);
+        width: 0;
+        height: 2rem;
+        overflow: hidden;
+        transition: 2s;
+        border-right: 0.2rem solid var(--text);
+        -webkit-text-stroke: 1px var(--text);
+        margin-top: 0.4rem;
+        padding-top: 0.1rem;
+    }
+
+    .mobile-menu-link ul li a:hover::before {
+        width: 100%;
+        filter: drop-shadow(0 0 25px var(--text));
+    }
+*/
+
+    .menu-3 {
+        grid-column: 4/5;
+        transition: all 1s linear;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: space-evenly;
+        column-gap: 1rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+/* -----------responsive css style Mobile----------- */
+@media (max-width: 520px) {
+    .main-nav {
+        width: 98vw;
+        height: 4rem;
+        padding-top: 0rem;
+        grid-template-columns: 1rem 1fr 1fr 1fr 1rem;
+        justify-items: center;
+        position: fixed;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .menu-link ul li {
+        font-size: 1.25rem;
+    }
+
+    .mobile-menu-link {
+        grid-column: 2/5;
+    }
+
+    .mobile-menu-link ul li {
+        position: relative;
+        list-style: none;
+    }
+
+    .mobile-menu-link ul li a {
+        font-size: 2rem;
+        text-decoration: none;
+        letter-spacing: 2px;
+        line-height: 1rem;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--text);
+    }
+
+    /* 
+    .mobile-menu-link ul li a::before {
+        content: attr(data-text);
+        position: absolute;
+        color: var(--text);
+        width: 0;
+        height: 2rem;
+        overflow: hidden;
+        transition: 3s;
+        border-right: 0.2rem solid var(--text);
+        -webkit-text-stroke: 1px var(--text);
+        margin-top: -0.4rem;
+        padding-top: 0.5rem;
+    }
+
+    .mobile-menu-link ul li a:hover::before {
+        width: 100%;
+        filter: drop-shadow(0 0 25px var(--text));
+    } 
+*/
+
+    .menu-3 {
+        grid-column: 4/5;
+    }
+
+    .hamburger-menu {
+        font-size: 1.8rem;
+    }
+}
