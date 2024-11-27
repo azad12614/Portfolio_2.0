@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
 import "./Hero.css";
 import pdf from "../assets/Resume.pdf";
-import av from "../assets/Abdullah Al Azad.jpeg";
+import avater from "../assets/Abdullah Al Azad.jpeg";
+import logo from "../assets/AZAD (1).png";
 
 const Hero = () => {
   return (
@@ -9,11 +10,11 @@ const Hero = () => {
       <section class="section-hero" id="Hero">
         <div class="heros">
           <div class="hero-text-box">
-            <h1 class="heading-primary">
-              Abdullah Al Azad
-            </h1>
+            <h1 class="heading-primary">Abdullah Al Azad</h1>
             <p class="hero-description">
-              A <strong>CSE Student</strong> | <strong>Competitive Programmer</strong> | <strong>Aspiring Web Developer</strong> From <b>Bangladesh</b>.
+              A <strong>CSE Student</strong> |{" "}
+              <strong>Competitive Programmer</strong> |{" "}
+              <strong>Aspiring Web Developer</strong> From <b>Bangladesh</b>.
             </p>
             <div class="hero-btn">
               <a href={pdf} target="_blank" class="cv">
@@ -25,16 +26,15 @@ const Hero = () => {
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src={av}
-              alt=""
-              className="hero-img"
-            />
+            <div className="wrapper">
+              <img src={avater} alt="" className="hero-img" />
+              <img src={logo} alt="" className="hero-img" />
+            </div>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
 export default Hero;

@@ -1,4 +1,4 @@
-@keyframes Edu1 {
+@keyframes Left_animation {
   from {
     opacity: 0.5;
     transform: translateX(-50%);
@@ -10,7 +10,7 @@
   }
 }
 
-@keyframes Edu2 {
+@keyframes Right_animation {
   from {
     opacity: 0.5;
     transform: translateX(50%);
@@ -27,10 +27,12 @@
 }
 
 .resume h4 {
-  color: var(--header);
+  color: var(--subHeader);
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   font-weight: bold;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--header);
   text-align: center;
   margin-top: 4%;
 }
@@ -74,7 +76,7 @@
 .gridi h4:hover {
   text-decoration: wavy underline var(--title) 2px;
 }
-
+/*
 .gridi h3 {
   font-family: "Jost", sans-serif;
   font-size: 2rem;
@@ -95,6 +97,26 @@
   font-style: italic;
   color: var(--number);
   margin-top: -0.5rem;
+}
+*/
+.gridi .info_title {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1.75fr;
+  margin-block: 1rem;
+  font-family: "Jost", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.gridi .info_value {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1.75fr;
+  margin-block: 1rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.25rem;
+  font-weight: bolder;
+  color: var(--number);
 }
 
 .gridedu {
@@ -121,15 +143,15 @@
 }
 
 .gride:nth-child(1n) {
-  animation: Edu1 ease-in;
+  animation: Left_animation ease-in;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 30%;
 }
 
 .gride:nth-child(2n) {
-  animation: Edu2 ease-in;
+  animation: Right_animation ease-in;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 30%;
 }
 
 .gride .date {
@@ -197,6 +219,32 @@
     align-content: center;
   }
 
+  .gridi .info_title {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1.5fr;
+    gap: 1rem;
+    margin-inline: 0rem;
+    margin-left: 3rem;
+    margin-block: 1rem;
+    font-family: "Jost", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text);
+  }
+
+  .gridi .info_value {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1.5fr;
+    gap: 1rem;
+    margin-inline: 0rem;
+    margin-left: 3rem;
+    margin-block: 1rem;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.25rem;
+    font-weight: bolder;
+    color: var(--number);
+  }
+
   .gridedu {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -258,6 +306,7 @@
     padding-bottom: 1rem;
   }
 
+  /*
   .gridi h3 {
     font-size: 1.5rem;
     color: var(--number);
@@ -272,6 +321,31 @@
   .gridi p {
     font-size: 1.5rem;
     margin-top: -0.3rem;
+  } 
+  */
+
+  .gridi .info_title {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1.5fr;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    margin-block: 1rem;
+    font-family: "Jost", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text);
+  }
+
+  .gridi .info_value {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1.5fr;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    margin-block: 1rem;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.75rem;
+    font-weight: bolder;
+    color: var(--number);
   }
 
   .gridedu {
@@ -323,6 +397,30 @@
 
   .gridi h4 {
     font-size: 1.75rem;
+  }
+
+  .gridi .info_title {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1.5fr;
+    gap: 0.25rem;
+    margin-left: 0.5rem;
+    margin-block: 1rem;
+    font-family: "Jost", sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text);
+  }
+
+  .gridi .info_value {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1.5fr;
+    gap: 0.25rem;
+    margin-left: 0.5rem;
+    margin-block: 1rem;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--number);
   }
 
   .gridedu {

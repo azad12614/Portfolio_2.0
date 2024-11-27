@@ -15,9 +15,16 @@ const Resume = () => {
               Codeforces
             </a>
           </h4>
-          <h3>Rating: 1313(Max)</h3>
-          <h2>Rank: Pupil</h2>
-          <p>1100+ Problem Solves</p>
+          <div class="info_title">
+            <h3>Rating (MAX)</h3>
+            <h3>Rank (MAX)</h3>
+            <h3>Problem Solved</h3>
+          </div>
+          <div class="info_value">
+            <h3>1313</h3>
+            <h3>Pupil</h3>
+            <h3>1100+</h3>
+          </div>
         </div>
         <div class="gridi">
           <h4>
@@ -25,9 +32,16 @@ const Resume = () => {
               CodeChef
             </a>
           </h4>
-          <h3>Rating: 1625(Max)</h3>
-          <h2>Rank: 3 Star(Div 2)</h2>
-          <p>100+ Problem Solves</p>
+          <div class="info_title">
+            <h3>Rating (MAX)</h3>
+            <h3>Rank (MAX)</h3>
+            <h3>Problem Solved</h3>
+          </div>
+          <div class="info_value">
+            <h3>1625</h3>
+            <h3>3 Star</h3>
+            <h3>100+</h3>
+          </div>
         </div>
         <div class="gridi">
           <h4>
@@ -35,9 +49,16 @@ const Resume = () => {
               Leetcode
             </a>
           </h4>
-          <h3>Rating: 1573(Max)</h3>
-          <h2>Rank: Top 26%</h2>
-          <p>85+ Problem Solves</p>
+          <div class="info_title">
+            <h3>Rating (MAX)</h3>
+            <h3>Rank (MAX)</h3>
+            <h3>Problem Solved</h3>
+          </div>
+          <div class="info_value">
+            <h3>1573</h3>
+            <h3>Top 26%</h3>
+            <h3>85+</h3>
+          </div>
         </div>
         <div class="gridi">
           <h4>
@@ -45,9 +66,16 @@ const Resume = () => {
               Atcoder
             </a>
           </h4>
-          <h3>Rating: 279(Max)</h3>
-          <h2>Rank: 38500+th</h2>
-          <p>80+ Problem Solves</p>
+          <div class="info_title">
+            <h3>Rating (MAX)</h3>
+            <h3>Rank (MAX)</h3>
+            <h3>Problem Solved</h3>
+          </div>
+          <div class="info_value">
+            <h3>279</h3>
+            <h3>38500+th</h3>
+            <h3>75+</h3>
+          </div>
         </div>
       </div>
       <h4>MY SKILLS 👩‍💻</h4>
@@ -81,7 +109,7 @@ const Resume = () => {
             Inter University Programming Contest<span>- CU</span>
           </p>
           <p class="details">
-            <strong>Ranked 20</strong> with amazing teammate{" "}
+            <strong>Rank (MAX)ed 20</strong> with amazing teammate{" "}
             <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in the
             Divisional Programming Contest organized by the{" "}
             <strong>Chittagong University Scientific Society.</strong>
@@ -93,7 +121,7 @@ const Resume = () => {
             ICPC Preliminary Contest <span>- ICPC</span>
           </p>
           <p class="details">
-            <strong>Ranked 288</strong> with amazing teammate{" "}
+            <strong>Rank (MAX)ed 288</strong> with amazing teammate{" "}
             <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in the
             Regional Programming Contest of the{" "}
             <strong>
@@ -107,7 +135,7 @@ const Resume = () => {
             NCPC Preliminary Contest<span>- JU</span>
           </p>
           <p class="details">
-            <strong>Ranked 241</strong> with amazing teammate{" "}
+            <strong>Rank (MAX)ed 241</strong> with amazing teammate{" "}
             <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in the
             Natioal Programming Contest organized by the{" "}
             <strong>Jahangirnagar University.</strong>
@@ -119,7 +147,7 @@ const Resume = () => {
             PU CSE IT FEST<span>- PU</span>
           </p>
           <p class="details">
-            <strong>Ranked 30</strong> with amazing teammate{" "}
+            <strong>Rank (MAX)ed 30</strong> with amazing teammate{" "}
             <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in the
             Divisional Programming Contest organized by the{" "}
             <strong>Premier University.</strong>
@@ -156,7 +184,7 @@ const Resume = () => {
             Inter University Programming Contest<span>- IIUC</span>
           </p>
           <p class="details">
-            <strong>Ranked 35</strong> with amazing teammate{" "}
+            <strong>Rank (MAX)ed 35</strong> with amazing teammate{" "}
             <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in the
             Divisional Programming Contest organized by the{" "}
             <strong>IIUC Computer Club & IIUCCPS.</strong>
@@ -168,7 +196,7 @@ const Resume = () => {
             ICPC Preliminary Contest <span>- ICPC</span>
           </p>
           <p class="details">
-            <strong>Ranked 801</strong> with amazing teammate{" "}
+            <strong>Rank (MAX)ed 801</strong> with amazing teammate{" "}
             <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in the
             Regional Programming Contest of the{" "}
             <strong>
@@ -182,8 +210,9 @@ const Resume = () => {
             CSE FEST Programming Contest <span>- IIUC</span>
           </p>
           <p class="details">
-            <strong>Ranked 15</strong> in the CSE FEST Solo Programming Contest
-            organized by the <strong>IIUC Computer Club & IIUCCPS.</strong>
+            <strong>Rank (MAX)ed 15</strong> in the CSE FEST Solo Programming
+            Contest organized by the{" "}
+            <strong>IIUC Computer Club & IIUCCPS.</strong>
           </p>
         </div>
         <div class="gride">
@@ -192,7 +221,7 @@ const Resume = () => {
             ICPC Preliminary Contest <span>- ICPC</span>
           </p>
           <p class="details">
-            <strong>Ranked 361</strong> with amazing teammate{" "}
+            <strong>Rank (MAX)ed 361</strong> with amazing teammate{" "}
             <strong>Thosifur Rhaman and Abrar Yasir</strong> in the Regional
             Programming Contest of the{" "}
             <strong>

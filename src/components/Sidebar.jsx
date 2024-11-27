@@ -26,7 +26,7 @@ const Sidebar = () => {
     return () => window.removeEventListener("scroll", handleScroll); // Cleanup
   }, []);
   return (
-    <ul className="sidebar" style={{ display: showButton ? "block" : "none" }}>
+    <ul class="sidebar" style={{ display: showButton ? "block" : "none" }}>
       <a
         href="https://github.com/azad12614"
         target="_blank"

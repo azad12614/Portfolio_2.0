@@ -57,9 +57,16 @@ svg {
 }
 
 .header {
-  font-family: "Monoton", sans-serif;
-  color: var(--subHeader);
+  /* font-family: "Monoton", sans-serif;
+  color: var(--subHeader); */
+
+  color: var(--header);
+  font-family: "Saira Stencil One", sans-serif;
   font-size: 3rem;
+  text-shadow: var(--subHeader) 1px 1px, var(--subHeader) 2px 2px,
+    var(--subHeader) 3px 3px, var(--subHeader) 4px 4px, var(--subHeader) 5px 5px,
+    var(--subHeader) 6px 6px;
+  letter-spacing: 0.2rem;
   font-weight: normal;
   text-align: center;
 }
