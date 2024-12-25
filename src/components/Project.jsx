@@ -13,7 +13,7 @@ import Sleepyheads from "../assets/Sleepyheads.png";
 const Project = () => {
   return (
     <div class="project" id="Project">
-      <h2 class="header">PROJECTS</h2>
+      <h2 class="header">🚀 PROJECTS</h2>
       <p class="title">
         “My Projects keep expanding over time to better address even more
         challenges.”

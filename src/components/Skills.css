@@ -15,6 +15,7 @@
 
 .lang {
   position: absolute;
+
   /* font-family: "Permanent Marker", cursive;
     font-size: 2rem;
     font-style: italic;
@@ -22,6 +23,12 @@
     background-color: var(--hoverBg);
     border: 2px solid var(--hoverBorder);
     border-radius: 50%; */
+
+  /*>1080px*/
+  --Duration: calc(33s);
+  --Left: calc(100%);
+  --Right: calc(-1 * (20%));
+
   text-align: center;
   align-content: center;
   left: var(--Left);
@@ -44,82 +51,57 @@
 /*Could not debug the easy way.*/
 .lang:nth-child(1) {
   /*>1080px*/
-  --Delays: calc(-0s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
+  --Delays: calc(0s);
 }
 
 .lang:nth-child(2) {
   /*>1080px*/
   --Delays: calc(-3s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
 }
 
 .lang:nth-child(3) {
   /*>1080px*/
   --Delays: calc(-6s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
 }
 
 .lang:nth-child(4) {
   /*>1080px*/
   --Delays: calc(-9s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
 }
 
 .lang:nth-child(5) {
   /*>1080px*/
   --Delays: calc(-12s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
 }
 
 .lang:nth-child(6) {
   /*>1080px*/
   --Delays: calc(-15s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
 }
 
 .lang:nth-child(7) {
   /*>1080px*/
   --Delays: calc(-18s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
 }
 
 .lang:nth-child(8) {
   /*>1080px*/
   --Delays: calc(-21s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
 }
 
 .lang:nth-child(9) {
   /*>1080px*/
   --Delays: calc(-24s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
 }
 
 .lang:nth-child(10) {
   /*>1080px*/
   --Delays: calc(-27s);
-  --Duration: calc(30s);
-  --Left: calc(100%);
-  --Right: calc(-1 * (20%));
+}
+
+.lang:nth-child(11) {
+  /*>1080px*/
+  --Delays: calc(-30s);
 }
 
 @media (max-width: 1080px) {
@@ -129,89 +111,68 @@
   }
 
   .lang {
+    /*1080px*/
     left: var(--Left);
+    --Duration: calc(33s);
+    --Left: calc(200%);
+    --Right: calc(-1 * (20%));
     animation: ScrollLeft var(--Duration) linear var(--Delays) infinite;
   }
 
   /*Could not debug the easy way.*/
   .lang:nth-child(1) {
     /*1080px*/
-    --Delays: calc(-0s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
+    --Delays: calc(0s);
   }
 
   .lang:nth-child(2) {
     /*1080px*/
     --Delays: calc(-3s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
   }
 
   .lang:nth-child(3) {
     /*1080px*/
     --Delays: calc(-6s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
   }
 
   .lang:nth-child(4) {
     /*1080px*/
     --Delays: calc(-9s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
   }
 
   .lang:nth-child(5) {
     /*1080px*/
     --Delays: calc(-12s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
   }
 
   .lang:nth-child(6) {
     /*1080px*/
     --Delays: calc(-15s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
   }
 
   .lang:nth-child(7) {
     /*1080px*/
     --Delays: calc(-18s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
   }
 
   .lang:nth-child(8) {
     /*1080px*/
     --Delays: calc(-21s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
   }
 
   .lang:nth-child(9) {
     /*1080px*/
     --Delays: calc(-24s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
   }
 
   .lang:nth-child(10) {
     /*1080px*/
     --Delays: calc(-27s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
+  }
+
+  .lang:nth-child(11) {
+    /*1080px*/
+    --Delays: calc(-30s);
   }
 }
 
@@ -229,98 +190,12 @@
     margin-inline: 1vw;
   }
 
-  .lang {
-    left: var(--Left);
-    animation: ScrollLeft var(--Duration) linear var(--Delays) infinite;
-  }
-
   .lang > h1 {
     font-size: 0.75rem;
   }
 
   .lang > img {
-    width: 75px;
+    width: 60px;
     aspect-ratio: 1/1;
-  }
-
-  /*Could not debug the easy way.*/
-  .lang:nth-child(1) {
-    /*520px*/
-    --Delays: calc(-0s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
-  }
-
-  .lang:nth-child(2) {
-    /*520px*/
-    --Delays: calc(-3s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
-  }
-
-  .lang:nth-child(3) {
-    /*520px*/
-    --Delays: calc(-6s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
-  }
-
-  .lang:nth-child(4) {
-    /*520px*/
-    --Delays: calc(-9s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
-  }
-
-  .lang:nth-child(5) {
-    /*520px*/
-    --Delays: calc(-12s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
-  }
-
-  .lang:nth-child(6) {
-    /*520px*/
-    --Delays: calc(-15s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
-  }
-
-  .lang:nth-child(7) {
-    /*520px*/
-    --Delays: calc(-18s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
-  }
-
-  .lang:nth-child(8) {
-    /*520px*/
-    --Delays: calc(-21s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
-  }
-
-  .lang:nth-child(9) {
-    /*520px*/
-    --Delays: calc(-24s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
-  }
-
-  .lang:nth-child(10) {
-    /*520px*/
-    --Delays: calc(-27s);
-    --Duration: calc(30s);
-    --Left: calc(200%);
-    --Right: calc(-1 * (20%));
   }
 }

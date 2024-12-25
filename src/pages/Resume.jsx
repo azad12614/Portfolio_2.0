@@ -5,7 +5,7 @@ import Skills from "../components/Skills";
 const Resume = () => {
   return (
     <div class="resume" id="Resume">
-      <h2 class="header">RESUME</h2>
+      <h2 class="header">📊 RESUME</h2>
       <p class="title">“Living, learning, & leveling up one day at a time.”</p>
       <h4>Coding Profiles 🎯</h4>
       <div class="gridinfo">
@@ -23,7 +23,7 @@ const Resume = () => {
           <div class="info_value">
             <h3>1313</h3>
             <h3>Pupil</h3>
-            <h3>1100+</h3>
+            <h3>1125+</h3>
           </div>
         </div>
         <div class="gridi">
@@ -56,7 +56,7 @@ const Resume = () => {
           </div>
           <div class="info_value">
             <h3>1573</h3>
-            <h3>Top 26%</h3>
+            <h3>Top 27%</h3>
             <h3>85+</h3>
           </div>
         </div>
@@ -72,15 +72,15 @@ const Resume = () => {
             <h3>Problem Solved</h3>
           </div>
           <div class="info_value">
-            <h3>279</h3>
-            <h3>38500+th</h3>
-            <h3>75+</h3>
+            <h3>316</h3>
+            <h3>36600+th</h3>
+            <h3>70+</h3>
           </div>
         </div>
       </div>
       <h4>MY SKILLS 👩‍💻</h4>
       <Skills></Skills>
-      <h4>EXPERIENCE 🚀</h4>
+      <h4>EXPERIENCE 🔭</h4>
       <div class="gridedu">
         <div class="gride">
           <p class="date">JUL 2024 - PRESENT</p>
