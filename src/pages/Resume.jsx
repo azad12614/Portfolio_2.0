@@ -23,7 +23,7 @@ const Resume = () => {
           <div class="info_value">
             <h3>1313</h3>
             <h3>Pupil</h3>
-            <h3>1125+</h3>
+            <h3>1135+</h3>
           </div>
         </div>
         <div class="gridi">
@@ -57,7 +57,7 @@ const Resume = () => {
           <div class="info_value">
             <h3>1573</h3>
             <h3>Top 27%</h3>
-            <h3>85+</h3>
+            <h3>90+</h3>
           </div>
         </div>
         <div class="gridi">
@@ -73,7 +73,7 @@ const Resume = () => {
           </div>
           <div class="info_value">
             <h3>316</h3>
-            <h3>36600+th</h3>
+            <h3>37K+th</h3>
             <h3>70+</h3>
           </div>
         </div>
