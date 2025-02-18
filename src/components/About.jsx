@@ -35,6 +35,10 @@ const About = () => {
           involvement in competitive programming.
         </div>
         <div class="details">
+          🌱 I’m learning Python, Matplotlib, NumPy, Pandas, Sci-Kit-Learn, and
+          TensorFlow for my Machine Learning Project.
+        </div>
+        {/* <div class="details">
           🌱 I'm currently focused on expanding my front-end skills with{" "}
           <p class="highlight">Next.js</p>
           and refining my MERN stack expertise.
@@ -42,20 +46,21 @@ const About = () => {
         <div class="details">
           🌱 I'm learning <p class="highlight">React Native</p> for
           cross-platform mobile development.
-        </div>
+        </div> */}
         <div class="details">
           🔭 I work as a <strong>Teaching Assistant</strong> at the
           International Islamic University Chittagong, assisting students with
           Data Structures.
         </div>
         <div class="details">
+          🔭 I am a <strong>Coordinator</strong> for the Competitive Programming
+          Society at IIUC, guiding Trainers and Mentors in their respective
+          works.
+        </div>
+        <div class="details">
           🔭 I also serve as a <strong>Trainer and Mentor</strong> for the
           Competitive Programming Society at IIUC, guiding students in algorithm
           development and problem-solving.
-        </div>
-        <div class="details">
-          🌱 I’m learning Python, Matplotlib, NumPy, Pandas, Sci-Kit-Learn, and
-          TensorFlow for my Machine Learning Project.
         </div>
         {/* <div class="details">
                     Hi there! I'm <p class="highlight">Abdullah Al Azad</p>, a <p class="highlight">Programmer</p> and <p class="highlight">Web Developer</p> with a strong foundation in computer science fundamentals.

@@ -23,7 +23,7 @@ const Resume = () => {
           <div class="info_value">
             <h3>1313</h3>
             <h3>Pupil</h3>
-            <h3>1135+</h3>
+            <h3>1145+</h3>
           </div>
         </div>
         <div class="gridi">
@@ -83,6 +83,17 @@ const Resume = () => {
       <h4>EXPERIENCE 🔭</h4>
       <div class="gridedu">
         <div class="gride">
+          <p class="date">JAN 2025 - PRESENT</p>
+          <p class="tittle">
+            Bootcamp Co-ordinator <span>- IIUCCPS</span>
+          </p>
+          <p class="details">
+            Serving as a <strong>Bootcamp Co-ordinator</strong> for the
+            Competitive Programming Society at{" "}
+            <strong>International Islamic University Chittagong.</strong>
+          </p>
+        </div>
+        <div class="gride">
           <p class="date">JUL 2024 - PRESENT</p>
           <p class="tittle">
             Teaching Assistant <span>- IIUC</span>
@@ -93,7 +104,7 @@ const Resume = () => {
           </p>
         </div>
         <div class="gride">
-          <p class="date">JUL 2023 - PRESENT</p>
+          <p class="date">JUL 2023 - JAN 2025</p>
           <p class="tittle">
             MENTOR <span>- IIUCCPS</span>
           </p>

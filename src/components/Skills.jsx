@@ -12,10 +12,12 @@ import react from "../assets/Lang/react.svg";
 import node from "../assets/Lang/node.svg";
 import python from "../assets/Lang/python.svg";
 import next from "../assets/Lang/next.svg";
+import git from "../assets/Lang/git.svg";
 
 const Skills = () => {
   const skillsData = [
-    { name: "Next JS", image: next },
+    // { name: "Next JS", image: next },
+    { name: "Git", image: git },
     { name: "Python", image: python },
     { name: "Node JS", image: node },
     { name: "React JS", image: react },
