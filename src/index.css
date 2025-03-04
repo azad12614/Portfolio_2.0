@@ -22,7 +22,7 @@
   --hoverBorder: #003135;
   --hoverBg: #1f2833;
   --hoverText: #0fa4af;
-  --bright: 130%;
+  --bright: 105%;
 }
 
 [data-theme="light"] {
@@ -45,5 +45,5 @@
   --hoverBorder: #003135;
   --hoverBg: #b7dbf8;
   --hoverText: #012c64;
-  --bright: 70%;
+  --bright: 95%;
 }

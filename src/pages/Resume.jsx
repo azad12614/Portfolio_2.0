@@ -7,7 +7,7 @@ const Resume = () => {
     <div class="resume" id="Resume">
       <h2 class="header">📊 RESUME</h2>
       <p class="title">“Living, learning, & leveling up one day at a time.”</p>
-      <h4>Coding Profiles 🎯</h4>
+      <h4>CODING PROFILES 🎯</h4>
       <div class="gridinfo">
         <div class="gridi">
           <h4>
@@ -80,7 +80,7 @@ const Resume = () => {
       </div>
       <h4>MY SKILLS 👩‍💻</h4>
       <Skills></Skills>
-      <h4>EXPERIENCE 🔭</h4>
+      <h4>ACADEMIC ENGAGEMENTS 💼</h4>
       <div class="gridedu">
         <div class="gride">
           <p class="date">JAN 2025 - PRESENT</p>
@@ -115,56 +115,6 @@ const Resume = () => {
           </p>
         </div>
         <div class="gride">
-          <p class="date">JUL 2024</p>
-          <p class="tittle">
-            Inter University Programming Contest<span>- CU</span>
-          </p>
-          <p class="details">
-            <strong>Rank (MAX)ed 20</strong> with amazing teammate{" "}
-            <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in the
-            Divisional Programming Contest organized by the{" "}
-            <strong>Chittagong University Scientific Society.</strong>
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">2024</p>
-          <p class="tittle">
-            ICPC Preliminary Contest <span>- ICPC</span>
-          </p>
-          <p class="details">
-            <strong>Rank (MAX)ed 288</strong> with amazing teammate{" "}
-            <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in the
-            Regional Programming Contest of the{" "}
-            <strong>
-              International Collegiate Programming Contest (ICPC).
-            </strong>
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">MAR 2024</p>
-          <p class="tittle">
-            NCPC Preliminary Contest<span>- JU</span>
-          </p>
-          <p class="details">
-            <strong>Rank (MAX)ed 241</strong> with amazing teammate{" "}
-            <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in the
-            Natioal Programming Contest organized by the{" "}
-            <strong>Jahangirnagar University.</strong>
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">JAN 2024</p>
-          <p class="tittle">
-            PU CSE IT FEST<span>- PU</span>
-          </p>
-          <p class="details">
-            <strong>Rank (MAX)ed 30</strong> with amazing teammate{" "}
-            <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in the
-            Divisional Programming Contest organized by the{" "}
-            <strong>Premier University.</strong>
-          </p>
-        </div>
-        <div class="gride">
           <p class="date">JUL 2023 - DEC 2023</p>
           <p class="tittle">
             TRAINER <span>- IIUCCPS</span>
@@ -175,13 +125,73 @@ const Resume = () => {
             <strong>International Islamic University Chittagong.</strong>
           </p>
         </div>
+      </div>
+      <h4>PROGRAMMING EXPERIENCES 🏆</h4>
+      <div class="gridedu">
         <div class="gride">
-          <p class="date">2023</p>
+          <p class="date">JUL 2024</p>
+          <p class="tittle">
+            <a
+              href="https://toph.co/contests/training/rxbqtb6/standings"
+              target="_blank"
+            >
+              Inter University Programming Contest
+            </a>
+            <span> - CUSS</span>
+          </p>
+          <p class="details">
+            <strong>Ranked 20th (Team - IIUC_ZeroPlan)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in
+            the Divisional Programming Contest organized by the{" "}
+            <strong>Chittagong University Scientific Society.</strong>
+          </p>
+        </div>
+        <div class="gride">
+          <p class="date">DEC 2024</p>
           <p class="tittle">
             ICPC Preliminary Contest <span>- ICPC</span>
           </p>
           <p class="details">
-            Participated with amazing teammate
+            <strong>Ranked 288th (Team - IIUC_ZeroPlan)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in
+            the Regional Programming Contest of the{" "}
+            <strong>
+              International Collegiate Programming Contest (ICPC).
+            </strong>
+          </p>
+        </div>
+        <div class="gride">
+          <p class="date">MAR 2024</p>
+          <p class="tittle">
+            NCPC Preliminary Contest <span>- JU</span>
+          </p>
+          <p class="details">
+            <strong>Ranked 241th (Team - IIUC_Groot)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in
+            the Natioal Programming Contest organized by the{" "}
+            <strong>Jahangirnagar University.</strong>
+          </p>
+        </div>
+        <div class="gride">
+          <p class="date">JAN 2024</p>
+          <p class="tittle">
+            PU CSE IT FEST <span>- PU</span>
+          </p>
+          <p class="details">
+            <strong>Ranked 30th (Team - IIUC_Groot)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
+            the Divisional Programming Contest organized by the{" "}
+            <strong>Premier University.</strong>
+          </p>
+        </div>
+        <div class="gride">
+          <p class="date">OCT 2023</p>
+          <p class="tittle">
+            ICPC Preliminary Contest 2023 <span>- ICPC</span>
+          </p>
+          <p class="details">
+            Participated <strong>(Team - IIUC_Groot)</strong> with amazing
+            teammate
             <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in the
             Regional Programming Contest of the{" "}
             <strong>
@@ -192,23 +202,100 @@ const Resume = () => {
         <div class="gride">
           <p class="date">SEP 2023</p>
           <p class="tittle">
-            Inter University Programming Contest<span>- IIUC</span>
+            <a
+              href="https://toph.co/c/15th-iiuc-inter-university-2023/standings"
+              target="_blank"
+            >
+              15th Inter University Programming Contest
+            </a>
+            <span> - IIUC</span>
           </p>
           <p class="details">
-            <strong>Rank (MAX)ed 35</strong> with amazing teammate{" "}
-            <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in the
-            Divisional Programming Contest organized by the{" "}
+            <strong>Ranked 35th (Team - IIUC_Synthroid)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
+            the Divisional Programming Contest organized by the{" "}
             <strong>IIUC Computer Club & IIUCCPS.</strong>
           </p>
         </div>
         <div class="gride">
-          <p class="date">2022</p>
+          <p class="date">SEP 2023</p>
           <p class="tittle">
-            ICPC Preliminary Contest <span>- ICPC</span>
+            <a
+              href="https://toph.co/contests/training/wf44wz8/standings"
+              target="_blank"
+            >
+              Intra University Programming Contest Aut'23 (Male)
+            </a>
+            <span> - IIUC</span>
           </p>
           <p class="details">
-            <strong>Rank (MAX)ed 801</strong> with amazing teammate{" "}
-            <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in the
+            <strong>Ranked 19th (Team - IIUC_Synthroid)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
+            the Intra University Programming Contest organized by the{" "}
+            <strong>International Islamic University Chittagong (IIUC).</strong>
+          </p>
+        </div>
+        <div class="gride">
+          <p class="date">MAR 2023</p>
+          <p class="tittle">
+            ICPC Preliminary Contest 2022 <span>- ICPC</span>
+          </p>
+          <p class="details">
+            <strong>Ranked 801th (Team - IIUC_Synthroid)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
+            the Regional Programming Contest of the{" "}
+            <strong>
+              International Collegiate Programming Contest (ICPC).
+            </strong>
+          </p>
+        </div>
+        <div class="gride">
+          <p class="date">NOV 2022</p>
+          <p class="tittle">
+            <a
+              href="https://toph.co/contests/training/x2c4mne/standings"
+              target="_blank"
+            >
+              Intra University Programming Contest
+            </a>
+            <span> - IIUCCPS</span>
+          </p>
+          <p class="details">
+            <strong>Ranked 12th (Team - IIUC_Synthroid)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
+            the Intra University Programming Contest of the{" "}
+            <strong>
+              International Islamic University Chittagong Competitive
+              Programming Society.
+            </strong>
+          </p>
+        </div>
+        <div class="gride">
+          <p class="date">OCT 2022</p>
+          <p class="tittle">
+            <a
+              href="https://toph.co/contests/training/mf23yf4/standings"
+              target="_blank"
+            >
+              Intra University Programming Contest (Junior)
+            </a>
+            <span> - IIUC</span>
+          </p>
+          <p class="details">
+            <strong>Ranked 4th (Team - IIUC_Synthroid)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
+            the Intra University Programming Contest of the{" "}
+            <strong>International Islamic University Chittagong (IIUC).</strong>
+          </p>
+        </div>
+        <div class="gride">
+          <p class="date">SEP 2022</p>
+          <p class="tittle">
+            ICPC Preliminary Contest 2021 <span>- ICPC</span>
+          </p>
+          <p class="details">
+            <strong>Ranked 361th (Team - IIUC_Synthroid)</strong> with amazing
+            teammate <strong>Thosifur Rhaman and Abrar Yasir</strong> in the
             Regional Programming Contest of the{" "}
             <strong>
               International Collegiate Programming Contest (ICPC).
@@ -216,28 +303,33 @@ const Resume = () => {
           </p>
         </div>
         <div class="gride">
-          <p class="date">2022</p>
+          <p class="date">AUG 2022</p>
           <p class="tittle">
-            CSE FEST Programming Contest <span>- IIUC</span>
+            <a
+              href="https://toph.co/contests/training/ctjhhnj/standings"
+              target="_blank"
+            >
+              Intra University Programming Contest Aut'22 (Junior/Solo)
+            </a>
+            <span> - IIUCCPS</span>
           </p>
           <p class="details">
-            <strong>Rank (MAX)ed 15</strong> in the CSE FEST Solo Programming
-            Contest organized by the{" "}
-            <strong>IIUC Computer Club & IIUCCPS.</strong>
+            <strong>Ranked 5th</strong> in the Solo Programming Contest
+            organized by the{" "}
+            <strong>
+              International Islamic University Chittagong Competitive
+              Programming Society.
+            </strong>
           </p>
         </div>
         <div class="gride">
-          <p class="date">2021</p>
+          <p class="date">AUG 2022</p>
           <p class="tittle">
-            ICPC Preliminary Contest <span>- ICPC</span>
+            CSE FEST Programming Contest (Solo)<span> - IIUC</span>
           </p>
           <p class="details">
-            <strong>Rank (MAX)ed 361</strong> with amazing teammate{" "}
-            <strong>Thosifur Rhaman and Abrar Yasir</strong> in the Regional
-            Programming Contest of the{" "}
-            <strong>
-              International Collegiate Programming Contest (ICPC).
-            </strong>
+            <strong>Ranked 15th</strong> in the CSE FEST Programming Contest
+            organized by the <strong>IIUC Computer Club & IIUCCPS.</strong>
           </p>
         </div>
       </div>
