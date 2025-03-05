@@ -140,7 +140,7 @@ const Project = () => {
             <p>This is a Sleep Health Prediction Website.</p>
             <div class="link_icon">
               {/* Live demo */}
-              <a href="" target="_blank">
+              <a href="#" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="1em"
@@ -176,7 +176,7 @@ const Project = () => {
             <p>This is a website for Idea Submission Blog.</p>
             <div class="link_icon">
               {/* Live demo */}
-              <a href="" target="_blank">
+              <a href="#" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="1em"
@@ -210,7 +210,7 @@ const Project = () => {
             <p>This is a website for Background Remover.</p>
             <div class="link_icon">
               {/* Live demo */}
-              <a href="" target="_blank">
+              <a href="#" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="1em"
