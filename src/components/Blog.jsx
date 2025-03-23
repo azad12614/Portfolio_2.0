@@ -56,7 +56,7 @@ const Blog = () => {
                 <a
                   href={
                     index === 0
-                      ? "https://acoderbro.blogspot.com/2024/04/10programminglanguages.html"
+                      ? "https://acoderbro.blogspot.com/2025/01/programming-languages.html"
                       : index === 1
                       ? "https://acoderbro.blogspot.com/2024/05/ai-for-coders.html"
                       : index === 2
@@ -75,7 +75,7 @@ const Blog = () => {
                 </a>
                 <p>
                   {index === 0
-                    ? "The Top 10 Programming Languages To Learn In 2024"
+                    ? "The Top 10 Programming Languages To Learn In 2025"
                     : index === 1
                     ? "Essential Tools and Libraries to Supercharge Your Workflow"
                     : index === 2
