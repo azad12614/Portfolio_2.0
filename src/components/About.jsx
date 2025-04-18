@@ -36,7 +36,7 @@ const About = () => {
         </div>
         <div class="details">
           🌱 I’m learning Python, Matplotlib, NumPy, Pandas, Sci-Kit-Learn, and
-          TensorFlow for my Machine Learning Project.
+          TensorFlow for my <p class="highlight">Machine Learning</p> Project.
         </div>
         {/* <div class="details">
           🌱 I'm currently focused on expanding my front-end skills with{" "}
