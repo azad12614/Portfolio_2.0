@@ -23,7 +23,7 @@ const Resume = () => {
           <div class="info_value">
             <h3>1313</h3>
             <h3>Pupil</h3>
-            <h3>1145+</h3>
+            <h3>1150+</h3>
           </div>
         </div>
         <div class="gridi">
