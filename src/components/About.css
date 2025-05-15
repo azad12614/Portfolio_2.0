@@ -11,7 +11,7 @@
   }
 }
 
-.about {
+.about-section {
   padding-top: 7rem;
   animation: fadeInUp 1s ease-out forwards;
   backdrop-filter: blur(7.5px);
@@ -69,7 +69,7 @@
 }
 
 @media (max-width: 520px) {
-  .about {
+  .about-section {
     padding-top: 5rem;
   }
 

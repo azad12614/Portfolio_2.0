@@ -4,12 +4,15 @@ import Skills from "../components/Skills";
 
 const Resume = () => {
   return (
-    <div class="resume" id="Resume">
-      <h2 class="header">📊 RESUME</h2>
-      <p class="title">“Living, learning, & leveling up one day at a time.”</p>
+    <section className="resume" id="Resume">
+      <h2 className="header">📊 RESUME</h2>
+      <p className="title">
+        "Passionate about solving real-world problems through code,
+        collaboration, and continuous learning."
+      </p>
 
       <h4>CODING PROFILES 🎯</h4>
-      <div class="gridinfo">
+      <div className="gridinfo">
         {[
           {
             link: "https://codeforces.com/profile/azad12614",
@@ -40,18 +43,18 @@ const Resume = () => {
             solve: "70+",
           },
         ].map((item) => (
-          <div class="gridi">
+          <div className="gridi">
             <h4>
               <a href={item.link} target="_blank">
                 {item.name}
               </a>
             </h4>
-            <div class="info_title">
+            <div className="info_title">
               <h3>Rating (MAX)</h3>
               <h3>Rank (MAX)</h3>
               <h3>Problem Solved</h3>
             </div>
-            <div class="info_value">
+            <div className="info_value">
               <h3>{item.rating}</h3>
               <h3>{item.rank}</h3>
               <h3>{item.solve}</h3>
@@ -64,7 +67,7 @@ const Resume = () => {
       <Skills></Skills>
 
       <h4>ACADEMIC ENGAGEMENTS 💼</h4>
-      <div class="gridedu">
+      <div className="gridedu">
         {[
           {
             date: "JAN 2025 - PRESENT",
@@ -104,10 +107,10 @@ const Resume = () => {
       </div>
 
       <h4>PROGRAMMING EXPERIENCES 🏆</h4>
-      <div class="gridedu">
-        <div class="gride">
-          <p class="date">JUL 2024</p>
-          <p class="tittle">
+      <div className="gridedu">
+        <div className="gride">
+          <p className="date">JUL 2024</p>
+          <p className="tittle">
             <a
               href="https://toph.co/contests/training/rxbqtb6/standings"
               target="_blank"
@@ -116,19 +119,19 @@ const Resume = () => {
             </a>
             <span> - CUSS</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 20th (Team - IIUC_ZeroPlan)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in
             the Divisional Programming Contest organized by the{" "}
             <strong>Chittagong University Scientific Society.</strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">DEC 2024</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">DEC 2024</p>
+          <p className="tittle">
             ICPC Preliminary Contest <span>- ICPC</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 288th (Team - IIUC_ZeroPlan)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in
             the Regional Programming Contest of the{" "}
@@ -137,36 +140,36 @@ const Resume = () => {
             </strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">MAR 2024</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">MAR 2024</p>
+          <p className="tittle">
             NCPC Preliminary Contest <span>- JU</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 241th (Team - IIUC_Groot)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Shehabudowlla Rakib</strong> in
             the Natioal Programming Contest organized by the{" "}
             <strong>Jahangirnagar University.</strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">JAN 2024</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">JAN 2024</p>
+          <p className="tittle">
             PU CSE IT FEST <span>- PU</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 30th (Team - IIUC_Groot)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
             the Divisional Programming Contest organized by the{" "}
             <strong>Premier University.</strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">OCT 2023</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">OCT 2023</p>
+          <p className="tittle">
             ICPC Preliminary Contest 2023 <span>- ICPC</span>
           </p>
-          <p class="details">
+          <p className="details">
             Participated <strong>(Team - IIUC_Groot)</strong> with amazing
             teammate
             <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in the
@@ -176,9 +179,9 @@ const Resume = () => {
             </strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">SEP 2023</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">SEP 2023</p>
+          <p className="tittle">
             <a
               href="https://toph.co/c/15th-iiuc-inter-university-2023/standings"
               target="_blank"
@@ -187,16 +190,16 @@ const Resume = () => {
             </a>
             <span> - IIUC</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 35th (Team - IIUC_Synthroid)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
             the Divisional Programming Contest organized by the{" "}
             <strong>IIUC Computer Club & IIUCCPS.</strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">SEP 2023</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">SEP 2023</p>
+          <p className="tittle">
             <a
               href="https://toph.co/contests/training/wf44wz8/standings"
               target="_blank"
@@ -205,19 +208,19 @@ const Resume = () => {
             </a>
             <span> - IIUC</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 19th (Team - IIUC_Synthroid)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
             the Intra University Programming Contest organized by the{" "}
             <strong>International Islamic University Chittagong (IIUC).</strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">MAR 2023</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">MAR 2023</p>
+          <p className="tittle">
             ICPC Preliminary Contest 2022 <span>- ICPC</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 801th (Team - IIUC_Synthroid)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
             the Regional Programming Contest of the{" "}
@@ -226,9 +229,9 @@ const Resume = () => {
             </strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">NOV 2022</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">NOV 2022</p>
+          <p className="tittle">
             <a
               href="https://toph.co/contests/training/x2c4mne/standings"
               target="_blank"
@@ -237,7 +240,7 @@ const Resume = () => {
             </a>
             <span> - IIUCCPS</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 12th (Team - IIUC_Synthroid)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
             the Intra University Programming Contest of the{" "}
@@ -247,9 +250,9 @@ const Resume = () => {
             </strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">OCT 2022</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">OCT 2022</p>
+          <p className="tittle">
             <a
               href="https://toph.co/contests/training/mf23yf4/standings"
               target="_blank"
@@ -258,19 +261,19 @@ const Resume = () => {
             </a>
             <span> - IIUC</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 4th (Team - IIUC_Synthroid)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Baizid Kamrurzaman</strong> in
             the Intra University Programming Contest of the{" "}
             <strong>International Islamic University Chittagong (IIUC).</strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">SEP 2022</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">SEP 2022</p>
+          <p className="tittle">
             ICPC Preliminary Contest 2021 <span>- ICPC</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 361th (Team - IIUC_Synthroid)</strong> with amazing
             teammate <strong>Thosifur Rhaman and Abrar Yasir</strong> in the
             Regional Programming Contest of the{" "}
@@ -279,9 +282,9 @@ const Resume = () => {
             </strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">AUG 2022</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">AUG 2022</p>
+          <p className="tittle">
             <a
               href="https://toph.co/contests/training/ctjhhnj/standings"
               target="_blank"
@@ -290,7 +293,7 @@ const Resume = () => {
             </a>
             <span> - IIUCCPS</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 5th</strong> in the Solo Programming Contest
             organized by the{" "}
             <strong>
@@ -299,12 +302,12 @@ const Resume = () => {
             </strong>
           </p>
         </div>
-        <div class="gride">
-          <p class="date">AUG 2022</p>
-          <p class="tittle">
+        <div className="gride">
+          <p className="date">AUG 2022</p>
+          <p className="tittle">
             CSE FEST Programming Contest (Solo)<span> - IIUC</span>
           </p>
-          <p class="details">
+          <p className="details">
             <strong>Ranked 15th</strong> in the CSE FEST Programming Contest
             organized by the <strong>IIUC Computer Club & IIUCCPS.</strong>
           </p>
@@ -312,7 +315,7 @@ const Resume = () => {
       </div>
 
       <h4>EDUCATION 🎓</h4>
-      <div class="gridedu">
+      <div className="gridedu">
         {[
           {
             date: "Jul 2021 - Jul 2025",
@@ -370,7 +373,7 @@ const Resume = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

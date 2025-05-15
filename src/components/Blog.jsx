@@ -50,7 +50,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="blog" id="Blog">
+    <div className="blog-section" id="Blog">
       <h2 className="header">✍️ BLOG</h2>
       <p className="title">
         “Software is really about humanity, that it’s really about helping

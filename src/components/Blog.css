@@ -9,19 +9,19 @@
   }
 }
 
-.blog {
+.blog-section {
   padding-top: 6rem;
   animation: Blog 0.8s ease-in-out;
 }
 
-.blog .arrow {
+.blog-section .arrow {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
 }
 
-.blog .arrow .btn {
+.blog-section .arrow .btn {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -34,12 +34,12 @@
   transition: all 0.2s ease-in-out;
 }
 
-.blog .arrow .btn:hover {
+.blog-section .arrow .btn:hover {
   background-color: var(--hoverBg);
   color: var(--hoverText);
 }
 
-.blog .arrow .btn span {
+.blog-section .arrow .btn span {
   font-size: 28px;
 }
 

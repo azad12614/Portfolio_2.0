@@ -1,64 +1,85 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import DarkMode from "./DarkMode.jsx";
 import "./Navbar.css";
 
+const sections = ["Hero", "About", "Resume", "Project", "Blog", "Contact"];
+
 const Navbar = () => {
-  const [showMediaIcons, setShowMediaIcons] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [activeSection, setActiveSection] = useState("Hero");
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("In view:", entry.target.id); // 🐞 debug here
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    sections.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <>
-      <nav className="main-nav">
-        {/* 1st logo part  */}
-        <div className="logo">
-          <Link to='/'>
-            AZAD
-          </Link>
-        </div>
+    <nav className="main-nav">
+      {/* Logo */}
+      <div className="logo">
+        <a href="/">AZAD</a>
+      </div>
 
-        {/* 2nd Menu part  */}
-        <div
-          className={
-            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-          }>
-          <ul>
-            <li>
-              <a href="#Hero" data-text="&nbsp;Home&nbsp;">&nbsp;Home&nbsp;</a>
+      {/* Menu links */}
+      <div
+        className={showMobileMenu ? "menu-link mobile-menu-link" : "menu-link"}
+      >
+        <ul>
+          {sections.map((section) => (
+            <li key={section}>
+              <a
+                href={`#${section}`}
+                data-text={` ${section} `}
+                className={activeSection === section ? "active" : ""}
+              >
+                &nbsp;{section}&nbsp;
+              </a>
             </li>
-            <li>
-              <a href="#About" data-text="&nbsp;About&nbsp;">&nbsp;About&nbsp;</a>
-            </li>
-            <li>
-              <a href="#Resume" data-text="&nbsp;Resume&nbsp;">&nbsp;Resume&nbsp;</a>
-            </li>
-            <li>
-              <a href="#Project" data-text="&nbsp;Project&nbsp;">&nbsp;Project&nbsp;</a>
-            </li>
-            <li>
-              <a href="#Blog" data-text="&nbsp;Blog&nbsp;">&nbsp;Blog&nbsp;</a>
-            </li>
-            <li>
-              <a href="#Contact" data-text="&nbsp;Contact&nbsp;">&nbsp;Contact&nbsp;</a>
-            </li>
-          </ul>
-        </div>
+          ))}
+        </ul>
+      </div>
 
-        {/* 3rd Menu part */}
-        <div className="menu-3">
-          {/* hamburger menu start  */}
-          <div className="hamburger-menu">
-            <div className="pointer" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <GiHamburgerMenu />
-            </div>
-          </div>
-
-          {/* theme */}
-          <div className="theme_box">
-            <DarkMode></DarkMode>
+      {/* Right Menu: Hamburger + Theme Toggle */}
+      <div className="menu-3">
+        <div className="hamburger-menu">
+          <div
+            className="pointer"
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+          >
+            <GiHamburgerMenu />
           </div>
         </div>
-      </nav >
-    </>
+
+        <div className="theme_box">
+          <DarkMode />
+        </div>
+      </div>
+    </nav>
   );
 };
 

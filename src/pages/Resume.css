@@ -76,29 +76,7 @@
 .gridi h4:hover {
   text-decoration: wavy underline var(--title) 2px;
 }
-/*
-.gridi h3 {
-  font-family: "Jost", sans-serif;
-  font-size: 2rem;
-  font-weight: bolder;
-  color: var(--number);
-}
 
-.gridi h2 {
-  font-family: "Jost", sans-serif;
-  font-size: 2rem;
-  font-weight: bolder;
-  color: var(--text);
-}
-
-.gridi p {
-  font-family: "Permanent Marker", cursive;
-  font-size: 2rem;
-  font-style: italic;
-  color: var(--number);
-  margin-top: -0.5rem;
-}
-*/
 .gridi .info_title {
   display: grid;
   grid-template-columns: 1.25fr 1fr 1.75fr;
