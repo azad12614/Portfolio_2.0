@@ -27,8 +27,8 @@ const Hero = () => {
           </div>
           <div class="hero-img-box">
             <div className="wrapper">
-              <img src={avater} alt="" className="hero-img" />
-              <img src={logo} alt="" className="hero-img" />
+              <img loading="lazy" src={avater} alt="" className="hero-img" />
+              <img loading="lazy" src={logo} alt="" className="hero-img" />
             </div>
           </div>
         </div>

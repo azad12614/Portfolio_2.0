@@ -32,9 +32,9 @@ const Skills = () => {
   return (
     <>
       <div class="skills">
-        {skillsData.map((skill, index) => (
+        {skillsData.map((skill) => (
           <div class="lang">
-            <img src={skill.image} alt={skill.name} />
+            <img loading="lazy" src={skill.image} alt={skill.name} />
             <h1>{skill.name}</h1>
           </div>
         ))}

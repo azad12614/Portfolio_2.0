@@ -107,7 +107,7 @@ function Contact() {
                 class="contact-icon"
               >
                 <li>
-                  <img src={git} />
+                  <img loading="lazy" src={git} />
                 </li>
               </a>
               <a
@@ -116,7 +116,7 @@ function Contact() {
                 class="contact-icon"
               >
                 <li>
-                  <img src={ln} />
+                  <img loading="lazy" src={ln} />
                 </li>
               </a>
               <a
@@ -125,7 +125,7 @@ function Contact() {
                 class="contact-icon"
               >
                 <li>
-                  <img src={fb} />
+                  <img loading="lazy" src={fb} />
                 </li>
               </a>
             </ul>

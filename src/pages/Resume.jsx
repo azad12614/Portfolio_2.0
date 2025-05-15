@@ -7,125 +7,102 @@ const Resume = () => {
     <div class="resume" id="Resume">
       <h2 class="header">📊 RESUME</h2>
       <p class="title">“Living, learning, & leveling up one day at a time.”</p>
+
       <h4>CODING PROFILES 🎯</h4>
       <div class="gridinfo">
-        <div class="gridi">
-          <h4>
-            <a href="https://codeforces.com/profile/azad12614" target="_blank">
-              Codeforces
-            </a>
-          </h4>
-          <div class="info_title">
-            <h3>Rating (MAX)</h3>
-            <h3>Rank (MAX)</h3>
-            <h3>Problem Solved</h3>
+        {[
+          {
+            link: "https://codeforces.com/profile/azad12614",
+            name: "Codeforces",
+            rating: "1313",
+            rank: "Pupil",
+            solve: "1150+",
+          },
+          {
+            link: "https://www.codechef.com/users/azad12614",
+            name: "CodeChef",
+            rating: "1625",
+            rank: "3 Star",
+            solve: "100+",
+          },
+          {
+            link: "https://leetcode.com/u/azad12614/",
+            name: "Leetcode",
+            rating: "1573",
+            rank: "Top 27%",
+            solve: "90+",
+          },
+          {
+            link: "https://atcoder.jp/users/azad12614",
+            name: "Atcoder",
+            rating: "316",
+            rank: "37K+th",
+            solve: "70+",
+          },
+        ].map((item) => (
+          <div class="gridi">
+            <h4>
+              <a href={item.link} target="_blank">
+                {item.name}
+              </a>
+            </h4>
+            <div class="info_title">
+              <h3>Rating (MAX)</h3>
+              <h3>Rank (MAX)</h3>
+              <h3>Problem Solved</h3>
+            </div>
+            <div class="info_value">
+              <h3>{item.rating}</h3>
+              <h3>{item.rank}</h3>
+              <h3>{item.solve}</h3>
+            </div>
           </div>
-          <div class="info_value">
-            <h3>1313</h3>
-            <h3>Pupil</h3>
-            <h3>1150+</h3>
-          </div>
-        </div>
-        <div class="gridi">
-          <h4>
-            <a href="https://www.codechef.com/users/azad12614" target="_blank">
-              CodeChef
-            </a>
-          </h4>
-          <div class="info_title">
-            <h3>Rating (MAX)</h3>
-            <h3>Rank (MAX)</h3>
-            <h3>Problem Solved</h3>
-          </div>
-          <div class="info_value">
-            <h3>1625</h3>
-            <h3>3 Star</h3>
-            <h3>100+</h3>
-          </div>
-        </div>
-        <div class="gridi">
-          <h4>
-            <a href="https://leetcode.com/u/azad12614/" target="_blank">
-              Leetcode
-            </a>
-          </h4>
-          <div class="info_title">
-            <h3>Rating (MAX)</h3>
-            <h3>Rank (MAX)</h3>
-            <h3>Problem Solved</h3>
-          </div>
-          <div class="info_value">
-            <h3>1573</h3>
-            <h3>Top 27%</h3>
-            <h3>90+</h3>
-          </div>
-        </div>
-        <div class="gridi">
-          <h4>
-            <a href="https://atcoder.jp/users/azad12614" target="_blank">
-              Atcoder
-            </a>
-          </h4>
-          <div class="info_title">
-            <h3>Rating (MAX)</h3>
-            <h3>Rank (MAX)</h3>
-            <h3>Problem Solved</h3>
-          </div>
-          <div class="info_value">
-            <h3>316</h3>
-            <h3>37K+th</h3>
-            <h3>70+</h3>
-          </div>
-        </div>
+        ))}
       </div>
+
       <h4>MY SKILLS 👩‍💻</h4>
       <Skills></Skills>
+
       <h4>ACADEMIC ENGAGEMENTS 💼</h4>
       <div class="gridedu">
-        <div class="gride">
-          <p class="date">JAN 2025 - PRESENT</p>
-          <p class="tittle">
-            Bootcamp Co-ordinator <span>- IIUCCPS</span>
-          </p>
-          <p class="details">
-            Serving as a <strong>Bootcamp Co-ordinator</strong> for the
-            Competitive Programming Society at{" "}
-            <strong>International Islamic University Chittagong.</strong>
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">JUL 2024 - PRESENT</p>
-          <p class="tittle">
-            Teaching Assistant <span>- IIUC</span>
-          </p>
-          <p class="details">
-            Serving as a <strong>Teaching Assistant</strong> at{" "}
-            <strong>International Islamic University Chittagong.</strong>
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">JUL 2023 - JAN 2025</p>
-          <p class="tittle">
-            MENTOR <span>- IIUCCPS</span>
-          </p>
-          <p class="details">
-            Serving as a <strong>Mentor</strong> for the Competitive Programming
-            Society at{" "}
-            <strong>International Islamic University Chittagong.</strong>
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">JUL 2023 - DEC 2023</p>
-          <p class="tittle">
-            TRAINER <span>- IIUCCPS</span>
-          </p>
-          <p class="details">
-            Serving as a <strong>Trainer</strong> for the Competitive
-            Programming Society at{" "}
-            <strong>International Islamic University Chittagong.</strong>
-          </p>
-        </div>
+        {[
+          {
+            date: "JAN 2025 - PRESENT",
+            title: "Bootcamp Co-ordinator",
+            org: "IIUCCPS",
+            desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
+          },
+          {
+            date: "JUL 2024 - PRESENT",
+            title: "Teaching Assistant",
+            org: "IIUC",
+            desc: "Serving as a Teaching Assistant at International Islamic University Chittagong.",
+          },
+          {
+            date: "JUL 2023 - JAN 2025",
+            title: "Mentor",
+            org: "IIUCCPS",
+            desc: "Served as a Mentor for the Competitive Programming Society at International Islamic University Chittagong.",
+          },
+          {
+            date: "JUL 2023 - DEC 2023",
+            title: "Trainer",
+            org: "IIUCCPS",
+            desc: "Served as a Trainer for the Competitive Programming Society at International Islamic University Chittagong.",
+          },
+        ].map((item, idx) => (
+          <div className="gride" key={idx}>
+            <p className="date">{item.date}</p>
+            <p className="tittle">
+              {item.title} <span>- {item.org}</span>
+            </p>
+            <p className="details">
+              <strong>{item.desc}</strong>
+            </p>
+          </div>
+        ))}
       </div>
+
       <h4>PROGRAMMING EXPERIENCES 🏆</h4>
       <div class="gridedu">
         <div class="gride">
@@ -333,80 +310,65 @@ const Resume = () => {
           </p>
         </div>
       </div>
+
       <h4>EDUCATION 🎓</h4>
       <div class="gridedu">
-        <div class="gride">
-          <p class="date">Jul 2021 - Jul 2025</p>
-          <p class="tittle">
-            B.Sc. DEGREE{" "}
-            <span>
-              - <a href="https://www.iiuc.ac.bd/">IIUC</a>
-            </span>
-          </p>
-          <p class="details">
-            I will get my degree from International Islamic University
-            Chittagong in 2025.
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">Apr 2018 - Apr 2020</p>
-          <p class="tittle">
-            H.S.C. Exam{" "}
-            <span>
-              -{" "}
-              <a href="https://www.idc.w3schoolbd.org/">
-                Islamia Degree College
-              </a>
-            </span>
-          </p>
-          <p class="details">
-            I registered for the Higher Secondary Certificate Exam at Islamia
-            Degree College.
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">Jan 2015 - Feb 2018</p>
-          <p class="tittle">
-            J.S.C. & S.S.C. Exam{" "}
-            <span>
-              - <a href="http://www.kascc.edu.bd/">Kazem Ali High School</a>
-            </span>
-          </p>
-          <p class="details">
-            I took the J.S.C. & S.S.C. Exam from Kazem Ali High School.
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">Jan 2013 - Dec 2014</p>
-          <p class="tittle">
-            7th Class{" "}
-            <span>
-              -{" "}
-              <a href="https://www.facebook.com/Harualchari.h.school/">
-                Harualchari High School
-              </a>
-            </span>
-          </p>
-          <p class="details">
-            I studied in Harualchari High School from 6th class to 7th class.
-          </p>
-        </div>
-        <div class="gride">
-          <p class="date">Jan 2008 - Dec 2012</p>
-          <p class="tittle">
-            P.S.C.{" "}
-            <span>
-              -{" "}
-              <a href="https://www.facebook.com/people/%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0-%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A7%9F%E0%A6%BE%E0%A6%B2%E0%A6%9B%E0%A7%9C%E0%A6%BF-%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A5%E0%A6%AE%E0%A6%BF%E0%A6%95-%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F/100057411851391/">
-                North Harualchari Govt. Primary School
-              </a>
-            </span>
-          </p>
-          <p class="details">
-            I took the P.S.C. Exam from N.H.G.P. School and studied from 1st
-            class to 5th class.
-          </p>
-        </div>
+        {[
+          {
+            date: "Jul 2021 - Jul 2025",
+            title: "B.Sc. DEGREE",
+            link: "https://www.iiuc.ac.bd/",
+            school: "IIUC",
+            details:
+              "I will get my degree from International Islamic University Chittagong in 2025.",
+          },
+          {
+            date: "Apr 2018 - Apr 2020",
+            title: "H.S.C. Exam",
+            link: "https://www.idc.w3schoolbd.org/",
+            school: "Islamia Degree College",
+            details:
+              "I registered for the Higher Secondary Certificate Exam at Islamia Degree College.",
+          },
+          {
+            date: "Jan 2015 - Feb 2018",
+            title: "J.S.C. & S.S.C. Exam",
+            link: "http://www.kascc.edu.bd/",
+            school: "Kazem Ali High School",
+            details:
+              "I took the J.S.C. & S.S.C. Exam from Kazem Ali High School.",
+          },
+          {
+            date: "Jan 2013 - Dec 2014",
+            title: "7th Class",
+            link: "https://www.facebook.com/Harualchari.h.school/",
+            school: "Harualchari High School",
+            details:
+              "I studied in Harualchari High School from 6th class to 7th class.",
+          },
+          {
+            date: "Jan 2008 - Dec 2012",
+            title: "P.S.C.",
+            link: "https://www.facebook.com/people/%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0-%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A7%9F%E0%A6%BE%E0%A6%B2%E0%A6%9B%E0%A7%9C%E0%A6%BF-%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A5%E0%A6%AE%E0%A6%BF%E0%A6%95-%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F/100057411851391/",
+            school: "North Harualchari Govt. Primary School",
+            details:
+              "I took the P.S.C. Exam from N.H.G.P. School and studied from 1st class to 5th class.",
+          },
+        ].map(({ date, title, link, school, details }, index) => (
+          <div className="gride" key={index}>
+            <p className="date">{date}</p>
+            <p className="tittle">
+              {title}{" "}
+              <span>
+                -{" "}
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  {school}
+                </a>
+              </span>
+            </p>
+            <p className="details">{details}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

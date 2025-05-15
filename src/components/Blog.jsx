@@ -70,7 +70,12 @@ const Blog = () => {
               </a>
               <p>{item.desc}</p>
             </div>
-            <img className="blogImg" src={item.img} alt={item.title} />
+            <img
+              loading="lazy"
+              className="blogImg"
+              src={item.img}
+              alt={item.title}
+            />
           </div>
         ))}
       </div>
