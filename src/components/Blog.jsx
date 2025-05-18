@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "./Blog.css";
 
 import Top from "../assets/10.jpg";
-import AI from "../assets/AI.png";
+import AI from "../assets/AI.jpg";
 import Copyleaks from "../assets/Copyleaks.png";
 import ML from "../assets/ML.png";
 

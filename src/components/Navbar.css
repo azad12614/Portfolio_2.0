@@ -1,113 +1,93 @@
-/* ----------- navbar style start ----------- */
+/* ======== Navbar Global Style ======== */
 .main-nav {
   position: fixed;
-  display: grid;
-  /* grid-template-columns: 5rem 1.5fr 5fr 1.5fr 5rem; */
-  grid-template-columns: 2rem 1.5fr 5fr 1fr 2rem;
-  width: 798px;
-  height: 5rem;
-  top: 9px;
+  top: 0.5rem;
   left: 50%;
-  transform: translate(-50%, 0%);
-  align-content: center;
-  backdrop-filter: blur(10px) saturate(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(180%);
-  /* background-color: var(--nav); */
-  border-radius: 5rem;
-  /* box-shadow: 0rem 0.5rem 1rem var(--text); */
-  z-index: 99;
-}
-
-/* ----------- logo part start ----------- */
-.logo {
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1000px;
+  height: 4.5rem;
   display: grid;
-  grid-column: 2/3;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: left;
-  color: var(--header);
+  padding: 0 1rem;
+  border-radius: 3rem;
+  background-color: var(--nav, rgba(36, 72, 85, 0.6));
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  z-index: 1000;
+  box-shadow: var(--border);
+}
+
+/* ======== Logo ======== */
+.logo a {
   font-family: "Saira Stencil One", sans-serif;
-  /* font-family: "Rubik Glitch", system-ui; */
-  /* font-family: "Kaushan Script", cursive; */
-  /* font-size: 3rem; */
-  font-size: 2.5rem;
-  text-shadow: var(--subHeader) 1px 1px, var(--subHeader) 2px 2px,
-    var(--subHeader) 3px 3px, var(--subHeader) 4px 4px, var(--subHeader) 5px 5px,
-    var(--subHeader) 6px 6px;
-  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  color: var(--header, #fbe9d0);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
-/* ----------- Main Link part start ----------- */
-.menu-link {
-  grid-column: 3/4;
-  font-family: "Cormorant Garamond", serif;
-  color: var(--text);
-  margin-block: auto;
-}
-
+/* ======== Menu Links ======== */
 .menu-link ul {
   display: flex;
-  justify-content: space-around;
-}
-
-.menu-link ul li {
-  /* font-size: 2rem; */
-  font-size: 1.5rem;
-  font-weight: bold;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-link ul li a {
-  text-transform: capitalize;
-  transition: 0.5s;
+  font-family: "Jost", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text, #d3d9d4);
+  text-decoration: none;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+.menu-link ul li a:hover,
+.menu-link ul li a.active {
+  color: var(--hoverText, #00bbdd);
 }
 
 .menu-link ul li a.active {
-  color: var(--hoverText);
-  border-bottom: 2px solid var(--hoverText);
-  font-weight: bold;
-  transition: 0.3s ease;
+  border-bottom: 2px solid var(--hoverText, #00bbdd);
 }
 
-.menu-link ul li:hover > a,
-.menu-link ul li:hover {
-  color: var(--text);
-  transform: translateZ(10px);
-  transition-duration: 1s;
-  text-shadow: 0 0 10px var(--text), 0 0 20px var(--highlight),
-    0 0 30px var(--text), 0 0 40px var(--highlight), 0 0 50px var(--text);
+/* ======== Right Side ======== */
+.menu-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
 }
 
-/* ----------- Social Media ----------- */
-
-.menu-3 {
-  grid-column: 4/5;
-  color: var(--text);
-  margin-block: auto;
-  margin-inline: auto;
-}
-
+/* ======== Hamburger Icon ======== */
 .hamburger-menu {
   display: none;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--text);
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.theme_box {
-  align-items: end;
-  background-color: var(--highlight);
-  border-radius: 50%;
+/* ======== Theme Toggle ======== */
+.theme-toggle {
+  display: flex;
+  align-items: center;
 }
 
-/* -----------responsive css style i-pad----------- */
-@media (max-width: 798px) {
-  .main-nav {
-    width: 98vw;
-    grid-template-columns: 3rem 1fr 1fr 0.5fr 3rem;
-    justify-items: left;
-  }
-
-  .logo {
-    font-size: 2rem;
+/* ======== Mobile Styles ======== */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
   }
 
   .menu-link {
@@ -117,124 +97,39 @@
   .mobile-menu-link {
     display: block;
     position: absolute;
-    top: 4.5rem;
+    top: 5rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 90vw;
-    background-color: var(--navMbl);
-    border: 2px solid var(--border);
+    background-color: var(--nav, rgba(16, 32, 48, 0.95));
+    border: 1px solid var(--border, #66fcf1);
     border-radius: 1rem;
-    box-shadow: 0 0 1.25rem var(--text);
-    backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter: blur(1rem);
-    z-index: 90;
-    padding: 1.5rem 1rem;
-    transition: all 0.5s ease-in-out;
-    animation: slideIn 0.4s ease-in;
-  }
-
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translate(-50%, -10%);
-    }
-    to {
-      opacity: 1;
-      transform: translate(-50%, 0%);
-    }
+    padding: 1.2rem 2rem;
+    z-index: 999;
+    box-shadow: 0 0 12px var(--highlight, #964734);
   }
 
   .mobile-menu-link ul {
-    display: flex;
     flex-direction: column;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .mobile-menu-link ul li {
-    width: 100%;
-    text-align: left;
+    gap: 1.2rem;
   }
 
   .mobile-menu-link ul li a {
-    font-size: 1.25rem;
-    color: var(--text);
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-decoration: none;
-    padding: 0.5rem;
+    font-size: 1.2rem;
     display: block;
-  }
-
-  .mobile-menu-link ul li a.active {
-    color: var(--btnText);
+    color: var(--text);
   }
 
   .mobile-menu-link ul li a:hover {
     color: var(--hoverText);
   }
-
-  .menu-3 {
-    grid-column: 4/5;
-    transition: all 1s linear;
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    justify-content: space-evenly;
-    column-gap: 1rem;
-  }
-
-  .hamburger-menu {
-    display: block;
-    font-size: 2rem;
-  }
 }
 
-/* -----------responsive css style Mobile----------- */
-@media (max-width: 520px) {
-  .main-nav {
-    width: 98vw;
-    height: 4rem;
-    padding-top: 0rem;
-    grid-template-columns: 1rem 1fr 1fr 1fr 1rem;
-    justify-items: center;
-    position: fixed;
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 1.5rem;
   }
 
-  .logo {
-    font-size: 1.8rem;
-  }
-
-  .menu-link ul li {
-    font-size: 1.25rem;
-  }
-
-  .mobile-menu-link {
-    grid-column: 2/5;
-  }
-
-  .mobile-menu-link ul li {
-    position: relative;
-    list-style: none;
-  }
-
-  .mobile-menu-link ul li a {
-    font-size: 2rem;
-    text-decoration: none;
-    letter-spacing: 2px;
-    line-height: 1rem;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--text);
-  }
-
-  .menu-3 {
-    grid-column: 4/5;
-  }
-
-  .hamburger-menu {
-    font-size: 1.8rem;
+  .menu-link ul li a {
+    font-size: 1rem;
   }
 }
