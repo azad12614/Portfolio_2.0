@@ -1,290 +1,287 @@
 #Contact {
-    padding-block: 5rem;
+  padding-block: 5rem;
 }
 
 .contact-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-    max-width: 840px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
 }
 
 /* Left contact page */
 
 .form-horizontal {
-    float: left;
-    max-width: 25rem;
-    font-family: 'Lato';
-    font-weight: 400;
+  float: left;
+  max-width: 25rem;
+  font-family: "Lato";
+  font-weight: 400;
 }
 
 .form-control,
 textarea {
-    max-width: 25rem;
-    background-color: #b9b9b9 !important;
-    border-color: transparent;
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-family: 'Lato';
-    font-size: medium;
-    border-radius: 10px;
-    margin-bottom: 0.5rem;
-    box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+  max-width: 25rem;
+  background-color: #b9b9b9 !important;
+  border-color: transparent;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: "Lato";
+  font-size: medium;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
 }
 
 .form-control:hover {
-    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+  box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
 }
 
 .send-button {
-    font-family: "Kaushan Script", cursive;
-    color: var(--btnText);
-    background-color: #b9b9b9 !important;
-    border-radius: 10px;
-    height: 2.5rem;
-    width: 25rem;
-    text-align: center;
-    align-content: center;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
-    cursor: url(../cursor2.png), pointer;
+  font-family: "Kaushan Script", cursive;
+  color: var(--btn-text);
+  background-color: #b9b9b9 !important;
+  border-radius: 10px;
+  height: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  align-content: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+  cursor: url(../cursor2.png), pointer;
 }
 
 .send-button:hover {
-    color: var(--hoverText);
-    background-color: var(--hoverBg) !important;
-    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
-    cursor: url(../cursor2.png), pointer;
+  color: var(--hoverText);
+  background-color: var(--hoverBg) !important;
+  box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+  cursor: url(../cursor2.png), pointer;
 }
 
 /* Begin Right Contact Page */
 .direct-contact-container {
-    max-width: 25rem;
-    margin-block: auto;
+  max-width: 25rem;
+  margin-block: auto;
 }
 
 /* Location, Phone, Email Section */
 .contact-list {
-    list-style-type: none;
-    color: var(--highlight);
-    text-align: center;
+  list-style-type: none;
+  color: var(--highlight);
+  text-align: center;
 }
 
 .list-item {
-    line-height: 3;
+  line-height: 3;
 }
 
 .contact-text a {
-    text-underline-offset: none;
-    transition-duration: 0.2s;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    font-style: oblique;
-    letter-spacing: 0.5px;
-    font-size: clamp(15px, 3vw, 20px);
+  text-underline-offset: none;
+  transition-duration: 0.2s;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bolder;
+  font-style: oblique;
+  letter-spacing: 0.5px;
+  font-size: clamp(15px, 3vw, 20px);
 }
 
 .contact-text a:hover {
-    color: var(--text);
-    text-decoration: none;
+  color: var(--text);
+  text-decoration: none;
 }
-
 
 /* Social Media Icons */
 .social-media-list {
-    position: relative;
-    font-size: 22px;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    cursor: url(../cursor2.png), pointer;
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  cursor: url(../cursor2.png), pointer;
 }
 
 .social-media-list a li {
-    position: relative;
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 10px 3px;
-    line-height: 60px;
-    border-radius: 50%;
-    color: var(--text);
-    background-color: var(--subBg);
-    padding: 10px;
-    transition: all .2s ease-in-out;
-    box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
-    cursor: url(../cursor2.png), pointer;
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: var(--text);
+  background-color: var(--subBg);
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+  cursor: url(../cursor2.png), pointer;
 }
 
 .social-media-list a li:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px var(--hoverBg);
-    transition: all .2s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px var(--hoverBg);
+  transition: all 0.2s ease-in-out;
 }
 
 .social-media-list a li:hover {
-    color: var(--hoverText);
-    background-color: var(--hoverBg);
-    box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
+  color: var(--hoverText);
+  background-color: var(--hoverBg);
+  box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
 }
 
 .social-media-list a li:hover:after {
-    opacity: 1;
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
 }
 
 .social-media-list a li img {
-    aspect-ratio: 1/1;
-    width: 40px;
-    border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 40px;
+  border-radius: 50%;
 }
 
 .social-media-list a li:hover img {
-    opacity: 1;
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
 }
 
 .copyright {
-    font: 200 14px 'Oswald', sans-serif;
-    color: var(--highlight);
-    letter-spacing: 1px;
-    text-align: center;
+  font: 200 14px "Oswald", sans-serif;
+  color: var(--highlight);
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 /* Begin Media Queries*/
 @media screen and (max-width: 850px) {
-    #Contact {
-        padding-top: 6rem;
-    }
+  #Contact {
+    padding-top: 6rem;
+  }
 
-    .contact-wrapper {
-        display: flex;
-        flex-direction: column;
-    }
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .direct-contact-container {
-        margin: 0 auto;
-    }
+  .direct-contact-container {
+    margin: 0 auto;
+  }
 
-    .direct-contact-container {
-        margin-block: 30px;
-        max-width: 300px;
-    }
+  .direct-contact-container {
+    margin-block: 30px;
+    max-width: 300px;
+  }
 
-    .social-media-list a li {
-        height: 60px;
-        width: 60px;
-        line-height: 60px;
-    }
+  .social-media-list a li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
 
-    .social-media-list a li:after {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-    }
+  .social-media-list a li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
 
-    .social-media-list a li img {
-        aspect-ratio: 1/1;
-        width: 30px;
-        margin: 15px;
-    }
+  .social-media-list a li img {
+    aspect-ratio: 1/1;
+    width: 30px;
+    margin: 15px;
+  }
 }
 
 @media screen and (max-width: 569px) {
-    #Contact {
-        padding-top: 5rem;
-    }
+  #Contact {
+    padding-top: 5rem;
+  }
 
-    .contact-wrapper {
-        align-items: center;
-        max-width: 840px;
-    }
+  .contact-wrapper {
+    align-items: center;
+    max-width: 840px;
+  }
 
-    .direct-contact-container,
-    .form-wrapper {
-        float: none;
-        margin: 0 auto;
-    }
+  .direct-contact-container,
+  .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }
 
-    .form-horizontal {
-        width: 96%;
-        margin-inline: 2%;
-    }
+  .form-horizontal {
+    width: 96%;
+    margin-inline: 2%;
+  }
 
-    .send-button {
-        width: 98%;
-        margin-inline: 1%;
-    }
+  .send-button {
+    width: 98%;
+    margin-inline: 1%;
+  }
 
-    .name,
-    .email,
-    textarea {
-        width: 280px;
-    }
+  .name,
+  .email,
+  textarea {
+    width: 280px;
+  }
 
-    .direct-contact-container {
-        margin-block: 30px;
-    }
+  .direct-contact-container {
+    margin-block: 30px;
+  }
 
+  .social-media-list {
+    left: 0;
+  }
 
-    .social-media-list {
-        left: 0;
-    }
+  .social-media-list a li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
 
-    .social-media-list a li {
-        height: 55px;
-        width: 55px;
-        line-height: 55px;
-        font-size: 2rem;
-    }
+  .social-media-list a li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
 
-    .social-media-list a li:after {
-        width: 55px;
-        height: 55px;
-        line-height: 55px;
-    }
-
-    .social-media-list a li img {
-        aspect-ratio: 1/1;
-        width: 50px;
-        margin: 1px;
-    }
-
+  .social-media-list a li img {
+    aspect-ratio: 1/1;
+    width: 50px;
+    margin: 1px;
+  }
 }
 
 @media screen and (max-width: 410px) {
-    #Contact {
-        padding-top: 4rem;
-    }
+  #Contact {
+    padding-top: 4rem;
+  }
 
-    .form-horizontal {
-        width: 96%;
-        margin-inline: 2%;
-    }
+  .form-horizontal {
+    width: 96%;
+    margin-inline: 2%;
+  }
 
-    .send-button {
-        width: 98%;
-        margin-inline: 1%;
-    }
+  .send-button {
+    width: 98%;
+    margin-inline: 1%;
+  }
 
-    .social-media-list a li img {
-        aspect-ratio: 1/1;
-        width: 58px;
-        margin: 1px;
-    }
+  .social-media-list a li img {
+    aspect-ratio: 1/1;
+    width: 58px;
+    margin: 1px;
+  }
 }

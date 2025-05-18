@@ -25,8 +25,9 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--subBg);
-  color: var(--header);
+  background: var(--btn-bg);
+  border: 2px solid var(--border);
+  color: var(--btn-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,8 +36,9 @@
 }
 
 .blog-section .arrow .btn:hover {
-  background-color: var(--hoverBg);
-  color: var(--hoverText);
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+  border: 2px solid var(--border-hover);
 }
 
 .blog-section .arrow .btn span {
@@ -55,7 +57,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  background: var(--subBg);
+  background: var(--bg-accent);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -66,6 +68,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  color: var(--text-heading);
 }
 
 .blogs .blogDis a {
@@ -79,11 +82,11 @@
 }
 
 .blogs .blogDis a:hover {
-  color: var(--hoverText);
+  color: var(--text-invert);
 }
 
 .blogs .blogDis p {
-  color: var(--text);
+  color: var(--text-main);
   font-style: italic;
   font-size: 1.25rem;
   line-height: 1.4;

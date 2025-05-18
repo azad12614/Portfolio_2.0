@@ -32,8 +32,6 @@
 }
 
 .hero-section {
-  /* padding-top: clamp(5rem, 10vh, 15rem); */
-  /* padding-bottom: 2rem; */
   padding-top: 5rem;
   padding-inline: 10vw;
   margin: 0;
@@ -41,10 +39,7 @@
   animation: Hero;
   animation-duration: 1s;
 
-  /* border-top: 0.5rem solid var(--logo); */
   height: clamp(900px, 100vh, 1000px);
-
-  /* background-image: url('https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHdhbGxwYXBlciUyMGRvdHN8ZW58MHx8MHx8fDA%3D'); */
   background-position: center;
 
   align-content: center;
@@ -55,71 +50,58 @@
   padding: 0;
   padding-top: 4rem;
   margin: 0;
-  /* grid-template-columns: 1.25fr 1fr; */
   grid-template-rows: 1fr 1.25fr;
-  /* gap: 5rem; */
   gap: 0rem;
-  /* padding-left: clamp(5rem, 15vw, 30rem);
-    padding-right: clamp(4rem, 12vw, 24rem); */
   align-items: center;
-
   height: max(80vh, 700px);
-
-  /* box-shadow: 0.25rem 0.25rem 1rem var(--text); */
   backdrop-filter: blur(10px) saturate(180%);
   -webkit-backdrop-filter: blur(10px) saturate(180%);
-  /* background-color: var(--nav); */
   border-radius: 12px;
 }
 
 .hero-text-box {
-  /* grid-column: 1/2; */
   grid-row: 2/2;
   text-align: center;
   justify-items: center;
 }
 
 .heading-primary {
-  /* font-family: "Playfair Display", serif; */
-  font-family: "Saira Stencil One", sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: clamp(3rem, 8vw, 6rem);
-  color: var(--header);
+  color: var(--primary);
   font-weight: 700;
   letter-spacing: 0.2rem;
   line-height: 1;
   padding-bottom: 2rem;
   /* text-align: start; */
   text-transform: uppercase;
-  text-shadow: var(--subHeader) 1px 1px, var(--subHeader) 2px 2px,
-    var(--subHeader) 3px 3px, var(--subHeader) 4px 4px, var(--subHeader) 5px 5px,
-    var(--subHeader) 6px 6px;
+  text-shadow: var(--shadow-soft) 1px 1px, var(--shadow-soft) 2px 2px,
+    var(--shadow-soft) 3px 3px, var(--shadow-soft) 4px 4px,
+    var(--shadow-soft) 5px 5px, var(--shadow-soft) 6px 6px;
 }
 
 .heading-primary:hover {
   transform: perspective(75em) rotateX(25deg);
-  text-shadow: var(--subHeader) 1px 1px, var(--subHeader) 2px 2px,
-    var(--subHeader) 3px 3px, var(--subHeader) 4px 4px, var(--subHeader) 5px 5px,
-    var(--subHeader) 6px 6px, var(--subHeader) 0px 25px 50px;
+  text-shadow: var(--shadow-soft) 1px 1px, var(--shadow-soft) 2px 2px,
+    var(--shadow-soft) 3px 3px, var(--shadow-soft) 4px 4px,
+    var(--shadow-soft) 5px 5px, var(--shadow-soft) 6px 6px,
+    var(--shadow-soft) 0px 25px 50px;
 }
 
 .hero-description {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-accent);
   font-size: clamp(2rem, 2vw, 3rem);
   font-weight: 600;
   line-height: 1.2;
   padding-bottom: 3rem;
-  color: var(--title);
+  color: var(--text-accent);
   text-transform: capitalize;
 }
 
-.hero-description:hover {
-  filter: brightness(var(--bright));
-  text-shadow: 0 0 1.5px var(--title), 0 0 3px var(--title);
-}
-
-.hero-description strong {
+.hero-description:hover strong {
   font-weight: 900;
-  text-decoration: underline wavy 2px var(--title);
+  filter: brightness(var(--bright));
+  text-decoration: underline wavy 2px var(--text-accent);
 }
 
 .hero-img-box {
@@ -157,9 +139,9 @@
 }
 
 .cv {
-  font-family: "Kaushan Script", cursive;
-  color: var(--btnText);
-  background-color: var(--btnBg);
+  font-family: var(--font-mono);
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
   /* border: solid 2px var(--border); */
   border-radius: 30px;
   margin-left: -0.5rem;
@@ -177,9 +159,9 @@
 }
 
 .me {
-  color: var(--hoverText);
-  background-color: var(--hoverBg);
-  font-family: "Kaushan Script", cursive;
+  color: var(--btn-hover-text);
+  background-color: var(--btn-hover-bg);
+  font-family: var(--font-mono);
   border-radius: 30px;
   margin-left: -0.5rem;
   padding: 10px 30px;
@@ -316,16 +298,16 @@
     padding-bottom: 1.25rem;
     text-align: center;
     transform: perspective(75em) rotateX(25deg);
-    text-shadow: var(--subHeader) 1px 1px, var(--subHeader) 2px 2px,
-      var(--subHeader) 3px 3px, var(--subHeader) 4px 4px,
-      var(--subHeader) 5px 5px, var(--subHeader) 6px 6px,
-      var(--subHeader) 0px 25px 50px;
+    text-shadow: var(--shadow-soft) 1px 1px, var(--shadow-soft) 2px 2px,
+      var(--shadow-soft) 3px 3px, var(--shadow-soft) 4px 4px,
+      var(--shadow-soft) 5px 5px, var(--shadow-soft) 6px 6px,
+      var(--shadow-soft) 0px 25px 50px;
   }
 
   .heading-primary:hover {
-    text-shadow: var(--subHeader) 1px 1px, var(--subHeader) 2px 2px,
-      var(--subHeader) 3px 3px, var(--subHeader) 4px 4px,
-      var(--subHeader) 5px 5px, var(--subHeader) 6px 6px;
+    text-shadow: var(--shadow-soft) 1px 1px, var(--shadow-soft) 2px 2px,
+      var(--shadow-soft) 3px 3px, var(--shadow-soft) 4px 4px,
+      var(--shadow-soft) 5px 5px, var(--shadow-soft) 6px 6px;
   }
 
   .hero-description {

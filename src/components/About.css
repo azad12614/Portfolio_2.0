@@ -23,9 +23,9 @@
 }
 
 .about-detail {
-  color: var(--text);
+  color: var(--text-main);
   font-size: 1.6rem;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-sans);
   line-height: 1.6;
   text-align: justify;
   padding-block: 0.5rem;
@@ -34,12 +34,11 @@
 
 .about-detail:hover {
   filter: brightness(var(--bright));
-  text-shadow: 0 0 1.5px var(--text), 0 0 3px var(--subText);
 }
 
 .highlight {
   color: var(--highlight);
-  font-weight: bold;
+  font-weight: 600;
   font-style: italic;
   display: inline;
   text-decoration: none;

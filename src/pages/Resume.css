@@ -27,12 +27,12 @@
 }
 
 .resume h4 {
-  color: var(--subHeader);
-  font-family: "Playfair Display", serif;
+  color: var(--text-accent);
+  font-family: var(--font-accent);
   font-size: 2.5rem;
   font-weight: bold;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--header);
+  -webkit-text-stroke-color: var(--text-accent);
   text-align: center;
   margin-top: 4%;
 }
@@ -54,7 +54,7 @@
   padding-top: 0.5rem;
   padding-bottom: 1rem;
   padding-inline: 0.5rem;
-  background-color: #ffffff10;
+  background-color: var(--bg-glass);
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
   box-shadow: 20px 20px 20px #00000090 inset, -2px -2px 20px #00000045 inset;
@@ -65,36 +65,36 @@
 }
 
 .gridi h4 {
-  font-family: "Kaushan Script", cursive;
+  font-family: var(--font-script);
   font-size: 3rem;
   font-weight: bolder;
-  color: var(--title);
+  color: var(--text-muted);
   padding: 0;
   padding-bottom: 1rem;
 }
 
 .gridi h4:hover {
-  text-decoration: wavy underline var(--title) 2px;
+  text-decoration: wavy underline var(--link) 2px;
 }
 
 .gridi .info_title {
   display: grid;
   grid-template-columns: 1.25fr 1fr 1.75fr;
   margin-block: 1rem;
-  font-family: "Jost", sans-serif;
+  font-family: var(--font-display);
   font-size: 2rem;
   font-weight: bold;
-  color: var(--text);
+  color: var(--text-accent);
 }
 
 .gridi .info_value {
   display: grid;
   grid-template-columns: 1.25fr 1fr 1.75fr;
   margin-block: 1rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--font-mono);
   font-size: 2.25rem;
   font-weight: bolder;
-  color: var(--number);
+  color: var(--text-accent);
 }
 
 .gridedu {
@@ -111,13 +111,12 @@
   padding: 2rem;
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
-  border: 0.1px solid var(--subText);
+  border: 0.1px solid var(--border);
   border-radius: 10px;
 }
 
 .gride:hover {
-  /* transform: scale(1.01); */
-  box-shadow: var(--hoverBorder) 0px 5px 10px;
+  box-shadow: var(--border-hover) 0px 5px 10px;
 }
 
 .gride:nth-child(1n) {
@@ -134,45 +133,41 @@
 
 .gride .date {
   text-align: left;
-  /* font-family: "Jost", sans-serif; */
-  font-family: "Kaushan Script", cursive;
+  font-family: var(--font-script);
   font-size: 1.4rem;
   border-left: 3px dashed var(--border);
-  color: var(--number);
+  color: var(--text-accent);
   padding-left: 0.5rem;
 }
 
 .gride .tittle {
   text-align: left;
-  /* font-family: "Silkscreen", sans-serif; */
-  font-family: "Jost", sans-serif;
+  font-family: var(--font-display);
   font-weight: bold;
   font-size: 1.75rem;
-  /* letter-spacing: -0.25rem; */
-  color: var(--number);
+  color: var(--text-accent);
   padding-left: 0.5rem;
 }
 
 .gride .tittle span {
   text-align: left;
-  font-family: "Rubik Glitch", system-ui;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-weight: 700;
   letter-spacing: 0;
-  color: var(--subText);
+  color: var(--text-heading);
 }
 
 .gride .details {
   text-align: left;
-  /* font-family: "Jost", sans-serif; */
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-accent);
   font-weight: normal;
   font-size: 1.3rem;
-  color: var(--text);
+  color: var(--text-main);
   padding-left: 0.5rem;
 }
 
 .gride .date:hover {
-  text-shadow: 0 0 6px var(--number);
+  text-shadow: 0 0 6px var(--text-accent);
 }
 
 .gride .tittle:hover {
@@ -180,11 +175,11 @@
 }
 
 .gride .tittle span a:hover {
-  text-decoration: underline wavy var(--text);
+  text-decoration: underline wavy var(--link);
 }
 
 .gride .tittle a:hover {
-  text-decoration: underline wavy var(--text);
+  text-decoration: underline wavy var(--link);
 }
 
 @media (max-width: 1080px) {
@@ -208,10 +203,8 @@
     margin-inline: 0rem;
     margin-left: 3rem;
     margin-block: 1rem;
-    font-family: "Jost", sans-serif;
     font-size: 2rem;
     font-weight: bold;
-    color: var(--text);
   }
 
   .gridi .info_value {
@@ -221,10 +214,8 @@
     margin-inline: 0rem;
     margin-left: 3rem;
     margin-block: 1rem;
-    font-family: "Times New Roman", Times, serif;
     font-size: 2.25rem;
     font-weight: bolder;
-    color: var(--number);
   }
 
   .gridedu {
@@ -312,10 +303,8 @@
     gap: 0.5rem;
     margin-left: 1rem;
     margin-block: 1rem;
-    font-family: "Jost", sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--text);
   }
 
   .gridi .info_value {
@@ -324,10 +313,8 @@
     gap: 0.5rem;
     margin-left: 1rem;
     margin-block: 1rem;
-    font-family: "Times New Roman", Times, serif;
     font-size: 1.75rem;
     font-weight: bolder;
-    color: var(--number);
   }
 
   .gridedu {
@@ -387,10 +374,8 @@
     gap: 0.25rem;
     margin-left: 0.5rem;
     margin-block: 1rem;
-    font-family: "Jost", sans-serif;
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--text);
   }
 
   .gridi .info_value {
@@ -399,10 +384,8 @@
     gap: 0.25rem;
     margin-left: 0.5rem;
     margin-block: 1rem;
-    font-family: "Times New Roman", Times, serif;
     font-size: 1.5rem;
     font-weight: bolder;
-    color: var(--number);
   }
 
   .gridedu {

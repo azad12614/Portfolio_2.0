@@ -1,7 +1,6 @@
 // src/components/Navbar.jsx
 import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import logo from "../assets/AZAD.png";
 import DarkMode from "./DarkMode";
 import "./Navbar.css";
 
@@ -34,14 +33,14 @@ const Navbar = () => {
   const toggleMenu = () => setShowMobileMenu((prev) => !prev);
 
   return (
-    <nav className="main-nav">
-      {/* Logo */}
-      <div className="logo">
-        <a href="/">AZAD</a>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <a href="/" className="text-logo">
+          <span className="glow">AZAD</span>
+        </a>
       </div>
 
-      {/* Desktop & Mobile Menu */}
-      <div className={`menu-link ${showMobileMenu ? "mobile-menu-link" : ""}`}>
+      <div className={`navbar-links ${showMobileMenu ? "open" : ""}`}>
         <ul>
           {sections.map((section) => (
             <li key={section}>
@@ -56,14 +55,11 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Right Icons */}
-      <div className="menu-right">
-        <button className="hamburger-menu pointer" onClick={toggleMenu}>
+      <div className="navbar-right">
+        <button className="hamburger" onClick={toggleMenu}>
           <GiHamburgerMenu />
         </button>
-        <div className="theme-toggle">
-          <DarkMode />
-        </div>
+        <DarkMode />
       </div>
     </nav>
   );

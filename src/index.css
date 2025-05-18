@@ -1,49 +1,98 @@
+/* =============================
+      /src/index.css
+============================= */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* =============================
+      🌐 Design Tokens
+============================= */
 :root {
-  --BG: url(./BG1.jpeg);
-  --bg: #0d0d0f;
-  --subBg: #124e66;
-  --logo: #fbe9d0;
-  --nav: #24485510;
-  --navMbl: #102030e1;
-  --header: #0085ff;
-  --subHeader: #0351a3;
-  --title: #84ccca;
-  --highlight: #964734;
-  --text: #d3d9d4;
-  --subText: #748d92;
-  --number: #00bbdd;
+  /* 🎨 Typography */
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Jost", sans-serif;
+  --font-mono: "Fira Mono", monospace;
+  --font-accent: "Cormorant Garamond", serif;
+  --font-logo: "Orbitron", serif;
+  --font-script: "Kaushan Script", cursive;
+
+  /* 🎨 Backgrounds */
+  --bg-main: #0d0d0f;
+  --bg-subtle: #11161c;
+  --bg-accent: #124e66;
+  --bg-glass: rgba(18, 30, 40, 0.6);
+
+  /* 🎨 Text Colors */
+  --text-main: #ecf0ec;
+  --text-muted: #748d92;
+  --text-heading: #84ccca;
+  --text-accent: #00bbdd;
+  --text-invert: #0d0d0f;
+
+  /* 🎨 Borders & Shadows */
   --border: #66fcf1;
-  --btnBg: #afdde5;
-  --btnText: #024650;
-  --hoverBorder: #003135;
-  --hoverBg: #1f2833;
-  --hoverText: #0fa4af;
+  --border-hover: #00a2ff;
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+  /* 🎨 Buttons */
+  --btn-bg: #afdde5;
+  --btn-text: #01313c;
+  --btn-hover-bg: #1f2833;
+  --btn-hover-text: #0fa4af;
+
+  /* 🎨 UI Highlights */
+  --primary: #02a9f7;
+  --secondary: #01303f;
+  --highlight: #964734;
+  --link: #00aacc;
+
+  /* 🎨 Special */
+  --logo: #fbe9d0;
+  --nav-glass: #24485510;
+  --mobile-nav: #102030e1;
+
+  /* 🎨 Cursors */
+  --cursor-default: url(./cursor1.png), auto;
+  --cursor-pointer: url(./cursor2.png), pointer;
+
+  /* 🌐 Background Image */
+  --BG: url(./BG1.jpeg);
+
+  /* 🌐 Brightness control */
   --bright: 105%;
 }
 
+/* =============================
+    🌞 Light Theme Overrides
+============================= */
 [data-theme="light"] {
   --BG: url(./BG2.jpg);
-  --bg: #e4e4e4;
-  --subBg: #b7dbf8;
-  --logo: #0b0e12;
-  --nav: #00bfff00;
-  --navMbl: #aabbcce1;
-  --header: #025ec0;
-  --subHeader: #023875;
-  --title: #0e4055;
-  --highlight: #00aacc;
-  --text: #212a31;
-  --subText: #122e49;
-  --number: #964734;
+
+  --bg-main: #f4f4f4;
+  --bg-subtle: #e4e4e4;
+  --bg-accent: #b7dbf8;
+  --bg-glass: rgba(220, 230, 240, 0.5);
+
+  --text-main: #212a31;
+  --text-muted: #122e49;
+  --text-heading: #0e4055;
+  --text-accent: #964734;
+
   --border: #00cfcf;
-  --btnBg: #01364b;
-  --btnText: #00a2ff;
-  --hoverBorder: #003135;
-  --hoverBg: #b7dbf8;
-  --hoverText: #012c64;
+  --border-hover: #0085ff;
+
+  --btn-bg: #01364b;
+  --btn-text: #00a2ff;
+  --btn-hover-bg: #b7dbf8;
+  --btn-hover-text: #012c64;
+
+  --primary: #0085ff;
+  --secondary: #023875;
+
+  --logo: #0b0e12;
+  --mobile-nav: #aabbcce1;
+
   --bright: 95%;
 }
