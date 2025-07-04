@@ -1,29 +1,23 @@
-@keyframes Left_animation {
+@keyframes fadeIn {
   from {
-    opacity: 0.5;
-    transform: translateX(-50%);
+    opacity: 0;
+    transform: translateY(20px);
   }
-
   to {
     opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-@keyframes Right_animation {
-  from {
-    opacity: 0.5;
-    transform: translateX(50%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0%);
+    transform: translateY(0);
   }
 }
 
 .resume {
-  padding-top: 7rem;
+  padding: 5rem 2rem;
+  /* background: var(--bg-main); */
+  animation: fadeIn 0.8s ease-out;
+}
+
+.resume-container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .resume h4 {
@@ -34,390 +28,263 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--text-accent);
   text-align: center;
-  margin-top: 4%;
+  margin: 2rem 0 1rem;
 }
 
-.gridinfo {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  row-gap: 2rem;
-  column-gap: 2rem;
-  margin-inline: clamp(4rem, 8%, 12rem);
-  margin-block: 2rem;
-  align-content: center;
+.profiles-slider {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  background: var(--bg-subtle);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
 }
 
-.gridi {
-  text-align: center;
-  border-radius: 10px;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
-  padding-inline: 0.5rem;
-  background-color: var(--bg-glass);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  box-shadow: 20px 20px 20px #00000090 inset, -2px -2px 20px #00000045 inset;
+.profiles-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
-.gridi:nth-child(1n):hover {
-  box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
-}
-
-.gridi h4 {
-  font-family: var(--font-script);
-  font-size: 3rem;
-  font-weight: bolder;
-  color: var(--text-muted);
-  padding: 0;
-  padding-bottom: 1rem;
-}
-
-.gridi h4:hover {
-  text-decoration: wavy underline var(--link) 2px;
-}
-
-.gridi .info_title {
-  display: grid;
-  grid-template-columns: 1.25fr 1fr 1.75fr;
-  margin-block: 1rem;
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--text-accent);
-}
-
-.gridi .info_value {
-  display: grid;
-  grid-template-columns: 1.25fr 1fr 1.75fr;
-  margin-block: 1rem;
+.tab-button {
   font-family: var(--font-mono);
-  font-size: 2.25rem;
-  font-weight: bolder;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--border);
+  border-radius: 25px;
+  background: transparent;
+  color: var(--text-main);
+  cursor: var(--cursor-pointer);
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: var(--primary);
+  color: var(--text-invert);
+  border-color: var(--primary);
+}
+
+.tab-button.active {
+  background: var(--primary);
+  color: var(--text-invert);
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
+.profile-content {
+  overflow: hidden;
+}
+
+.profile-card {
+  padding: 1.5rem;
+  padding-top: 0.5rem;
+  border-radius: 8px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(7.5px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.profile-card h4 {
+  font-size: 2rem;
+  font-family: var(--font-display);
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.profile-card h4 a {
+  color: var(--text-heading);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.profile-card h4 a:hover {
+  color: var(--primary);
+  text-decoration: underline wavy var(--link);
+}
+
+.info-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-subtle);
+  border-radius: 8px;
+}
+
+.info-item {
+  flex: 1;
+  text-align: center;
+}
+
+.info-label {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
   color: var(--text-accent);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.info-value {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--text-main);
+  font-weight: 700;
 }
 
 .gridedu {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem 1rem;
-  padding-left: clamp(4rem, 12vw, 12rem);
-  padding-right: clamp(2rem, 8vw, 8rem);
-  padding-top: 1rem;
+  gap: 1.5rem;
+  padding: 1.5rem clamp(2rem, 5vw, 4rem);
 }
 
 .gride {
-  margin-block: 1rem;
-  padding: 2rem;
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  border: 0.1px solid var(--border);
-  border-radius: 10px;
+  background: var(--bg-glass);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .gride:hover {
-  box-shadow: var(--border-hover) 0px 5px 10px;
-}
-
-.gride:nth-child(1n) {
-  animation: Left_animation ease-in;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
-}
-
-.gride:nth-child(2n) {
-  animation: Right_animation ease-in;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--shadow-soft);
 }
 
 .gride .date {
-  text-align: left;
-  font-family: var(--font-script);
-  font-size: 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
   border-left: 3px dashed var(--border);
-  color: var(--text-accent);
   padding-left: 0.5rem;
 }
 
 .gride .tittle {
-  text-align: left;
   font-family: var(--font-display);
-  font-weight: bold;
-  font-size: 1.75rem;
-  color: var(--text-accent);
-  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .gride .tittle span {
-  text-align: left;
   font-family: var(--font-mono);
-  font-weight: 700;
-  letter-spacing: 0;
   color: var(--text-heading);
+  font-weight: 500;
 }
 
-.gride .details {
-  text-align: left;
-  font-family: var(--font-accent);
-  font-weight: normal;
-  font-size: 1.3rem;
+.gride .tittle a {
   color: var(--text-main);
-  padding-left: 0.5rem;
-}
-
-.gride .date:hover {
-  text-shadow: 0 0 6px var(--text-accent);
-}
-
-.gride .tittle:hover {
-  filter: brightness(var(--bright));
-}
-
-.gride .tittle span a:hover {
-  text-decoration: underline wavy var(--link);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .gride .tittle a:hover {
+  color: var(--primary);
   text-decoration: underline wavy var(--link);
 }
 
-@media (max-width: 1080px) {
-  .resume {
-    animation-range: entry 0% cover 20%;
-  }
-
-  .gridinfo {
-    grid-template-columns: auto;
-    row-gap: 1.5rem;
-    column-gap: 1.5rem;
-    margin-inline: clamp(4rem, 8%, 12rem);
-    margin-block: 2rem;
-    align-content: center;
-  }
-
-  .gridi .info_title {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr 1.5fr;
-    gap: 1rem;
-    margin-inline: 0rem;
-    margin-left: 3rem;
-    margin-block: 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  .gridi .info_value {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr 1.5fr;
-    gap: 1rem;
-    margin-inline: 0rem;
-    margin-left: 3rem;
-    margin-block: 1rem;
-    font-size: 2.25rem;
-    font-weight: bolder;
-  }
-
-  .gridedu {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding-left: clamp(4rem, 8vw, 8rem);
-    padding-right: clamp(2rem, 4vw, 4rem);
-    padding-top: 1rem;
-  }
-
-  .gride {
-    margin-block: 1rem;
-  }
-
-  .gride:nth-child(1n) {
-    animation-range: entry 0% cover 50%;
-  }
-
-  .gride:nth-child(2n) {
-    animation-range: entry 0% cover 50%;
-  }
-
-  .date {
-    font-size: 1.4rem;
-    padding-left: 0.5rem;
-  }
-
-  .tittle {
-    font-size: 1.75rem;
-    padding-left: 0.5rem;
-  }
-
-  .tittle span {
-    font-size: 1.75;
-  }
-
-  .details {
-    font-size: 1.2rem;
-    padding-left: 0.5rem;
-  }
+.gride .details {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
-@media (max-width: 798px) {
+@media (max-width: 768px) {
   .resume {
-    animation-range: entry 0% cover 15%;
+    padding: 3rem 1.5rem;
   }
 
   .resume h4 {
     font-size: 2rem;
   }
 
-  .gridinfo {
-    grid-template-columns: auto;
-    margin-inline: clamp(4rem, 8%, 12rem);
-    margin-block: 2rem;
-    align-content: center;
+  .profiles-slider {
+    margin: 0 1rem 1.5rem;
+    padding: 1rem;
   }
 
-  .gridi h4 {
-    font-size: 2rem;
-    padding-bottom: 1rem;
+  .tab-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 
-  /*
-  .gridi h3 {
-    font-size: 1.5rem;
-    color: var(--number);
-  }
-
-  .gridi h2 {
-    font-size: 1.5rem;
-    color: var(--text);
-    padding-top: 0.3rem;
-  }
-
-  .gridi p {
-    font-size: 1.5rem;
-    margin-top: -0.3rem;
-  } 
-  */
-
-  .gridi .info_title {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr 1.5fr;
+  .info-grid {
+    flex-direction: column;
     gap: 0.5rem;
-    margin-left: 1rem;
-    margin-block: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  .gridi .info_value {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr 1.5fr;
-    gap: 0.5rem;
-    margin-left: 1rem;
-    margin-block: 1rem;
-    font-size: 1.75rem;
-    font-weight: bolder;
   }
 
   .gridedu {
     grid-template-columns: 1fr;
-    gap: 1rem;
-    padding-left: clamp(2rem, 4vw, 4rem);
-    padding-right: clamp(1rem, 2vw, 2rem);
-    padding-top: 1rem;
+    padding: 1rem 2rem;
   }
 
-  .gride {
-    margin-block: 0.25rem;
+  .gride .tittle {
+    font-size: 1.3rem;
   }
 
-  .date {
-    font-size: 1.25rem;
-    padding-left: 0.5rem;
-  }
-
-  .tittle {
-    font-size: 1.5rem;
-    padding-left: 0.5rem;
-  }
-
-  .tittle span {
-    font-size: 1.5;
-  }
-
-  .details {
+  .gride .details {
     font-size: 1.1rem;
-    padding-left: 0.5rem;
   }
 }
 
 @media (max-width: 520px) {
   .resume {
-    padding-top: 6rem;
-    animation-range: entry 0% cover 10%;
+    padding: 2rem 1rem;
   }
 
   .resume h4 {
     font-size: 1.75rem;
   }
 
-  .gridinfo {
-    margin-inline: clamp(2rem, 4%, 4rem);
-    margin-block: 1rem;
+  .profiles-slider {
+    margin: 0 0.5rem 1rem;
   }
 
-  .gridi h4 {
-    font-size: 1.75rem;
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 
-  .gridi .info_title {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr 1.5fr;
-    gap: 0.25rem;
-    margin-left: 0.5rem;
-    margin-block: 1rem;
-    font-size: 1.25rem;
-    font-weight: bold;
+  .profile-card {
+    padding: 1rem;
   }
 
-  .gridi .info_value {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr 1.5fr;
-    gap: 0.25rem;
-    margin-left: 0.5rem;
-    margin-block: 1rem;
-    font-size: 1.5rem;
-    font-weight: bolder;
+  .profile-card h4 {
+    font-size: 1.4rem;
+  }
+
+  .info-label,
+  .info-value {
+    font-size: 1rem;
   }
 
   .gridedu {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    padding-inline: clamp(0.5rem, 2vw, 1.5rem);
-    padding-top: 1rem;
+    padding: 1rem;
   }
 
   .gride {
-    margin-block: 0rem;
+    padding: 1rem;
   }
 
-  .date {
-    font-size: 1.2rem;
-    padding-left: 0.25rem;
-    line-height: 1.3;
-  }
-
-  .tittle {
-    font-size: 1.4rem;
-    padding-left: 0.25rem;
-    line-height: 1.3;
-  }
-
-  .tittle span {
-    font-size: 1.4;
-  }
-
-  .details {
+  .gride .date {
     font-size: 1rem;
-    padding-left: 0.25rem;
-    line-height: 1.3;
+  }
+
+  .gride .tittle {
+    font-size: 1.2rem;
+  }
+
+  .gride .details {
+    font-size: 1rem;
   }
 }

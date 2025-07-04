@@ -1,9 +1,7 @@
-/* src/components/About.css */
-
-@keyframes fadeInUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -12,72 +10,78 @@
 }
 
 .about-section {
-  padding-top: 7rem;
-  animation: fadeInUp 1s ease-out forwards;
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
+  padding: 5rem 2rem;
+  /* background: var(--bg-main); */
+  animation: fadeIn 0.8s ease-out;
 }
 
-.about-info {
-  padding-inline: 16rem;
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  background: var(--bg-subtle);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  max-width: 80vw;
 }
 
 .about-detail {
-  color: var(--text-main);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: var(--font-sans);
-  line-height: 1.6;
-  text-align: justify;
-  padding-block: 0.5rem;
-  transition: 0.3s ease;
+  font-weight: 200;
+  color: var(--text-main);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+  text-align: left;
 }
 
-.about-detail:hover {
-  filter: brightness(var(--bright));
+.about-card:first-child {
+  text-align: right;
 }
 
 .highlight {
-  color: var(--highlight);
+  color: var(--primary);
   font-weight: 600;
-  font-style: italic;
-  display: inline;
-  text-decoration: none;
-  transition: 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .highlight:hover {
-  filter: brightness(var(--bright));
-}
-
-/* Responsive Design */
-
-@media (max-width: 1080px) {
-  .about-info {
-    padding-inline: 8rem;
-  }
+  color: var(--border-hover);
 }
 
 @media (max-width: 768px) {
-  .about-info {
-    padding-inline: 4rem;
+  .about-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-card {
+    padding: 1.5rem;
   }
 
   .about-detail {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 520px) {
   .about-section {
-    padding-top: 5rem;
+    padding: 2rem 1rem;
   }
 
-  .about-info {
-    padding-inline: 2rem;
+  .about-card {
+    padding: 1rem;
   }
 
   .about-detail {
-    text-align: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }

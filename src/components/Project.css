@@ -169,7 +169,7 @@
     position: absolute;
     z-index: 10;
     top: 0rem;
-    left: 30vw;
+    left: 35vw;
 
     border: 2px solid var(--border);
   }

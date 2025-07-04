@@ -2,7 +2,7 @@
 
 .navbar {
   position: fixed;
-  top: 0.2rem;
+  top: 2rem;
   left: 50%;
   transform: translateX(-50%);
   width: 92vw;

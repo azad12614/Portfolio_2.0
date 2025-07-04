@@ -67,7 +67,7 @@
 
 .heading-primary {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2.5rem, 7.5vw, 5.5rem);
   color: var(--primary);
   font-weight: 700;
   letter-spacing: 0.2rem;
@@ -90,7 +90,7 @@
 
 .hero-description {
   font-family: var(--font-accent);
-  font-size: clamp(2rem, 2vw, 3rem);
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
   font-weight: 600;
   line-height: 1.2;
   padding-bottom: 3rem;
@@ -149,7 +149,7 @@
   text-align: center;
   align-content: center;
   font-weight: bold;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
 }
 
@@ -168,7 +168,7 @@
   text-align: center;
   align-content: center;
   font-weight: bold;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
 }
 

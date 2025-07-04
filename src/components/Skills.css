@@ -6,9 +6,7 @@
 
 .skills {
   position: relative;
-  width: 70vw;
   height: 200px;
-  margin-inline: clamp(8rem, 12vw, 16rem);
   margin-block: 2rem;
   overflow-x: hidden;
 }
@@ -37,14 +35,14 @@
 
 .lang > h1 {
   font-family: "Permanent Marker", cursive;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-style: italic;
   text-align: center;
   color: var(--hoverText);
 }
 
 .lang > img {
-  width: 120px;
+  width: 100px;
   aspect-ratio: 1/1;
 }
 
