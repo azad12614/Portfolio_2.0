@@ -13,8 +13,7 @@ const Hero = () => {
           <p className="hero-description">
             A <strong>CSE Student</strong>,{" "}
             <strong>Competitive Programmer</strong>,{" "}
-            <strong>Full-stack Developer</strong> on the{" "}
-            <strong>MERN stack</strong>.
+            <strong>MERN stack Developer</strong>.
           </p>
           <div className="hero-btn">
             <a href={pdf} target="_blank" className="cv">
