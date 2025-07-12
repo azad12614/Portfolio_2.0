@@ -35,13 +35,10 @@
   padding-top: 5rem;
   padding-inline: 10vw;
   margin: 0;
-
   animation: Hero;
   animation-duration: 1s;
-
   height: clamp(900px, 100vh, 1000px);
   background-position: center;
-
   align-content: center;
 }
 
@@ -54,8 +51,8 @@
   gap: 0rem;
   align-items: center;
   height: max(80vh, 700px);
-  backdrop-filter: blur(10px) saturate(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  backdrop-filter: blur(7.5px) saturate(180%);
+  -webkit-backdrop-filter: blur(7.5px) saturate(180%);
   border-radius: 12px;
 }
 
@@ -185,9 +182,10 @@
   }
 
   .heros {
+    height: 90vw;
     grid-template-rows: 1fr 1.5fr;
     gap: 0;
-    padding: 2rem;
+    padding: 1.5rem;
     padding-block: 4rem;
     /* grid-template-columns: 4rem 1.25fr 3rem 1fr 3rem;
         gap: 0rem;

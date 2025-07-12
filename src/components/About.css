@@ -30,7 +30,8 @@
   background: var(--bg-subtle);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
+  box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
   max-width: 80vw;
 }
 

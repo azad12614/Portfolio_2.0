@@ -37,7 +37,8 @@
   padding: 1.5rem;
   background: var(--bg-subtle);
   border-radius: 12px;
-  box-shadow: var(--shadow-soft);
+  /* box-shadow: var(--shadow-soft); */
+  box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
 }
 
 .profiles-tabs {
@@ -46,42 +47,50 @@
   gap: 0.5rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
+  background: var(--bg-glass);
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tab-button {
   font-family: var(--font-mono);
   font-size: 1.2rem;
   font-weight: 600;
-  padding: 0.6rem 1.2rem;
-  border: 2px solid var(--border);
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--border);
   border-radius: 25px;
-  background: transparent;
+  background: var(--bg-subtle);
   color: var(--text-main);
   cursor: var(--cursor-pointer);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, transform 0.2s ease;
 }
 
 .tab-button:hover {
   background: var(--primary);
   color: var(--text-invert);
   border-color: var(--primary);
+  transform: translateY(-3px);
 }
 
 .tab-button.active {
   background: var(--primary);
   color: var(--text-invert);
   border-color: var(--primary);
-  font-weight: 600;
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .profile-content {
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile-card {
-  padding: 1.5rem;
-  padding-top: 0.5rem;
-  border-radius: 8px;
+  padding: 0.5rem;
+  padding-top: 0.1rem;
+  border-radius: 12px;
   background: var(--bg-glass);
   backdrop-filter: blur(7.5px);
   animation: fadeIn 0.5s ease-out;
@@ -134,6 +143,19 @@
   font-size: 1.2rem;
   color: var(--text-main);
   font-weight: 700;
+}
+
+.experience-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  background: var(--bg-glass);
+  padding: 0.75rem 1rem;
+  border-radius: 50px;
+  width: max-content;
+  justify-content: center;
+  justify-self: center;
+  box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
 }
 
 .gridedu {
@@ -223,6 +245,16 @@
     gap: 0.5rem;
   }
 
+  .experience-tabs {
+    flex-direction: column;
+    padding: 0.3rem;
+  }
+
+  .tab {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
   .gridedu {
     grid-template-columns: 1fr;
     padding: 1rem 2rem;
@@ -266,6 +298,15 @@
   .info-label,
   .info-value {
     font-size: 1rem;
+  }
+
+  .experience-tabs {
+    padding: 0.2rem;
+  }
+
+  .tab {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
   }
 
   .gridedu {
