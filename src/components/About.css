@@ -10,7 +10,8 @@
 }
 
 .about-section {
-  padding: 5rem 2rem;
+  padding: 2rem;
+  padding-top: 7rem;
   /* background: var(--bg-main); */
   animation: fadeIn 0.8s ease-out;
 }

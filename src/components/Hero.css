@@ -33,7 +33,7 @@
 
 .hero-section {
   padding-top: 5rem;
-  padding-inline: 10vw;
+  padding-inline: 5vw;
   margin: 0;
   animation: Hero;
   animation-duration: 1s;
@@ -43,14 +43,14 @@
 }
 
 .heros {
+  width: 90vw;
+  height: 80vh;
   display: grid;
   padding: 0;
-  padding-top: 4rem;
   margin: 0;
   grid-template-rows: 1fr 1.25fr;
   gap: 0rem;
   align-items: center;
-  height: max(80vh, 700px);
   backdrop-filter: blur(7.5px) saturate(180%);
   -webkit-backdrop-filter: blur(7.5px) saturate(180%);
   border-radius: 12px;
@@ -64,13 +64,14 @@
 
 .heading-primary {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: clamp(2.5rem, 7.5vw, 5.5rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   color: var(--primary);
   font-weight: 700;
   letter-spacing: 0.2rem;
   line-height: 1;
+  padding-top: 0;
   padding-bottom: 2rem;
-  /* text-align: start; */
+  margin-top: -1rem;
   text-transform: uppercase;
   text-shadow: var(--shadow-soft) 1px 1px, var(--shadow-soft) 2px 2px,
     var(--shadow-soft) 3px 3px, var(--shadow-soft) 4px 4px,
@@ -87,7 +88,7 @@
 
 .hero-description {
   font-family: var(--font-accent);
-  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
   font-weight: 600;
   line-height: 1.2;
   padding-bottom: 3rem;
@@ -124,6 +125,7 @@
   inline-size: min(50dvmin, 20rem);
   animation: comeOn var(--dur) cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
   transform-origin: center;
+  margin-top: 4rem;
 }
 
 .wrapper img:nth-child(2n) {
@@ -139,7 +141,6 @@
   font-family: var(--font-mono);
   color: var(--btn-text);
   background-color: var(--btn-bg);
-  /* border: solid 2px var(--border); */
   border-radius: 30px;
   margin-left: -0.5rem;
   padding: 10px 30px;
@@ -151,7 +152,6 @@
 }
 
 .cv:hover {
-  /* border: solid 2px var(--hoverBorder); */
   box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
 }
 
@@ -174,39 +174,26 @@
 }
 
 @media (max-width: 1080px) {
-  .hero-section {
-    /* padding-top: clamp(10rem, 10vh, 15rem);
-        height: max-content; */
-    padding-top: 5rem;
-    padding-inline: 10vw;
-  }
-
   .heros {
-    height: 90vw;
     grid-template-rows: 1fr 1.5fr;
     gap: 0;
     padding: 1.5rem;
     padding-block: 4rem;
-    /* grid-template-columns: 4rem 1.25fr 3rem 1fr 3rem;
-        gap: 0rem;
-        padding: 0;
-        margin: 0;
-        height: max-content; */
   }
 
   .hero-text-box {
-    /* grid-column: 2/3; */
     grid-row: 2/2;
   }
 
   .heading-primary {
-    font-size: clamp(3rem, 7vw, 6rem);
+    font-size: clamp(3rem, 6vw, 6rem);
     letter-spacing: 0.1rem;
     line-height: 1;
     padding-bottom: 1rem;
   }
 
   .hero-description {
+    font-size: clamp(1.5rem, 3vw, 3rem);
     line-height: 1.1;
     padding-bottom: 2rem;
   }
@@ -222,32 +209,30 @@
 }
 
 @media (max-width: 798px) {
-  /* .hero-section {
-        padding-top: clamp(5rem, 10vh, 10rem); 
-    }
+  .heros {
+    margin-top: -8rem;
+  }
 
-    .heros {
-        grid-template-columns: 3rem 3fr 3rem;
-        grid-template-rows: 0.5fr 1fr;
-        gap: 1rem;
-    } */
+  .wrapper img:nth-child(1n) {
+    block-size: min(50dvmin, 18rem);
+    inline-size: min(50dvmin, 18rem);
+    margin-top: 0rem;
+  }
 
   .hero-text-box {
-    /* grid-column: 2/3;
-        grid-row: 2/3; */
     text-align: center;
   }
 
   .heading-primary {
-    font-size: clamp(2rem, 7vw, 4rem);
+    font-size: clamp(2rem, 6vw, 6rem);
     letter-spacing: 0rem;
     line-height: 0.9;
-    padding-bottom: 1rem;
+    padding-block: 1rem;
     text-align: center;
   }
 
   .hero-description {
-    font-size: clamp(1rem, 6vw, 2rem);
+    font-size: clamp(1rem, 3vw, 3rem);
     letter-spacing: 0.01rem;
     line-height: 1;
     padding-bottom: 1.5rem;
@@ -261,7 +246,7 @@
 
   .cv,
   .me {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 8px 24px;
     text-align: center;
   }
@@ -271,9 +256,6 @@
   .hero-section {
     height: 100vh;
     margin: 0;
-    padding: 0;
-    padding-top: 5rem;
-    padding-inline: 0.5rem;
   }
 
   .heros {
@@ -282,6 +264,7 @@
     grid-template-rows: 0.4fr 0.75fr;
     gap: 0rem;
     padding: 0.5rem;
+    padding-block: 2rem;
     margin: 0;
   }
 
@@ -290,10 +273,11 @@
   }
 
   .heading-primary {
-    font-size: clamp(2rem, 15vw, 3.75rem);
+    font-size: clamp(2rem, 10vw, 3rem);
     letter-spacing: 0rem;
     line-height: 0.9;
-    padding-bottom: 1.25rem;
+    padding-block: 0.75rem;
+    margin-top: 0;
     text-align: center;
     transform: perspective(75em) rotateX(25deg);
     text-shadow: var(--shadow-soft) 1px 1px, var(--shadow-soft) 2px 2px,
@@ -309,9 +293,8 @@
   }
 
   .hero-description {
-    font-size: clamp(1.25rem, 7vw, 2rem);
+    font-size: clamp(1.25rem, 6vw, 2rem);
     line-height: 1.15;
-    /* padding-bottom: 2.5rem; */
     padding-bottom: 1.25rem;
     text-align: center;
   }
@@ -324,14 +307,14 @@
   }
 
   .cv {
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 8px 24px;
     text-align: center;
     transform: translateX(-3rem);
   }
 
   .me {
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 8px 24px;
     text-align: center;
     transform: translateX(3rem);

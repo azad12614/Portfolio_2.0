@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="hero-text-box">
           <h1 className="heading-primary">Abdullah Al Azad</h1>
           <p className="hero-description">
-            A <strong>CSE Student</strong>,{" "}
+            <strong>CSE Student</strong>,{" "}
             <strong>Competitive Programmer</strong>,{" "}
             <strong>MERN stack Developer</strong>.
           </p>
