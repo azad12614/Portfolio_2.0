@@ -35,7 +35,7 @@
   max-width: 800px;
   margin: 0 auto 2.5rem;
   padding: 1.5rem;
-  background: var(--bg-subtle);
+  background: var(--bg-glass);
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
@@ -46,7 +46,7 @@
   justify-content: space-evenly;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
-  background: var(--bg-glass);
+  background: var(--bg-subtle);
   padding: 1rem;
   border-radius: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -84,14 +84,14 @@
   overflow: hidden;
   padding: 1rem;
   border-radius: 15px;
-  background: var(--bg-glass);
+  background: var(--bg-subtle);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-card {
   padding: 1rem;
   border-radius: 12px;
-  background: var(--bg-subtle);
+  background: var(--bg-glass);
   animation: fadeIn 0.5s ease-out;
 }
 
@@ -120,7 +120,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   padding: 1.5rem;
-  background: var(--bg-glass);
+  background: var(--bg-subtle);
   border-radius: 10px;
 }
 
@@ -130,7 +130,7 @@
   gap: 0.5rem;
   text-align: center;
   padding: 0.5rem;
-  background: var(--bg-subtle);
+  background: var(--bg-glass);
   border-radius: 8px;
 }
 
@@ -154,7 +154,7 @@
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
-  background: var(--bg-glass);
+  background: var(--bg-subtle);
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);

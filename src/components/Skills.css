@@ -14,7 +14,7 @@
   height: max-content;
   margin-block: 2rem;
   padding: 1.5rem;
-  background: var(--bg-subtle);
+  background: var(--bg-glass);
   border-radius: 15px;
   box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
   display: grid;

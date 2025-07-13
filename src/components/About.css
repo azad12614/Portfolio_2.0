@@ -27,7 +27,7 @@
 }
 
 .about-card {
-  background: var(--bg-subtle);
+  background: var(--bg-glass);
   padding: 2rem;
   border-radius: 8px;
   /* box-shadow: var(--shadow-soft); */
