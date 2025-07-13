@@ -25,20 +25,22 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: var(--btn-bg);
-  border: 2px solid var(--border);
-  color: var(--btn-text);
+  /* background: var(--btn-bg); */
+  border: 1px solid var(--border);
+  color: var(--text);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
   transition: all 0.2s ease-in-out;
 }
 
 .blog-section .arrow .btn:hover {
   background-color: var(--btn-hover-bg);
   color: var(--btn-hover-text);
-  border: 2px solid var(--border-hover);
+  border: 1px solid var(--border-hover);
+  transform: scale(0.98);
+  box-shadow: inset 4px 6px 8px rgba(0, 0, 0, 0.5);
 }
 
 .blog-section .arrow .btn span {
@@ -57,7 +59,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  background: var(--bg-accent);
+  background: var(--bg-glass);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -99,12 +101,12 @@
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   margin: auto;
 }
 
 .blogs .blogImg:hover {
   transform: scale(1.05);
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive */

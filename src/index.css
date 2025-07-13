@@ -73,12 +73,13 @@
   --bg-main: #f4f4f4;
   --bg-subtle: #e4e4e4;
   --bg-accent: #b7dbf8;
-  --bg-glass: rgba(220, 230, 240, 0.5);
+  --bg-glass: rgba(14, 64, 85, 0.25);
 
   --text-main: #212a31;
   --text-muted: #122e49;
   --text-heading: #0e4055;
   --text-accent: #964734;
+  --text-invert: #ecf0ec;
 
   --border: #00cfcf;
   --border-hover: #0085ff;

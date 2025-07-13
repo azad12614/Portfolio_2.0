@@ -27,7 +27,7 @@ const Skills = () => {
     { name: "Express JS", image: express, order: 6 },
     { name: "React JS", image: react, order: 7 },
     { name: "Node JS", image: node, order: 8 },
-    { name: "Next.js", image: next, order: 9 },
+    { name: "Next JS", image: next, order: 9 },
     { name: "Python", image: python, order: 10 },
     { name: "SQL", image: sql, order: 11 },
     { name: "Git", image: git, order: 12 },
