@@ -13,6 +13,8 @@ import node from "../assets/Lang/node.svg";
 import python from "../assets/Lang/python.svg";
 import next from "../assets/Lang/next.svg";
 import git from "../assets/Lang/git.svg";
+import github from "../assets/Social/Github.png";
+import sql from "../assets/Lang/sql.svg";
 
 const Skills = () => {
   const skillsData = [
@@ -25,8 +27,11 @@ const Skills = () => {
     { name: "Express JS", image: express, order: 6 },
     { name: "React JS", image: react, order: 7 },
     { name: "Node JS", image: node, order: 8 },
-    { name: "Python", image: python, order: 9 },
-    { name: "Git", image: git, order: 10 },
+    { name: "Next.js", image: next, order: 9 },
+    { name: "Python", image: python, order: 10 },
+    { name: "SQL", image: sql, order: 11 },
+    { name: "Git", image: git, order: 12 },
+    { name: "Github", image: github, order: 13 },
   ];
   return (
     <>

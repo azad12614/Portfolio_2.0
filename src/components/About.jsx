@@ -31,7 +31,8 @@ const About = () => {
               competitive programming.
             </p>
             <p className="about-detail">
-              🌱 Learning <span className="highlight">Python</span> and{" "}
+              🌱 Learning <span className="highlight">Python</span>,{" "}
+              <span className="highlight">Next.js</span> and{" "}
               <span className="highlight">Machine Learning</span> with Pandas,
               NumPy, and TensorFlow.
             </p>
