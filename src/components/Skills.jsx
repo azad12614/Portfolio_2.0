@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Skills.css";
 
 import c from "../assets/Lang/c.svg";
@@ -33,17 +33,27 @@ const Skills = () => {
     { name: "Git", image: git, order: 12 },
     { name: "Github", image: github, order: 13 },
   ];
+
+  const [animateSkills, setAnimateSkills] = useState(true);
+
+  useEffect(() => {
+    setAnimateSkills(false);
+    setTimeout(() => setAnimateSkills(true), 50); // Brief delay to retrigger animation on mount
+  }, []);
+
   return (
-    <>
-      <div className="skills">
-        {skillsData.map((skill, index) => (
-          <div className="lang" key={index} style={{ "--order": skill.order }}>
-            <img loading="lazy" src={skill.image} alt={skill.name} />
-            <h1>{skill.name}</h1>
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="skills">
+      {skillsData.map((skill, index) => (
+        <div
+          className={`lang ${animateSkills ? "animate-on-load" : ""}`}
+          key={index}
+          style={{ "--order": skill.order }}
+        >
+          <img loading="lazy" src={skill.image} alt={skill.name} />
+          <h1>{skill.name}</h1>
+        </div>
+      ))}
+    </div>
   );
 };
 

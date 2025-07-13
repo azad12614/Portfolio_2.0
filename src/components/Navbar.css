@@ -2,10 +2,10 @@
 
 .navbar {
   position: fixed;
-  top: 2rem;
+  top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 92vw;
+  width: 90vw;
   max-width: 1000px;
   height: 4.5rem;
   background-color: var(--bg-glass);
@@ -16,7 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5rem;
   z-index: 1000;
 }
 

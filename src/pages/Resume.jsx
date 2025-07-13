@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Resume.css";
 import Skills from "../components/Skills";
 
 const Resume = () => {
   const [activeProfile, setActiveProfile] = useState(0);
   const [activeTab, setActiveTab] = useState("academic");
+  const [animateProfile, setAnimateProfile] = useState(true);
+  const [animateGrid, setAnimateGrid] = useState(true);
+
+  // Reset animation triggers
+  useEffect(() => {
+    setAnimateProfile(false);
+    setTimeout(() => setAnimateProfile(true), 50); // Adjusted delay for reliability
+  }, [activeProfile]);
+
+  useEffect(() => {
+    setAnimateGrid(false);
+    setTimeout(() => setAnimateGrid(true), 50); // Adjusted delay for reliability
+  }, [activeTab]);
 
   const profiles = [
     {
@@ -105,7 +118,7 @@ const Resume = () => {
       date: "Oct 2023",
       title: "ICPC Preliminary Contest 2023",
       org: "ICPC",
-      desc: "Participated (Team - IIUC_Groot) with виконавці Toshifur Rhaman and Baizid Kamrurzaman in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
+      desc: "Participated (Team - IIUC_Groot) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
     },
     {
       date: "Sep 2023",
@@ -213,7 +226,11 @@ const Resume = () => {
             ))}
           </div>
           <div className="profile-content">
-            <div className="profile-card">
+            <div
+              className={`profile-card ${
+                animateProfile ? "animate-on-load" : ""
+              }`}
+            >
               <h4>
                 <a
                   href={profiles[activeProfile].link}
@@ -278,7 +295,10 @@ const Resume = () => {
         <div className="gridedu">
           {activeTab === "education" &&
             education.map((item, index) => (
-              <div className="gride" key={index}>
+              <div
+                className={`gride ${animateGrid ? "animate-on-load" : ""}`}
+                key={index}
+              >
                 <p className="date">{item.date}</p>
                 <p className="tittle">
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -291,7 +311,10 @@ const Resume = () => {
             ))}
           {activeTab === "programming" &&
             programming.map((item, index) => (
-              <div className="gride" key={index}>
+              <div
+                className={`gride ${animateGrid ? "animate-on-load" : ""}`}
+                key={index}
+              >
                 <p className="date">{item.date}</p>
                 <p className="tittle">
                   {item.link ? (
@@ -312,7 +335,10 @@ const Resume = () => {
             ))}
           {activeTab === "academic" &&
             academic.map((item, index) => (
-              <div className="gride" key={index}>
+              <div
+                className={`gride ${animateGrid ? "animate-on-load" : ""}`}
+                key={index}
+              >
                 <p className="date">{item.date}</p>
                 <p className="tittle">
                   {item.title} <span>- {item.org}</span>
