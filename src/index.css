@@ -25,22 +25,22 @@
   --bg-glass: rgba(18, 30, 40, 0.6);
 
   /* 🎨 Text Colors */
-  --text-main: #ecf0ec;
-  --text-muted: #748d92;
-  --text-heading: #84ccca;
-  --text-accent: #00bbdd;
+  --text-main: #f5f6f5;
+  --text-muted: #8a9ca3;
+  --text-heading: #a0e4e2;
+  --text-accent: #00c4e6;
   --text-invert: #0d0d0f;
 
   /* 🎨 Borders & Shadows */
   --border: #66fcf1;
   --border-hover: #00a2ff;
-  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.3);
+  --shadow-soft: 0 6px 16px rgba(0, 0, 0, 0.4);
 
   /* 🎨 Buttons */
-  --btn-bg: #afdde5;
-  --btn-text: #01313c;
-  --btn-hover-bg: #1f2833;
-  --btn-hover-text: #0fa4af;
+  --btn-bg: #b7e1ea;
+  --btn-text: #012a36;
+  --btn-hover-bg: #1f2a33;
+  --btn-hover-text: #00c4e6;
 
   /* 🎨 UI Highlights */
   --primary: #02a9f7;
@@ -61,31 +61,29 @@
   --BG: url(./BG1.jpeg);
 
   /* 🌐 Brightness control */
-  --bright: 105%;
+  --bright: 110%;
 }
 
 /* =============================
     🌞 Light Theme Overrides
 ============================= */
 [data-theme="light"] {
-  --BG: url(./BG2.jpg);
-
-  --bg-main: #f4f4f4;
-  --bg-subtle: #e4e4e4;
+  --bg-main: #f8f9f8;
+  --bg-subtle: #e8ecef;
   --bg-accent: #b7dbf8;
-  --bg-glass: rgba(14, 64, 85, 0.25);
+  --bg-glass: rgba(14, 64, 85, 0.3);
 
-  --text-main: #212a31;
-  --text-muted: #122e49;
+  --text-main: #1a252f;
+  --text-muted: #2a3f5a;
   --text-heading: #0e4055;
   --text-accent: #964734;
-  --text-invert: #ecf0ec;
+  --text-invert: #f5f6f5;
 
   --border: #00cfcf;
   --border-hover: #0085ff;
 
-  --btn-bg: #01364b;
-  --btn-text: #00a2ff;
+  --btn-bg: #014c66;
+  --btn-text: #b7e1ea;
   --btn-hover-bg: #b7dbf8;
   --btn-hover-text: #012c64;
 
@@ -94,6 +92,8 @@
 
   --logo: #0b0e12;
   --mobile-nav: #aabbcce1;
+
+  --BG: url(./BG2.jpg);
 
   --bright: 95%;
 }
