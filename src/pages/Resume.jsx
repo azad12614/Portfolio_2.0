@@ -204,13 +204,10 @@ const Resume = () => {
 
   return (
     <section className="resume" id="Resume">
+      <h2 className="header">📊 My Journey</h2>
+      <p className="title">"Showcasing my skills and achievements in tech."</p>
       <div className="resume-container">
-        <h2 className="header">📊 Resume</h2>
-        <p className="title">
-          "Solving real-world problems with code and continuous learning."
-        </p>
-
-        <h4>Coding Profiles 🎯</h4>
+        <h4 className="resume-subtitle">Coding Profiles 🎯</h4>
         <div className="profiles-slider">
           <div className="profiles-tabs">
             {profiles.map((item, index) => (
@@ -236,6 +233,7 @@ const Resume = () => {
                   href={profiles[activeProfile].link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="OJ"
                 >
                   {profiles[activeProfile].name}
                 </a>
@@ -264,16 +262,16 @@ const Resume = () => {
           </div>
         </div>
 
-        <h4>My Skills 👩‍💻</h4>
+        <h4 className="resume-subtitle">My Skills 👩‍💻</h4>
         <Skills />
 
-        <h4>Experience</h4>
+        <h4 className="resume-subtitle">Experience Timeline</h4>
         <div className="experience-tabs">
           <button
             className={`tab-button ${activeTab === "academic" ? "active" : ""}`}
             onClick={() => setActiveTab("academic")}
           >
-            <span className="tab-icon">💼</span> Academic Engagements
+            <span className="tab-icon">💼</span> Academic Roles
           </button>
           <button
             className={`tab-button ${
@@ -281,7 +279,7 @@ const Resume = () => {
             }`}
             onClick={() => setActiveTab("programming")}
           >
-            <span className="tab-icon">🏆</span> Programming
+            <span className="tab-icon">🏆</span> Programming Achievements
           </button>
           <button
             className={`tab-button ${

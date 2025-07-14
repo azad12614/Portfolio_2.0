@@ -95,7 +95,6 @@
 .hero-description:hover strong {
   font-weight: 700;
   color: var(--text-accent);
-  text-decoration: underline wavy 2px var(--text-accent);
 }
 
 .hero-img-box {

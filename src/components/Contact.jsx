@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 
 import git from "../assets/Social/Github.png";
@@ -6,65 +6,88 @@ import fb from "../assets/Social/FB.png";
 import ln from "../assets/Social/Linkdin.png";
 
 function Contact() {
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Simulate form submission (replace with actual API call if needed)
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setSubmissionStatus("success");
+      e.target.reset(); // Clear form
+    } catch (error) {
+      setSubmissionStatus("error");
+    }
+    // Reset status after 3 seconds
+    setTimeout(() => setSubmissionStatus(null), 3000);
+  };
+
   return (
     <div className="d-flex flex-column max-w-full">
       <section id="Contact">
-        <h2 class="header">🌐 CONTACT ME</h2>
-        <p class="title">“Get in Touch, Don't Be Shy!!”</p>
-        <div class="contact-wrapper">
-          {/* <!-- Left contact page --> */}
-
+        <h2 className="header">🌐 CONTACT ME</h2>
+        <p className="title">“Get in Touch, Don't Be Shy!!”</p>
+        <div className="contact-wrapper">
+          {/* Left contact page */}
           <form
             action="mailto:azad.jishan2003@gmail.com"
             id="contact-form"
-            class="form-horizontal"
+            className="form-horizontal"
             method="POST"
+            onSubmit={handleSubmit}
           >
-            <div class="group">
-              <div class="col-sm-12">
+            <div className="group">
+              <div className="col-sm-12">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="name"
                   placeholder="NAME"
                   name="name"
-                  required="y"
-                ></input>
+                  required
+                />
               </div>
             </div>
 
-            <div class="group">
-              <div class="col-sm-12">
+            <div className="group">
+              <div className="col-sm-12">
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="email"
                   placeholder="EMAIL"
                   name="email"
-                  required="y"
-                ></input>
+                  required
+                />
               </div>
             </div>
 
             <textarea
-              class="form-control"
+              className="form-control"
               rows="10"
               placeholder="MESSAGE"
               name="message"
-              required="y"
+              required
             ></textarea>
 
-            <button class="send-button" id="submit" type="submit" value="SEND">
+            <button className="send-button" id="submit" type="submit">
               SEND
             </button>
+            <div
+              className={`submission-feedback ${
+                submissionStatus ? submissionStatus : ""
+              }`}
+            >
+              {submissionStatus === "success" && "Message sent successfully!"}
+              {submissionStatus === "error" &&
+                "Failed to send message. Try again."}
+            </div>
           </form>
-
-          {/* <!-- Left contact page --> */}
-
-          <div class="direct-contact-container">
-            <ul class="contact-list">
-              <li class="list-item">
-                <span class="contact-text place">
+          {/* Right contact page */}
+          <div className="direct-contact-container">
+            <ul className="contact-list">
+              <li className="list-item">
+                <span className="contact-text place">
                   <a
                     href="https://maps.app.goo.gl/A8Bz35Qhx7oBV9RV7"
                     title="Take me to a ride"
@@ -75,8 +98,8 @@ function Contact() {
                 </span>
               </li>
 
-              <li class="list-item">
-                <span class="contact-text phone">
+              <li className="list-item">
+                <span className="contact-text phone">
                   <a
                     href="tel:01630440005"
                     title="Give me a call"
@@ -87,8 +110,8 @@ function Contact() {
                 </span>
               </li>
 
-              <li class="list-item">
-                <span class="contact-text gmail">
+              <li className="list-item">
+                <span className="contact-text gmail">
                   <a
                     href="mailto:azad.jishan2003@gmail.com"
                     title="Send me an email"
@@ -100,11 +123,11 @@ function Contact() {
               </li>
             </ul>
 
-            <ul class="social-media-list">
+            <ul className="social-media-list">
               <a
                 href="https://github.com/azad12614"
                 target="_blank"
-                class="contact-icon"
+                className="contact-icon"
               >
                 <li>
                   <img loading="lazy" src={git} />
@@ -113,7 +136,7 @@ function Contact() {
               <a
                 href="https://www.linkedin.com/in/abdullah-al-azad-12614-jishan"
                 target="_blank"
-                class="contact-icon"
+                className="contact-icon"
               >
                 <li>
                   <img loading="lazy" src={ln} />
@@ -122,7 +145,7 @@ function Contact() {
               <a
                 href="https://www.facebook.com/abdullah.2003.azad/"
                 target="_blank"
-                class="contact-icon"
+                className="contact-icon"
               >
                 <li>
                   <img loading="lazy" src={fb} />
@@ -130,7 +153,7 @@ function Contact() {
               </a>
             </ul>
 
-            <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED.</div>
+            <div className="copyright">&copy; ALL OF THE RIGHTS RESERVED.</div>
           </div>
         </div>
       </section>

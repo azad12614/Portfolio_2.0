@@ -13,19 +13,26 @@
 }
 
 /* Left contact page */
-
 .form-horizontal {
   float: left;
   max-width: 25rem;
   font-family: "Lato";
   font-weight: 400;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.form-horizontal:hover .form-control,
+.form-horizontal:hover textarea {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
 }
 
 .form-control,
 textarea {
   max-width: 25rem;
   background-color: #b9b9b9 !important;
-  border-color: transparent;
+  border: 2px solid transparent;
   letter-spacing: 1px;
   font-weight: bold;
   font-family: "Lato";
@@ -33,32 +40,62 @@ textarea {
   border-radius: 10px;
   margin-bottom: 0.5rem;
   box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-control:hover {
+.form-control:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+.form-control:hover,
+textarea:hover {
   box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
 }
 
 .send-button {
   font-family: "Kaushan Script", cursive;
   color: var(--btn-text);
-  background-color: #b9b9b9 !important;
+  background-color: var(--primary) !important;
   border-radius: 10px;
-  height: 2.5rem;
+  height: 3rem;
   width: 25rem;
   text-align: center;
   align-content: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bolder;
   box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
-  cursor: url(../cursor2.png), pointer;
+  cursor: var(--cursor-pointer);
+  transition: all 0.3s ease;
 }
 
 .send-button:hover {
-  color: var(--hoverText);
-  background-color: var(--hoverBg) !important;
-  box-shadow: 10px 10px 10px #00000090, -1px -1px 10px #00000045;
-  cursor: url(../cursor2.png), pointer;
+  color: var(--btn-hover-text);
+  background-color: var(--secondary) !important;
+  box-shadow: 0 0 12px var(--primary);
+  transform: scale(1.01);
+}
+
+/* Submission feedback */
+.submission-feedback {
+  display: none;
+  text-align: center;
+  color: var(--primary);
+  font-family: "Lato";
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.submission-feedback.success {
+  display: block;
+  color: var(--primary);
+}
+
+.submission-feedback.error {
+  display: block;
+  color: var(--highlight);
 }
 
 /* Begin Right Contact Page */
@@ -70,7 +107,7 @@ textarea {
 /* Location, Phone, Email Section */
 .contact-list {
   list-style-type: none;
-  color: var(--highlight);
+  color: var(--primary);
   text-align: center;
 }
 
@@ -79,7 +116,7 @@ textarea {
 }
 
 .contact-text a {
-  text-underline-offset: none;
+  text-decoration: none;
   transition-duration: 0.2s;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bolder;
@@ -101,7 +138,7 @@ textarea {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  cursor: url(../cursor2.png), pointer;
+  cursor: var(--cursor-pointer);
 }
 
 .social-media-list a li {
@@ -117,7 +154,7 @@ textarea {
   padding: 10px;
   transition: all 0.2s ease-in-out;
   box-shadow: 10px 10px 10px #00000090 inset, -1px -1px 10px #00000045 inset;
-  cursor: url(../cursor2.png), pointer;
+  cursor: var(--cursor-pointer);
 }
 
 .social-media-list a li:after {
@@ -165,7 +202,7 @@ textarea {
   text-align: center;
 }
 
-/* Begin Media Queries*/
+/* Begin Media Queries */
 @media screen and (max-width: 850px) {
   #Contact {
     padding-top: 6rem;
@@ -215,49 +252,12 @@ textarea {
   }
 
   .direct-contact-container,
-  .form-wrapper {
+  .form-horizontal {
     float: none;
     margin: 0 auto;
   }
 
-  .form-horizontal {
-    width: 96%;
-    margin-inline: 2%;
-  }
-
-  .send-button {
-    width: 98%;
-    margin-inline: 1%;
-  }
-
-  .name,
-  .email,
-  textarea {
-    width: 280px;
-  }
-
-  .direct-contact-container {
-    margin-block: 30px;
-  }
-
-  .social-media-list {
-    left: 0;
-  }
-
-  .social-media-list a li {
-    height: 55px;
-    width: 55px;
-    line-height: 55px;
-    font-size: 2rem;
-  }
-
-  .social-media-list a li:after {
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-  }
-
-  .social-media-list a li img {
+  -dem-list a li img {
     aspect-ratio: 1/1;
     width: 50px;
     margin: 1px;

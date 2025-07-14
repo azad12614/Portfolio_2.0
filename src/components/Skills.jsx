@@ -18,27 +18,27 @@ import sql from "../assets/Lang/sql.svg";
 
 const Skills = () => {
   const skillsData = [
-    { name: "C", image: c, order: 0 },
-    { name: "C++", image: cp, order: 1 },
-    { name: "HTML", image: html, order: 2 },
-    { name: "CSS", image: css, order: 3 },
-    { name: "Javascript", image: javascript, order: 4 },
-    { name: "MongoDB", image: mongodb, order: 5 },
-    { name: "Express JS", image: express, order: 6 },
-    { name: "React JS", image: react, order: 7 },
-    { name: "Node JS", image: node, order: 8 },
-    { name: "Next JS", image: next, order: 9 },
-    { name: "Python", image: python, order: 10 },
-    { name: "SQL", image: sql, order: 11 },
-    { name: "Git", image: git, order: 12 },
-    { name: "Github", image: github, order: 13 },
+    { name: "C", image: c, order: 0, color: "#6fa9e7" },
+    { name: "C++", image: cp, order: 1, color: "#1d4d80" },
+    { name: "HTML", image: html, order: 2, color: "#ff6f2e" },
+    { name: "CSS", image: css, order: 3, color: "#1e7ecd" },
+    { name: "Javascript", image: javascript, order: 4, color: "#ffde37" },
+    { name: "MongoDB", image: mongodb, order: 5, color: "#62a53b" },
+    { name: "Express JS", image: express, order: 6, color: "#70859d" },
+    { name: "React JS", image: react, order: 7, color: "#6bf0ff" },
+    { name: "Node JS", image: node, order: 8, color: "#64ba4c" },
+    { name: "Next JS", image: next, order: 9, color: "#ffffff" },
+    { name: "Python", image: python, order: 10, color: "#ffe142" },
+    { name: "SQL", image: sql, order: 11, color: "#5485de" },
+    { name: "Git", image: git, order: 12, color: "#ff5820" },
+    { name: "Github", image: github, order: 13, color: "#9ba19b" },
   ];
 
-  const [animateSkills, setAnimateSkills] = useState(true);
+  const [animateSkills, setAnimateSkills] = useState(false);
 
   useEffect(() => {
     setAnimateSkills(false);
-    setTimeout(() => setAnimateSkills(true), 50); // Brief delay to retrigger animation on mount
+    setTimeout(() => setAnimateSkills(true), 50);
   }, []);
 
   return (
@@ -47,7 +47,7 @@ const Skills = () => {
         <div
           className={`lang ${animateSkills ? "animate-on-load" : ""}`}
           key={index}
-          style={{ "--order": skill.order }}
+          style={{ "--order": skill.order, "--skill-color": skill.color }}
         >
           <img loading="lazy" src={skill.image} alt={skill.name} />
           <h1>{skill.name}</h1>

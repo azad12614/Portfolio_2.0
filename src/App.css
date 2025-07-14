@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=IBM+Plex+Sans:wght@300..700&family=Jost:wght@300..800&family=Fira+Mono&family=Orbitron:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=IBM+Plex+Sans:wght@300..700&family=Jost:wght@300..800&family=Fira+Mono&family=Orbitron:wght@700&family=Cormorant+Garamond:wght@400;600;700&display=swap");
 
 /* =============================
       ⚙️ Global Resets
@@ -22,7 +22,7 @@ li,
 button,
 .pointer,
 svg {
-  cursor: var(--cursor-pointer);
+  cursor: var(--cursor-pointer) !important;
 }
 
 body {
@@ -64,19 +64,19 @@ body {
 .header {
   font-family: var(--font-logo);
   color: var(--primary);
-  font-size: 3rem;
-  text-shadow: var(--secondary) 1px 1px, var(--secondary) 2px 2px,
-    var(--secondary) 3px 3px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-shadow: var(--secondary) 0.1rem 0.1rem, var(--secondary) 0.2rem 0.2rem;
   letter-spacing: 0.1rem;
   text-align: center;
+  margin-top: 4rem;
 }
 
 .title {
   font-family: var(--font-display);
   color: var(--text-heading);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   text-align: center;
-  margin: 0.2rem 8rem 1.2rem 8rem;
+  margin: 0.2rem 0.2rem 1.2rem 0.2rem;
   line-height: 1.3;
 }
 
@@ -87,20 +87,27 @@ strong {
 
 @media (max-width: 1080px) {
   .header {
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
   }
   .title {
-    font-size: 1.5rem;
-    margin: 0 4rem 1rem;
+    font-size: clamp(1.25rem, 3.5vw, 1.75rem);
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
   }
   .title {
-    font-size: 1.25rem;
-    margin: 0 2rem 1rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .header {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  .title {
+    font-size: clamp(1rem, 3vw, 1.5rem);
   }
 }

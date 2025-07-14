@@ -9,63 +9,88 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .blog-section {
-  padding-top: 7rem;
+  padding-top: 7vh;
   animation: Blog 0.8s ease-in-out;
-}
-
-.blog-section .arrow {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.blog-section .arrow .btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  /* background: var(--btn-bg); */
-  border: 1px solid var(--border);
-  color: var(--text);
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
-  transition: all 0.2s ease-in-out;
-}
-
-.blog-section .arrow .btn:hover {
-  background-color: var(--btn-hover-bg);
-  color: var(--btn-hover-text);
-  border: 1px solid var(--border-hover);
-  transform: scale(0.98);
-  box-shadow: inset 4px 6px 8px rgba(0, 0, 0, 0.5);
-}
-
-.blog-section .arrow .btn span {
-  font-size: 28px;
 }
 
 .info {
-  width: 75%;
-  max-width: 1000px;
-  margin: 2rem auto;
+  width: 100%;
+  max-width: 1200px; /* Max content width */
+  margin: 4vh auto;
   display: grid;
   place-items: center;
 }
 
-.blogs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  background: var(--bg-glass);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.carousel {
+  width: 100%;
+  max-width: 1200px; /* Max content width */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center carousel items */
 }
 
-.blogs .blogDis {
+.blog-card {
+  display: none;
+  grid-template-columns: 1fr 0fr;
+  gap: 3vh;
+  background: var(--bg-glass);
+  padding: 3vh 4vw;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 900px; /* Max content width for cards */
+  justify-self: center; /* Center card within carousel */
+}
+
+.blog-card.active {
+  display: grid;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.blog-card .blog-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-card .blog-content:hover a {
+  text-decoration: underline wavy var(--link);
+}
+
+.blog-card .blogImg {
+  width: 25vw;
+  max-width: 300px;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.blog-card .blogImg:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.blog-card .blogDis {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,59 +98,150 @@
   color: var(--text-heading);
 }
 
-.blogs .blogDis a {
+.blog-card .blogDis a {
   text-decoration: none;
   color: var(--title);
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.75rem;
-  font-style: oblique;
+  font-family: var(--font-accent);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 1.5vh;
   text-transform: uppercase;
 }
 
-.blogs .blogDis a:hover {
-  color: var(--text-invert);
+.blog-card .blogDis a:hover {
+  color: var(--primary);
+  text-decoration: underline wavy var(--link);
 }
 
-.blogs .blogDis p {
+.blog-card .blogDis p {
   color: var(--text-main);
-  font-style: italic;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.5;
 }
 
-.blogs .blogImg {
-  width: 100%;
-  max-width: 250px;
-  aspect-ratio: 1;
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  margin-top: 3vh;
+}
+
+.navigation .arrow {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.navigation .arrow .btn {
+  width: clamp(40px, 6vw, 55px);
+  height: clamp(40px, 6vw, 55px);
   border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-  margin: auto;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: 1px solid var(--border);
+  color: var(--text-invert);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
 }
 
-.blogs .blogImg:hover {
-  transform: scale(1.05);
-  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+.navigation .arrow .btn:hover {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: var(--btn-hover-text);
+  border: 1px solid var(--border-hover);
+  transform: scale(0.98);
+  box-shadow: inset 4px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navigation .arrow .btn span {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.navigation .dots {
+  display: flex;
+  gap: 1vw;
+}
+
+.navigation .dots .dot {
+  width: clamp(10px, 1.2vw, 15px);
+  height: clamp(10px, 1.2vw, 15px);
+  border-radius: 50%;
+  background: var(--bg-subtle);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navigation .dots .dot.active {
+  background: var(--primary);
+  transform: scale(1.3);
+}
+
+.navigation .dots .dot:hover {
+  background: var(--secondary);
+  transform: scale(1.2);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .blogs {
+  .blog-card {
     grid-template-columns: 1fr;
-    text-align: center;
-    padding: 1.5rem;
+    padding: 2.5vh 3vw;
   }
 
-  .blogs .blogDis a {
-    font-size: 1.5rem;
+  .blog-card .blog-content {
+    grid-template-columns: 1fr;
+    gap: 2vh;
   }
 
-  .blogs .blogDis p {
-    font-size: 1rem;
-  }
-
-  .blogs .blogImg {
+  .blog-card .blogImg {
+    width: 25vw;
     max-width: 200px;
+  }
+
+  .navigation .arrow .btn {
+    width: clamp(30px, 8vw, 50px);
+    height: clamp(30px, 8vw, 50px);
+  }
+
+  .navigation .dots .dot {
+    width: clamp(8px, 1.5vw, 12px);
+    height: clamp(8px, 1.5vw, 12px);
+  }
+}
+
+@media (max-width: 520px) {
+  .blog-card {
+    margin: 2vh 3vw;
+    margin-bottom: 0;
+  }
+
+  .blog-content {
+    justify-items: center;
+  }
+
+  .blog-card .blogImg {
+    width: 40vw;
+    max-width: 150px;
+  }
+
+  .blog-card .blogDis a {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+
+  .blog-card .blogDis p {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+
+  .navigation .arrow .btn {
+    margin-top: 0;
+    width: clamp(25px, 10vw, 40px);
+    height: clamp(25px, 10vw, 40px);
+  }
+
+  .navigation .dots .dot {
+    width: clamp(6px, 2vw, 10px);
+    height: clamp(6px, 2vw, 10px);
   }
 }

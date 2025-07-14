@@ -1,5 +1,18 @@
 /* src/components/Navbar.css */
 
+/* Logo Animation */
+@keyframes logoPulse {
+  0% {
+    text-shadow: 0 0 5px var(--primary), 0 0 15px var(--secondary);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary);
+  }
+  100% {
+    text-shadow: 0 0 5px var(--primary), 0 0 15px var(--secondary);
+  }
+}
+
 .navbar {
   position: fixed;
   top: 2vh;
@@ -22,16 +35,23 @@
 /* === Logo Styling === */
 .text-logo {
   font-family: var(--font-logo);
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
   font-weight: 700;
   color: var(--logo);
   text-decoration: none;
   letter-spacing: 2px;
   padding-left: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.text-logo:hover {
+  transform: scale(1.05);
+  color: var(--primary);
+  animation: logoPulse 1.5s infinite ease-in-out;
 }
 
 .glow {
-  text-shadow: 0 0 5px var(--primary), 0 0 15px var(--primary);
+  text-shadow: 0 0 5px var(--primary), 0 0 15px var(--secondary);
 }
 
 /* === Links === */
@@ -124,7 +144,7 @@
 
 @media (max-width: 480px) {
   .text-logo {
-    font-size: 1.5rem;
+    font-size: clamp(1.4rem, 3.5vw, 1.8rem);
   }
 
   .navbar-links ul li a {

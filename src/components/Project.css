@@ -26,8 +26,7 @@
 }
 
 .project-section {
-  padding-top: 2rem;
-  padding-top: 7rem;
+  padding-top: 3rem;
   padding-inline: 5vw;
 }
 
@@ -40,13 +39,26 @@
 
 .project-card {
   display: flex;
-  /* background: var(--bg-accent); */
   border-radius: 16px;
   width: 60vw;
   margin: auto;
-  /* overflow: hidden; */
-  /* box-shadow: var(--shadow-soft); */
+  background: var(--bg-glass);
+  box-shadow: var(--shadow-soft);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.project-card:hover .project-image > img {
+  transform: scale(1.05);
+  border-color: var(--primary);
+}
+
+.project-card:hover .project-content {
+  background: rgba(18, 30, 40, 0.8);
 }
 
 .project-card:nth-child(1n) {
@@ -65,15 +77,14 @@
   display: flex;
   object-fit: cover;
   aspect-ratio: 1/1;
-  /* background: var(--bg-main); */
   margin: auto;
-  /* border-radius: 16px; */
 }
 
 .project-image > img {
   width: clamp(10rem, 20vw, 20rem);
   border-radius: 50%;
   border: 2px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .project-content {
@@ -86,28 +97,22 @@
   background: var(--bg-glass);
   box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
   border-radius: 16px;
-  /* border: 2px solid var(--border); */
-}
-
-.project-content:hover {
-  transform: scale(0.98);
-  box-shadow: inset 5px 8px 10px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease;
 }
 
 .project-title {
-  /* font-family: "Saira Stencil One", sans-serif; */
   font-family: var(--font-logo);
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
   color: var(--primary);
   margin-bottom: 0.75rem;
-  /* line-height: 1.3; */
   text-transform: uppercase;
 }
 
 .project-description {
   font-family: "Playfair Display", serif;
   color: var(--text-main);
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   margin-bottom: 1rem;
   font-style: italic;
   line-height: 1.4;
@@ -131,6 +136,12 @@
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover .tech-badge {
+  background-color: var(--primary);
+  color: var(--text-invert);
 }
 
 .project-links {
@@ -142,12 +153,12 @@
 
 .project-links a {
   color: var(--link);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .project-links a:hover {
   color: var(--highlight);
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* Responsive Layout */
@@ -166,14 +177,12 @@
 
   .project-image {
     background: var(--bg-subtle);
-
     display: flex;
     object-fit: cover;
     width: clamp(10rem, 20vw, 20rem);
     aspect-ratio: 1/1;
     border-radius: 50%;
     margin: auto;
-
     position: absolute;
     z-index: 10;
     top: 0rem;
@@ -187,7 +196,7 @@
   }
 
   .project-title {
-    font-size: 1.6rem;
+    font-size: clamp(1.6rem, 3.25vw, 2rem);
   }
 }
 
@@ -220,11 +229,11 @@
   }
 
   .project-title {
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
   }
 
   .project-description {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     padding: 0;
     margin: 0;
   }
