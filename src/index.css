@@ -54,11 +54,11 @@
   --mobile-nav: #102030e1;
 
   /* 🎨 Cursors */
-  --cursor-default: url(./cursor1.png), auto;
-  --cursor-pointer: url(./cursor2.png), pointer;
+  --cursor-default: url(cursor1.png), auto;
+  --cursor-pointer: url(cursor2.png), pointer;
 
   /* 🌐 Background Image */
-  --BG: url(./BG1.jpeg);
+  --BG: url(BG1.jpeg);
 
   /* 🌐 Brightness control */
   --bright: 110%;
@@ -93,7 +93,7 @@
   --logo: #0b0e12;
   --mobile-nav: #aabbcce1;
 
-  --BG: url(./BG2.jpg);
+  --BG: url(BG2.jpg);
 
   --bright: 95%;
 }
