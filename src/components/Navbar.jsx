@@ -1,14 +1,16 @@
-// src/components/Navbar.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import DarkMode from "./DarkMode";
 import "./Navbar.css";
+import logo from "../assets/Logo.jpg";
 
 const sections = ["Hero", "About", "Resume", "Project", "Blog", "Contact"];
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("Hero");
+
+  const toggleMenu = useCallback(() => setShowMobileMenu((prev) => !prev), []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -19,7 +21,7 @@ const Navbar = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2, rootMargin: "0px" }
     );
 
     sections.forEach((id) => {
@@ -30,13 +32,11 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, []);
 
-  const toggleMenu = () => setShowMobileMenu((prev) => !prev);
-
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="navbar-logo">
-        <a href="/" className="text-logo">
-          <span className="glow">AZAD</span>
+        <a href="/" className="logo-link" aria-label="Home">
+          <img src={logo} alt="Azad Logo" className="logo-img" />
         </a>
       </div>
 
@@ -47,6 +47,7 @@ const Navbar = () => {
               <a
                 href={`#${section}`}
                 className={activeSection === section ? "active" : ""}
+                aria-current={activeSection === section ? "page" : undefined}
               >
                 {section}
               </a>
@@ -56,7 +57,12 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-right">
-        <button className="hamburger" onClick={toggleMenu}>
+        <button
+          className="hamburger"
+          onClick={toggleMenu}
+          aria-label="Toggle mobile menu"
+          aria-expanded={showMobileMenu}
+        >
           <GiHamburgerMenu />
         </button>
         <DarkMode />

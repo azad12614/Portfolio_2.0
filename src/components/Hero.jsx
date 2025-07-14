@@ -2,7 +2,8 @@ import React from "react";
 import "./Hero.css";
 import pdf from "../assets/Abdullah_Al_Azad.pdf";
 import avater from "../assets/Abdullah_Al_Azad.jpg";
-import logo from "../assets/AZAD.png";
+// import logo from "../assets/AZAD.png";
+import logo from "../assets/Logo.jpg";
 
 const Hero = () => {
   return (
