@@ -6,38 +6,47 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "./Awards.css";
 
+import hultPrize2023 from "./src/assets/Awards/2023_HULT_PRIZE.png";
+import mentorAward2023 from "./src/assets/Awards/2023_Mentor.png";
+import trainerCert2023 from "./src/assets/Awards/2023_Trainer.jpg";
+import nasa2024 from "./src/assets/Awards/2024_NASA.png";
+import puProgramming2024 from "./src/assets/Awards/2024_PU.jpg";
+import mentorAward2024 from "./src/assets/Awards/2024_Mentor.png";
+import cadetCoordinator2025 from "./src/assets/Awards/2025_Coordinator.jpg";
+import faangSeminar from "./src/assets/Awards/FAANG.png";
+
 const awards = [
   {
     title: "2023 HULT PRIZE Certification",
-    image: "./src/assets/Awards/2023_HULT_PRIZE.png",
+    image: hultPrize2023,
   },
   {
     title: "2023 Mentor Awards",
-    image: "./src/assets/Awards/2023_Mentor.png",
+    image: mentorAward2023,
   },
   {
     title: "2023 Trainer Certification",
-    image: "./src/assets/Awards/2023_Trainer.jpg",
+    image: trainerCert2023,
   },
   {
     title: "2024 NASA Space Apps Challenge Certification",
-    image: "./src/assets/Awards/2024_NASA.png",
+    image: nasa2024,
   },
   {
     title: "2024 PU Programming Contest Certification",
-    image: "./src/assets/Awards/2024_PU.jpg",
+    image: puProgramming2024,
   },
   {
     title: "2024 Mentor Award",
-    image: "./src/assets/Awards/2024_Mentor.png",
+    image: mentorAward2024,
   },
   {
     title: "2025 Cadet Bootcamp Coordinator",
-    image: "./src/assets/Awards/2025_Coordinator.jpg",
+    image: cadetCoordinator2025,
   },
   {
     title: "FAANG Seminar Certification",
-    image: "./src/assets/Awards/FAANG.png",
+    image: faangSeminar,
   },
 ];
 
