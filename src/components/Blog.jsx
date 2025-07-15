@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Blog.css";
 
-import Top from "../assets/10.jpg";
-import AI from "../assets/AI.jpg";
-import Copyleaks from "../assets/Copyleaks.png";
-import ML from "../assets/ML.png";
+import Top from "../assets/Blog/10.jpg";
+import AI from "../assets/Blog/AI.jpg";
+import Copyleaks from "../assets/Blog/Copyleaks.png";
+import ML from "../assets/Blog/ML.png";
 
 const blogData = [
   {

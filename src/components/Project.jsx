@@ -1,12 +1,12 @@
 import "./Project.css";
-import Cloud_Campus from "../assets/Cloud_Campus.png";
-import Gaming from "../assets/Gaming.png";
-import Ladder from "../assets/Ladder.png";
-import NASA from "../assets/NASA.jpeg";
-import Rating from "../assets/Rating.png";
-import Sleepyheads from "../assets/Sleepyheads.png";
-import StartUP from "../assets/StartUP.png";
-import ClipOut from "../assets/ClipOut.png";
+import ClipOut from "../assets/Projects/ClipOut.png";
+import Cloud_Campus from "../assets/Projects/Cloud_Campus.png";
+import Gaming from "../assets/Projects/Gaming.png";
+import Ladder from "../assets/Projects/Ladder.png";
+import NASA from "../assets/Projects/NASA.jpeg";
+import Rating from "../assets/Projects/Rating.png";
+import Sleepyheads from "../assets/Projects/Sleepyheads.png";
+import StartUP from "../assets/Projects/StartUP.png";
 
 const Project = () => {
   const ProjectList = [
