@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "./Awards.css";
 
-import hultPrize2023 from "../assets/Awards/2023_HULT_PRIZE.png";
+import hultPrize2023 from "../assets/Awards/2023_HULT.png";
 import mentorAward2023 from "../assets/Awards/2023_Mentor.png";
 import trainerCert2023 from "../assets/Awards/2023_Trainer.jpg";
 import nasa2024 from "../assets/Awards/2024_NASA.png";
