@@ -33,6 +33,18 @@
   box-shadow: 0 0 2rem var(--highlight), 0 0 2.5rem var(--primary);
 }
 
+.award-slide-image {
+  position: absolute; /* Position relative to .award-slide */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes it behave like background-size: cover */
+  /* If you want it to behave like background-size: contain, use object-fit: contain */
+  /* If you want it to behave like background-size: auto, you might need more complex CSS or just let it default */
+  z-index: 1;
+}
+
 .award-label {
   background: var(--text-invert);
   font-family: var(--font-logo);

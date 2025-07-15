@@ -6,14 +6,14 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "./Awards.css";
 
-import hultPrize2023 from "./src/assets/Awards/2023_HULT_PRIZE.png";
-import mentorAward2023 from "./src/assets/Awards/2023_Mentor.png";
-import trainerCert2023 from "./src/assets/Awards/2023_Trainer.jpg";
-import nasa2024 from "./src/assets/Awards/2024_NASA.png";
-import puProgramming2024 from "./src/assets/Awards/2024_PU.jpg";
-import mentorAward2024 from "./src/assets/Awards/2024_Mentor.png";
-import cadetCoordinator2025 from "./src/assets/Awards/2025_Coordinator.jpg";
-import faangSeminar from "./src/assets/Awards/FAANG.png";
+import hultPrize2023 from "../assets/Awards/2023_HULT_PRIZE.png";
+import mentorAward2023 from "../assets/Awards/2023_Mentor.png";
+import trainerCert2023 from "../assets/Awards/2023_Trainer.jpg";
+import nasa2024 from "../assets/Awards/2024_NASA.png";
+import puProgramming2024 from "../assets/Awards/2024_PU.jpg";
+import mentorAward2024 from "../assets/Awards/2024_Mentor.png";
+import cadetCoordinator2025 from "../assets/Awards/2025_Coordinator.jpg";
+import faangSeminar from "../assets/Awards/FAANG.png";
 
 const awards = [
   {
@@ -71,14 +71,13 @@ function Awards() {
       >
         {awards.map((award, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="award-slide"
-              style={{
-                loading: "lazy",
-                backgroundImage: `url(${award.image})`,
-              }}
-              title={award.title}
-            >
+            <div className="award-slide" title={award.title}>
+              <img
+                src={award.image}
+                alt={award.title}
+                className="award-slide-image"
+                loading="lazy"
+              />
               <div className="award-label">{award.title}</div>
             </div>
           </SwiperSlide>
