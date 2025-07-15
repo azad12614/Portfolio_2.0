@@ -9,35 +9,35 @@ import "./Awards.css";
 const awards = [
   {
     title: "2023 HULT PRIZE Certification",
-    image: "../assets/Awards/2023_HULT_PRIZE.png",
+    image: "./src/assets/Awards/2023_HULT_PRIZE.png",
   },
   {
     title: "2023 Mentor Awards",
-    image: "../assets/Awards/2023_Mentor.png",
+    image: "./src/assets/Awards/2023_Mentor.png",
   },
   {
     title: "2023 Trainer Certification",
-    image: "../assets/Awards/2023_Trainer.jpg",
+    image: "./src/assets/Awards/2023_Trainer.jpg",
   },
   {
     title: "2024 NASA Space Apps Challenge Certification",
-    image: "../assets/Awards/2024_NASA.png",
+    image: "./src/assets/Awards/2024_NASA.png",
   },
   {
     title: "2024 PU Programming Contest Certification",
-    image: "../assets/Awards/2024_PU.jpg",
+    image: "./src/assets/Awards/2024_PU.jpg",
   },
   {
     title: "2024 Mentor Award",
-    image: "../assets/Awards/2024_Mentor.png",
+    image: "./src/assets/Awards/2024_Mentor.png",
   },
   {
     title: "2025 Cadet Bootcamp Coordinator",
-    image: "../assets/Awards/2025_Coordinator.jpg",
+    image: "./src/assets/Awards/2025_Coordinator.jpg",
   },
   {
     title: "FAANG Seminar Certification",
-    image: "../assets/Awards/FAANG.png",
+    image: "./src/assets/Awards/FAANG.png",
   },
 ];
 
