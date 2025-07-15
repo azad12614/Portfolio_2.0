@@ -4,7 +4,15 @@ import DarkMode from "./DarkMode";
 import "./Navbar.css";
 import logo from "../assets/Logo.jpg";
 
-const sections = ["Hero", "About", "Resume", "Project", "Blog", "Contact"];
+const sections = [
+  "Hero",
+  "About",
+  "Resume",
+  "Project",
+  "Awards",
+  "Blog",
+  "Contact",
+];
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);

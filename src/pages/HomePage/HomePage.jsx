@@ -8,6 +8,7 @@ import Blog from "../../components/Blog";
 import Contact from "../../components/Contact";
 import Top from "../../components/Top";
 import Sidebar from "../../components/Sidebar";
+import Awards from "../../components/Awards";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <About></About>
       <Resume></Resume>
       <Project></Project>
+      <Awards></Awards>
       <Blog></Blog>
       <Contact></Contact>
       <Sidebar></Sidebar>

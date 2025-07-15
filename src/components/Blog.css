@@ -23,14 +23,12 @@
 .blog-section {
   padding-top: 7vh;
   animation: Blog 0.8s ease-in-out;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 .info {
   width: 100%;
-  max-width: 1200px; /* Max content width */
+  max-width: 1200px;
   margin: 4vh auto;
   display: grid;
   place-items: center;
@@ -38,11 +36,11 @@
 
 .carousel {
   width: 100%;
-  max-width: 1200px; /* Max content width */
+  max-width: 1200px;
   overflow: hidden;
   position: relative;
   display: flex;
-  justify-content: center; /* Center carousel items */
+  justify-content: center;
 }
 
 .blog-card {
@@ -55,8 +53,8 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   width: 100%;
-  max-width: 900px; /* Max content width for cards */
-  justify-self: center; /* Center card within carousel */
+  max-width: 900px;
+  justify-self: center;
 }
 
 .blog-card.active {
