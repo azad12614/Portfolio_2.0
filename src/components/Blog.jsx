@@ -3,27 +3,27 @@ import "./Blog.css";
 
 import Top from "../assets/Blog/10.jpg";
 import AI from "../assets/Blog/AI.jpg";
-import Copyleaks from "../assets/Blog/Copyleaks.png";
+import LLM from "../assets/Blog/LLM.png";
 import ML from "../assets/Blog/ML.png";
 
 const blogData = [
+  {
+    title: "Kimi K2",
+    desc: "Moonshot AI's Game-Changing Open Agentic Intelligence Model.",
+    img: LLM,
+    link: "https://machineofmind.blogspot.com/2025/07/kimi-k2-moonshot-ais-game-changing-open.html",
+  },
+  {
+    title: "The AI Arms Race",
+    desc: "Comparing the Latest Frontier LLMs in July 2025.",
+    img: AI,
+    link: "https://machineofmind.blogspot.com/2025/07/the-ai-arms-race-comparing-latest.html",
+  },
   {
     title: "Programming",
     desc: "The Top 10 Programming Languages To Learn In 2025",
     img: Top,
     link: "https://machineofmind.blogspot.com/2025/01/programming-languages.html",
-  },
-  {
-    title: "AI for Coders",
-    desc: "Essential Tools and Libraries to Supercharge Your Workflow",
-    img: AI,
-    link: "https://machineofmind.blogspot.com/2024/05/ai-for-coders.html",
-  },
-  {
-    title: "The Mystery of Copyleaks",
-    desc: "Copyleaks is a cutting-edge plagiarism detection software.",
-    img: Copyleaks,
-    link: "https://machineofmind.blogspot.com/2025/05/copyleaks-beyond-plagiarism-detection.html",
   },
   {
     title: "Machine Learning",
