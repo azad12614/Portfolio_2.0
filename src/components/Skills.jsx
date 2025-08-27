@@ -15,6 +15,7 @@ import next from "../assets/Lang/next.svg";
 import git from "../assets/Lang/git.svg";
 import github from "../assets/Social/Github.png";
 import sql from "../assets/Lang/sql.svg";
+import typescript from "../assets/Lang/typescript.svg";
 
 const Skills = () => {
   const skillsData = [
@@ -22,16 +23,17 @@ const Skills = () => {
     { name: "C++", image: cp, order: 1, color: "#1d4d80" },
     { name: "HTML", image: html, order: 2, color: "#ff6f2e" },
     { name: "CSS", image: css, order: 3, color: "#1e7ecd" },
-    { name: "Javascript", image: javascript, order: 4, color: "#ffde37" },
-    { name: "MongoDB", image: mongodb, order: 5, color: "#62a53b" },
-    { name: "Express JS", image: express, order: 6, color: "#70859d" },
-    { name: "React JS", image: react, order: 7, color: "#6bf0ff" },
-    { name: "Node JS", image: node, order: 8, color: "#64ba4c" },
-    { name: "Next JS", image: next, order: 9, color: "#ffffff" },
-    { name: "Python", image: python, order: 10, color: "#ffe142" },
-    { name: "SQL", image: sql, order: 11, color: "#5485de" },
-    { name: "Git", image: git, order: 12, color: "#ff5820" },
-    { name: "Github", image: github, order: 13, color: "#9ba19b" },
+    { name: "MongoDB", image: mongodb, order: 4, color: "#62a53b" },
+    { name: "Express JS", image: express, order: 5, color: "#70859d" },
+    { name: "React JS", image: react, order: 6, color: "#6bf0ff" },
+    { name: "Node JS", image: node, order: 7, color: "#64ba4c" },
+    { name: "Javascript", image: javascript, order: 8, color: "#ffde37" },
+    { name: "Typescript", image: typescript, order: 9, color: "#1e7ecd" },
+    { name: "Next JS", image: next, order: 10, color: "#ffffff" },
+    { name: "Python", image: python, order: 11, color: "#ffe142" },
+    { name: "SQL", image: sql, order: 12, color: "#5485de" },
+    { name: "Git", image: git, order: 13, color: "#ff5820" },
+    { name: "Github", image: github, order: 14, color: "#9ba19b" },
   ];
 
   const [animateSkills, setAnimateSkills] = useState(false);

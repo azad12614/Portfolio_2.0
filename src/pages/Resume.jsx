@@ -52,7 +52,7 @@ const Resume = () => {
 
   const education = [
     {
-      date: "Jul 2021 - Jul 2025",
+      date: "Jul 2021 - Aug 2025",
       title: "B.Sc. Degree",
       link: "https://www.iiuc.ac.bd/",
       org: "IIUC",
@@ -177,13 +177,13 @@ const Resume = () => {
 
   const academic = [
     {
-      date: "Jan 2025 - Present",
+      date: "Jan 2025 - Aug 2025",
       title: "Bootcamp Co-ordinator",
       org: "IIUCCPS",
       desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
     },
     {
-      date: "Jul 2024 - Present",
+      date: "Jul 2024 - Aug 2025",
       title: "Teaching Assistant",
       org: "IIUC",
       desc: "Serving as a Teaching Assistant at International Islamic University Chittagong.",

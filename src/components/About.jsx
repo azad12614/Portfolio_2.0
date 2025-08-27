@@ -9,7 +9,7 @@ const About = () => {
       <div className="about-content">
         <p className="about-description">
           I'm <strong>Abdullah Al Azad</strong>, a passionate{" "}
-          <strong>Computer Science and Engineering student</strong> at{" "}
+          <strong>Computer Science and Engineering graduate</strong> at{" "}
           <strong>International Islamic University Chittagong</strong>, with a
           deep love for solving complex problems through code. As a{" "}
           <strong>competitive programmer</strong>, I’ve honed my skills in
