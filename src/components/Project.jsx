@@ -8,6 +8,7 @@ import Rating from "../assets/Projects/Rating.png";
 import Sleepyheads from "../assets/Projects/Sleepyheads.png";
 import StartUP from "../assets/Projects/StartUP.png";
 import InvoiceMaster from "../assets/Projects/Invoice_Master.png";
+import TaskTracker from "../assets/Projects/Task_Tracker.png";
 
 const Project = () => {
   const ProjectList = [
@@ -28,6 +29,15 @@ const Project = () => {
         "A training platform based on Codeforces problem sets with admin controls and user progress tracking.",
       live: "https://cf-ladder.onrender.com/",
       github: "https://github.com/azad12614/Ladder",
+    },
+    {
+      imgSrc: TaskTracker,
+      title: "Task Tracker",
+      tech: "MERN STACK",
+      description:
+        "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
+      live: "https://tasktracker12614.onrender.com/",
+      github: "https://github.com/azad12614/TaskTracker",
     },
     {
       imgSrc: NASA,
