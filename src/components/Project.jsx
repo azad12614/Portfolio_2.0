@@ -7,6 +7,7 @@ import NASA from "../assets/Projects/NASA.jpeg";
 import Rating from "../assets/Projects/Rating.png";
 import Sleepyheads from "../assets/Projects/Sleepyheads.png";
 import StartUP from "../assets/Projects/StartUP.png";
+import InvoiceMaster from "../assets/Projects/Invoice_Master.png";
 
 const Project = () => {
   const ProjectList = [
@@ -47,24 +48,6 @@ const Project = () => {
       github: "https://github.com/azad12614/SleepyHeads",
     },
     {
-      imgSrc: StartUP,
-      title: "StartUP",
-      tech: "React.js, Next.js, Sanity",
-      description:
-        "A blogging platform for submitting and exploring startup ideas with a modern CMS.",
-      live: null,
-      github: "https://github.com/azad12614/StartUP",
-    },
-    {
-      imgSrc: ClipOut,
-      title: "BG-ClipOut",
-      tech: "React.js",
-      description:
-        "A simple and intuitive tool for removing image backgrounds with a clean UI.",
-      live: null,
-      github: "https://github.com/azad12614/BG-ClipOut",
-    },
-    {
       imgSrc: Gaming,
       title: "Game Vault",
       tech: "HTML, CSS, JavaScript",
@@ -81,6 +64,33 @@ const Project = () => {
         "A leaderboard showcasing Codeforces ratings of IIUC CSE students.",
       live: "https://azad12614.github.io/CF_Rating_IIUC/",
       github: "https://github.com/azad12614/CF_Rating_IIUC",
+    },
+    {
+      imgSrc: ClipOut,
+      title: "BG-ClipOut",
+      tech: "React.js",
+      description:
+        "A simple and intuitive tool for removing image backgrounds with a clean UI.",
+      live: null,
+      github: "https://github.com/azad12614/BG-ClipOut",
+    },
+    {
+      imgSrc: StartUP,
+      title: "StartUP",
+      tech: "Next.js, TypeScript, Sanity",
+      description:
+        "A blogging platform for submitting and exploring startup ideas with a modern CMS.",
+      live: null,
+      github: "https://github.com/azad12614/StartUP",
+    },
+    {
+      imgSrc: InvoiceMaster,
+      title: "Invoice Master",
+      tech: "Next.js, TypeScript, Prisma",
+      description:
+        "A platform for sending Invoice mail with Mailtrap along with traking them.",
+      live: null,
+      github: "https://github.com/azad12614/InvoiceMaster",
     },
   ];
 

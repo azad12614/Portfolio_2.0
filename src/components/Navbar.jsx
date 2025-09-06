@@ -2,11 +2,11 @@ import React, { useEffect, useState, useCallback } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import DarkMode from "./DarkMode";
 import "./Navbar.css";
-import logo from "../assets/Logo.jpg";
+import logo from "../assets/logo.png";
 
 const sections = [
   "Hero",
-  "About",
+  // "About",
   "Resume",
   "Project",
   "Awards",
