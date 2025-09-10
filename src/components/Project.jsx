@@ -42,7 +42,7 @@ const Project = () => {
     {
       imgSrc: NASA,
       title: "Learn4Climate",
-      tech: "React.js, Node.js",
+      tech: "React.js, Node.js, CSS",
       description:
         "A climate education platform developed for NASA's International Space Apps Challenge.",
       live: "https://learn4climate.onrender.com/",
@@ -51,7 +51,7 @@ const Project = () => {
     {
       imgSrc: Sleepyheads,
       title: "Sleepy Heads",
-      tech: "HTML, CSS, Python",
+      tech: "HTML, CSS, Python, ML",
       description:
         "A sleep health prediction tool that analyzes user input to suggest better sleep patterns.",
       live: null,
@@ -78,7 +78,7 @@ const Project = () => {
     {
       imgSrc: ClipOut,
       title: "BG-ClipOut",
-      tech: "React.js",
+      tech: "React.js, TailwindCSS, RestAPI",
       description:
         "A simple and intuitive tool for removing image backgrounds with a clean UI.",
       live: null,
@@ -87,7 +87,7 @@ const Project = () => {
     {
       imgSrc: StartUP,
       title: "StartUP",
-      tech: "Next.js, TypeScript, Sanity",
+      tech: "Next.js, TypeScript, TailwindCSS, Sanity",
       description:
         "A blogging platform for submitting and exploring startup ideas with a modern CMS.",
       live: null,
@@ -96,9 +96,9 @@ const Project = () => {
     {
       imgSrc: InvoiceMaster,
       title: "Invoice Master",
-      tech: "Next.js, TypeScript, Prisma",
+      tech: "Next.js, TypeScript, TailwindCSS, Prisma",
       description:
-        "A platform for sending Invoice mail with Mailtrap along with traking them.",
+        "A platform for sending Invoice mail with Mailtrap, along with tracking them.",
       live: null,
       github: "https://github.com/azad12614/InvoiceMaster",
     },
