@@ -15,7 +15,7 @@ const HomePage = () => {
     <div>
       <Navbar></Navbar>
       <Hero></Hero>
-      {/* <About></About> */}
+      <About></About>
       <Resume></Resume>
       <Project></Project>
       <Awards></Awards>

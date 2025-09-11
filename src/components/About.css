@@ -12,7 +12,7 @@
 .about-section {
   padding: 2rem;
   padding-top: 7rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   justify-items: center;
 }
 
@@ -77,7 +77,7 @@
 @media (max-width: 768px) {
   .about-section {
     padding: 5vh 3vw;
-    min-height: 70vh;
+    /* min-height: 70vh; */
   }
 
   .about-content {

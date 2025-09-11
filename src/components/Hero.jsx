@@ -27,9 +27,9 @@ const Hero = () => {
         <div className="hero-text-box">
           <h1 className="heading-primary">Abdullah Al Azad</h1>
           <p className="hero-description">
-            <strong>CSE Student</strong>,{" "}
-            <strong>Competitive Programmer</strong>,{" "}
-            <strong>MERN Stack Developer</strong>.
+            <strong>Full-Stack Developer</strong>,{" "}
+            <strong>MERN & Next.js Specialist</strong>,{" "}
+            <strong>Competitive Programmer</strong>.
           </p>
           <div className="hero-btn">
             <a href={pdf} target="_blank" className="cv">

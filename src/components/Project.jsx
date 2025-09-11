@@ -24,7 +24,7 @@ const Project = () => {
     {
       imgSrc: Ladder,
       title: "CF Ladder",
-      tech: "MERN Stack",
+      tech: "MERN Stack, REST APIs, JWT, Axios",
       description:
         "A training platform based on Codeforces problem sets with admin controls and user progress tracking.",
       live: "https://cf-ladder.onrender.com/",
@@ -33,11 +33,29 @@ const Project = () => {
     {
       imgSrc: TaskTracker,
       title: "Task Tracker",
-      tech: "MERN STACK",
+      tech: "MERN STACK, JWT",
       description:
         "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
       live: "https://tasktracker12614.onrender.com/",
       github: "https://github.com/azad12614/TaskTracker",
+    },
+    {
+      imgSrc: StartUP,
+      title: "StartUP",
+      tech: "Next.js, TypeScript, TailwindCSS, Sanity",
+      description:
+        "A blogging platform for submitting and exploring startup ideas with a modern CMS.",
+      live: null,
+      github: "https://github.com/azad12614/StartUP",
+    },
+    {
+      imgSrc: InvoiceMaster,
+      title: "Invoice Master",
+      tech: "Next.js, TypeScript, TailwindCSS, Prisma, ShadcnUI",
+      description:
+        "A platform for sending Invoice mail with Mailtrap, along with tracking them.",
+      live: null,
+      github: "https://github.com/azad12614/InvoiceMaster",
     },
     {
       imgSrc: NASA,
@@ -83,24 +101,6 @@ const Project = () => {
         "A simple and intuitive tool for removing image backgrounds with a clean UI.",
       live: null,
       github: "https://github.com/azad12614/BG-ClipOut",
-    },
-    {
-      imgSrc: StartUP,
-      title: "StartUP",
-      tech: "Next.js, TypeScript, TailwindCSS, Sanity",
-      description:
-        "A blogging platform for submitting and exploring startup ideas with a modern CMS.",
-      live: null,
-      github: "https://github.com/azad12614/StartUP",
-    },
-    {
-      imgSrc: InvoiceMaster,
-      title: "Invoice Master",
-      tech: "Next.js, TypeScript, TailwindCSS, Prisma",
-      description:
-        "A platform for sending Invoice mail with Mailtrap, along with tracking them.",
-      live: null,
-      github: "https://github.com/azad12614/InvoiceMaster",
     },
   ];
 

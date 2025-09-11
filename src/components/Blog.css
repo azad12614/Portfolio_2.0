@@ -12,11 +12,11 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateX(50%);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -41,80 +41,82 @@
   position: relative;
   display: flex;
   justify-content: center;
+  height: 500px;
 }
 
 .blog-card {
   display: none;
-  grid-template-columns: 1fr 0fr;
-  gap: 3vh;
-  background: var(--bg-glass);
-  padding: 3vh 4vw;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: var(--bg-subtle);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   width: 100%;
-  max-width: 900px;
+  max-width: 400px;
+  overflow: hidden;
   justify-self: center;
 }
 
 .blog-card.active {
-  display: grid;
+  display: block;
   animation: fadeIn 0.6s ease-out forwards;
 }
 
-.blog-card .blog-content {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 3vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.blog-card .blog-content:hover a {
-  text-decoration: underline wavy var(--link);
-}
-
-.blog-card .blogImg {
-  width: 25vw;
-  max-width: 300px;
-  aspect-ratio: 1;
-  border-radius: 1rem;
+.blog-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
-.blog-card .blogImg:hover {
-  transform: scale(1.05);
-  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+.blog-content {
+  padding: 1.5rem;
 }
 
-.blog-card .blogDis {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+.blog-title {
+  /* font-size: 1.25rem; */
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
   color: var(--text-heading);
 }
 
-.blog-card .blogDis a {
-  text-decoration: none;
-  color: var(--title);
-  font-family: var(--font-accent);
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
-  font-weight: 600;
-  margin-bottom: 1.5vh;
-  text-transform: uppercase;
+.blog-date {
+  /* font-size: 0.875rem; */
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--text-muted);
+  margin-bottom: 1rem;
 }
 
-.blog-card .blogDis a:hover {
-  color: var(--primary);
+.blog-desc {
+  /* font-size: 0.875rem; */
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.blog-footer a {
+  text-decoration: none;
+  color: var(--link);
+  font-weight: 500;
+}
+
+.blog-footer a:hover {
   text-decoration: underline wavy var(--link);
 }
 
-.blog-card .blogDis p {
-  color: var(--text-main);
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  line-height: 1.5;
+.blog-tag {
+  background: var(--bg-accent);
+  color: var(--primary);
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
 }
 
 .navigation {
@@ -163,8 +165,8 @@
 }
 
 .navigation .dots .dot {
-  width: clamp(10px, 1.2vw, 15px);
-  height: clamp(10px, 1.2vw, 15px);
+  width: clamp(6px, 1vw, 12px);
+  height: clamp(6px, 1vw, 12px);
   border-radius: 50%;
   background: var(--bg-subtle);
   cursor: pointer;
@@ -184,18 +186,17 @@
 /* Responsive */
 @media (max-width: 768px) {
   .blog-card {
-    grid-template-columns: 1fr;
-    padding: 2.5vh 3vw;
+    max-width: 350px;
+    padding: 1rem;
   }
 
-  .blog-card .blog-content {
-    grid-template-columns: 1fr;
-    gap: 2vh;
+  .blog-title {
+    font-size: 1.1rem;
   }
 
-  .blog-card .blogImg {
-    width: 25vw;
-    max-width: 200px;
+  .blog-date,
+  .blog-desc {
+    font-size: 0.8rem;
   }
 
   .navigation .arrow .btn {
@@ -211,29 +212,19 @@
 
 @media (max-width: 520px) {
   .blog-card {
-    margin: 2vh 3vw;
-    margin-bottom: 0;
+    max-width: 300px;
   }
 
-  .blog-content {
-    justify-items: center;
+  .blog-title {
+    font-size: 1rem;
   }
 
-  .blog-card .blogImg {
-    width: 40vw;
-    max-width: 150px;
-  }
-
-  .blog-card .blogDis a {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-  }
-
-  .blog-card .blogDis p {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  .blog-date,
+  .blog-desc {
+    font-size: 0.75rem;
   }
 
   .navigation .arrow .btn {
-    margin-top: 0;
     width: clamp(25px, 10vw, 40px);
     height: clamp(25px, 10vw, 40px);
   }
