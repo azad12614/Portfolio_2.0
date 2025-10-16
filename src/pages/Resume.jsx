@@ -52,7 +52,7 @@ const Resume = () => {
 
   const education = [
     {
-      date: "Jul 2021 - Sep 2025",
+      date: "Jul 2021 - Oct 2025",
       title: "B.Sc. Degree",
       link: "https://www.iiuc.ac.bd/",
       org: "IIUC",

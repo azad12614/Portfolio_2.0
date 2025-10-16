@@ -1,39 +1,47 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Blog.css";
 
-import Top from "../assets/Blog/10.jpg";
-import AI from "../assets/Blog/AI.jpg";
-import LLM from "../assets/Blog/LLM.png";
-import ML from "../assets/Blog/ML.png";
+import AI from "../assets/Blog/AI.png";
+import Censorship from "../assets/Blog/Censorship.png";
+import Energy from "../assets/Blog/Energy.png";
+import Tech from "../assets/Blog/Tech.png";
+import Win from "../assets/Blog/Win10.png";
 
 const blogData = [
   {
-    title: "Kimi K2",
-    desc: "Moonshot AI's Game-Changing Open Agentic Intelligence Model.",
-    img: LLM,
-    link: "https://machineofmind.blogspot.com/2025/07/kimi-k2-moonshot-ais-game-changing-open.html",
-    date: "July 14, 2025",
+    title: "The Countdown Is On",
+    desc: "Navigating the Windows 10 End-of-Support Deadline",
+    img: Win,
+    link: "https://machineofmind.blogspot.com/2025/10/the-countdown-is-on.html",
+    date: "October 09, 2025",
   },
   {
-    title: "The AI Arms Race",
-    desc: "Comparing the Latest Frontier LLMs in July 2025.",
+    title: "Tech Week Singapore 2025",
+    desc: "Connecting Cloud, Code, and the Future of Intelligent Systems",
+    img: Tech,
+    link: "https://machineofmind.blogspot.com/2025/10/tech-week-singapore-2025.html",
+    date: "October 03, 2025",
+  },
+  {
+    title: "When AI Comes Home",
+    desc: "The Unseen Impacts of Data Centers on Our Neighborhoods",
     img: AI,
-    link: "https://machineofmind.blogspot.com/2025/07/the-ai-arms-race-comparing-latest.html",
-    date: "July 15, 2025",
+    link: "https://machineofmind.blogspot.com/2025/09/when-ai-comes-home.html",
+    date: "September 25, 2025",
   },
   {
-    title: "Programming",
-    desc: "The Top 10 Programming Languages To Learn In 2025",
-    img: Top,
-    link: "https://machineofmind.blogspot.com/2025/01/programming-languages.html",
-    date: "March 20, 2025",
+    title: "The Hidden Cost of Intelligence",
+    desc: "Is LLM Heading for an Energy Crisis",
+    img: Energy,
+    link: "https://machineofmind.blogspot.com/2025/08/the-hidden-cost-of-intelligence.html",
+    date: "August 10, 2025",
   },
   {
-    title: "Machine Learning",
-    desc: "From Sci-Fi Fantasy to Superheroes of Everyday Life",
-    img: ML,
-    link: "https://machineofmind.blogspot.com/2024/05/machine-learning.html",
-    date: "Auguest 20, 2024",
+    title: "The Digital Iron Curtain",
+    desc: "How Sanctions and Censorship are Reshaping Russia's Internet Tech Stack",
+    img: Censorship,
+    link: "https://machineofmind.blogspot.com/2025/07/the-digital-iron-curtain.html",
+    date: "July 30, 2025",
   },
 ];
 
