@@ -283,7 +283,7 @@ const Resume = () => {
             className={`tab-button ${activeTab === "academic" ? "active" : ""}`}
             onClick={() => setActiveTab("academic")}
           >
-            <span className="tab-icon">💼</span> Academic Roles
+            <span className="tab-icon">💼</span> Jobs & Academic Roles
           </button>
           <button
             className={`tab-button ${
