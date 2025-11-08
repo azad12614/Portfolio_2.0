@@ -21,6 +21,7 @@ import api from "../assets/Lang/api.svg";
 import jwt from "../assets/Lang/jwt.svg";
 import prisma from "../assets/Lang/prisma.svg";
 import vite from "../assets/Lang/vite.svg";
+import docker from "../assets/Lang/docker.svg";
 
 const Skills = () => {
   const skillsData = [
@@ -44,6 +45,7 @@ const Skills = () => {
     { name: "Vite", image: vite, order: 17, color: "#9982ff" },
     { name: "Rest Api", image: api, order: 18, color: "#ffffff" },
     { name: "JWT", image: jwt, order: 19, color: "#c942e6" },
+    { name: "Docker", image: docker, order: 20, color: "#009fc8" },
   ];
 
   const [animateSkills, setAnimateSkills] = useState(false);

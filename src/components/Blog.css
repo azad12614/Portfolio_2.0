@@ -74,7 +74,7 @@
 
 .blog-title {
   /* font-size: 1.25rem; */
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--text-heading);

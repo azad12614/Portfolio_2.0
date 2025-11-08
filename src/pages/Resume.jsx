@@ -52,7 +52,7 @@ const Resume = () => {
 
   const education = [
     {
-      date: "Jul 2021 - Oct 2025",
+      date: "Jul 2021 - Expected Dec 2025",
       title: "B.Sc. Degree",
       link: "https://www.iiuc.ac.bd/",
       org: "IIUC",
@@ -176,6 +176,18 @@ const Resume = () => {
   ];
 
   const academic = [
+    {
+      date: "Oct 2025 - Present",
+      title: "Web Developer Intern",
+      org: "Universal Institute for Advanced Studies (UIAS)",
+      desc: "Officially joined the team to apply MERN/Next.js and competitive programming skills to solve technical challenges. ",
+    },
+    {
+      date: "Nov 2025 - Present",
+      title: "Assistant Web Secretary (Backend)",
+      org: "IIUCCPS",
+      desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
+    },
     {
       date: "Jan 2025 - Aug 2025",
       title: "Bootcamp Co-ordinator",

@@ -38,7 +38,7 @@ const blogData = [
   },
   {
     title: "The Digital Iron Curtain",
-    desc: "How Sanctions and Censorship are Reshaping Russia's Internet Tech Stack",
+    desc: "How Sanctions and Censorship are Reshaping Russia's Tech-Stack",
     img: Censorship,
     link: "https://machineofmind.blogspot.com/2025/07/the-digital-iron-curtain.html",
     date: "July 30, 2025",
@@ -105,7 +105,7 @@ const Blog = () => {
       </div>
 
       <div className="navigation">
-        <div className="arrow pointer">
+        {/* <div className="arrow pointer">
           <div className="btn pointer" id="prev" onClick={handlePrevSlide}>
             <span className="material-symbols-outlined pointer">
               keyboard_double_arrow_left
@@ -116,7 +116,7 @@ const Blog = () => {
               keyboard_double_arrow_right
             </span>
           </div>
-        </div>
+        </div> */}
         <div className="dots">
           {blogData.map((_, index) => (
             <button

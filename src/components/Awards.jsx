@@ -14,6 +14,7 @@ import puProgramming2024 from "../assets/Awards/2024_PU.jpg";
 import mentorAward2024 from "../assets/Awards/2024_Mentor.png";
 import cadetCoordinator2025 from "../assets/Awards/2025_Coordinator.jpg";
 import faangSeminar from "../assets/Awards/FAANG.png";
+import thesis from "../assets/Awards/2025_Thesis.jpg";
 
 const awards = [
   {
@@ -47,6 +48,10 @@ const awards = [
   {
     title: "FAANG Seminar Certification",
     image: faangSeminar,
+  },
+  {
+    title: "B.Sc Thesis Paper",
+    image: thesis,
   },
 ];
 
