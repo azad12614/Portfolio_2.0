@@ -21,7 +21,7 @@
 }
 
 .blog-section {
-  padding-top: 7vh;
+  padding-top: 3rem;
   animation: Blog 0.8s ease-in-out;
   align-items: center;
 }
@@ -41,7 +41,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 500px;
 }
 
 .blog-card {
@@ -64,8 +63,9 @@
 .blog-img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
+  aspect-ratio: 5/4;
   object-fit: cover;
+  object-position: top;
 }
 
 .blog-content {

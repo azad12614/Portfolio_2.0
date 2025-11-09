@@ -23,6 +23,7 @@
   --bg-subtle: #11161c;
   --bg-accent: #124e66;
   --bg-glass: rgba(18, 30, 40, 0.6);
+  --bg-glass-2: rgba(17, 40, 59, 0.9);
 
   /* 🎨 Text Colors */
   --text-main: #f5f6f5;
@@ -72,6 +73,7 @@
   --bg-subtle: #e8ecef;
   --bg-accent: #b7dbf8;
   --bg-glass: rgba(14, 64, 85, 0.3);
+  --bg-glass-2: rgba(96, 122, 143, 0.9);
 
   --text-main: #1a252f;
   --text-muted: #2a3f5a;

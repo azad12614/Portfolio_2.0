@@ -1,12 +1,11 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
 import DarkMode from "./DarkMode";
 import "./Navbar.css";
 import logo from "../assets/logo.png";
 
 const sections = [
   "Hero",
-  // "About",
+  "About",
   "Resume",
   "Project",
   "Awards",
@@ -20,6 +19,13 @@ const Navbar = () => {
 
   const toggleMenu = useCallback(() => setShowMobileMenu((prev) => !prev), []);
 
+  // New function to close the menu when a link is clicked
+  const handleLinkClick = useCallback(() => {
+    if (showMobileMenu) {
+      setShowMobileMenu(false);
+    }
+  }, [showMobileMenu]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -29,7 +35,7 @@ const Navbar = () => {
           }
         });
       },
-      { threshold: 0.2, rootMargin: "0px" }
+      { threshold: 0.05, rootMargin: "0px" }
     );
 
     sections.forEach((id) => {
@@ -56,6 +62,7 @@ const Navbar = () => {
                 href={`#${section}`}
                 className={activeSection === section ? "active" : ""}
                 aria-current={activeSection === section ? "page" : undefined}
+                onClick={handleLinkClick} // <-- NEW: Close menu on link click
               >
                 {section}
               </a>
@@ -66,12 +73,14 @@ const Navbar = () => {
 
       <div className="navbar-right">
         <button
-          className="hamburger"
+          className={`hamburger ${showMobileMenu ? "open" : ""}`} // Add conditional class
           onClick={toggleMenu}
           aria-label="Toggle mobile menu"
           aria-expanded={showMobileMenu}
         >
-          <GiHamburgerMenu />
+          <span className="bar top-bar"></span>
+          <span className="bar middle-bar"></span>
+          <span className="bar bottom-bar"></span>
         </button>
         <DarkMode />
       </div>

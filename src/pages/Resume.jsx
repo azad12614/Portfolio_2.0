@@ -1,93 +1,57 @@
 import React, { useState, useEffect } from "react";
 import "./Resume.css";
 import Skills from "../components/Skills";
+import Coding from "../components/Coding";
 
 const Resume = () => {
-  const [activeProfile, setActiveProfile] = useState(0);
-  const [activeTab, setActiveTab] = useState("academic");
-  const [animateProfile, setAnimateProfile] = useState(true);
+  const [activeTab, setActiveTab] = useState("jobs");
   const [animateGrid, setAnimateGrid] = useState(true);
-
-  // Reset animation triggers
-  useEffect(() => {
-    setAnimateProfile(false);
-    setTimeout(() => setAnimateProfile(true), 50); // Adjusted delay for reliability
-  }, [activeProfile]);
 
   useEffect(() => {
     setAnimateGrid(false);
     setTimeout(() => setAnimateGrid(true), 50); // Adjusted delay for reliability
   }, [activeTab]);
 
-  const profiles = [
+  const job = [
     {
-      link: "https://codeforces.com/profile/azad12614",
-      name: "Codeforces",
-      rating: "1313",
-      rank: "Pupil",
-      solve: "1150+",
-    },
-    {
-      link: "https://www.codechef.com/users/azad12614",
-      name: "CodeChef",
-      rating: "1625",
-      rank: "3 Star",
-      solve: "100+",
-    },
-    {
-      link: "https://leetcode.com/u/azad12614/",
-      name: "Leetcode",
-      rating: "1573",
-      rank: "Top 27%",
-      solve: "90+",
-    },
-    {
-      link: "https://atcoder.jp/users/azad12614",
-      name: "Atcoder",
-      rating: "316",
-      rank: "37K+th",
-      solve: "70+",
+      date: "Oct 2025 - Present",
+      title: "Web Developer Intern (Remote)",
+      org: "Universal Institute for Advanced Studies (UIAS)",
+      desc: "Officially joined the team to apply MERN/Next.js and competitive programming skills to solve technical challenges. ",
     },
   ];
-
-  const education = [
+  const academic = [
     {
-      date: "Jul 2021 - Expected Dec 2025",
-      title: "B.Sc. Degree",
-      link: "https://www.iiuc.ac.bd/",
+      date: "Nov 2025 - Present",
+      title: "Assistant Web Secretary (Backend)",
+      org: "IIUCCPS",
+      desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
+    },
+    {
+      date: "Jan 2025 - Aug 2025",
+      title: "Bootcamp Co-ordinator",
+      org: "IIUCCPS",
+      desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
+    },
+    {
+      date: "Jul 2024 - Aug 2025",
+      title: "Teaching Assistant",
       org: "IIUC",
-      desc: "Pursuing my degree at International Islamic University Chittagong, expected graduation in 2025.",
+      desc: "Serving as a Teaching Assistant at International Islamic University Chittagong.",
     },
     {
-      date: "Apr 2018 - Apr 2020",
-      title: "H.S.C. Exam",
-      link: "https://www.idc.w3schoolbd.org/",
-      org: "Islamia Degree College",
-      desc: "Completed Higher Secondary Certificate Exam at Islamia Degree College.",
+      date: "Jul 2023 - Jan 2025",
+      title: "Mentor",
+      org: "IIUCCPS",
+      desc: "Served as a Mentor for the Competitive Programming Society at International Islamic University Chittagong.",
     },
     {
-      date: "Jan 2015 - Feb 2018",
-      title: "J.S.C. & S.S.C. Exam",
-      link: "http://www.kascc.edu.bd/",
-      org: "Kazem Ali High School",
-      desc: "Completed J.S.C. and S.S.C. Exams at Kazem Ali High School.",
-    },
-    {
-      date: "Jan 2013 - Dec 2014",
-      title: "7th Class",
-      link: "https://www.facebook.com/Harualchari.h.school/",
-      org: "Harualchari High School",
-      desc: "Studied at Harualchari High School from 6th to 7th class.",
-    },
-    {
-      date: "Jan 2008 - Dec 2012",
-      title: "P.S.C.",
-      link: "https://www.facebook.com/people/%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0-%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A7%9F%E0%A6%BE%E0%A6%B2%E0%A6%9B%E0%A7%9C%E0%A6%BF-%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A5%E0%A6%AE%E0%A6%BF%E0%A6%95-%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F/100057411851391/",
-      org: "North Harualchari Govt. Primary School",
-      desc: "Completed P.S.C. Exam and studied from 1st to 5th class at North Harualchari Govt. Primary School.",
+      date: "Jul 2023 - Dec 2023",
+      title: "Trainer",
+      org: "IIUCCPS",
+      desc: "Served as a Trainer for the Competitive Programming Society at International Islamic University Chittagong.",
     },
   ];
-
   const programming = [
     {
       date: "Jul 2024",
@@ -174,43 +138,41 @@ const Resume = () => {
       desc: "Ranked 15th in the CSE FEST Programming Contest organized by the IIUC Computer Club & IIUCCPS.",
     },
   ];
-
-  const academic = [
+  const education = [
     {
-      date: "Oct 2025 - Present",
-      title: "Web Developer Intern",
-      org: "Universal Institute for Advanced Studies (UIAS)",
-      desc: "Officially joined the team to apply MERN/Next.js and competitive programming skills to solve technical challenges. ",
-    },
-    {
-      date: "Nov 2025 - Present",
-      title: "Assistant Web Secretary (Backend)",
-      org: "IIUCCPS",
-      desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
-    },
-    {
-      date: "Jan 2025 - Aug 2025",
-      title: "Bootcamp Co-ordinator",
-      org: "IIUCCPS",
-      desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
-    },
-    {
-      date: "Jul 2024 - Aug 2025",
-      title: "Teaching Assistant",
+      date: "Jul 2021 - Expected Dec 2025",
+      title: "B.Sc. Degree",
+      link: "https://www.iiuc.ac.bd/",
       org: "IIUC",
-      desc: "Serving as a Teaching Assistant at International Islamic University Chittagong.",
+      desc: "Pursuing my degree at International Islamic University Chittagong, expected graduation in 2025.",
     },
     {
-      date: "Jul 2023 - Jan 2025",
-      title: "Mentor",
-      org: "IIUCCPS",
-      desc: "Served as a Mentor for the Competitive Programming Society at International Islamic University Chittagong.",
+      date: "Apr 2018 - Apr 2020",
+      title: "H.S.C. Exam",
+      link: "https://www.idc.w3schoolbd.org/",
+      org: "Islamia Degree College",
+      desc: "Completed Higher Secondary Certificate Exam at Islamia Degree College.",
     },
     {
-      date: "Jul 2023 - Dec 2023",
-      title: "Trainer",
-      org: "IIUCCPS",
-      desc: "Served as a Trainer for the Competitive Programming Society at International Islamic University Chittagong.",
+      date: "Jan 2015 - Feb 2018",
+      title: "J.S.C. & S.S.C. Exam",
+      link: "http://www.kascc.edu.bd/",
+      org: "Kazem Ali High School",
+      desc: "Completed J.S.C. and S.S.C. Exams at Kazem Ali High School.",
+    },
+    {
+      date: "Jan 2013 - Dec 2014",
+      title: "7th Class",
+      link: "https://www.facebook.com/Harualchari.h.school/",
+      org: "Harualchari High School",
+      desc: "Studied at Harualchari High School from 6th to 7th class.",
+    },
+    {
+      date: "Jan 2008 - Dec 2012",
+      title: "P.S.C.",
+      link: "https://www.facebook.com/people/%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0-%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A7%9F%E0%A6%BE%E0%A6%B2%E0%A6%9B%E0%A7%9C%E0%A6%BF-%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A5%E0%A6%AE%E0%A6%BF%E0%A6%95-%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F/100057411851391/",
+      org: "North Harualchari Govt. Primary School",
+      desc: "Completed P.S.C. Exam and studied from 1st to 5th class at North Harualchari Govt. Primary School.",
     },
   ];
 
@@ -218,72 +180,21 @@ const Resume = () => {
     <section className="resume" id="Resume">
       <h2 className="header">📊 My Journey</h2>
       <p className="title">"Showcasing my skills and achievements in tech."</p>
+
       <div className="resume-container">
-        <h4 className="resume-subtitle">Coding Profiles 🎯</h4>
-        <div className="profiles-slider">
-          <div className="profiles-tabs">
-            {profiles.map((item, index) => (
-              <button
-                key={index}
-                className={`tab-button ${
-                  activeProfile === index ? "active" : ""
-                }`}
-                onClick={() => setActiveProfile(index)}
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
-          <div className="profile-content">
-            <div
-              className={`profile-card ${
-                animateProfile ? "animate-on-load" : ""
-              }`}
-            >
-              <h4>
-                <a
-                  href={profiles[activeProfile].link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="OJ"
-                >
-                  {profiles[activeProfile].name}
-                </a>
-              </h4>
-              <div className="info-grid">
-                <div className="info-item">
-                  <span className="info-label">Rating (MAX)</span>
-                  <span className="info-value">
-                    {profiles[activeProfile].rating}
-                  </span>
-                </div>
-                <div className="info-item">
-                  <span className="info-label">Rank (MAX)</span>
-                  <span className="info-value">
-                    {profiles[activeProfile].rank}
-                  </span>
-                </div>
-                <div className="info-item">
-                  <span className="info-label">Problems Solved</span>
-                  <span className="info-value">
-                    {profiles[activeProfile].solve}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h4 className="resume-subtitle">My Skills 👩‍💻</h4>
-        <Skills />
-
         <h4 className="resume-subtitle">Experience Timeline</h4>
         <div className="experience-tabs">
+          <button
+            className={`tab-button ${activeTab === "jobs" ? "active" : ""}`}
+            onClick={() => setActiveTab("jobs")}
+          >
+            <span className="tab-icon">💼</span> Jobs
+          </button>
           <button
             className={`tab-button ${activeTab === "academic" ? "active" : ""}`}
             onClick={() => setActiveTab("academic")}
           >
-            <span className="tab-icon">💼</span> Jobs & Academic Roles
+            <span className="tab-icon">👨🏻‍🎓</span> Academic Roles
           </button>
           <button
             className={`tab-button ${
@@ -303,8 +214,8 @@ const Resume = () => {
           </button>
         </div>
         <div className="gridedu">
-          {activeTab === "education" &&
-            education.map((item, index) => (
+          {activeTab === "jobs" &&
+            job.map((item, index) => (
               <div
                 className={`gride ${animateGrid ? "animate-on-load" : ""}`}
                 key={index}
@@ -315,6 +226,19 @@ const Resume = () => {
                     {item.title}
                   </a>{" "}
                   <span>- {item.org}</span>
+                </p>
+                <p className="details">{item.desc}</p>
+              </div>
+            ))}
+          {activeTab === "academic" &&
+            academic.map((item, index) => (
+              <div
+                className={`gride ${animateGrid ? "animate-on-load" : ""}`}
+                key={index}
+              >
+                <p className="date">{item.date}</p>
+                <p className="tittle">
+                  {item.title} <span>- {item.org}</span>
                 </p>
                 <p className="details">{item.desc}</p>
               </div>
@@ -343,20 +267,29 @@ const Resume = () => {
                 <p className="details">{item.desc}</p>
               </div>
             ))}
-          {activeTab === "academic" &&
-            academic.map((item, index) => (
+          {activeTab === "education" &&
+            education.map((item, index) => (
               <div
                 className={`gride ${animateGrid ? "animate-on-load" : ""}`}
                 key={index}
               >
                 <p className="date">{item.date}</p>
                 <p className="tittle">
-                  {item.title} <span>- {item.org}</span>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    {item.title}
+                  </a>{" "}
+                  <span>- {item.org}</span>
                 </p>
                 <p className="details">{item.desc}</p>
               </div>
             ))}
         </div>
+
+        <h4 className="resume-subtitle">My Skills 👩‍💻</h4>
+        <Skills />
+
+        <h4 className="resume-subtitle">Coding Profiles 🎯</h4>
+        <Coding />
       </div>
     </section>
   );
