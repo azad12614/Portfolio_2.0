@@ -1,15 +1,44 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 
+// --- Helper Functions to Safely Interact with localStorage ---
+
+// Tries to safely read from localStorage, defaults to null on error
+const getSafeStorage = (key) => {
+  try {
+    return window.localStorage.getItem(key);
+  } catch (e) {
+    console.warn("SecurityError: Failed to read localStorage.", e);
+    return null;
+  }
+};
+
+// Tries to safely write to localStorage, logs warning on error
+const setSafeStorage = (key, value) => {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch (e) {
+    console.warn("SecurityError: Failed to write to localStorage.", e);
+  }
+};
+
+// --- DarkMode Component ---
+
 const DarkMode = () => {
+  // Use state to manage the theme and initial checked status
+  const [isLightMode, setIsLightMode] = useState(false);
+
+  // Set the theme attribute on the body and safely store the preference
   const setDarkMode = () => {
     document.querySelector("body").setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark");
+    setSafeStorage("theme", "dark");
+    setIsLightMode(false);
   };
 
   const setLightMode = () => {
     document.querySelector("body").setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
+    setSafeStorage("theme", "light");
+    setIsLightMode(true);
   };
 
   const toggleTheme = (e) => {
@@ -17,12 +46,18 @@ const DarkMode = () => {
     else setDarkMode();
   };
 
+  // 1. Initial theme load (useEffect handles the saved theme)
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      document.querySelector("body").setAttribute("data-theme", savedTheme);
-    }
-  }, []);
+    const savedTheme = getSafeStorage("theme");
+
+    // Default to 'light' if no theme is saved or if storage failed
+    const themeToApply = savedTheme || "light";
+
+    document.querySelector("body").setAttribute("data-theme", themeToApply);
+
+    // Set the initial checkbox state based on the applied theme
+    setIsLightMode(themeToApply === "light");
+  }, []); // Run only once on mount
 
   return (
     <div className="h-10 w-10 p-1 rounded-full drop-shadow pointer">
@@ -32,8 +67,11 @@ const DarkMode = () => {
           className="theme-controller"
           value="synthwave"
           onChange={toggleTheme}
-          defaultChecked={localStorage.getItem("theme") === "light"}
+          // 2. Initial checkbox state is now handled by component state
+          checked={isLightMode}
+          readOnly // Use readOnly since state (checked) controls the input
         />
+        {/* SVG icons */}
         <svg
           className="swap-on fill-current w-8 h-8 text-[#000]"
           xmlns="http://www.w3.org/2000/svg"
