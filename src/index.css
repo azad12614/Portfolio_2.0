@@ -49,6 +49,23 @@
   --highlight: #964734;
   --link: #00aacc;
 
+  /* 🎨 Status Colors */
+  --success: #10b981; /* Green - for positive actions */
+  --success-light: #34d399; /* Lighter green */
+  --success-dark: #059669; /* Darker green */
+
+  --warning: #f59e0b; /* Amber - for warnings */
+  --warning-light: #fbbf24; /* Lighter amber */
+  --warning-dark: #d97706; /* Darker amber */
+
+  --error: #ef4444; /* Red - for errors/destructive */
+  --error-light: #f87171; /* Lighter red */
+  --error-dark: #dc2626; /* Darker red */
+
+  --info: #3b82f6; /* Blue - for information */
+  --info-light: #60a5fa; /* Lighter blue */
+  --info-dark: #2563eb; /* Darker blue */
+
   /* 🎨 Special */
   --logo: #d0f1fb;
   --nav-glass: #24485510;
@@ -91,6 +108,23 @@
 
   --primary: #0085ff;
   --secondary: #023875;
+
+  /* Light theme status colors - slightly adjusted for better contrast */
+  --success: #059669;
+  --success-light: #10b981;
+  --success-dark: #047857;
+
+  --warning: #d97706;
+  --warning-light: #f59e0b;
+  --warning-dark: #b45309;
+
+  --error: #dc2626;
+  --error-light: #ef4444;
+  --error-dark: #b91c1c;
+
+  --info: #2563eb;
+  --info-light: #3b82f6;
+  --info-dark: #1d4ed8;
 
   --logo: #0b0e12;
   --mobile-nav: #aabbcce1;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Resume.css";
 import Skills from "../components/Skills";
 import Coding from "../components/Coding";
+import Cards from "../components/Cards";
 
 const Resume = () => {
   const [activeTab, setActiveTab] = useState("jobs");
@@ -15,9 +16,12 @@ const Resume = () => {
   const job = [
     {
       date: "Oct 2025 - Present",
-      title: "Web Developer Intern (Remote)",
+      title: "Web Developer",
       org: "Universal Institute for Advanced Studies (UIAS)",
-      desc: "Officially joined the team to apply MERN/Next.js and competitive programming skills to solve technical challenges. ",
+      worktype: "Intern",
+      workplace: "Remote",
+      link: "https://www.linkedin.com/company/universal-institute-for-advanced-studies%C2%A0-uias?trk=public_post_feed-actor-name",
+      desc: "Officially joined the team to apply MERN/Next.js and competitive programming skills to solve technical challenges.",
     },
   ];
   const academic = [
@@ -25,30 +29,40 @@ const Resume = () => {
       date: "Nov 2025 - Present",
       title: "Assistant Web Secretary (Backend)",
       org: "IIUCCPS",
+      worktype: "Volunteer",
+      workplace: "Remote",
       desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
     },
     {
       date: "Jan 2025 - Aug 2025",
       title: "Bootcamp Co-ordinator",
       org: "IIUCCPS",
+      worktype: "Volunteer",
+      workplace: "Remote",
       desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
     },
     {
       date: "Jul 2024 - Aug 2025",
       title: "Teaching Assistant",
       org: "IIUC",
+      worktype: "PartTime",
+      workplace: "Hybrid",
       desc: "Serving as a Teaching Assistant at International Islamic University Chittagong.",
     },
     {
       date: "Jul 2023 - Jan 2025",
       title: "Mentor",
       org: "IIUCCPS",
+      worktype: "Volunteer",
+      workplace: "Remote",
       desc: "Served as a Mentor for the Competitive Programming Society at International Islamic University Chittagong.",
     },
     {
       date: "Jul 2023 - Dec 2023",
       title: "Trainer",
       org: "IIUCCPS",
+      worktype: "Volunteer",
+      workplace: "Remote",
       desc: "Served as a Trainer for the Competitive Programming Society at International Islamic University Chittagong.",
     },
   ];
@@ -58,30 +72,35 @@ const Resume = () => {
       title: "Inter University Programming Contest",
       link: "https://toph.co/contests/training/rxbqtb6/standings",
       org: "CUSS",
+      workplace: "Offline",
       desc: "Ranked 20th (Team - IIUC_ZeroPlan) with teammates Toshifur Rhaman and Shehabudowlla Rakib in the Divisional Programming Contest organized by the Chittagong University Scientific Society.",
     },
     {
       date: "Dec 2024",
       title: "ICPC Preliminary Contest",
       org: "ICPC",
+      workplace: "Online",
       desc: "Ranked 288th (Team - IIUC_ZeroPlan) with teammates Toshifur Rhaman and Shehabudowlla Rakib in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
     },
     {
       date: "Mar 2024",
       title: "NCPC Preliminary Contest",
       org: "JU",
+      workplace: "Online",
       desc: "Ranked 241st (Team - IIUC_Groot) with teammates Toshifur Rhaman and Shehabudowlla Rakib in the National Programming Contest organized by Jahangirnagar University.",
     },
     {
       date: "Jan 2024",
       title: "PU CSE IT FEST",
       org: "PU",
+      workplace: "Offline",
       desc: "Ranked 30th (Team - IIUC_Groot) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Divisional Programming Contest organized by Premier University.",
     },
     {
       date: "Oct 2023",
       title: "ICPC Preliminary Contest 2023",
       org: "ICPC",
+      workplace: "Online",
       desc: "Participated (Team - IIUC_Groot) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
     },
     {
@@ -89,6 +108,7 @@ const Resume = () => {
       title: "15th Inter University Programming Contest",
       link: "https://toph.co/c/15th-iiuc-inter-university-2023/standings",
       org: "IIUC",
+      workplace: "Offline",
       desc: "Ranked 35th (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Divisional Programming Contest organized by the IIUC Computer Club & IIUCCPS.",
     },
     {
@@ -96,12 +116,14 @@ const Resume = () => {
       title: "Intra University Programming Contest Aut'23 (Male)",
       link: "https://toph.co/contests/training/wf44wz8/standings",
       org: "IIUC",
+      workplace: "Offline",
       desc: "Ranked 19th (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Shehabudowlla Rakib in the Intra University Programming Contest organized by the International Islamic University Chittagong (IIUC).",
     },
     {
       date: "Mar 2023",
       title: "ICPC Preliminary Contest 2022",
       org: "ICPC",
+      workplace: "Online",
       desc: "Ranked 801st (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
     },
     {
@@ -109,6 +131,7 @@ const Resume = () => {
       title: "Intra University Programming Contest",
       link: "https://toph.co/contests/training/x2c4mne/standings",
       org: "IIUCCPS",
+      workplace: "Offline",
       desc: "Ranked 12th (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Intra University Programming Contest of the International Islamic University Chittagong Competitive Programming Society.",
     },
     {
@@ -116,12 +139,14 @@ const Resume = () => {
       title: "Intra University Programming Contest (Junior)",
       link: "https://toph.co/contests/training/mf23yf4/standings",
       org: "IIUC",
+      workplace: "Offline",
       desc: "Ranked 4th (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Intra University Programming Contest of the International Islamic University Chittagong (IIUC).",
     },
     {
       date: "Sep 2022",
       title: "ICPC Preliminary Contest 2021",
       org: "ICPC",
+      workplace: "Online",
       desc: "Ranked 361st (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Abrar Yasir in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
     },
     {
@@ -129,12 +154,14 @@ const Resume = () => {
       title: "Intra University Programming Contest Aut'22 (Junior/Solo)",
       link: "https://toph.co/contests/training/ctjhhnj/standings",
       org: "IIUCCPS",
+      workplace: "Offline",
       desc: "Ranked 5th in the Solo Programming Contest organized by the International Islamic University Chittagong Competitive Programming Society.",
     },
     {
       date: "Aug 2022",
       title: "CSE FEST Programming Contest (Solo)",
       org: "IIUC",
+      workplace: "Offline",
       desc: "Ranked 15th in the CSE FEST Programming Contest organized by the IIUC Computer Club & IIUCCPS.",
     },
   ];
@@ -216,72 +243,39 @@ const Resume = () => {
         <div className="gridedu">
           {activeTab === "jobs" &&
             job.map((item, index) => (
-              <div
-                className={`gride ${animateGrid ? "animate-on-load" : ""}`}
+              <Cards
                 key={index}
-              >
-                <p className="date">{item.date}</p>
-                <p className="tittle">
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    {item.title}
-                  </a>{" "}
-                  <span>- {item.org}</span>
-                </p>
-                <p className="details">{item.desc}</p>
-              </div>
+                item={item}
+                animateGrid={animateGrid}
+                type="job"
+              />
             ))}
           {activeTab === "academic" &&
             academic.map((item, index) => (
-              <div
-                className={`gride ${animateGrid ? "animate-on-load" : ""}`}
+              <Cards
                 key={index}
-              >
-                <p className="date">{item.date}</p>
-                <p className="tittle">
-                  {item.title} <span>- {item.org}</span>
-                </p>
-                <p className="details">{item.desc}</p>
-              </div>
+                item={item}
+                animateGrid={animateGrid}
+                type="academic"
+              />
             ))}
           {activeTab === "programming" &&
             programming.map((item, index) => (
-              <div
-                className={`gride ${animateGrid ? "animate-on-load" : ""}`}
+              <Cards
                 key={index}
-              >
-                <p className="date">{item.date}</p>
-                <p className="tittle">
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.title}
-                    </a>
-                  ) : (
-                    item.title
-                  )}{" "}
-                  <span>- {item.org}</span>
-                </p>
-                <p className="details">{item.desc}</p>
-              </div>
+                item={item}
+                animateGrid={animateGrid}
+                type="programming"
+              />
             ))}
           {activeTab === "education" &&
             education.map((item, index) => (
-              <div
-                className={`gride ${animateGrid ? "animate-on-load" : ""}`}
+              <Cards
                 key={index}
-              >
-                <p className="date">{item.date}</p>
-                <p className="tittle">
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    {item.title}
-                  </a>{" "}
-                  <span>- {item.org}</span>
-                </p>
-                <p className="details">{item.desc}</p>
-              </div>
+                item={item}
+                animateGrid={animateGrid}
+                type="education"
+              />
             ))}
         </div>
 
