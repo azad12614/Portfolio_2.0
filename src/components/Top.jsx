@@ -6,8 +6,7 @@ const Top = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        // Adjust threshold for button visibility
+      if (window.scrollY > 300) {
         setShowButton(true);
       } else {
         setShowButton(false);
@@ -15,24 +14,31 @@ const Top = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const goTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
-    <div>
-      <button
-        onClick={goTop}
-        id="Btn-top"
-        title="Go to top"
-        style={{ display: showButton ? "block" : "none" }}
+    <button
+      onClick={goTop}
+      className={`top-button ${showButton ? "visible" : "hidden"}`}
+      title="Go to top"
+      aria-label="Scroll to top"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
       >
-        <span class="material-symbols-outlined">stat_3</span>
-      </button>
-    </div>
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
   );
 };
 

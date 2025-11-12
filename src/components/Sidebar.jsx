@@ -8,49 +8,93 @@ const LinksData = [
   {
     link: "https://github.com/azad12614",
     srcs: git,
+    name: "GitHub",
+    color: "var(--text-main)",
   },
   {
     link: "https://www.linkedin.com/in/abdullah-al-azad-12614-jishan",
     srcs: ln,
+    name: "LinkedIn",
+    color: "var(--primary)",
   },
   {
     link: "https://www.facebook.com/abdullah.2003.azad/",
     srcs: fb,
+    name: "Facebook",
+    color: "var(--info)",
   },
 ];
 
 const Sidebar = () => {
-  const [showButton, setShowButton] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // console.log(window.scrollY);
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Show sidebar when user scrolls past 20% of the page and not near bottom
       if (
-        window.scrollY <
-        document.documentElement.scrollHeight - window.innerHeight * 1.5
+        scrollPosition > windowHeight * 0.2 &&
+        scrollPosition < documentHeight - windowHeight * 1.2
       ) {
-        // Adjust threshold for button visibility
-        setShowButton(true);
+        setShowSidebar(true);
       } else {
-        setShowButton(false);
+        setShowSidebar(false);
+        setIsHovered(false);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial position
 
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
   return (
-    <ul class="sidebar" style={{ display: showButton ? "block" : "none" }}>
-      {LinksData.map((item) => (
-        <a href={item.link} target="_blank" class="contact-icon">
-          <li>
-            <img loading="lazy" src={item.srcs} />
-          </li>
-        </a>
-      ))}
-    </ul>
+    <div
+      className={`sidebar ${showSidebar ? "visible" : "hidden"} ${
+        isHovered ? "expanded" : ""
+      }`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="sidebar-content">
+        <div className="social-links">
+          {LinksData.map((item, index) => (
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="link-container">
+                <img
+                  loading="lazy"
+                  src={item.srcs}
+                  alt={item.name}
+                  className="social-icon"
+                />
+                {isHovered && <span className="link-tooltip">{item.name}</span>}
+              </div>
+              <div
+                className="link-glow"
+                style={{ backgroundColor: item.color }}
+              ></div>
+            </a>
+          ))}
+        </div>
+
+        <div className="sidebar-line"></div>
+      </div>
+    </div>
   );
 };
 

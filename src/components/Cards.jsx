@@ -23,7 +23,7 @@ const Cards = ({ item, animateGrid, type }) => {
       intern: "var(--text-accent)",
       parttime: "var(--primary)",
       fulltime: "var(--highlight)",
-      volunteer: "var(--border)",
+      volunteer: "var(--info)",
     };
     return colors[workType] || "var(--text-muted)";
   };

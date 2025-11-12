@@ -1,15 +1,181 @@
-#Btn-top {
+/* Top.css */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+}
+
+.top-button {
   position: fixed;
-  width: 3rem;
+  bottom: 2rem;
+  right: 1.25rem;
+  width: 2.75rem;
   aspect-ratio: 1/1;
-  border-radius: 10px;
-  bottom: 20px;
-  right: 20px;
-  font-size: 30px;
-  font-weight: bolder;
-  color: var(--header);
-  background-color: var(--subBg);
-  padding: 0;
-  margin: 0;
-  z-index: 999;
+  border: none;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  cursor: var(--cursor-pointer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+}
+
+.top-button.visible {
+  animation: fadeInUp 0.3s ease-out forwards;
+  pointer-events: all;
+}
+
+.top-button.hidden {
+  animation: fadeOutDown 0.3s ease-out forwards;
+  pointer-events: none;
+}
+
+.top-button:hover {
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  color: var(--text-invert);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(2, 169, 247, 0.4);
+  border-color: transparent;
+}
+
+.top-button:active {
+  transform: translateY(-1px) scale(0.95);
+}
+
+.top-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--text-accent),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.top-button:hover::before {
+  opacity: 0.3;
+}
+
+/* Progress circle indicator */
+.top-button::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.top-button.visible::after {
+  opacity: 0.3;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-button {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .top-button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-button {
+    bottom: 1rem;
+    right: 1rem;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .top-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Light theme adjustments */
+[data-theme="light"] .top-button {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+}
+
+[data-theme="light"] .top-button:hover {
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  color: var(--text-invert);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .top-button,
+  .top-button::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .top-button:hover {
+    transform: none;
+  }
+}
+
+/* Focus states for accessibility */
+.top-button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.top-button:focus:not(:focus-visible) {
+  outline: none;
 }
