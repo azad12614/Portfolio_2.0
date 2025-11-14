@@ -1,7 +1,8 @@
-@keyframes fadeIn {
+/* About.css */
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(5vh);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -9,98 +10,246 @@
   }
 }
 
+@keyframes staggerFade {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .about-section {
-  padding: 2rem;
-  padding-top: 7rem;
-  /* min-height: 100vh; */
-  justify-items: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about-content {
-  width: 90vw;
-  max-width: 1000px;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.about-card {
   background: var(--bg-glass);
-  backdrop-filter: blur(8px) saturate(180%);
-  -webkit-backdrop-filter: blur(8px) saturate(180%);
-  border-radius: 1.5rem;
-  padding: 4vh 4vw;
-  display: grid;
-  gap: 2vh;
-  animation: fadeIn 1s ease-out;
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.about-intro {
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .about-description {
-  font-family: var(--font-accent);
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-family: var(--font-sans);
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   color: var(--text-main);
-  line-height: 1.5;
-  text-align: justify;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .about-description strong {
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 700;
-  color: var(--text-accent);
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.about-description:hover strong {
-  color: var(--highlight);
-  /* text-decoration: underline wavy 2px var(--highlight); */
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.about-link {
-  color: var(--link);
-  text-decoration: none;
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-glass-2);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+  animation: staggerFade 0.6s ease-out both;
+}
+
+.highlight-item:nth-child(1) {
+  animation-delay: 0.6s;
+}
+.highlight-item:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.highlight-item:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.highlight-item:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.highlight-item:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.highlight-item:hover {
+  border-color: var(--primary);
+  transform: translateX(10px);
+  box-shadow: 0 10px 25px rgba(2, 169, 247, 0.2);
+}
+
+.highlight-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.highlight-content {
+  flex: 1;
+}
+
+.highlight-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, var(--text-heading), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.highlight-content p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.highlight-content strong {
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 600;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.about-link:hover {
-  color: var(--border-hover);
-  text-decoration: underline wavy 2px var(--border-hover);
+.about-cta {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(102, 252, 241, 0.2);
 }
 
-@media (max-width: 1080px) {
-  .about-section {
-    padding: 6vh 4vw;
-  }
-
-  .about-content {
-    padding: 3vh 3vw;
-  }
-
-  .about-description {
-    font-size: clamp(0.9rem, 2.8vw, 1.4rem);
-  }
+.about-cta p {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
 }
 
+.about-cta a {
+  color: var(--link);
+  font-weight: 600;
+}
+
+.about-cta a:hover {
+  text-decoration: underline wavy;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .about-section {
-    padding: 5vh 3vw;
-    /* min-height: 70vh; */
+    padding: 2rem 1rem;
   }
 
-  .about-content {
-    padding: 2vh 2vw;
-    gap: 1.5vh;
+  .about-card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+
+  .highlight-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .highlight-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .highlight-icon {
+    font-size: 1.75rem;
+  }
+
+  .highlight-content h3 {
+    font-size: 1.2rem;
   }
 
   .about-description {
-    font-size: clamp(0.85rem, 2.5vw, 1.3rem);
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
   .about-section {
-    padding: 4vh 2vw;
+    padding: 1.5rem 0.5rem;
   }
 
-  .about-content {
-    padding: 1.5vh 1.5vw;
+  .about-card {
+    padding: 1.5rem;
     border-radius: 1rem;
   }
 
-  .about-description {
-    font-size: clamp(0.8rem, 2.2vw, 1.2rem);
+  .highlight-item {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Light theme adjustments */
+[data-theme="light"] .about-card {
+  background: var(--bg-glass);
+}
+
+[data-theme="light"] .highlight-item {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .about-section * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .highlight-item:hover {
+    transform: none;
+  }
+
+  .about-card:hover {
+    transform: none;
   }
 }

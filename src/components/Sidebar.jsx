@@ -37,8 +37,8 @@ const Sidebar = () => {
 
       // Show sidebar when user scrolls past 20% of the page and not near bottom
       if (
-        scrollPosition > windowHeight * 0.2 &&
-        scrollPosition < documentHeight - windowHeight * 1.2
+        scrollPosition > windowHeight * 0.5 &&
+        scrollPosition < documentHeight - windowHeight * 1.5
       ) {
         setShowSidebar(true);
       } else {
