@@ -254,15 +254,15 @@
 }
 
 .contact-details {
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
   border-radius: 0.75rem;
   transition: all 0.3s ease;
 }
