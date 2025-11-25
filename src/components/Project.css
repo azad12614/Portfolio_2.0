@@ -102,11 +102,11 @@
   animation-delay: 0.2s;
 }
 
-.project-card.featured {
+.project-card.tag {
   border-color: var(--primary);
 }
 
-.project-card.featured::before {
+.project-card.tag::before {
   content: "";
   position: absolute;
   top: 0;
@@ -221,11 +221,25 @@
   transform: translateY(-2px);
 }
 
-.featured-badge {
+.tag-badge {
   position: absolute;
   top: 1rem;
   right: 1rem;
   background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  color: var(--text-invert);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.team-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: linear-gradient(135deg, var(--text-accent), var(--text-main));
   color: var(--text-invert);
   padding: 0.5rem 1rem;
   border-radius: 50px;

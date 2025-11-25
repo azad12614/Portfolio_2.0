@@ -1,26 +1,43 @@
 import "./Project.css";
-import ClipOut from "../assets/Projects/ClipOut.png";
+import Portfolio from "../assets/Projects/Portfolio.png";
 import Cloud_Campus from "../assets/Projects/Cloud_Campus.png";
-import Gaming from "../assets/Projects/Gaming.png";
 import Ladder from "../assets/Projects/Ladder.png";
 import NASA from "../assets/Projects/NASA.jpeg";
-import Rating from "../assets/Projects/Rating.png";
 import Sleepyheads from "../assets/Projects/Sleepyheads.png";
-import StartUP from "../assets/Projects/StartUP.png";
-import InvoiceMaster from "../assets/Projects/Invoice_Master.png";
+import AVGlobalPath from "../assets/Projects/AV_Global_Path.png";
+import FlyHigh from "../assets/Projects/FlyHigh.png";
 import TaskTracker from "../assets/Projects/Task_Tracker.png";
+import InvoiceMaster from "../assets/Projects/Invoice_Master.png";
+import StartUP from "../assets/Projects/StartUP.png";
+import Gaming from "../assets/Projects/Gaming.png";
+import Rating from "../assets/Projects/Rating.png";
+import ClipOut from "../assets/Projects/ClipOut.png";
+import ColorPicker from "../assets/Projects/Color_Picker.png";
 
 const Project = () => {
   const ProjectList = [
     {
+      imgSrc: Portfolio,
+      title: "Portfolio",
+      tech: "React JS, Node JS, CSS",
+      description:
+        "A portfolio that showcases my skills, achievements, and experiences in the software industry.",
+      live: "https://azad12614.onrender.com/",
+      github: "https://github.com/azad12614/Portfolio_2.0/",
+      tag: "Featured",
+      team: false,
+      category: "Frontend",
+    },
+    {
       imgSrc: Cloud_Campus,
       title: "Cloud Campus",
-      tech: "MERN Stack",
+      tech: "MERN Stack, REST APIs",
       description:
         "An academic website for the IIUC CSE department featuring modern design and dynamic course data.",
       live: "https://cloud-campus.onrender.com/",
       github: "https://github.com/azad12614/Cloud_Campus",
-      featured: true,
+      tag: "Featured",
+      team: true,
       category: "Full Stack",
     },
     {
@@ -31,51 +48,21 @@ const Project = () => {
         "A training platform based on Codeforces problem sets with admin controls and user progress tracking.",
       live: "https://cf-ladder.onrender.com/",
       github: "https://github.com/azad12614/Ladder",
-      featured: true,
+      tag: "Featured",
+      team: false,
       category: "Full Stack",
     },
-    {
-      imgSrc: TaskTracker,
-      title: "Task Tracker",
-      tech: "MERN STACK, JWT",
-      description:
-        "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
-      live: "https://tasktracker12614.onrender.com/",
-      github: "https://github.com/azad12614/TaskTracker",
-      featured: false,
-      category: "Full Stack",
-    },
-    {
-      imgSrc: StartUP,
-      title: "StartUP",
-      tech: "Next.js, TypeScript, TailwindCSS, Sanity",
-      description:
-        "A blogging platform for submitting and exploring startup ideas with a modern CMS.",
-      live: null,
-      github: "https://github.com/azad12614/StartUP",
-      featured: false,
-      category: "Frontend",
-    },
-    {
-      imgSrc: InvoiceMaster,
-      title: "Invoice Master",
-      tech: "Next.js, TypeScript, TailwindCSS, Prisma, ShadcnUI",
-      description:
-        "A platform for sending Invoice mail with Mailtrap, along with tracking them.",
-      live: null,
-      github: "https://github.com/azad12614/InvoiceMaster",
-      featured: false,
-      category: "Full Stack",
-    },
+    /* VibeCast ADD & Game Vault Delete - Future Task*/
     {
       imgSrc: NASA,
       title: "Learn4Climate",
-      tech: "React.js, Node.js, CSS",
+      tech: "React JS, Node JS, CSS",
       description:
         "A climate education platform developed for NASA's International Space Apps Challenge.",
       live: "https://learn4climate.onrender.com/",
       github: "https://github.com/azad12614/NASA",
-      featured: true,
+      tag: "Hackathon Task",
+      team: true,
       category: "Frontend",
     },
     {
@@ -86,8 +73,69 @@ const Project = () => {
         "A sleep health prediction tool that analyzes user input to suggest better sleep patterns.",
       live: null,
       github: "https://github.com/azad12614/SleepyHeads",
-      featured: false,
+      tag: "Academic Task",
+      team: true,
       category: "Machine Learning",
+    },
+    {
+      imgSrc: FlyHigh,
+      title: "FlyHigh",
+      tech: "HTML, CSS",
+      description:
+        "FlyHigh is a water-themed travel agency specializing in curated aquatic escapes.",
+      live: "https://azad12614.github.io/FlyHigh/",
+      github: "https://github.com/azad12614/FlyHigh",
+      tag: "Internship Task",
+      team: false,
+      category: "Frontend",
+    },
+    {
+      imgSrc: AVGlobalPath,
+      title: "AV Global Path",
+      tech: "HTML, CSS, JavaScript",
+      description:
+        "AV Global Path is a global brokerage firm facilitating international trade of commodities and equipment. We connect buyers and suppliers across borders through transparent, efficient trade solutions.",
+      live: "https://azad12614.github.io/av-global-path/",
+      github: "https://github.com/azad12614/av-global-path",
+      tag: "Internship Task",
+      team: true,
+      category: "Frontend",
+    },
+    {
+      imgSrc: TaskTracker,
+      title: "Task Tracker",
+      tech: "MERN STACK, JWT",
+      description:
+        "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
+      live: "https://tasktracker12614.onrender.com/",
+      github: "https://github.com/azad12614/TaskTracker",
+      tag: "Internship Task",
+      team: false,
+      category: "Full Stack",
+    },
+    {
+      imgSrc: InvoiceMaster,
+      title: "Invoice Master",
+      tech: "Next.js, TypeScript, TailwindCSS, Prisma, ShadcnUI",
+      description:
+        "A platform for sending Invoice mail with Mailtrap, along with tracking them.",
+      live: null,
+      github: "https://github.com/azad12614/InvoiceMaster",
+      tag: "Learning Task",
+      team: false,
+      category: "Full Stack",
+    },
+    {
+      imgSrc: StartUP,
+      title: "StartUP",
+      tech: "Next.js, TypeScript, TailwindCSS, Sanity",
+      description:
+        "A blogging platform for submitting and exploring startup ideas with a modern CMS.",
+      live: null,
+      github: "https://github.com/azad12614/StartUP",
+      tag: "Learning Task",
+      team: false,
+      category: "Frontend",
     },
     {
       imgSrc: Gaming,
@@ -97,7 +145,8 @@ const Project = () => {
         "A collection of mini-games built as a beginner-friendly web game project.",
       live: "https://azad12614.github.io/Game-Vault/Index.html",
       github: "https://github.com/azad12614/Game-Vault",
-      featured: false,
+      tag: "Learning Task",
+      team: false,
       category: "Frontend",
     },
     {
@@ -108,7 +157,8 @@ const Project = () => {
         "A leaderboard showcasing Codeforces ratings of IIUC CSE students.",
       live: "https://azad12614.github.io/CF_Rating_IIUC/",
       github: "https://github.com/azad12614/CF_Rating_IIUC",
-      featured: false,
+      tag: "Learning Task",
+      team: false,
       category: "Frontend",
     },
     {
@@ -119,7 +169,20 @@ const Project = () => {
         "A simple and intuitive tool for removing image backgrounds with a clean UI.",
       live: null,
       github: "https://github.com/azad12614/BG-ClipOut",
-      featured: false,
+      tag: "Learning Task",
+      team: false,
+      category: "Frontend",
+    },
+    {
+      imgSrc: ColorPicker,
+      title: "Color_Picker",
+      tech: "HTML, CSS, JavaScript",
+      description:
+        "A simple and intuitive Google Extension tool for picking color from screen.",
+      live: null,
+      github: "https://github.com/azad12614/Color_Picker",
+      tag: "Learning Task",
+      team: false,
       category: "Frontend",
     },
   ];
@@ -131,11 +194,12 @@ const Project = () => {
     description,
     live,
     github,
-    featured,
+    tag,
+    team,
     category,
   }) {
     return (
-      <div className={`project-card ${featured ? "featured" : ""}`}>
+      <div className={`project-card ${tag ? "tag" : ""}`}>
         <div className="card-glow"></div>
 
         <div className="project-image">
@@ -186,7 +250,8 @@ const Project = () => {
               </a>
             </div>
           </div>
-          {featured && <div className="featured-badge">Featured</div>}
+          <div className="tag-badge">{tag}</div>
+          {team && <div className="team-badge">Team Work</div>}
         </div>
 
         <div className="project-content">
