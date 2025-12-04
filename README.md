@@ -1,8 +1,8 @@
 # Abdullah Al Azad – Portfolio 2.0
 
 **A sleek, React-powered personal portfolio showcasing my projects, skills, and professional journey.**
+
 [Live Demo](https://azad12614.onrender.com/) | [GitHub Repo](https://github.com/azad12614/Portfolio_2.0)
-**License:** MIT
 
 ---
 
@@ -28,13 +28,13 @@ My second-generation portfolio built with **React.js** and **Node.js** serves as
 
 ## Tech Stack
 
-| Category        | Technologies                                |
-| --------------- | ------------------------------------------- |
-| **Frontend**    | React.js                                    |
-| **Backend**     | Node.js (for optional server-side features) |
-| **Styling**     | CSS, (Tailwind / PostCSS if used)           |
-| **Build Tools** | Vite (implied) / Standard React build       |
-| **Deployment**  | (E.g., Render, Vercel, or others you used)  |
+| Category        | Technologies                |
+| --------------- | --------------------------- |
+| **Frontend**    | React.js                    |
+| **Backend**     | Node.js                     |
+| **Styling**     | CSS, (Tailwind)             |
+| **Build Tools** | Vite / Standard React build |
+| **Deployment**  | (Render)                    |
 
 ---
 
@@ -43,7 +43,7 @@ My second-generation portfolio built with **React.js** and **Node.js** serves as
 ```
 /src
   ├─ components/         – Reusable React components (e.g., Navbar, Hero, ContactForm)
-  ├─ pages/              – Page-level views (e.g., Home, Projects, Blog)
+  ├─ pages/              – Page-level views (e.g., Home)
   ├─ assets/             – Images, icons, and static assets
   └─ App.jsx             – Primary app container and router
 
