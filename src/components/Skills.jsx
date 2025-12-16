@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Skills.css";
 
+import api from "../assets/Lang/api.svg";
 import c from "../assets/Lang/c.svg";
 import cp from "../assets/Lang/cp.svg";
-import html from "../assets/Lang/html.svg";
 import css from "../assets/Lang/css.svg";
-import tailwind from "../assets/Lang/tailwind.svg";
-import javascript from "../assets/Lang/javascript.svg";
-import mongodb from "../assets/Lang/mongodb.svg";
-import express from "../assets/Lang/express.svg";
-import react from "../assets/Lang/react.svg";
-import node from "../assets/Lang/node.svg";
-import python from "../assets/Lang/python.svg";
-import next from "../assets/Lang/next.svg";
-import git from "../assets/Lang/git.svg";
-import github from "../assets/Social/Github.png";
-import sql from "../assets/Lang/sql.svg";
-import typescript from "../assets/Lang/typescript.svg";
-import api from "../assets/Lang/api.svg";
-import jwt from "../assets/Lang/jwt.svg";
-import prisma from "../assets/Lang/prisma.svg";
-import vite from "../assets/Lang/vite.svg";
 import docker from "../assets/Lang/docker.svg";
+import express from "../assets/Lang/express.svg";
+import git from "../assets/Lang/git.svg";
+import html from "../assets/Lang/html.svg";
+import javascript from "../assets/Lang/javascript.svg";
+import jwt from "../assets/Lang/jwt.svg";
+import mongodb from "../assets/Lang/mongodb.svg";
+import next from "../assets/Lang/next.svg";
+import node from "../assets/Lang/node.svg";
+import prisma from "../assets/Lang/prisma.svg";
+import python from "../assets/Lang/python.svg";
+import react from "../assets/Lang/react.svg";
+import sql from "../assets/Lang/sql.svg";
+import tailwind from "../assets/Lang/tailwind.svg";
+import typescript from "../assets/Lang/typescript.svg";
+import vite from "../assets/Lang/vite.svg";
+import github from "../assets/Social/Github.png";
 
 const Skills = () => {
   const skillsData = [

@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
+import logo from "../assets/logo.png";
 import DarkMode from "./DarkMode";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
 
 const sections = [
   "Hero",
@@ -19,7 +19,6 @@ const Navbar = () => {
 
   const toggleMenu = useCallback(() => setShowMobileMenu((prev) => !prev), []);
 
-  // New function to close the menu when a link is clicked
   const handleLinkClick = useCallback(() => {
     if (showMobileMenu) {
       setShowMobileMenu(false);
@@ -62,7 +61,7 @@ const Navbar = () => {
                 href={`#${section}`}
                 className={activeSection === section ? "active" : ""}
                 aria-current={activeSection === section ? "page" : undefined}
-                onClick={handleLinkClick} // <-- NEW: Close menu on link click
+                onClick={handleLinkClick}
               >
                 {section}
               </a>

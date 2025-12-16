@@ -1,14 +1,13 @@
-import React from "react";
-import Navbar from "../../components/Navbar";
-import Hero from "../../components/Hero";
 import About from "../../components/About";
-import Resume from "../Resume";
-import Project from "../../components/Project";
+import Awards from "../../components/Awards";
 import Blog from "../../components/Blog";
 import Contact from "../../components/Contact";
-import Top from "../../components/Top";
+import Hero from "../../components/Hero";
+import Navbar from "../../components/Navbar";
+import Project from "../../components/Project";
 import Sidebar from "../../components/Sidebar";
-import Awards from "../../components/Awards";
+import Top from "../../components/Top";
+import Resume from "../Resume";
 
 const HomePage = () => {
   return (

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import "./Hero.css";
+import { useEffect, useState } from "react";
 import pdf from "../assets/Abdullah_Al_Azad.pdf";
 import avater from "../assets/Abdullah_Al_Azad.png";
+import fb from "../assets/Social/FB.png";
 import git from "../assets/Social/Github.png";
 import ln from "../assets/Social/Linkdin.png";
-import fb from "../assets/Social/FB.png";
+import "./Hero.css";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);

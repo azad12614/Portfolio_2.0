@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import "./Resume.css";
-import Skills from "../components/Skills";
-import Coding from "../components/Coding";
+import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
+import Coding from "../components/Coding";
+import Skills from "../components/Skills";
+import "./Resume.css";
 
 const Resume = () => {
   const [activeTab, setActiveTab] = useState("jobs");

@@ -1,5 +1,3 @@
-// Cards.jsx
-import React from "react";
 import "./Cards.css";
 
 const Cards = ({ item, animateGrid, type }) => {

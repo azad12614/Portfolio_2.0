@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import fb from "../assets/Social/FB.png";
 import git from "../assets/Social/Github.png";
 import ln from "../assets/Social/Linkdin.png";

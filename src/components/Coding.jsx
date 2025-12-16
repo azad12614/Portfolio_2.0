@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import "./Coding.css";
+import { useEffect, useState } from "react";
 import AC from "../assets/Code/AC.png";
 import CC from "../assets/Code/CC.png";
 import CF from "../assets/Code/CF.png";
 import LC from "../assets/Code/LC.png";
+import "./Coding.css";
 
 const Coding = () => {
   const [activeProfile, setActiveProfile] = useState(0);

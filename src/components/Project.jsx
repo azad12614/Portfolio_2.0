@@ -1,18 +1,19 @@
-import "./Project.css";
-import Portfolio from "../assets/Projects/Portfolio.png";
+import AVGlobalPath from "../assets/Projects/AV_Global_Path.png";
+import ClipOut from "../assets/Projects/ClipOut.png";
 import Cloud_Campus from "../assets/Projects/Cloud_Campus.png";
+import ColorPicker from "../assets/Projects/Color_Picker.png";
+import FlyHigh from "../assets/Projects/FlyHigh.png";
+import Gaming from "../assets/Projects/Gaming.png";
+import InvoiceMaster from "../assets/Projects/Invoice_Master.png";
 import Ladder from "../assets/Projects/Ladder.png";
 import NASA from "../assets/Projects/NASA.jpeg";
-import Sleepyheads from "../assets/Projects/Sleepyheads.png";
-import AVGlobalPath from "../assets/Projects/AV_Global_Path.png";
-import FlyHigh from "../assets/Projects/FlyHigh.png";
-import TaskTracker from "../assets/Projects/Task_Tracker.png";
-import InvoiceMaster from "../assets/Projects/Invoice_Master.png";
-import StartUP from "../assets/Projects/StartUP.png";
-import Gaming from "../assets/Projects/Gaming.png";
+import Portfolio from "../assets/Projects/Portfolio.png";
 import Rating from "../assets/Projects/Rating.png";
-import ClipOut from "../assets/Projects/ClipOut.png";
-import ColorPicker from "../assets/Projects/Color_Picker.png";
+import Sleepyheads from "../assets/Projects/Sleepyheads.png";
+import StartUP from "../assets/Projects/StartUP.png";
+import TaskTracker from "../assets/Projects/Task_Tracker.png";
+import VibeCast from "../assets/Projects/VibeCast.png";
+import "./Project.css";
 
 const Project = () => {
   const ProjectList = [
@@ -43,7 +44,7 @@ const Project = () => {
     {
       imgSrc: Ladder,
       title: "CF Ladder",
-      tech: "MERN Stack, REST APIs, JWT, Axios",
+      tech: "MERN Stack, REST APIs, JWT, Axios, Mongoose",
       description:
         "A training platform based on Codeforces problem sets with admin controls and user progress tracking.",
       live: "https://cf-ladder.onrender.com/",
@@ -52,7 +53,30 @@ const Project = () => {
       team: false,
       category: "Full Stack",
     },
-    /* VibeCast ADD & Game Vault Delete - Future Task*/
+    {
+      imgSrc: TaskTracker,
+      title: "Task Tracker",
+      tech: "MERN STACK, REST APIs, JWT, Axios, Mongoose",
+      description:
+        "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
+      live: "https://tasktracker12614.onrender.com/",
+      github: "https://github.com/azad12614/TaskTracker",
+      tag: "Internship Task",
+      team: false,
+      category: "Full Stack",
+    },
+    {
+      imgSrc: VibeCast,
+      title: "VibeCast",
+      tech: "React JS, Node JS, Tailwind CSS, Public Apis",
+      description:
+        "Vibecast is a modern, single-page application (SPA) designed to help users discover trending movies and popular video games.",
+      live: "https://vibecast-entertainment.onrender.com/",
+      github: "https://github.com/azad12614/Vibecast",
+      tag: "Learning Task",
+      team: false,
+      category: "Frontend",
+    },
     {
       imgSrc: NASA,
       title: "Learn4Climate",
@@ -100,18 +124,6 @@ const Project = () => {
       tag: "Internship Task",
       team: true,
       category: "Frontend",
-    },
-    {
-      imgSrc: TaskTracker,
-      title: "Task Tracker",
-      tech: "MERN STACK, JWT",
-      description:
-        "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
-      live: "https://tasktracker12614.onrender.com/",
-      github: "https://github.com/azad12614/TaskTracker",
-      tag: "Internship Task",
-      team: false,
-      category: "Full Stack",
     },
     {
       imgSrc: InvoiceMaster,

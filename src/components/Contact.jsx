@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Contact.css";
 
-import git from "../assets/Social/Github.png";
 import fb from "../assets/Social/FB.png";
+import git from "../assets/Social/Github.png";
 import ln from "../assets/Social/Linkdin.png";
 
 function Contact() {

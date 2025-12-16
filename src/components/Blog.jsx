@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Blog.css";
 
 import AI from "../assets/Blog/AI.png";
