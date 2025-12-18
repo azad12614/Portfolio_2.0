@@ -12,7 +12,7 @@ import Rating from "../assets/Projects/Rating.png";
 import Sleepyheads from "../assets/Projects/Sleepyheads.png";
 import StartUP from "../assets/Projects/StartUP.png";
 import TaskTracker from "../assets/Projects/Task_Tracker.png";
-import VibeCast from "../assets/Projects/VibeCast.png";
+import VibeCast from "../assets/Projects/Vibe_Cast.png";
 import "./Project.css";
 
 const Project = () => {
