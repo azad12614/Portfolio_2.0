@@ -4,12 +4,12 @@ const About = () => {
   return (
     <section className="about-section" id="About">
       <h2 className="header">💫 About Me</h2>
-      <p className="title">"Who I Am?"</p>
+      <p className="title">&quot;Who I Am?&quot;</p>
       <div className="about-content">
         <div className="about-card">
           <div className="about-intro">
             <p className="about-description">
-              I'm <strong>Abdullah Al Azad</strong>, a passionate{" "}
+              I&apos;m <strong>Abdullah Al Azad</strong>, a passionate{" "}
               <strong>Full-Stack Developer</strong> specializing in building{" "}
               <strong>
                 scalable, secure, and user-focused web applications
@@ -26,8 +26,8 @@ const About = () => {
                 <p>
                   <strong>Assistant Web Secretary (Backend)</strong> for{" "}
                   <strong>IIUCCPS</strong>, previously{" "}
-                  <strong>Web Developer Intern</strong> at{" "}
-                  <strong>UIAS</strong>.
+                  <strong>Web Developer Intern</strong> at <strong>UIAS</strong>
+                  .
                 </p>
               </div>
             </div>
@@ -37,8 +37,8 @@ const About = () => {
               <div className="highlight-content">
                 <h3>Project Experience</h3>
                 <p>
-                  Delivered <strong>10+ projects</strong> (MERN,
-                  TypeScript) and completed a B.Sc. thesis in Deep Learning.
+                  Delivered <strong>10+ projects</strong> (MERN, TypeScript) and
+                  completed a B.Sc. thesis in Deep Learning.
                 </p>
               </div>
             </div>
@@ -50,7 +50,8 @@ const About = () => {
                 <p>
                   Proficient in{" "}
                   <strong>
-                    MERN Stack, TypeScript, Hono, Bun, oRPC, TanStack, and Drizzle ORM
+                    MERN Stack, TypeScript, Hono, Bun, oRPC, TanStack, and
+                    Drizzle ORM
                   </strong>
                   , with focus on clean code and robust architecture.
                 </p>

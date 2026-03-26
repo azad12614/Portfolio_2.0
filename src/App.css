@@ -65,7 +65,9 @@ body {
   font-family: var(--font-logo);
   color: var(--primary);
   font-size: clamp(2rem, 5vw, 3rem);
-  text-shadow: var(--secondary) 0.1rem 0.1rem, var(--secondary) 0.2rem 0.2rem;
+  text-shadow:
+    var(--secondary) 0.1rem 0.1rem,
+    var(--secondary) 0.2rem 0.2rem;
   letter-spacing: 0.1rem;
   text-align: center;
   margin-top: 4rem;

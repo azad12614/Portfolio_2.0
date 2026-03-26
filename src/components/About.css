@@ -33,11 +33,12 @@
 
 .about-card {
   background: var(--bg-glass);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--card-border-width) solid var(--border);
   border-radius: 2rem;
   padding: 3rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
 }
 
@@ -81,7 +82,9 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem;
-  background: var(--bg-glass-2);
+  background: var(--inner-bg);
+  backdrop-filter: var(--inner-backdrop);
+  -webkit-backdrop-filter: var(--inner-backdrop);
   border: 1px solid var(--border);
   border-radius: 1.5rem;
   transition: all 0.3s ease;
@@ -227,15 +230,6 @@
   .section-subtitle {
     font-size: 1.1rem;
   }
-}
-
-/* Light theme adjustments */
-[data-theme="light"] .about-card {
-  background: var(--bg-glass);
-}
-
-[data-theme="light"] .highlight-item {
-  background: rgba(255, 255, 255, 0.6);
 }
 
 /* Reduced motion support */

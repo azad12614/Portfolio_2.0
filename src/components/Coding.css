@@ -10,7 +10,6 @@
   }
 }
 
-
 .animate-on-load {
   animation: fadeIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
@@ -23,10 +22,12 @@
 
 .profiles-slider {
   background: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: 2rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--card-shadow);
   padding: 2rem;
-  border: 1px solid var(--border);
+  border: var(--card-border-width) solid var(--border);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -89,19 +90,19 @@
 }
 
 .tab-button:hover {
-  background: linear-gradient(135deg, var(--bg-accent), var(--bg-glass));
-  color: var(--text-accent);
-  border-color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  color: var(--text-invert);
+  border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(2, 169, 247, 0.2);
+  box-shadow: 0 6px 20px rgba(2, 169, 247, 0.3);
 }
 
 .tab-button.active {
-  background: linear-gradient(135deg, var(--bg-accent), var(--bg-glass));
-  color: var(--text-accent);
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  color: var(--text-main);
   border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(2, 169, 247, 0.3);
+  box-shadow: 0 8px 25px rgba(2, 169, 247, 0.35);
 }
 
 .profile-content {
@@ -453,22 +454,30 @@
 }
 
 /* Light theme adjustments */
+[data-theme="light"] .profiles-slider {
+  background: transparent;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 2px solid var(--border);
+  box-shadow: var(--glass-shadow);
+}
+
 [data-theme="light"] .profile-card {
-  background: var(--bg-glass);
+  background: var(--bg-subtle);
+  border-color: var(--border);
 }
 
 [data-theme="light"] .stat-card {
-  background: rgba(255, 255, 255, 0.6);
-}
-
-[data-theme="light"] .profiles-slider {
-  background: var(--bg-glass);
-}
-
-[data-theme="light"] .tab-button {
   background: var(--bg-subtle);
+  border-color: var(--border);
 }
 
 [data-theme="light"] .stat-card:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--bg-glass-2);
+}
+
+[data-theme="light"] .tab-button {
+  background: transparent;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }

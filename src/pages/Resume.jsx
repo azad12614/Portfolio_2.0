@@ -207,7 +207,9 @@ const Resume = () => {
   return (
     <section className="resume" id="Resume">
       <h2 className="header">📊 My Journey</h2>
-      <p className="title">"Showcasing my skills and achievements in tech."</p>
+      <p className="title">
+        &quot;Showcasing my skills and achievements in tech.&quot;
+      </p>
 
       <div className="resume-container">
         <h4 className="resume-subtitle">Experience Timeline</h4>

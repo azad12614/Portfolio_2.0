@@ -146,17 +146,6 @@
   }
 }
 
-/* Light theme adjustments */
-[data-theme="light"] .top-button {
-  background: var(--bg-glass);
-  border: 1px solid var(--border);
-}
-
-[data-theme="light"] .top-button:hover {
-  background: linear-gradient(135deg, var(--primary), var(--text-accent));
-  color: var(--text-invert);
-}
-
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .top-button,

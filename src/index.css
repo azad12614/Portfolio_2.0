@@ -22,8 +22,11 @@
   --bg-main: #0d0d0f;
   --bg-subtle: #11161c;
   --bg-accent: #124e66;
-  --bg-glass: rgba(18, 30, 40, 0.6);
+  --bg-glass: rgba(18, 30, 40, 0.55);
   --bg-glass-2: rgba(17, 40, 59, 0.9);
+  --glass-blur: blur(20px);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 
   /* 🎨 Text Colors */
   --text-main: #f5f6f5;
@@ -66,6 +69,16 @@
   --info-light: #60a5fa; /* Lighter blue */
   --info-dark: #2563eb; /* Darker blue */
 
+  /* 🎨 Card surface tokens */
+  --card-border-width: 1px;
+  --card-shadow: var(--shadow-soft);
+  --inner-bg: var(--bg-glass-2);
+  --inner-backdrop: none;
+  --overlay-bg: rgba(13, 13, 15, 0.8);
+  --badge-bg: rgba(255, 255, 255, 0.1);
+  --input-bg: var(--bg-glass-2);
+  --platform-logo-filter: brightness(0) invert(1);
+
   /* 🎨 Special */
   --logo: #d0f1fb;
   --nav-glass: #24485510;
@@ -86,50 +99,76 @@
     🌞 Light Theme Overrides
 ============================= */
 [data-theme="light"] {
-  --bg-main: #f8f9f8;
-  --bg-subtle: #e8ecef;
-  --bg-accent: #b7dbf8;
-  --bg-glass: rgba(14, 64, 85, 0.3);
-  --bg-glass-2: rgba(96, 122, 143, 0.9);
+  /* 🎨 Backgrounds — medium-toned blue-gray, 70% brightness, no pure white */
+  --bg-main: #b8cad4;
+  --bg-subtle: rgba(148, 168, 180, 0.55);
+  --bg-accent: rgba(130, 152, 165, 0.60);
+  --bg-glass: transparent;
+  --bg-glass-2: rgba(236, 246, 252, 0.45);
 
-  --text-main: #1a252f;
-  --text-muted: #2a3f5a;
-  --text-heading: #0e4055;
-  --text-accent: #964734;
-  --text-invert: #f5f6f5;
+  /* 🎨 Glass tokens */
+  --glass-blur: blur(16px) saturate(140%);
+  --glass-border: rgba(255, 255, 255, 0.52);
+  --glass-shadow: 0 8px 32px rgba(10, 50, 80, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.62);
 
-  --border: #00cfcf;
-  --border-hover: #0085ff;
+  /* 🎨 Text — dark blue-teal family, same palette as dark but inverted lightness */
+  --text-main: #1c2e38;
+  --text-muted: #4a6070;
+  --text-heading: #0a4055;
+  --text-accent: #0070a0;
+  --text-invert: #f0f4f7;
 
-  --btn-bg: #014c66;
-  --btn-text: #b7e1ea;
-  --btn-hover-bg: #b7dbf8;
-  --btn-hover-text: #012c64;
+  /* 🎨 Borders */
+  --border: #5abcd8;
+  --border-hover: #0077aa;
 
-  --primary: #0085ff;
-  --secondary: #023875;
+  /* 🎨 Buttons */
+  --btn-bg: #024060;
+  --btn-text: #e0f2f8;
+  --btn-hover-bg: #035070;
+  --btn-hover-text: #a0e4e2;
 
-  /* Light theme status colors - slightly adjusted for better contrast */
-  --success: #059669;
-  --success-light: #10b981;
-  --success-dark: #047857;
+  /* 🎨 UI Highlights */
+  --primary: #0088cc;
+  --secondary: #024060;
+  --highlight: #8a3d2e;
+  --link: #0066aa;
 
-  --warning: #d97706;
-  --warning-light: #f59e0b;
-  --warning-dark: #b45309;
+  /* 🎨 Status Colors */
+  --success: #047857;
+  --success-light: #059669;
+  --success-dark: #065f46;
 
-  --error: #dc2626;
-  --error-light: #ef4444;
-  --error-dark: #b91c1c;
+  --warning: #b45309;
+  --warning-light: #d97706;
+  --warning-dark: #92400e;
 
-  --info: #2563eb;
-  --info-light: #3b82f6;
-  --info-dark: #1d4ed8;
+  --error: #b91c1c;
+  --error-light: #dc2626;
+  --error-dark: #991b1b;
 
+  --info: #1d4ed8;
+  --info-light: #2563eb;
+  --info-dark: #1e40af;
+
+  /* 🎨 Special */
   --logo: #0b0e12;
-  --mobile-nav: #aabbcce1;
+  --nav-glass: rgba(180, 210, 228, 0.28);
+  --mobile-nav: rgba(176, 204, 220, 0.94);
 
+  /* 🌐 Background Image */
   --BG: url(./BG2.jpg);
 
-  --bright: 95%;
+  /* 🎨 Card surface tokens */
+  --card-border-width: 2px;
+  --card-shadow: var(--glass-shadow);
+  --inner-bg: var(--bg-subtle);
+  --overlay-bg: rgba(248, 249, 248, 0.8);
+  --badge-bg: rgba(255, 255, 255, 0.6);
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --platform-logo-filter: brightness(0) invert(0);
+
+  /* 🌐 Brightness control */
+  --bright: 90%;
+  --shadow-soft: 0 6px 16px rgba(10, 50, 80, 0.18);
 }

@@ -58,7 +58,9 @@ function Awards() {
   return (
     <section className="award-section" id="Awards">
       <h2 className="header">🏆 My Achievements</h2>
-      <p className="title">“Achievements empower through innovation.”</p>
+      <p className="title">
+        &quot;Achievements empower through innovation.&quot;
+      </p>
       <Swiper
         modules={[Autoplay, Keyboard, Pagination, EffectFade]}
         slidesPerView={1}

@@ -109,10 +109,11 @@
 .blog-card {
   display: none;
   background: var(--bg-glass);
-  border: 1px solid var(--border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--card-border-width) solid var(--border);
   border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
   max-width: 400px;
   width: 100%;
@@ -132,6 +133,7 @@
 .blog-image {
   position: relative;
   overflow: hidden;
+  border-radius: 1.5rem 1.5rem 0 0;
 }
 
 .blog-img {
@@ -152,7 +154,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent, rgba(13, 13, 15, 0.8));
+  background: linear-gradient(to bottom, transparent, var(--overlay-bg));
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
@@ -374,14 +376,6 @@
 }
 
 /* Light theme adjustments */
-[data-theme="light"] .blog-card {
-  background: var(--bg-glass);
-}
-
-[data-theme="light"] .blog-overlay {
-  background: linear-gradient(to bottom, transparent, rgba(248, 249, 248, 0.8));
-}
-
 [data-theme="light"] .blog-read-time {
   background: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.2);

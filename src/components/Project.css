@@ -26,8 +26,11 @@
 
 .project-card {
   background: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: 20px;
-  border: 1px solid var(--border);
+  border: var(--card-border-width) solid var(--border);
+  box-shadow: var(--card-shadow);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
@@ -95,7 +98,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(13, 13, 15, 0.8);
+  background: var(--overlay-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,6 +221,10 @@
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .tech-stack {
@@ -271,11 +278,18 @@
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), var(--text-accent));
   color: var(--text-invert);
+  border: none;
+  box-shadow: 0 4px 14px rgba(2, 169, 247, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(2, 169, 247, 0.3);
+  box-shadow: 0 6px 20px rgba(2, 169, 247, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(2, 169, 247, 0.2);
 }
 
 .btn-secondary {
@@ -305,17 +319,8 @@
 }
 
 /* Light theme adjustments */
-[data-theme="light"] .project-card {
-  background: var(--bg-glass);
-}
-
-[data-theme="light"] .image-overlay {
-  background: rgba(248, 249, 248, 0.9);
-}
-
 [data-theme="light"] .github-link {
   background: rgba(0, 0, 0, 0.05);
-  color: var(--text-main);
 }
 
 [data-theme="light"] .tech-badge {

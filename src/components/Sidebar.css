@@ -155,17 +155,6 @@
   height: 55px;
 }
 
-/* Light theme adjustments */
-[data-theme="light"] .social-icon {
-  background: var(--bg-glass);
-  border: 2px solid var(--border);
-}
-
-[data-theme="light"] .link-tooltip {
-  background: var(--bg-glass-2);
-  border: 1px solid var(--border);
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .sidebar {

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./Cards.css";
 
 const Cards = ({ item, animateGrid, type }) => {
@@ -100,6 +101,20 @@ const Cards = ({ item, animateGrid, type }) => {
       </div>
     </div>
   );
+};
+
+Cards.propTypes = {
+  item: PropTypes.shape({
+    date: PropTypes.string,
+    worktype: PropTypes.string,
+    workplace: PropTypes.string,
+    title: PropTypes.string,
+    org: PropTypes.string,
+    link: PropTypes.string,
+    desc: PropTypes.string,
+  }).isRequired,
+  animateGrid: PropTypes.bool,
+  type: PropTypes.oneOf(["job", "academic", "programming", "education"]),
 };
 
 export default Cards;

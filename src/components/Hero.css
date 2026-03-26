@@ -164,17 +164,24 @@
   font-family: var(--font-mono);
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  border: none;
   font-size: 1rem;
-  background: var(--btn-bg);
-  color: var(--btn-text);
+  background: var(--bg-glass-2);
+  color: var(--text-heading);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .primary-btn:hover {
   transform: translateY(-2px);
-  background: var(--btn-hover-bg);
+  background: var(--bg-glass);
   color: var(--text-main);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
+}
+
+.primary-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
 .accent-btn {
@@ -198,7 +205,7 @@
 .accent-btn:hover {
   background: var(--bg-glass-2);
   color: var(--btn-hover-text);
-  border: none;
+  border: 2px solid transparent;
   transform: translateY(-2px);
 }
 
@@ -630,14 +637,26 @@
 /* Light theme adjustments */
 [data-theme="light"] .avatar-wrapper {
   background: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-color: var(--glass-border);
+  box-shadow: var(--glass-shadow);
 }
 
 [data-theme="light"] .floating-card {
   background: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-color: var(--glass-border);
+  box-shadow: var(--glass-shadow);
 }
 
 [data-theme="light"] .accent-btn {
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-color: var(--border);
+  color: var(--text-main);
 }
 
 /* Reduced motion support */

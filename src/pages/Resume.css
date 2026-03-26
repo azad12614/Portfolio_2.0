@@ -52,10 +52,11 @@
 }
 
 .resume-tab-button.active {
-  background: linear-gradient(135deg, var(--primary), var(--text-main));
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
   color: var(--text-invert);
   font-weight: 700;
   border: none;
+  box-shadow: 0 4px 14px rgba(2, 169, 247, 0.35);
 }
 
 .gridedu {

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import AVGlobalPath from "../assets/Projects/AV_Global_Path.png";
 import ClipOut from "../assets/Projects/ClipOut.png";
 import Cloud_Campus from "../assets/Projects/Cloud_Campus.png";
@@ -331,12 +332,24 @@ const Project = () => {
     );
   }
 
+  ProjectCard.propTypes = {
+    imgSrc: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    tech: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    live: PropTypes.string,
+    github: PropTypes.string.isRequired,
+    tag: PropTypes.string,
+    team: PropTypes.bool,
+    category: PropTypes.string.isRequired,
+  };
+
   return (
     <section className="project-section" id="Project">
       <h2 className="header">🚀 PROJECTS</h2>
       <p className="title">
-        “My Projects keep expanding over time to better address even more
-        challenges.”
+        &quot;My Projects keep expanding over time to better address even more
+        challenges.&quot;
       </p>
 
       <div className="project-grid">

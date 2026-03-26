@@ -29,8 +29,8 @@ function Contact() {
 
   return (
     <section className="contact-section" id="Contact">
-      <h2 className="header">🌐 CONTACT ME</h2>{" "}
-      <p className="title">“Get in Touch, Don't Be Shy!!”</p>
+      <h2 className="header">🌐 CONTACT ME</h2>
+      <p className="title">&quot;Get in Touch, Don&apos;t Be Shy!!&quot;</p>
       <div className="contact-container">
         <div className="contact-content">
           {/* Contact Form */}
@@ -150,10 +150,10 @@ function Contact() {
           {/* Contact Info */}
           <div className="contact-info">
             <div className="info-card">
-              <h3 className="info-title">Let's Connect</h3>
+              <h3 className="info-title">Let&apos;s Connect</h3>
               <p className="info-description">
-                I'm always open to discussing new opportunities, creative ideas,
-                or opportunities to be part of your vision.
+                I&apos;m always open to discussing new opportunities, creative
+                ideas, or opportunities to be part of your vision.
               </p>
 
               <div className="contact-details">
