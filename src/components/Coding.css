@@ -10,15 +10,6 @@
   }
 }
 
-@keyframes glowPulse {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(2, 169, 247, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(2, 169, 247, 0.3);
-  }
-}
 
 .animate-on-load {
   animation: fadeIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
@@ -157,10 +148,6 @@
   filter: brightness(0) invert(0);
 }
 
-.tab-button.active .platform-logo {
-  filter: brightness(0) invert(1);
-}
-
 [data-theme="light"] .tab-button.active .platform-logo {
   filter: brightness(0) invert(0);
 }
@@ -227,7 +214,6 @@
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  /* border: 2px solid transparent; */
 }
 
 .visit-link:hover {

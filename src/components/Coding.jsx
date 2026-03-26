@@ -12,7 +12,8 @@ const Coding = () => {
 
   useEffect(() => {
     setAnimateProfile(false);
-    setTimeout(() => setAnimateProfile(true), 50);
+    const id = setTimeout(() => setAnimateProfile(true), 50);
+    return () => clearTimeout(id);
   }, [activeProfile]);
 
   const profiles = [
@@ -27,6 +28,7 @@ const Coding = () => {
       contests: "80+",
       logo: CF,
       description: "Competitive Programming Platform",
+      maxScale: 2000,
     },
     {
       link: "https://www.codechef.com/users/azad12614",
@@ -39,6 +41,7 @@ const Coding = () => {
       contests: "15+",
       logo: CC,
       description: "Monthly Coding Challenges",
+      maxScale: 2200,
     },
     {
       link: "https://leetcode.com/u/azad12614/",
@@ -51,6 +54,7 @@ const Coding = () => {
       contests: "25+",
       logo: LC,
       description: "Algorithm Challenges & Interviews",
+      maxScale: 2500,
     },
     {
       link: "https://atcoder.jp/users/azad12614",
@@ -63,6 +67,7 @@ const Coding = () => {
       contests: "20+",
       logo: AC,
       description: "Japanese Programming Contests",
+      maxScale: 800,
     },
   ];
 
@@ -71,7 +76,7 @@ const Coding = () => {
       pupil: "var(--success-dark)",
       "3 star": "var(--highlight)",
       "top 27%": "var(--warning-light)",
-      "9 Kyu": "var(--info-light)",
+      "9 kyu": "var(--info-light)",
     };
     return rankColors[rank.toLowerCase()] || "var(--info-light)";
   };
@@ -191,15 +196,18 @@ const Coding = () => {
                 <div
                   className="progress-fill"
                   style={{
-                    width: `${
-                      (parseInt(profiles[activeProfile].rating) / 2000) * 100
-                    }%`,
+                    width: `${Math.min(
+                      (parseInt(profiles[activeProfile].rating) /
+                        profiles[activeProfile].maxScale) *
+                        100,
+                      100
+                    )}%`,
                   }}
                 ></div>
               </div>
               <div className="progress-labels">
                 <span>0</span>
-                <span>2000</span>
+                <span>{profiles[activeProfile].maxScale}</span>
               </div>
             </div>
           </div>

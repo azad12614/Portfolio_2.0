@@ -67,6 +67,7 @@ function Contact() {
               <div className="form-group">
                 <textarea
                   className="form-input textarea"
+                  id="message"
                   rows="5"
                   placeholder="Your message here..."
                   name="message"

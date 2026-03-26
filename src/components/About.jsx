@@ -14,7 +14,7 @@ const About = () => {
               <strong>
                 scalable, secure, and user-focused web applications
               </strong>{" "}
-              with <strong>MERN</strong> and <strong>Next.js</strong>.
+              with <strong>modern full-stack technologies</strong>.
             </p>
           </div>
 
@@ -22,11 +22,12 @@ const About = () => {
             <div className="highlight-item">
               <div className="highlight-icon">💼</div>
               <div className="highlight-content">
-                <h3>Current Roles</h3>
+                <h3>Current Role</h3>
                 <p>
-                  <strong>Web Developer Intern</strong> at <strong>UIAS</strong>{" "}
-                  and <strong>Assistant Web Secretary (Backend)</strong> for{" "}
-                  <strong>IIUCCPS</strong>.
+                  <strong>Assistant Web Secretary (Backend)</strong> for{" "}
+                  <strong>IIUCCPS</strong>, previously{" "}
+                  <strong>Web Developer Intern</strong> at{" "}
+                  <strong>UIAS</strong>.
                 </p>
               </div>
             </div>
@@ -36,8 +37,8 @@ const About = () => {
               <div className="highlight-content">
                 <h3>Project Experience</h3>
                 <p>
-                  Delivered <strong>10+ full-stack projects</strong> (MERN,
-                  Next.js) and completed a B.Sc. thesis in Deep Learning.
+                  Delivered <strong>10+ projects</strong> (MERN,
+                  TypeScript) and completed a B.Sc. thesis in Deep Learning.
                 </p>
               </div>
             </div>
@@ -49,7 +50,7 @@ const About = () => {
                 <p>
                   Proficient in{" "}
                   <strong>
-                    MERN Stack, Next.js, TypeScript, and REST APIs
+                    MERN Stack, TypeScript, Hono, Bun, oRPC, TanStack, and Drizzle ORM
                   </strong>
                   , with focus on clean code and robust architecture.
                 </p>

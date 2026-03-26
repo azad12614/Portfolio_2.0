@@ -4,43 +4,32 @@ import Cloud_Campus from "../assets/Projects/Cloud_Campus.png";
 import ColorPicker from "../assets/Projects/Color_Picker.png";
 import FlyHigh from "../assets/Projects/FlyHigh.png";
 import Gaming from "../assets/Projects/Gaming.png";
-import InvoiceMaster from "../assets/Projects/Invoice_Master.png";
+import GhorBazar from "../assets/Projects/GhorBazar.png";
 import Ladder from "../assets/Projects/Ladder.png";
 import NASA from "../assets/Projects/NASA.jpeg";
 import Portfolio from "../assets/Projects/Portfolio.png";
 import Rating from "../assets/Projects/Rating.png";
 import Sleepyheads from "../assets/Projects/Sleepyheads.png";
-import StartUP from "../assets/Projects/StartUP.png";
 import TaskTracker from "../assets/Projects/Task_Tracker.png";
 import VibeCast from "../assets/Projects/Vibe_Cast.png";
 import "./Project.css";
 
 const Project = () => {
   const ProjectList = [
+    // 1. Most modern full-stack (oRPC, TanStack Start, Bun, Drizzle, Better Auth)
     {
-      imgSrc: Portfolio,
-      title: "Portfolio",
-      tech: "React JS, Node JS, CSS",
+      imgSrc: GhorBazar,
+      title: "GhorBazar",
+      tech: "React, TanStack Start, Hono, oRPC, Bun, Better Auth, Drizzle ORM, PostgreSQL, TypeScript, Tailwind CSS",
       description:
-        "A portfolio that showcases my skills, achievements, and experiences in the software industry.",
-      live: "https://azad12614.onrender.com/",
-      github: "https://github.com/azad12614/Portfolio_2.0/",
+        "A full-stack building materials marketplace for Bangladesh, connecting buyers with verified vendors for cement, bricks, steel, and more.",
+      live: null,
+      github: "https://github.com/azad12614/GhorBazar",
       tag: "Featured",
       team: false,
-      category: "Frontend",
-    },
-    {
-      imgSrc: Cloud_Campus,
-      title: "Cloud Campus",
-      tech: "MERN Stack, REST APIs",
-      description:
-        "An academic website for the IIUC CSE department featuring modern design and dynamic course data.",
-      live: "https://cloud-campus.onrender.com/",
-      github: "https://github.com/azad12614/Cloud_Campus",
-      tag: "Featured",
-      team: true,
       category: "Full Stack",
     },
+    // 2. MERN Full Stack solo
     {
       imgSrc: Ladder,
       title: "CF Ladder",
@@ -53,10 +42,24 @@ const Project = () => {
       team: false,
       category: "Full Stack",
     },
+    // 3. MERN Full Stack team
+    {
+      imgSrc: Cloud_Campus,
+      title: "Cloud Campus",
+      tech: "MERN Stack, REST APIs",
+      description:
+        "An academic website for the IIUC CSE department featuring modern design and dynamic course data.",
+      live: "https://cloud-campus.onrender.com/",
+      github: "https://github.com/azad12614/Cloud_Campus",
+      tag: "Featured",
+      team: true,
+      category: "Full Stack",
+    },
+    // 4. MERN Full Stack internship
     {
       imgSrc: TaskTracker,
       title: "Task Tracker",
-      tech: "MERN STACK, REST APIs, JWT, Axios, Mongoose",
+      tech: "MERN Stack, REST APIs, JWT, Axios, Mongoose",
       description:
         "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
       live: "https://tasktracker12614.onrender.com/",
@@ -65,6 +68,20 @@ const Project = () => {
       team: false,
       category: "Full Stack",
     },
+    // 5. React + Vite featured
+    {
+      imgSrc: Portfolio,
+      title: "Portfolio",
+      tech: "React JS, Vite, CSS",
+      description:
+        "A portfolio that showcases my skills, achievements, and experiences in the software industry.",
+      live: "https://azad12614.onrender.com/",
+      github: "https://github.com/azad12614/Portfolio_2.0/",
+      tag: "Featured",
+      team: false,
+      category: "Frontend",
+    },
+    // 6. React + Node + Tailwind
     {
       imgSrc: VibeCast,
       title: "VibeCast",
@@ -77,6 +94,20 @@ const Project = () => {
       team: false,
       category: "Frontend",
     },
+    // 7. React + Tailwind + API
+    {
+      imgSrc: ClipOut,
+      title: "BG-ClipOut",
+      tech: "React.js, TailwindCSS, RestAPI",
+      description:
+        "A simple and intuitive tool for removing image backgrounds with a clean UI.",
+      live: null,
+      github: "https://github.com/azad12614/BG-ClipOut",
+      tag: "Learning Task",
+      team: false,
+      category: "Frontend",
+    },
+    // 8. React + Node, hackathon
     {
       imgSrc: NASA,
       title: "Learn4Climate",
@@ -89,6 +120,7 @@ const Project = () => {
       team: true,
       category: "Frontend",
     },
+    // 9. Python + ML, unique category
     {
       imgSrc: Sleepyheads,
       title: "Sleepy Heads",
@@ -101,6 +133,46 @@ const Project = () => {
       team: true,
       category: "Machine Learning",
     },
+    // 10. HTML/CSS/JS internship
+    {
+      imgSrc: AVGlobalPath,
+      title: "AV Global Path",
+      tech: "HTML, CSS, JavaScript",
+      description:
+        "Built a website for a global brokerage firm facilitating international trade of commodities and equipment, connecting buyers and suppliers across borders.",
+      live: "https://azad12614.github.io/av-global-path/",
+      github: "https://github.com/azad12614/av-global-path",
+      tag: "Internship Task",
+      team: true,
+      category: "Frontend",
+    },
+    // 11. HTML/CSS/JS utility
+    {
+      imgSrc: Rating,
+      title: "CF Rating",
+      tech: "HTML, CSS, JavaScript",
+      description:
+        "A leaderboard showcasing Codeforces ratings of IIUC CSE students.",
+      live: "https://azad12614.github.io/CF_Rating_IIUC/",
+      github: "https://github.com/azad12614/CF_Rating_IIUC",
+      tag: "Learning Task",
+      team: false,
+      category: "Frontend",
+    },
+    // 12. HTML/CSS/JS games
+    {
+      imgSrc: Gaming,
+      title: "Game Vault",
+      tech: "HTML, CSS, JavaScript",
+      description:
+        "A collection of mini-games built with vanilla HTML, CSS, and JavaScript.",
+      live: "https://azad12614.github.io/Game-Vault/Index.html",
+      github: "https://github.com/azad12614/Game-Vault",
+      tag: "Learning Task",
+      team: false,
+      category: "Frontend",
+    },
+    // 13. HTML/CSS internship
     {
       imgSrc: FlyHigh,
       title: "FlyHigh",
@@ -114,83 +186,11 @@ const Project = () => {
       category: "Frontend",
     },
     {
-      imgSrc: AVGlobalPath,
-      title: "AV Global Path",
-      tech: "HTML, CSS, JavaScript",
-      description:
-        "AV Global Path is a global brokerage firm facilitating international trade of commodities and equipment. We connect buyers and suppliers across borders through transparent, efficient trade solutions.",
-      live: "https://azad12614.github.io/av-global-path/",
-      github: "https://github.com/azad12614/av-global-path",
-      tag: "Internship Task",
-      team: true,
-      category: "Frontend",
-    },
-    {
-      imgSrc: InvoiceMaster,
-      title: "Invoice Master",
-      tech: "Next.js, TypeScript, TailwindCSS, Prisma, ShadcnUI",
-      description:
-        "A platform for sending Invoice mail with Mailtrap, along with tracking them.",
-      live: null,
-      github: "https://github.com/azad12614/InvoiceMaster",
-      tag: "Learning Task",
-      team: false,
-      category: "Full Stack",
-    },
-    {
-      imgSrc: StartUP,
-      title: "StartUP",
-      tech: "Next.js, TypeScript, TailwindCSS, Sanity",
-      description:
-        "A blogging platform for submitting and exploring startup ideas with a modern CMS.",
-      live: null,
-      github: "https://github.com/azad12614/StartUP",
-      tag: "Learning Task",
-      team: false,
-      category: "Frontend",
-    },
-    {
-      imgSrc: Gaming,
-      title: "Game Vault",
-      tech: "HTML, CSS, JavaScript",
-      description:
-        "A collection of mini-games built as a beginner-friendly web game project.",
-      live: "https://azad12614.github.io/Game-Vault/Index.html",
-      github: "https://github.com/azad12614/Game-Vault",
-      tag: "Learning Task",
-      team: false,
-      category: "Frontend",
-    },
-    {
-      imgSrc: Rating,
-      title: "CF Rating",
-      tech: "HTML, CSS, JavaScript",
-      description:
-        "A leaderboard showcasing Codeforces ratings of IIUC CSE students.",
-      live: "https://azad12614.github.io/CF_Rating_IIUC/",
-      github: "https://github.com/azad12614/CF_Rating_IIUC",
-      tag: "Learning Task",
-      team: false,
-      category: "Frontend",
-    },
-    {
-      imgSrc: ClipOut,
-      title: "BG-ClipOut",
-      tech: "React.js, TailwindCSS, RestAPI",
-      description:
-        "A simple and intuitive tool for removing image backgrounds with a clean UI.",
-      live: null,
-      github: "https://github.com/azad12614/BG-ClipOut",
-      tag: "Learning Task",
-      team: false,
-      category: "Frontend",
-    },
-    {
       imgSrc: ColorPicker,
       title: "Color_Picker",
       tech: "HTML, CSS, JavaScript",
       description:
-        "A simple and intuitive Google Extension tool for picking color from screen.",
+        "A Google Chrome Extension tool for picking any color directly from the screen.",
       live: null,
       github: "https://github.com/azad12614/Color_Picker",
       tag: "Learning Task",

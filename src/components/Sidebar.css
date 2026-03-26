@@ -45,7 +45,7 @@
 .sidebar {
   position: fixed;
   right: 1.25rem;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -211,25 +211,6 @@
   }
 }
 
-/* Alternative mobile layout for smaller screens */
-@media (max-width: 480px) and (min-width: 641px) {
-  .sidebar {
-    bottom: 2rem;
-    top: auto;
-    right: 50%;
-    transform: translateX(50%);
-    flex-direction: row;
-  }
-
-  .sidebar-content {
-    flex-direction: row;
-  }
-
-  .social-links {
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-}
 
 /* Enhanced focus states for accessibility */
 .social-link:focus {

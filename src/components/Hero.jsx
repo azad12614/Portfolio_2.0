@@ -27,8 +27,8 @@ const Hero = () => {
     },
     {
       type: "tech",
-      content: "NEXT",
-      class: "nextjs",
+      content: "TS",
+      class: "typescript",
     },
     {
       type: "tech",
@@ -78,7 +78,7 @@ const Hero = () => {
                 <strong>Full-Stack Developer</strong>
                 {!isMobile && (
                   <>
-                    , <strong>MERN & NEXT.JS Specialist</strong>,{" "}
+                    , <strong>TypeScript & Modern Web Stack</strong>,{" "}
                     <strong>Competitive Programmer</strong>
                   </>
                 )}

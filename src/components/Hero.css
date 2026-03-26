@@ -332,7 +332,7 @@
   animation-delay: 0s;
 }
 
-.floating-card.nextjs {
+.floating-card.typescript {
   top: 70%;
   right: 8%;
   background: linear-gradient(
@@ -465,7 +465,7 @@
     left: 8%;
   }
 
-  .floating-card.nextjs {
+  .floating-card.typescript {
     top: 70%;
     right: 10%;
   }
@@ -575,7 +575,7 @@
     left: 5%;
   }
 
-  .floating-card.nextjs {
+  .floating-card.typescript {
     top: 70%;
     right: 10%;
   }

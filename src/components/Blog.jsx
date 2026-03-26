@@ -52,33 +52,17 @@ const blogData = [
 
 const Blog = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const infoRef = useRef(null);
 
   useEffect(() => {
-    let timer;
-    if (isAutoPlaying) {
-      timer = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % blogData.length);
-      }, 5000);
-    }
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % blogData.length);
+    }, 5000);
     return () => clearInterval(timer);
-  }, [isAutoPlaying]);
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % blogData.length);
-  };
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + blogData.length) % blogData.length);
-  };
+  }, []);
 
   const handleDotClick = (index) => {
     setCurrentSlide(index);
-  };
-
-  const toggleAutoPlay = () => {
-    setIsAutoPlaying(!isAutoPlaying);
   };
 
   return (
@@ -90,23 +74,6 @@ const Blog = () => {
 
       <div className="blog-container">
         <div className="carousel-wrapper">
-          {/* <button
-            className="carousel-btn prev-btn"
-            onClick={handlePrevSlide}
-            aria-label="Previous blog"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button> */}
-
           <div className="carousel" ref={infoRef}>
             {blogData.map((item, index) => (
               <div
@@ -160,22 +127,6 @@ const Blog = () => {
             ))}
           </div>
 
-          {/* <button
-            className="carousel-btn next-btn"
-            onClick={handleNextSlide}
-            aria-label="Next blog"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button> */}
         </div>
 
         <div className="carousel-controls">
@@ -189,14 +140,6 @@ const Blog = () => {
               ></button>
             ))}
           </div>
-
-          {/* <button
-            className={`auto-play-btn ${isAutoPlaying ? "playing" : "paused"}`}
-            onClick={toggleAutoPlay}
-            aria-label={isAutoPlaying ? "Pause auto-play" : "Play auto-play"}
-          >
-            {isAutoPlaying ? "⏸️" : "▶️"}
-          </button> */}
         </div>
       </div>
     </section>

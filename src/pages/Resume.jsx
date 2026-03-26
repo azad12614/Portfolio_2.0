@@ -10,18 +10,19 @@ const Resume = () => {
 
   useEffect(() => {
     setAnimateGrid(false);
-    setTimeout(() => setAnimateGrid(true), 50); // Adjusted delay for reliability
+    const id = setTimeout(() => setAnimateGrid(true), 50);
+    return () => clearTimeout(id);
   }, [activeTab]);
 
   const job = [
     {
-      date: "Oct 2025 - Present",
+      date: "Oct 2025 - Feb 2026",
       title: "Web Developer",
       org: "Universal Institute for Advanced Studies (UIAS)",
       worktype: "Intern",
       workplace: "Remote",
       link: "https://www.linkedin.com/company/universal-institute-for-advanced-studies%C2%A0-uias?trk=public_post_feed-actor-name",
-      desc: "Officially joined the team to apply MERN/Next.js and competitive programming skills to solve technical challenges.",
+      desc: "Built and shipped multiple client-facing web projects including a brokerage firm website and a local business site, handling frontend development, UI improvements, and feature additions across the internship.",
     },
   ];
   const academic = [
@@ -31,7 +32,7 @@ const Resume = () => {
       org: "IIUCCPS",
       worktype: "Volunteer",
       workplace: "Remote",
-      desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
+      desc: "Managing and enhancing backend infrastructure for IIUCCPS, supporting the society's web presence and technical operations.",
     },
     {
       date: "Jan 2025 - Aug 2025",
@@ -39,7 +40,7 @@ const Resume = () => {
       org: "IIUCCPS",
       worktype: "Volunteer",
       workplace: "Remote",
-      desc: "Serving as a Bootcamp Co-ordinator for the Competitive Programming Society at International Islamic University Chittagong.",
+      desc: "Organized weekly coding sessions for 100+ participants. Collaborated with 20+ trainers and mentors, scaling program reach by 50% year-over-year.",
     },
     {
       date: "Jul 2024 - Aug 2025",
@@ -47,7 +48,7 @@ const Resume = () => {
       org: "IIUC",
       worktype: "PartTime",
       workplace: "Hybrid",
-      desc: "Serving as a Teaching Assistant at International Islamic University Chittagong.",
+      desc: "Assisted in teaching Data Structures to 100+ students, boosting average class performance by 15%. Designed coding assignments, checked submissions, and organized marking.",
     },
     {
       date: "Jul 2023 - Jan 2025",
@@ -55,7 +56,7 @@ const Resume = () => {
       org: "IIUCCPS",
       worktype: "Volunteer",
       workplace: "Remote",
-      desc: "Served as a Mentor for the Competitive Programming Society at International Islamic University Chittagong.",
+      desc: "Mentored 30+ beginner and intermediate CP enthusiasts, guiding them through data structures, algorithms, and competitive problem-solving.",
     },
     {
       date: "Jul 2023 - Dec 2023",
@@ -63,7 +64,7 @@ const Resume = () => {
       org: "IIUCCPS",
       worktype: "Volunteer",
       workplace: "Remote",
-      desc: "Served as a Trainer for the Competitive Programming Society at International Islamic University Chittagong.",
+      desc: "Conducted problem-solving sessions on algorithms, data structures, and Codeforces problems for bootcamp participants.",
     },
   ];
   const programming = [
@@ -167,11 +168,11 @@ const Resume = () => {
   ];
   const education = [
     {
-      date: "Jul 2021 - Expected Dec 2025",
+      date: "Jul 2021 - Dec 2025",
       title: "B.Sc. Degree",
       link: "https://www.iiuc.ac.bd/",
       org: "IIUC",
-      desc: "Pursuing my degree at International Islamic University Chittagong, expected graduation in 2025.",
+      desc: "Completed B.Sc. degree at International Islamic University Chittagong.",
     },
     {
       date: "Apr 2018 - Apr 2020",
@@ -212,19 +213,19 @@ const Resume = () => {
         <h4 className="resume-subtitle">Experience Timeline</h4>
         <div className="experience-tabs">
           <button
-            className={`tab-button ${activeTab === "jobs" ? "active" : ""}`}
+            className={`resume-tab-button ${activeTab === "jobs" ? "active" : ""}`}
             onClick={() => setActiveTab("jobs")}
           >
             <span className="tab-icon">💼</span> Jobs
           </button>
           <button
-            className={`tab-button ${activeTab === "academic" ? "active" : ""}`}
+            className={`resume-tab-button ${activeTab === "academic" ? "active" : ""}`}
             onClick={() => setActiveTab("academic")}
           >
             <span className="tab-icon">👨🏻‍🎓</span> Academic Roles
           </button>
           <button
-            className={`tab-button ${
+            className={`resume-tab-button ${
               activeTab === "programming" ? "active" : ""
             }`}
             onClick={() => setActiveTab("programming")}
@@ -232,7 +233,7 @@ const Resume = () => {
             <span className="tab-icon">🏆</span> Programming Achievements
           </button>
           <button
-            className={`tab-button ${
+            className={`resume-tab-button ${
               activeTab === "education" ? "active" : ""
             }`}
             onClick={() => setActiveTab("education")}
