@@ -52,7 +52,7 @@ const Resume = () => {
     },
     {
       date: "Jul 2023 - Jan 2025",
-      title: "Mentor",
+      title: "Bootcamp Mentor",
       org: "IIUCCPS",
       worktype: "Volunteer",
       workplace: "Remote",
@@ -172,7 +172,7 @@ const Resume = () => {
       title: "B.Sc. Degree",
       link: "https://www.iiuc.ac.bd/",
       org: "IIUC",
-      desc: "Completed B.Sc. degree at International Islamic University Chittagong.",
+      desc: "Completed B.Sc. in Computer Science and Engineering at International Islamic University Chittagong. Thesis: A Hybrid CNN-BiGRU Approach for Bangla Audio Deepfake Detection.",
     },
     {
       date: "Apr 2018 - Apr 2020",
@@ -201,6 +201,43 @@ const Resume = () => {
       link: "https://www.facebook.com/people/%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0-%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A7%9F%E0%A6%BE%E0%A6%B2%E0%A6%9B%E0%A7%9C%E0%A6%BF-%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A5%E0%A6%AE%E0%A6%BF%E0%A6%95-%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F/100057411851391/",
       org: "North Harualchari Govt. Primary School",
       desc: "Completed P.S.C. Exam and studied from 1st to 5th class at North Harualchari Govt. Primary School.",
+    },
+  ];
+  const achievements = [
+    {
+      date: "Feb 2024, Jul 2025",
+      title: "The Best Mentor Award",
+      org: "IIUCCPS",
+      workplace: "Offline",
+      desc: "Awarded for contributions as a mentor in the IIUCCPS Bootcamp Program.",
+    },
+    {
+      date: "Feb 2024",
+      title: "Trainer Certificate",
+      org: "IIUCCPS",
+      workplace: "Offline",
+      desc: "Received a certificate recognizing my role as a trainer at IIUCCPS Bootcamp Program Autumn 2023.",
+    },
+    {
+      date: "Sep 2024",
+      title: "Participation Certificate",
+      org: "NASA",
+      workplace: "Online",
+      desc: "Participated in the NASA International Space Apps Challenge 2024.",
+    },
+    {
+      date: "2022, 2023, 2024",
+      title: "Certificate of Achievement",
+      org: "ICPC",
+      workplace: "Online",
+      desc: "Awarded for achievements in the International Collegiate Programming Contest.",
+    },
+    {
+      date: "May 2025",
+      title: "Ostad Courses Certificate",
+      org: "Ostad",
+      workplace: "Online",
+      desc: 'Certificate for courses: "Webflow Crash Course" and "Javascript Workshop for Beginners".',
     },
   ];
 
@@ -242,6 +279,14 @@ const Resume = () => {
           >
             <span className="tab-icon">🎓</span> Education
           </button>
+          <button
+            className={`resume-tab-button ${
+              activeTab === "achievements" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("achievements")}
+          >
+            <span className="tab-icon">🏅</span> Awards & Certs
+          </button>
         </div>
         <div className="gridedu">
           {activeTab === "jobs" &&
@@ -278,6 +323,15 @@ const Resume = () => {
                 item={item}
                 animateGrid={animateGrid}
                 type="education"
+              />
+            ))}
+          {activeTab === "achievements" &&
+            achievements.map((item, index) => (
+              <Cards
+                key={index}
+                item={item}
+                animateGrid={animateGrid}
+                type="programming"
               />
             ))}
         </div>

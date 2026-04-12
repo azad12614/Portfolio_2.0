@@ -20,6 +20,7 @@
 
 .experience-tabs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 0.9rem;
   margin-bottom: 2vh;
@@ -80,8 +81,8 @@
   }
 
   .resume-tab-button {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    padding: 1vh 1.5vw;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.875rem;
   }
 
   .resume-subtitle {
@@ -91,8 +92,8 @@
 
   .experience-tabs {
     flex-direction: column;
-    padding: 1vh 1.5vw;
-    gap: 1.5vw;
+    padding: 1vh 1rem;
+    gap: 0.5rem;
   }
 
   .gridedu {

@@ -38,7 +38,12 @@ const About = () => {
                 <h3>Project Experience</h3>
                 <p>
                   Delivered <strong>10+ projects</strong> (MERN, TypeScript) and
-                  completed a B.Sc. thesis in Deep Learning.
+                  completed a B.Sc. thesis on{" "}
+                  <strong>
+                    A Hybrid CNN-BiGRU Approach for Bangla Audio Deepfake
+                    Detection
+                  </strong>
+                  .
                 </p>
               </div>
             </div>
