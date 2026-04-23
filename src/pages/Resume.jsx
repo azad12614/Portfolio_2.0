@@ -35,6 +35,15 @@ const Resume = () => {
       desc: "Managing and enhancing backend infrastructure for IIUCCPS, supporting the society's web presence and technical operations.",
     },
     {
+      date: "2024 - Present",
+      title: "Open Source Contributor",
+      org: "freeCodeCamp",
+      worktype: "Volunteer",
+      workplace: "Remote",
+      link: "https://www.freecodecamp.org/",
+      desc: "Contributed to freeCodeCamp, one of the world's largest open-source coding education platforms.",
+    },
+    {
       date: "Jan 2025 - Aug 2025",
       title: "Bootcamp Co-ordinator",
       org: "IIUCCPS",

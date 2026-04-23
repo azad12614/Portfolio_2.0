@@ -6,6 +6,7 @@ import bun from "../assets/Lang/bun.svg";
 import c from "../assets/Lang/c.svg";
 import cp from "../assets/Lang/cp.svg";
 import css from "../assets/Lang/css.svg";
+import drizzle from "../assets/Lang/drizzle.svg";
 import eslint from "../assets/Lang/eslint.svg";
 import express from "../assets/Lang/express.svg";
 import firebase from "../assets/Lang/firebase.svg";
@@ -18,7 +19,9 @@ import jotai from "../assets/Lang/jotai.png";
 import jwt from "../assets/Lang/jwt.svg";
 import mongodb from "../assets/Lang/mongodb.svg";
 import node from "../assets/Lang/node.svg";
-import orpc from "../assets/Lang/orpc.png";
+import rpc from "../assets/Lang/rpc.svg";
+import docker from "../assets/Lang/docker.svg";
+import postgresql from "../assets/Lang/postgresql.svg";
 import restapi from "../assets/Lang/api.svg";
 import prettier from "../assets/Lang/prettier.svg";
 import react from "../assets/Lang/react.svg";
@@ -51,28 +54,31 @@ const Skills = () => {
     { name: "Express", image: express, order: 11, color: "#70859d" },
     { name: "Hono", image: hono, order: 12, color: "#ff6b00" },
     { name: "Bun", image: bun, order: 13, color: "#f8f0e3" },
-    { name: "ORPC", image: orpc, order: 14, color: "#ffffff" },
+    { name: "RPC", image: rpc, order: 14, color: "#ffffff" },
     { name: "REST API", image: restapi, order: 15, color: "#6ab04c" },
+    { name: "Docker", image: docker, order: 16, color: "#2496ed" },
 
     // Database
-    { name: "MongoDB", image: mongodb, order: 16, color: "#62a53b" },
-    { name: "SQL", image: sql, order: 17, color: "#5485de" },
+    { name: "MongoDB", image: mongodb, order: 17, color: "#62a53b" },
+    { name: "PostgreSQL", image: postgresql, order: 18, color: "#336791" },
+    { name: "MySQL", image: sql, order: 19, color: "#5485de" },
+    { name: "Drizzle ORM", image: drizzle, order: 20, color: "#c5f74f" },
 
     // Auth
-    { name: "Firebase", image: firebase, order: 18, color: "#ffca28" },
-    { name: "Better Auth", image: betterauth, order: 19, color: "#ffffff" },
-    { name: "JWT", image: jwt, order: 20, color: "#d63aff" },
+    { name: "Firebase", image: firebase, order: 21, color: "#ffca28" },
+    { name: "Better Auth", image: betterauth, order: 22, color: "#ffffff" },
+    { name: "JWT", image: jwt, order: 23, color: "#d63aff" },
 
     // State & Validation
-    { name: "Jotai", image: jotai, order: 21, color: "#ffffff" },
-    { name: "Zod", image: zod, order: 22, color: "#3066b4" },
+    { name: "Jotai", image: jotai, order: 24, color: "#ffffff" },
+    { name: "Zod", image: zod, order: 25, color: "#3066b4" },
 
     // DevOps & Tools
-    { name: "Git", image: git, order: 23, color: "#ff5820" },
-    { name: "GitHub", image: github, order: 24, color: "#646664" },
-    { name: "ESLint", image: eslint, order: 25, color: "#4b32c3" },
-    { name: "Prettier", image: prettier, order: 26, color: "#f7b93e" },
-    { name: "Husky", image: husky, order: 27, color: "#4a4a4a" },
+    { name: "Git", image: git, order: 26, color: "#ff5820" },
+    { name: "GitHub", image: github, order: 27, color: "#646664" },
+    { name: "ESLint", image: eslint, order: 28, color: "#4b32c3" },
+    { name: "Prettier", image: prettier, order: 29, color: "#f7b93e" },
+    { name: "Husky", image: husky, order: 30, color: "#4a4a4a" },
   ];
 
   const [animateSkills, setAnimateSkills] = useState(false);

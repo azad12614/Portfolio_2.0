@@ -1,0 +1,7 @@
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
+  <title>RPC</title>
+  <!-- top arrow: left to right -->
+  <path d="M2 7h16l-3-3 1.5-1.5L22 8l-5.5 5.5L15 12l3-3H2V7z"/>
+  <!-- bottom arrow: right to left -->
+  <path d="M22 17H6l3 3-1.5 1.5L2 16l5.5-5.5L9 12l-3 3h16v2z"/>
+</svg>

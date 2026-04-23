@@ -55,8 +55,9 @@ const About = () => {
                 <p>
                   Proficient in{" "}
                   <strong>
-                    MERN Stack, TypeScript, Hono, Bun, oRPC, TanStack, and
-                    Drizzle ORM
+                    MERN Stack, TypeScript, Hono, Bun, RPC, TanStack, Drizzle
+                    ORM, Tailwind CSS, PostgreSQL, MySQL, JWT, Better Auth,
+                    Firebase, Zod, and Docker
                   </strong>
                   , with focus on clean code and robust architecture.
                 </p>
@@ -68,8 +69,10 @@ const About = () => {
               <div className="highlight-content">
                 <h3>Competitive Programming</h3>
                 <p>
-                  <strong>Codeforces Pupil, CodeChef 3 Star</strong> - Strong
-                  analytical and problem-solving skills.
+                  <strong>Codeforces Pupil, CodeChef 3 Star</strong> —{" "}
+                  <strong>1400+ problems</strong> solved across{" "}
+                  <strong>140+ contests</strong> on Codeforces, CodeChef,
+                  LeetCode, and AtCoder.
                 </p>
               </div>
             </div>

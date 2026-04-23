@@ -17,11 +17,11 @@ import "./Project.css";
 
 const Project = () => {
   const ProjectList = [
-    // 1. Most modern full-stack (oRPC, TanStack Start, Bun, Drizzle, Better Auth)
+    // 1. Most modern full-stack (RPC, TanStack Start, Bun, Drizzle, Better Auth)
     {
       imgSrc: GhorBazar,
       title: "GhorBazar",
-      tech: "React, TanStack Start, Hono, oRPC, Bun, Better Auth, Drizzle ORM, PostgreSQL, TypeScript, Tailwind CSS",
+      tech: "React, TanStack Start, Hono, RPC, Bun, Better Auth, Drizzle ORM, PostgreSQL, Docker, TypeScript, Tailwind CSS",
       description:
         "A full-stack building materials marketplace for Bangladesh, connecting buyers with verified vendors for cement, bricks, steel, and more.",
       live: null,
