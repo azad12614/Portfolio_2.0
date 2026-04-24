@@ -111,7 +111,7 @@ const Resume = () => {
       title: "ICPC Preliminary Contest 2023",
       org: "ICPC",
       workplace: "Online",
-      desc: "Participated (Team - IIUC_Groot) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
+      desc: "Ranked 191st (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC). Honorable Mention.",
     },
     {
       date: "Sep 2023",
