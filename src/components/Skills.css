@@ -9,25 +9,44 @@
   }
 }
 
-.skills {
-  position: relative;
-  height: max-content;
-  margin: 4vh auto;
-  padding: 3vh 4vw;
+.skills-wrapper {
+  margin: 2vh auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-group {
   background: var(--bg-glass);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-radius: 1.5rem;
   border: var(--card-border-width) solid var(--border);
   box-shadow: var(--card-shadow);
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out forwards;
+  padding: 1.5rem 2rem 2rem;
+}
+
+.skill-group-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(2, 169, 247, 0.2);
+}
+
+.skills {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
     minmax(clamp(100px, 12vw, 150px), 1fr)
   );
   gap: 2vh;
-  overflow: hidden;
-  animation: fadeIn 0.6s ease-out forwards;
 }
 
 .lang {
