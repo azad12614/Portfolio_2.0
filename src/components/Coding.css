@@ -43,98 +43,9 @@
   background: linear-gradient(90deg, transparent, var(--primary), transparent);
 }
 
+/* pill-group handles flex layout; just keep bottom margin override */
 .profiles-tabs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.tab-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
-  font-weight: 600;
-  padding: 1rem 0.5rem;
-  border: 2px solid var(--border);
-  border-radius: 1rem;
-  background: var(--bg-subtle);
-  color: var(--text-main);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: var(--cursor-pointer);
-  position: relative;
-  overflow: hidden;
-}
-
-.tab-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(2, 169, 247, 0.1),
-    transparent
-  );
-  transition: left 0.5s ease;
-}
-
-.tab-button:hover::before {
-  left: 100%;
-}
-
-.tab-button:hover {
-  background: linear-gradient(135deg, var(--primary), var(--text-accent));
-  color: var(--text-invert);
-  border-color: transparent;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(2, 169, 247, 0.3);
-}
-
-.tab-button.active {
-  background: linear-gradient(135deg, var(--primary), var(--text-accent));
-  color: var(--text-main);
-  border-color: transparent;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(2, 169, 247, 0.35);
-}
-
-.profile-content {
-  overflow: hidden;
-}
-
-.profile-card {
-  background: var(--bg-glass-2);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  border: 1px solid var(--border);
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.profile-card.hovered {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(2, 169, 247, 0.15);
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-  gap: 1rem;
-}
-
-.platform-badge {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .platform-logo {
@@ -149,12 +60,38 @@
   filter: brightness(0) invert(0);
 }
 
-[data-theme="light"] .tab-button.active .platform-logo {
+.pill-btn.active .platform-logo {
+  filter: brightness(0) invert(1);
+}
+
+[data-theme="light"] .pill-btn.active .platform-logo {
   filter: brightness(0) invert(0);
 }
 
-.tab-button:hover .platform-logo {
-  transform: scale(1.1);
+.profile-content {
+  overflow: hidden;
+}
+
+.profile-card {
+  background: var(--bg-glass-2);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.platform-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Large platform logo in main card */
@@ -172,7 +109,7 @@
 }
 
 [data-theme="light"] .platform-logo-lg {
-  filter: brightness(0) invert(0); /* Makes logo black in light theme */
+  filter: brightness(0) invert(0);
 }
 
 .platform-info {
@@ -185,8 +122,6 @@
   font-weight: 700;
   margin: 0 0 0.5rem 0;
   color: var(--text-heading);
-  text-decoration: none;
-  transition: all 0.3s ease;
   background: linear-gradient(135deg, var(--text-heading), var(--primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -204,25 +139,12 @@
   flex-shrink: 0;
 }
 
-.visit-link {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, var(--primary), var(--text-accent));
-  color: var(--text-invert);
-  text-decoration: none;
-  border-radius: 2rem;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+/* ── Compact stat row (mobile only, hidden on desktop) ── */
+.stats-compact {
+  display: none;
 }
 
-.visit-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(2, 169, 247, 0.4);
-  border-color: var(--border-hover);
-}
-
+/* ── Full stat cards (desktop only) ── */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -371,36 +293,29 @@
   color: var(--text-muted);
 }
 
-/* Responsive Design */
+/* ── Mobile: compact row, hide stat cards + progress ── */
 @media (max-width: 768px) {
   .coding-profiles-section {
     padding: 0 1rem;
   }
 
   .profiles-slider {
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-radius: 1.5rem;
-  }
-
-  .profiles-tabs {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
   }
 
   .card-header {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   .platform-badge {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-  }
-
-  .platform-logo {
-    width: 18px;
-    height: 18px;
   }
 
   .platform-logo-lg {
@@ -409,12 +324,53 @@
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    display: none;
   }
 
-  .stat-card {
-    padding: 1.25rem;
+  .progress-section {
+    display: none;
+  }
+
+  .stats-compact {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--bg-glass);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 0.875rem 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .stat-compact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    flex: 1;
+  }
+
+  .stat-compact-label {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .stat-compact-value {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  .stat-compact-divider {
+    width: 1px;
+    height: 2rem;
+    background: var(--border);
+    flex-shrink: 0;
   }
 }
 
@@ -424,17 +380,8 @@
     border-radius: 1rem;
   }
 
-  .profiles-tabs {
-    grid-template-columns: 1fr;
-  }
-
   .profile-card {
-    padding: 1.5rem;
-  }
-
-  .platform-logo {
-    width: 16px;
-    height: 16px;
+    padding: 1.25rem;
   }
 
   .platform-logo-lg {
@@ -442,18 +389,25 @@
     height: 40px;
   }
 
-  .visit-link {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.8rem;
+  .stat-compact-value {
+    font-size: 0.875rem;
   }
 
-  .tab-button {
-    flex-direction: column;
-    gap: 0.25rem;
+  .stat-compact-label {
+    font-size: 0.65rem;
+  }
+
+  /* Icon-only tabs on small screens */
+  .profiles-tabs .platform-name {
+    display: none;
+  }
+
+  .profiles-tabs .pill-btn {
+    padding: 0.5rem 0.75rem;
   }
 }
 
-/* Light theme adjustments */
+/* Light theme */
 [data-theme="light"] .profiles-slider {
   background: transparent;
   backdrop-filter: var(--glass-blur);
@@ -476,8 +430,6 @@
   background: var(--bg-glass-2);
 }
 
-[data-theme="light"] .tab-button {
-  background: transparent;
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
+[data-theme="light"] .stats-compact {
+  background: var(--bg-subtle);
 }
