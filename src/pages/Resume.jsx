@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Cards from "../components/Cards";
 import Coding from "../components/Coding";
 import Skills from "../components/Skills";
@@ -6,13 +6,6 @@ import "./Resume.css";
 
 const Resume = () => {
   const [activeTab, setActiveTab] = useState("jobs");
-  const [animateGrid, setAnimateGrid] = useState(true);
-
-  useEffect(() => {
-    setAnimateGrid(false);
-    const id = setTimeout(() => setAnimateGrid(true), 50);
-    return () => clearTimeout(id);
-  }, [activeTab]);
 
   const job = [
     {
@@ -190,27 +183,6 @@ const Resume = () => {
       org: "Islamia Degree College",
       desc: "Completed Higher Secondary Certificate Exam at Islamia Degree College.",
     },
-    {
-      date: "Jan 2015 - Feb 2018",
-      title: "J.S.C. & S.S.C. Exam",
-      link: "http://www.kascc.edu.bd/",
-      org: "Kazem Ali High School",
-      desc: "Completed J.S.C. and S.S.C. Exams at Kazem Ali High School.",
-    },
-    {
-      date: "Jan 2013 - Dec 2014",
-      title: "7th Class",
-      link: "https://www.facebook.com/Harualchari.h.school/",
-      org: "Harualchari High School",
-      desc: "Studied at Harualchari High School from 6th to 7th class.",
-    },
-    {
-      date: "Jan 2008 - Dec 2012",
-      title: "P.S.C.",
-      link: "https://www.facebook.com/people/%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0-%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A7%9F%E0%A6%BE%E0%A6%B2%E0%A6%9B%E0%A7%9C%E0%A6%BF-%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%A5%E0%A6%AE%E0%A6%BF%E0%A6%95-%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F/100057411851391/",
-      org: "North Harualchari Govt. Primary School",
-      desc: "Completed P.S.C. Exam and studied from 1st to 5th class at North Harualchari Govt. Primary School.",
-    },
   ];
   const achievements = [
     {
@@ -259,89 +231,58 @@ const Resume = () => {
 
       <div className="resume-container">
         <h4 className="resume-subtitle">Experience Timeline</h4>
-        <div className="experience-tabs">
+        <div className="pill-group">
           <button
-            className={`resume-tab-button ${activeTab === "jobs" ? "active" : ""}`}
+            className={`pill-btn ${activeTab === "jobs" ? "active" : ""}`}
             onClick={() => setActiveTab("jobs")}
           >
-            <span className="tab-icon">💼</span> Jobs
+            💼 Jobs
           </button>
           <button
-            className={`resume-tab-button ${activeTab === "academic" ? "active" : ""}`}
+            className={`pill-btn ${activeTab === "academic" ? "active" : ""}`}
             onClick={() => setActiveTab("academic")}
           >
-            <span className="tab-icon">👨🏻‍🎓</span> Academic Roles
+            👨🏻‍🎓 Academic Roles
           </button>
           <button
-            className={`resume-tab-button ${
-              activeTab === "programming" ? "active" : ""
-            }`}
+            className={`pill-btn ${activeTab === "programming" ? "active" : ""}`}
             onClick={() => setActiveTab("programming")}
           >
-            <span className="tab-icon">🏆</span> Programming Achievements
+            🏆 Programming
           </button>
           <button
-            className={`resume-tab-button ${
-              activeTab === "education" ? "active" : ""
-            }`}
+            className={`pill-btn ${activeTab === "education" ? "active" : ""}`}
             onClick={() => setActiveTab("education")}
           >
-            <span className="tab-icon">🎓</span> Education
+            🎓 Education
           </button>
           <button
-            className={`resume-tab-button ${
-              activeTab === "achievements" ? "active" : ""
-            }`}
+            className={`pill-btn ${activeTab === "achievements" ? "active" : ""}`}
             onClick={() => setActiveTab("achievements")}
           >
-            <span className="tab-icon">🏅</span> Awards & Certs
+            🏅 Awards & Certs
           </button>
         </div>
-        <div className="gridedu">
+        <div className="gridedu" key={activeTab}>
           {activeTab === "jobs" &&
-            job.map((item, index) => (
-              <Cards
-                key={index}
-                item={item}
-                animateGrid={animateGrid}
-                type="job"
-              />
+            job.map((item) => (
+              <Cards key={item.title} item={item} animateGrid type="job" />
             ))}
           {activeTab === "academic" &&
-            academic.map((item, index) => (
-              <Cards
-                key={index}
-                item={item}
-                animateGrid={animateGrid}
-                type="academic"
-              />
+            academic.map((item) => (
+              <Cards key={item.title} item={item} animateGrid type="academic" />
             ))}
           {activeTab === "programming" &&
-            programming.map((item, index) => (
-              <Cards
-                key={index}
-                item={item}
-                animateGrid={animateGrid}
-                type="programming"
-              />
+            programming.map((item) => (
+              <Cards key={item.title} item={item} animateGrid type="programming" />
             ))}
           {activeTab === "education" &&
-            education.map((item, index) => (
-              <Cards
-                key={index}
-                item={item}
-                animateGrid={animateGrid}
-                type="education"
-              />
+            education.map((item) => (
+              <Cards key={item.title} item={item} animateGrid type="education" />
             ))}
           {activeTab === "achievements" &&
-            achievements.map((item, index) => (
-              <Cards
-                key={index}
-                item={item}
-                animateGrid={animateGrid}
-                type="programming"
-              />
+            achievements.map((item) => (
+              <Cards key={item.title} item={item} animateGrid type="programming" />
             ))}
         </div>
 
