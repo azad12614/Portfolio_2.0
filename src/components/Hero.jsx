@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import pdf from "../assets/Abdullah_Al_Azad.pdf";
 import avater from "../assets/Abdullah_Al_Azad.png";
 import fb from "../assets/Social/FB.png";
@@ -7,18 +6,6 @@ import ln from "../assets/Social/Linkdin.png";
 import "./Hero.css";
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
   const floatingItems = [
     {
       type: "tech",
@@ -75,29 +62,17 @@ const Hero = () => {
 
             <div className="hero-subtitle">
               <span className="subtitle-text">
-                <strong>Full-Stack Developer</strong>
-                {!isMobile && (
-                  <>
-                    , <strong>TypeScript & Modern Web Stack</strong>,{" "}
-                    <strong>Competitive Programmer</strong>
-                  </>
-                )}
+                <strong>Full-Stack Developer</strong>,{" "}
+                <strong>TypeScript & Modern Web Stack</strong>,{" "}
+                <strong>Competitive Programmer</strong>
               </span>
             </div>
 
-            {!isMobile ? (
-              <p className="hero-description">
-                Crafting digital experiences with modern web technologies.
-                Passionate about building scalable applications and solving
-                complex problems through code.
-              </p>
-            ) : (
-              <p className="hero-description">
-                Full-Stack Developer passionate about building scalable
-                applications and solving complex problems through modern web
-                technologies.
-              </p>
-            )}
+            <p className="hero-description">
+              Crafting digital experiences with modern web technologies.
+              Passionate about building scalable applications and solving
+              complex problems through code.
+            </p>
 
             <div className="hero-actions">
               <a
@@ -147,7 +122,6 @@ const Hero = () => {
             <div className="avatar-container">
               <div className="avatar-wrapper">
                 <img
-                  loading="lazy"
                   src={avater}
                   alt="Abdullah Al Azad"
                   className="avatar-image"
@@ -180,13 +154,10 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator - Desktop Only */}
-        {!isMobile && (
-          <div className="scroll-indicator">
-            <div className="scroll-line"></div>
-            <span>Scroll to explore</span>
-          </div>
-        )}
+        <div className="scroll-indicator">
+          <div className="scroll-line"></div>
+          <span>Scroll to explore</span>
+        </div>
       </div>
     </section>
   );
