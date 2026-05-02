@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import AVGlobalPath from "../assets/Projects/AV_Global_Path.png";
 import ClipOut from "../assets/Projects/ClipOut.png";
 import Cloud_Campus from "../assets/Projects/Cloud_Campus.png";
@@ -15,334 +16,264 @@ import TaskTracker from "../assets/Projects/Task_Tracker.png";
 import VibeCast from "../assets/Projects/Vibe_Cast.png";
 import "./Project.css";
 
-const Project = () => {
-  const ProjectList = [
-    // 1. Most modern full-stack (RPC, TanStack Start, Bun, Drizzle, Better Auth)
-    {
-      imgSrc: GhorBazar,
-      title: "GhorBazar",
-      tech: "React, TanStack Start, Hono, RPC, Bun, Better Auth, Drizzle ORM, PostgreSQL, Docker, TypeScript, Tailwind CSS",
-      description:
-        "A full-stack building materials marketplace for Bangladesh, connecting buyers with verified vendors for cement, bricks, steel, and more.",
-      live: null,
-      github: "https://github.com/azad12614/GhorBazar",
-      tag: "Featured",
-      team: false,
-      category: "Full Stack",
-    },
-    // 2. MERN Full Stack solo
-    {
-      imgSrc: Ladder,
-      title: "CF Ladder",
-      tech: "MERN Stack, REST APIs, JWT, Axios, Mongoose",
-      description:
-        "A training platform based on Codeforces problem sets with admin controls and user progress tracking.",
-      live: "https://cf-ladder.onrender.com/",
-      github: "https://github.com/azad12614/Ladder",
-      tag: "Featured",
-      team: false,
-      category: "Full Stack",
-    },
-    // 3. MERN Full Stack team
-    {
-      imgSrc: Cloud_Campus,
-      title: "Cloud Campus",
-      tech: "MERN Stack, REST APIs",
-      description:
-        "An academic website for the IIUC CSE department featuring modern design and dynamic course data.",
-      live: "https://cloud-campus.onrender.com/",
-      github: "https://github.com/azad12614/Cloud_Campus",
-      tag: "Featured",
-      team: true,
-      category: "Full Stack",
-    },
-    // 4. MERN Full Stack internship
-    {
-      imgSrc: TaskTracker,
-      title: "Task Tracker",
-      tech: "MERN Stack, REST APIs, JWT, Axios, Mongoose",
-      description:
-        "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
-      live: "https://tasktracker12614.onrender.com/",
-      github: "https://github.com/azad12614/TaskTracker",
-      tag: "Internship Task",
-      team: false,
-      category: "Full Stack",
-    },
-    // 5. React + Vite featured
-    {
-      imgSrc: Portfolio,
-      title: "Portfolio",
-      tech: "React JS, Vite, CSS",
-      description:
-        "A portfolio that showcases my skills, achievements, and experiences in the software industry.",
-      live: "https://azad12614.onrender.com/",
-      github: "https://github.com/azad12614/Portfolio_2.0/",
-      tag: "Featured",
-      team: false,
-      category: "Frontend",
-    },
-    // 6. React + Node + Tailwind
-    {
-      imgSrc: VibeCast,
-      title: "VibeCast",
-      tech: "React JS, Node JS, Tailwind CSS, Public Apis",
-      description:
-        "Vibecast is a modern, single-page application (SPA) designed to help users discover trending movies and popular video games.",
-      live: "https://vibecast-entertainment.onrender.com/",
-      github: "https://github.com/azad12614/Vibecast",
-      tag: "Learning Task",
-      team: false,
-      category: "Frontend",
-    },
-    // 7. React + Tailwind + API
-    {
-      imgSrc: ClipOut,
-      title: "BG-ClipOut",
-      tech: "React.js, TailwindCSS, RestAPI",
-      description:
-        "A simple and intuitive tool for removing image backgrounds with a clean UI.",
-      live: null,
-      github: "https://github.com/azad12614/BG-ClipOut",
-      tag: "Learning Task",
-      team: false,
-      category: "Frontend",
-    },
-    // 8. React + Node, hackathon
-    {
-      imgSrc: NASA,
-      title: "Learn4Climate",
-      tech: "React JS, Node JS, CSS",
-      description:
-        "A climate education platform developed for NASA's International Space Apps Challenge.",
-      live: "https://learn4climate.onrender.com/",
-      github: "https://github.com/azad12614/NASA",
-      tag: "Hackathon Task",
-      team: true,
-      category: "Frontend",
-    },
-    // 9. Python + ML, unique category
-    {
-      imgSrc: Sleepyheads,
-      title: "Sleepy Heads",
-      tech: "HTML, CSS, Python, ML",
-      description:
-        "A sleep health prediction tool that analyzes user input to suggest better sleep patterns.",
-      live: null,
-      github: "https://github.com/azad12614/SleepyHeads",
-      tag: "Academic Task",
-      team: true,
-      category: "Machine Learning",
-    },
-    // 10. HTML/CSS/JS internship
-    {
-      imgSrc: AVGlobalPath,
-      title: "AV Global Path",
-      tech: "HTML, CSS, JavaScript",
-      description:
-        "Built a website for a global brokerage firm facilitating international trade of commodities and equipment, connecting buyers and suppliers across borders.",
-      live: "https://azad12614.github.io/av-global-path/",
-      github: "https://github.com/azad12614/av-global-path",
-      tag: "Internship Task",
-      team: true,
-      category: "Frontend",
-    },
-    // 11. HTML/CSS/JS utility
-    {
-      imgSrc: Rating,
-      title: "CF Rating",
-      tech: "HTML, CSS, JavaScript",
-      description:
-        "A leaderboard showcasing Codeforces ratings of IIUC CSE students.",
-      live: "https://azad12614.github.io/CF_Rating_IIUC/",
-      github: "https://github.com/azad12614/CF_Rating_IIUC",
-      tag: "Learning Task",
-      team: false,
-      category: "Frontend",
-    },
-    // 12. HTML/CSS/JS games
-    {
-      imgSrc: Gaming,
-      title: "Game Vault",
-      tech: "HTML, CSS, JavaScript",
-      description:
-        "A collection of mini-games built with vanilla HTML, CSS, and JavaScript.",
-      live: "https://azad12614.github.io/Game-Vault/Index.html",
-      github: "https://github.com/azad12614/Game-Vault",
-      tag: "Learning Task",
-      team: false,
-      category: "Frontend",
-    },
-    // 13. HTML/CSS internship
-    {
-      imgSrc: FlyHigh,
-      title: "FlyHigh",
-      tech: "HTML, CSS",
-      description:
-        "FlyHigh is a water-themed travel agency specializing in curated aquatic escapes.",
-      live: "https://azad12614.github.io/FlyHigh/",
-      github: "https://github.com/azad12614/FlyHigh",
-      tag: "Internship Task",
-      team: false,
-      category: "Frontend",
-    },
-    {
-      imgSrc: ColorPicker,
-      title: "Color_Picker",
-      tech: "HTML, CSS, JavaScript",
-      description:
-        "A Google Chrome Extension tool for picking any color directly from the screen.",
-      live: null,
-      github: "https://github.com/azad12614/Color_Picker",
-      tag: "Learning Task",
-      team: false,
-      category: "Frontend",
-    },
-  ];
+const ProjectList = [
+  {
+    imgSrc: GhorBazar,
+    title: "GhorBazar",
+    tech: "React, TanStack Start, Hono, RPC, Bun, Better Auth, Drizzle ORM, PostgreSQL, Docker, TypeScript, Tailwind CSS",
+    description:
+      "A full-stack building materials marketplace for Bangladesh, connecting buyers with verified vendors for cement, bricks, steel, and more.",
+    live: null,
+    github: "https://github.com/azad12614/GhorBazar",
+    tag: "Featured",
+    team: false,
+    category: "Full Stack",
+  },
+  {
+    imgSrc: Ladder,
+    title: "CF Ladder",
+    tech: "MERN Stack, REST APIs, JWT, Axios, Mongoose",
+    description:
+      "A training platform based on Codeforces problem sets with admin controls and user progress tracking.",
+    live: "https://cf-ladder.onrender.com/",
+    github: "https://github.com/azad12614/Ladder",
+    tag: "Featured",
+    team: false,
+    category: "Full Stack",
+  },
+  {
+    imgSrc: Cloud_Campus,
+    title: "Cloud Campus",
+    tech: "MERN Stack, REST APIs",
+    description:
+      "An academic website for the IIUC CSE department featuring modern design and dynamic course data.",
+    live: "https://cloud-campus.onrender.com/",
+    github: "https://github.com/azad12614/Cloud_Campus",
+    tag: "Featured",
+    team: true,
+    category: "Full Stack",
+  },
+  {
+    imgSrc: Portfolio,
+    title: "Portfolio",
+    tech: "React JS, Vite, CSS",
+    description:
+      "A portfolio that showcases my skills, achievements, and experiences in the software industry.",
+    live: "https://azad12614.onrender.com/",
+    github: "https://github.com/azad12614/Portfolio_2.0/",
+    tag: "Featured",
+    team: false,
+    category: "Frontend",
+  },
+  {
+    imgSrc: TaskTracker,
+    title: "Task Tracker",
+    tech: "MERN Stack, REST APIs, JWT, Axios, Mongoose",
+    description:
+      "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
+    live: "https://tasktracker12614.onrender.com/",
+    github: "https://github.com/azad12614/TaskTracker",
+    tag: "Internship Task",
+    team: false,
+    category: "Full Stack",
+  },
+  {
+    imgSrc: NASA,
+    title: "Learn4Climate",
+    tech: "React JS, Node JS, CSS",
+    description:
+      "A climate education platform developed for NASA's International Space Apps Challenge.",
+    live: "https://learn4climate.onrender.com/",
+    github: "https://github.com/azad12614/NASA",
+    tag: "Hackathon Task",
+    team: true,
+    category: "Frontend",
+  },
+  {
+    imgSrc: VibeCast,
+    title: "VibeCast",
+    tech: "React JS, Node JS, Tailwind CSS, Public Apis",
+    description:
+      "Vibecast is a modern, single-page application (SPA) designed to help users discover trending movies and popular video games.",
+    live: "https://vibecast-entertainment.onrender.com/",
+    github: "https://github.com/azad12614/Vibecast",
+    tag: "Learning Task",
+    team: false,
+    category: "Frontend",
+  },
+  {
+    imgSrc: ClipOut,
+    title: "BG-ClipOut",
+    tech: "React.js, TailwindCSS, RestAPI",
+    description:
+      "A simple and intuitive tool for removing image backgrounds with a clean UI.",
+    live: null,
+    github: "https://github.com/azad12614/BG-ClipOut",
+    tag: "Learning Task",
+    team: false,
+    category: "Frontend",
+  },
+  {
+    imgSrc: Sleepyheads,
+    title: "Sleepy Heads",
+    tech: "HTML, CSS, Python, ML",
+    description:
+      "A sleep health prediction tool that analyzes user input to suggest better sleep patterns.",
+    live: null,
+    github: "https://github.com/azad12614/SleepyHeads",
+    tag: "Academic Task",
+    team: true,
+    category: "Machine Learning",
+  },
+  {
+    imgSrc: AVGlobalPath,
+    title: "AV Global Path",
+    tech: "HTML, CSS, JavaScript",
+    description:
+      "Built a website for a global brokerage firm facilitating international trade of commodities and equipment, connecting buyers and suppliers across borders.",
+    live: "https://azad12614.github.io/av-global-path/",
+    github: "https://github.com/azad12614/av-global-path",
+    tag: "Internship Task",
+    team: true,
+    category: "Frontend",
+  },
+  {
+    imgSrc: Rating,
+    title: "CF Rating",
+    tech: "HTML, CSS, JavaScript",
+    description:
+      "A leaderboard showcasing Codeforces ratings of IIUC CSE students.",
+    live: "https://azad12614.github.io/CF_Rating_IIUC/",
+    github: "https://github.com/azad12614/CF_Rating_IIUC",
+    tag: "Learning Task",
+    team: false,
+    category: "Frontend",
+  },
+  {
+    imgSrc: Gaming,
+    title: "Game Vault",
+    tech: "HTML, CSS, JavaScript",
+    description:
+      "A collection of mini-games built with vanilla HTML, CSS, and JavaScript.",
+    live: "https://azad12614.github.io/Game-Vault/Index.html",
+    github: "https://github.com/azad12614/Game-Vault",
+    tag: "Learning Task",
+    team: false,
+    category: "Frontend",
+  },
+  {
+    imgSrc: FlyHigh,
+    title: "FlyHigh",
+    tech: "HTML, CSS",
+    description:
+      "FlyHigh is a water-themed travel agency specializing in curated aquatic escapes.",
+    live: "https://azad12614.github.io/FlyHigh/",
+    github: "https://github.com/azad12614/FlyHigh",
+    tag: "Internship Task",
+    team: false,
+    category: "Frontend",
+  },
+  {
+    imgSrc: ColorPicker,
+    title: "Color Picker",
+    tech: "HTML, CSS, JavaScript",
+    description:
+      "A Google Chrome Extension tool for picking any color directly from the screen.",
+    live: null,
+    github: "https://github.com/azad12614/Color_Picker",
+    tag: "Learning Task",
+    team: false,
+    category: "Frontend",
+  },
+];
 
-  function ProjectCard({
-    imgSrc,
-    title,
-    tech,
-    description,
-    live,
-    github,
-    tag,
-    team,
-    category,
-  }) {
-    return (
-      <div className={`project-card ${tag ? "tag" : ""}`}>
-        <div className="card-glow"></div>
+const FILTERS = ["All", "Full Stack", "Frontend", "Machine Learning"];
+const DEFAULT_COUNT = 6;
 
-        <div className="project-image">
-          <img src={imgSrc} alt={title} loading="lazy" />
-          <div className="image-overlay">
-            <div className="project-links">
-              {live && (
-                <a
-                  href={live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link live-link"
-                  title="Live Demo"
-                >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                  <span>Live Demo</span>
-                </a>
-              )}
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link github-link"
-                title="View Code"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>View Code</span>
-              </a>
-            </div>
-          </div>
-          <div className="tag-badge">{tag}</div>
-          {team && <div className="team-badge">Team Work</div>}
+function ProjectCard({ imgSrc, title, tech, description, live, github, tag, team, category }) {
+  return (
+    <div className="project-card">
+      <img src={imgSrc} alt={title} className="card-bg-img" loading="lazy" />
+      <div className="card-overlay">
+        <div className="card-top">
+          {team && <span className="team-badge">Team</span>}
+          <span className="tag-badge">{tag}</span>
         </div>
 
-        <div className="project-content">
-          <div className="project-header">
-            <div className="category-tag">{category}</div>
-            <h3 className="project-title">{title}</h3>
-          </div>
-
+        <div className="card-bottom">
+          <span className="category-tag">{category}</span>
+          <h3 className="project-title">{title}</h3>
           <p className="project-description">{description}</p>
 
           <div className="tech-stack">
-            {tech.split(",").map((t, i) => (
-              <span key={i} className="tech-badge">
+            {tech.split(",").map((t) => (
+              <span key={t.trim()} className="tech-badge">
                 {t.trim()}
               </span>
             ))}
           </div>
 
-          <div className="project-footer">
-            <div className="project-actions">
-              {live && (
-                <a
-                  href={live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                  Visit Live
-                </a>
-              )}
+          <div className="project-actions">
+            {live && (
               <a
-                href={github}
+                href={live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-accent"
+                className="btn btn-primary"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
                 </svg>
-                Source Code
+                Visit Live
               </a>
-            </div>
+            )}
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-accent"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              Source Code
+            </a>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
-  ProjectCard.propTypes = {
-    imgSrc: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    tech: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    live: PropTypes.string,
-    github: PropTypes.string.isRequired,
-    tag: PropTypes.string,
-    team: PropTypes.bool,
-    category: PropTypes.string.isRequired,
-  };
+ProjectCard.propTypes = {
+  imgSrc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  tech: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  live: PropTypes.string,
+  github: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  team: PropTypes.bool,
+  category: PropTypes.string.isRequired,
+};
+
+const Project = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [showAll, setShowAll] = useState(false);
+
+  const filtered =
+    activeFilter === "All"
+      ? ProjectList
+      : ProjectList.filter((p) => p.category === activeFilter);
+
+  const displayed =
+    activeFilter === "All" && !showAll
+      ? filtered.slice(0, DEFAULT_COUNT)
+      : filtered;
+
+  const hiddenCount = filtered.length - DEFAULT_COUNT;
 
   return (
     <section className="project-section" id="Project">
@@ -352,11 +283,37 @@ const Project = () => {
         challenges.&quot;
       </p>
 
-      <div className="project-grid">
-        {ProjectList.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+      <div className="pill-group">
+        {FILTERS.map((f) => (
+          <button
+            key={f}
+            className={`pill-btn ${activeFilter === f ? "active" : ""}`}
+            onClick={() => {
+              setActiveFilter(f);
+              setShowAll(false);
+            }}
+          >
+            {f}
+          </button>
         ))}
       </div>
+
+      <div className="project-grid">
+        {displayed.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
+      </div>
+
+      {activeFilter === "All" && hiddenCount > 0 && (
+        <div className="show-more-wrapper">
+          <button
+            className="btn btn-secondary show-more-btn"
+            onClick={() => setShowAll((prev) => !prev)}
+          >
+            {showAll ? "Show Less" : `Show ${hiddenCount} More`}
+          </button>
+        </div>
+      )}
     </section>
   );
 };
