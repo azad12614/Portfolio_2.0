@@ -38,6 +38,8 @@
   color: var(--text-main);
   font-family: var(--font-sans);
   cursor: var(--cursor-default);
+  display: flex;
+  flex-direction: column;
 }
 
 .experience-card:hover {
@@ -164,6 +166,7 @@
 
 .card-content {
   margin-bottom: 1.5rem;
+  flex: 1;
 }
 
 .description {
@@ -178,6 +181,7 @@
   display: flex;
   justify-content: flex-end;
   padding-top: 1rem;
+  margin-top: auto;
 }
 
 .experience-tag {
