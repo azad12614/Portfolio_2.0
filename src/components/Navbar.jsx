@@ -4,18 +4,19 @@ import DarkMode from "./DarkMode";
 import "./Navbar.css";
 
 const sections = [
-  "Hero",
-  "About",
-  "Resume",
-  "Project",
-  "Awards",
-  "Blog",
-  "Contact",
+  { id: "Hero", label: "Home" },
+  { id: "About", label: "About" },
+  { id: "Resume", label: "Journey" },
+  { id: "Project", label: "Projects" },
+  { id: "Awards", label: "Awards" },
+  { id: "Blog", label: "Blog" },
+  { id: "Contact", label: "Contact" },
 ];
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("Hero");
+  const sectionIds = sections.map((s) => s.id);
 
   const toggleMenu = useCallback(() => setShowMobileMenu((prev) => !prev), []);
 
@@ -37,7 +38,7 @@ const Navbar = () => {
       { threshold: 0.05, rootMargin: "0px" }
     );
 
-    sections.forEach((id) => {
+    sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -55,15 +56,15 @@ const Navbar = () => {
 
       <div className={`navbar-links ${showMobileMenu ? "open" : ""}`}>
         <ul>
-          {sections.map((section) => (
-            <li key={section}>
+          {sections.map(({ id, label }) => (
+            <li key={id}>
               <a
-                href={`#${section}`}
-                className={activeSection === section ? "active" : ""}
-                aria-current={activeSection === section ? "page" : undefined}
+                href={`#${id}`}
+                className={activeSection === id ? "active" : ""}
+                aria-current={activeSection === id ? "page" : undefined}
                 onClick={handleLinkClick}
               >
-                {section}
+                {label}
               </a>
             </li>
           ))}
