@@ -1,4 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./Blog.css";
 
 import AI from "../assets/Blog/AI.png";
@@ -51,37 +55,31 @@ const blogData = [
 ];
 
 const Blog = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const infoRef = useRef(null);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % blogData.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const handleDotClick = (index) => {
-    setCurrentSlide(index);
-  };
-
   return (
     <section className="blog-section" id="Blog">
       <h2 className="header">✍️ My Blog Insights</h2>
       <p className="title">
-        “Software is about empowering people with technology.”
+        &quot;Software is about empowering people with technology.&quot;
       </p>
 
       <div className="blog-container">
-        <div className="carousel-wrapper">
-          <div className="carousel" ref={infoRef}>
-            {blogData.map((item, index) => (
-              <div
-                className={`blog-card ${
-                  index === currentSlide ? "active" : ""
-                }`}
-                key={index}
-              >
+        <Swiper
+          modules={[Autoplay, Keyboard, Navigation, Pagination]}
+          slidesPerView={1}
+          loop={true}
+          keyboard={{ enabled: true }}
+          navigation={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{ clickable: true }}
+          className="blog-swiper"
+        >
+          {blogData.map((item) => (
+            <SwiperSlide key={item.link}>
+              <div className="blog-card">
                 <div className="blog-image">
                   <img
                     loading="lazy"
@@ -124,23 +122,9 @@ const Blog = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-
-        </div>
-
-        <div className="carousel-controls">
-          <div className="dots">
-            {blogData.map((_, index) => (
-              <button
-                key={index}
-                className={`dot ${index === currentSlide ? "active" : ""}`}
-                onClick={() => handleDotClick(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              ></button>
-            ))}
-          </div>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
