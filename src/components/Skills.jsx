@@ -31,6 +31,8 @@ import typescript from "../assets/Lang/typescript.svg";
 import vite from "../assets/Lang/vite.svg";
 import zod from "../assets/Lang/zod.svg";
 import github from "../assets/Social/Github.png";
+import postman from "../assets/Lang/postman.png";
+import render from "../assets/Lang/render.png";
 
 const skillGroups = [
   {
@@ -38,9 +40,6 @@ const skillGroups = [
     skills: [
       { name: "C", image: c, color: "#5c85d6" },
       { name: "C++", image: cp, color: "#1d4d80" },
-      { name: "HTML", image: html, color: "#e44d26" },
-      { name: "CSS", image: css, color: "#264de4" },
-      { name: "Tailwind", image: tailwind, color: "#38bdf8" },
       { name: "JavaScript", image: javascript, color: "#ffde37" },
       { name: "TypeScript", image: typescript, color: "#3496da" },
     ],
@@ -48,8 +47,12 @@ const skillGroups = [
   {
     label: "Frontend",
     skills: [
+      { name: "HTML", image: html, color: "#e44d26" },
+      { name: "CSS", image: css, color: "#264de4" },
+      { name: "Tailwind", image: tailwind, color: "#38bdf8" },
       { name: "React", image: react, color: "#6bf0ff" },
       { name: "TanStack", image: tanstack, color: "#22c55e" },
+      { name: "Jotai", image: jotai, color: "#ffffff" },
       { name: "Vite", image: vite, color: "#646cff" },
     ],
   },
@@ -62,7 +65,6 @@ const skillGroups = [
       { name: "Bun", image: bun, color: "#f8f0e3" },
       { name: "RPC", image: rpc, color: "#ffffff" },
       { name: "REST API", image: restapi, color: "#6ab04c" },
-      { name: "Docker", image: docker, color: "#2496ed" },
     ],
   },
   {
@@ -80,7 +82,6 @@ const skillGroups = [
       { name: "Firebase", image: firebase, color: "#ffca28" },
       { name: "Better Auth", image: betterauth, color: "#ffffff" },
       { name: "JWT", image: jwt, color: "#d63aff" },
-      { name: "Jotai", image: jotai, color: "#ffffff" },
       { name: "Zod", image: zod, color: "#3066b4" },
     ],
   },
@@ -89,6 +90,9 @@ const skillGroups = [
     skills: [
       { name: "Git", image: git, color: "#ff5820" },
       { name: "GitHub", image: github, color: "#646664" },
+      { name: "Docker", image: docker, color: "#2496ed" },
+      { name: "Postman", image: postman, color: "#ff6c37" },
+      { name: "Render", image: render, color: "#46e3b7" },
       { name: "ESLint", image: eslint, color: "#4b32c3" },
       { name: "Prettier", image: prettier, color: "#f7b93e" },
       { name: "Husky", image: husky, color: "#4a4a4a" },

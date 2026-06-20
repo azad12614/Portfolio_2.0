@@ -14,6 +14,8 @@ import puProgramming2024 from "../assets/Awards/2024_PU.jpg";
 import cadetCoordinator2025 from "../assets/Awards/2025_Coordinator.jpg";
 import thesis from "../assets/Awards/2025_Thesis.jpg";
 import faangSeminar from "../assets/Awards/FAANG.png";
+import icpc from "../assets/Awards/ICPC.png";
+import uias from "../assets/Awards/UIAS.png";
 
 const awards = [
   {
@@ -51,6 +53,14 @@ const awards = [
   {
     title: "B.Sc Thesis Paper",
     image: thesis,
+  },
+  {
+    title: "ICPC Certificate of Achievement (2022, 2023, 2024)",
+    image: icpc,
+  },
+  {
+    title: "Web Dev Intern Certificate — UIAS & UAN, Feb 2026",
+    image: uias,
   },
 ];
 

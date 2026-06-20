@@ -13,6 +13,7 @@ import Portfolio from "../assets/Projects/Portfolio.png";
 import Rating from "../assets/Projects/Rating.png";
 import Sleepyheads from "../assets/Projects/Sleepyheads.png";
 import TaskTracker from "../assets/Projects/Task_Tracker.png";
+import TicketPipeline from "../assets/Projects/Ticket_Pipeline.png";
 import VibeCast from "../assets/Projects/Vibe_Cast.png";
 import "./Project.css";
 
@@ -74,6 +75,18 @@ const ProjectList = [
     live: "https://tasktracker12614.onrender.com/",
     github: "https://github.com/azad12614/TaskTracker",
     tag: "Internship Task",
+    team: false,
+    category: "Full Stack",
+  },
+  {
+    imgSrc: TicketPipeline,
+    title: "AI Ticket Pipeline",
+    tech: "Node.js, TypeScript, Express 5, PostgreSQL, AWS SQS, Portkey AI, Socket.io, Zod, Docker",
+    description:
+      "Async AI-powered customer support ticket pipeline with 2-phase AI (triage + draft), queue-based worker, real-time Socket.io events via PG LISTEN/NOTIFY.",
+    live: null,
+    github: "https://github.com/azad12614/Ticket_Pipeline",
+    tag: "Featured",
     team: false,
     category: "Full Stack",
   },

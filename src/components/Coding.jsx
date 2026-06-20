@@ -34,7 +34,7 @@ const profiles = [
   },
   {
     link: "https://leetcode.com/u/azad12614/",
-    name: "Leetcode",
+    name: "LeetCode",
     rating: "1573",
     maxRating: "1573",
     rank: "Top 27%",

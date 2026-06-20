@@ -8,7 +8,7 @@
 
 ## Overview
 
-My second-generation portfolio built with **React.js** and **Node.js** serves as a centralized showcase for my work, academic background, and technical skills. Clean, responsive, and fully customizable, it helps me present my developer profile with clarity and style.
+My second-generation portfolio built with **React.js** serves as a centralized showcase for my work, academic background, and technical skills. Clean, responsive, and fully customizable, it helps me present my developer profile with clarity and style.
 
 ---
 
@@ -30,11 +30,9 @@ My second-generation portfolio built with **React.js** and **Node.js** serves as
 
 | Category        | Technologies                |
 | --------------- | --------------------------- |
-| **Frontend**    | React.js                    |
-| **Backend**     | Node.js                     |
-| **Styling**     | CSS, (Tailwind)             |
-| **Build Tools** | Vite / Standard React build |
-| **Deployment**  | (Render)                    |
+| **Frontend**    | React.js, CSS, Tailwind CSS |
+| **Build Tools** | Vite                        |
+| **Deployment**  | Render                      |
 
 ---
 
@@ -62,7 +60,7 @@ Configuration:
 - **Personal Branding**: A curated, professional hub representing your capabilities and journey.
 - **Customizable & Scalable**: Easily tweak or expand sections as your profile evolves.
 - **Responsive Design**: Ensures accessibility across devices and screen sizes.
-- **Builds Technical Credibility**: Demonstrates you understand React component structure, routing, and (optionally) backend integration.
+- **Builds Technical Credibility**: Demonstrates you understand React component structure, routing, and modern frontend architecture.
 
 ---
 
@@ -81,8 +79,7 @@ npm run dev        # starts React development server (usually http://localhost:3
 
 ## Keywords for Visibility
 
-- **Frontend:** React.js, Responsive Design, Component-Based UI, Portfolio Site
-- **Optional Backend:** Node.js, Server-Side Rendering (if used), Contact Form Backend
+- **Frontend:** React.js, Vite, Tailwind CSS, Responsive Design, Component-Based UI, Portfolio Site
 - **Concepts:** Personal Branding, Developer Portfolio, UX/UI Design, Modern Web Development
 
 ---
