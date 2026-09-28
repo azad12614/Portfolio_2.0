@@ -5,13 +5,37 @@ import { Autoplay, Keyboard, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./Blog.css";
 
-import AI from "../assets/Blog/AI.png";
-import Censorship from "../assets/Blog/Censorship.png";
-import Energy from "../assets/Blog/Energy.png";
-import Tech from "../assets/Blog/Tech.png";
-import Win from "../assets/Blog/Win10.png";
+import AIParadox from "../assets/Blog/AI_Paradox.webp";
+import OrbitalAI from "../assets/Blog/Orbital_AI.webp";
+import Tech from "../assets/Blog/Tech.webp";
+import TSMC from "../assets/Blog/TSMC_A14.webp";
+import Win from "../assets/Blog/Win10.webp";
 
 const blogData = [
+  {
+    title: "The Great AI Paradox",
+    desc: "Agentic Commerce vs. The Swarm Threat",
+    img: AIParadox,
+    link: "https://machineofmind.blogspot.com/2026/09/the-great-ai-paradox-agentic-commerce.html",
+    date: "September 15, 2026",
+    readTime: "3 min read",
+  },
+  {
+    title: "Orbital AI Compute",
+    desc: "SpaceXAI Launches First Low Earth Orbit Starlink AI Processing Nodes",
+    img: OrbitalAI,
+    link: "https://machineofmind.blogspot.com/2026/07/orbital-ai-compute-spacexai-launches.html",
+    date: "July 21, 2026",
+    readTime: "3 min read",
+  },
+  {
+    title: "Silicon Frontier Briefing",
+    desc: "TSMC Secures Landmark 1.4nm (A14) Fabrication Trial Success",
+    img: TSMC,
+    link: "https://machineofmind.blogspot.com/2026/07/silicon-frontier-briefing-tsmc-secures.html",
+    date: "July 18, 2026",
+    readTime: "3 min read",
+  },
   {
     title: "The Countdown Is On",
     desc: "Navigating the Windows 10 End-of-Support Deadline",
@@ -24,33 +48,9 @@ const blogData = [
     title: "Tech Week Singapore 2025",
     desc: "Connecting Cloud, Code, and the Future of Intelligent Systems",
     img: Tech,
-    link: "https://machineofmind.blogspot.com/2025/10/tech-week-singapore-2025.html",
+    link: "https://machineofmind.blogspot.com/2025/10/tech-week-singapore-2025-connecting.html",
     date: "October 03, 2025",
     readTime: "7 min read",
-  },
-  {
-    title: "When AI Comes Home",
-    desc: "The Unseen Impacts of Data Centers on Our Neighborhoods",
-    img: AI,
-    link: "https://machineofmind.blogspot.com/2025/09/when-ai-comes-home.html",
-    date: "September 25, 2025",
-    readTime: "6 min read",
-  },
-  {
-    title: "The Hidden Cost of Intelligence",
-    desc: "Is LLM Heading for an Energy Crisis",
-    img: Energy,
-    link: "https://machineofmind.blogspot.com/2025/08/the-hidden-cost-of-intelligence.html",
-    date: "August 10, 2025",
-    readTime: "8 min read",
-  },
-  {
-    title: "The Digital Iron Curtain",
-    desc: "How Sanctions and Censorship are Reshaping Russia's Tech-Stack",
-    img: Censorship,
-    link: "https://machineofmind.blogspot.com/2025/07/the-digital-iron-curtain.html",
-    date: "July 30, 2025",
-    readTime: "9 min read",
   },
 ];
 
