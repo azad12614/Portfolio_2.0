@@ -1,19 +1,19 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import AVGlobalPath from "../assets/Projects/AV_Global_Path.png";
-import ClipOut from "../assets/Projects/ClipOut.png";
 import Cloud_Campus from "../assets/Projects/Cloud_Campus.png";
 import ColorPicker from "../assets/Projects/Color_Picker.png";
 import FlyHigh from "../assets/Projects/FlyHigh.png";
-import Gaming from "../assets/Projects/Gaming.png";
-import GhorBazar from "../assets/Projects/GhorBazar.png";
+import GhorBazar from "../assets/Projects/GhorBazar.webp";
+import HackerNews from "../assets/Projects/Hacker_News.webp";
 import Ladder from "../assets/Projects/Ladder.png";
 import NASA from "../assets/Projects/NASA.jpeg";
 import Portfolio from "../assets/Projects/Portfolio.png";
 import Rating from "../assets/Projects/Rating.png";
+import SevenGUIs from "../assets/Projects/Seven_GUIs.webp";
 import Sleepyheads from "../assets/Projects/Sleepyheads.png";
 import TaskTracker from "../assets/Projects/Task_Tracker.png";
-import TicketPipeline from "../assets/Projects/Ticket_Pipeline.png";
+import TicketPipeline from "../assets/Projects/Ticket_Pipeline.webp";
 import VibeCast from "../assets/Projects/Vibe_Cast.png";
 import "./Project.css";
 
@@ -27,7 +27,7 @@ const ProjectList = [
     live: null,
     github: "https://github.com/azad12614/GhorBazar",
     tag: "Featured",
-    team: false,
+    team: true,
     category: "Full Stack",
   },
   {
@@ -74,7 +74,7 @@ const ProjectList = [
       "TaskTracker is a tool for managing tasks, boosting productivity, and staying on top of your deadlines.",
     live: "https://tasktracker12614.onrender.com/",
     github: "https://github.com/azad12614/TaskTracker",
-    tag: "Internship Task",
+    tag: "Personal Project",
     team: false,
     category: "Full Stack",
   },
@@ -115,13 +115,25 @@ const ProjectList = [
     category: "Frontend",
   },
   {
-    imgSrc: ClipOut,
-    title: "BG-ClipOut",
-    tech: "React.js, TailwindCSS, RestAPI",
+    imgSrc: HackerNews,
+    title: "Hacker News",
+    tech: "TypeScript, Vite, Tailwind CSS, HNPWA API",
     description:
-      "A simple and intuitive tool for removing image backgrounds with a clean UI.",
+      "A Hacker News clone in vanilla TypeScript with paginated top, new, past, comments, ask, show and jobs feeds.",
     live: null,
-    github: "https://github.com/azad12614/BG-ClipOut",
+    github: "https://github.com/azad12614/HackerNews",
+    tag: "Learning Task",
+    team: false,
+    category: "Frontend",
+  },
+  {
+    imgSrc: SevenGUIs,
+    title: "7GUIs",
+    tech: "React, TypeScript, Vite, Tailwind CSS, Jotai, HeroUI",
+    description:
+      "The seven 7GUIs benchmark tasks (Counter, Converter, Flight, Timer, CRUD, Circle, Cells), each built in three React styles: plain, pure and Jotai.",
+    live: null,
+    github: "https://github.com/azad12614/7GUIS",
     tag: "Learning Task",
     team: false,
     category: "Frontend",
@@ -147,7 +159,7 @@ const ProjectList = [
     live: "https://azad12614.github.io/av-global-path/",
     github: "https://github.com/azad12614/av-global-path",
     tag: "Internship Task",
-    team: true,
+    team: false,
     category: "Frontend",
   },
   {
@@ -158,18 +170,6 @@ const ProjectList = [
       "A leaderboard showcasing Codeforces ratings of IIUC CSE students.",
     live: "https://azad12614.github.io/CF_Rating_IIUC/",
     github: "https://github.com/azad12614/CF_Rating_IIUC",
-    tag: "Learning Task",
-    team: false,
-    category: "Frontend",
-  },
-  {
-    imgSrc: Gaming,
-    title: "Game Vault",
-    tech: "HTML, CSS, JavaScript",
-    description:
-      "A collection of mini-games built with vanilla HTML, CSS, and JavaScript.",
-    live: "https://azad12614.github.io/Game-Vault/Index.html",
-    github: "https://github.com/azad12614/Game-Vault",
     tag: "Learning Task",
     team: false,
     category: "Frontend",
