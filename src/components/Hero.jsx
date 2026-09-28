@@ -1,5 +1,5 @@
 import pdf from "../assets/Abdullah_Al_Azad.pdf";
-import avater from "../assets/Abdullah_Al_Azad.png";
+import avater from "../assets/Abdullah_Al_Azad.webp";
 import fb from "../assets/Social/FB.png";
 import git from "../assets/Social/Github.png";
 import ln from "../assets/Social/Linkdin.png";
