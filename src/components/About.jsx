@@ -19,8 +19,8 @@ const About = () => {
           <div className="highlight-item">
             <span className="highlight-icon">💼</span>
             <p className="highlight-text">
-              <strong>Current Role</strong> — Assistant Web Secretary (Backend)
-              for <strong>IIUCCPS</strong>, previously Web Developer Intern at{" "}
+              <strong>Current Role</strong> — Software Engineer at{" "}
+              <strong>mtacademy.au</strong>, previously Web Developer Intern at{" "}
               <strong>UIAS</strong>.
             </p>
           </div>

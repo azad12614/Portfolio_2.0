@@ -9,6 +9,15 @@ const Resume = () => {
 
   const job = [
     {
+      date: "Aug 2026 - Present",
+      title: "Software Engineer",
+      org: "mtacademy.au",
+      worktype: "Full-time",
+      workplace: "Remote",
+      link: "https://mtacademy.au/",
+      desc: "Contributing full-stack engineer on a production SaaS platform for corporate training sales, covering modular training sales, membership and quote-request flows, and workflow automation. Shipped certificate/PDF generation, admin search and access-control fixes, and Playwright end-to-end coverage across a Next.js and FastAPI stack.",
+    },
+    {
       date: "Oct 2025 - Feb 2026",
       title: "Web Developer",
       org: "Universal Institute for Advanced Studies (UIAS)",
@@ -20,12 +29,20 @@ const Resume = () => {
   ];
   const academic = [
     {
-      date: "Nov 2025 - Present",
+      date: "Nov 2025 - Jul 2026",
       title: "Assistant Web Secretary (Backend)",
       org: "IIUCCPS",
       worktype: "Volunteer",
       workplace: "Remote",
       desc: "Managing and enhancing backend infrastructure for IIUCCPS, supporting the society's web presence and technical operations.",
+    },
+    {
+      date: "Jan 2026 - Jul 2026",
+      title: "Trainee, Batch MB52",
+      org: "mentorbhai",
+      worktype: "Training",
+      workplace: "Remote",
+      desc: "Completed a structured full-stack engineering training program. Built GhorBazar and AI Ticket Pipeline as part of the curriculum, alongside a HackerNews clone, a 7GUIs benchmark implementation, and a static GenZ fashion website. Contributed to the open-source Bigcapital accounting platform.",
     },
     {
       date: "2024 - Present",
@@ -48,12 +65,12 @@ const Resume = () => {
       date: "Jul 2024 - Aug 2025",
       title: "Teaching Assistant",
       org: "IIUC",
-      worktype: "PartTime",
+      worktype: "Part-time",
       workplace: "Hybrid",
       desc: "Assisted in teaching Data Structures to 100+ students, boosting average class performance by 15%. Designed coding assignments, checked submissions, and organized marking.",
     },
     {
-      date: "Jul 2023 - Jan 2025",
+      date: "Jul 2023 - Dec 2024",
       title: "Bootcamp Mentor",
       org: "IIUCCPS",
       worktype: "Volunteer",
@@ -71,40 +88,47 @@ const Resume = () => {
   ];
   const programming = [
     {
-      date: "Jul 2024",
+      date: "Nov 2024",
       title: "Inter University Programming Contest",
       link: "https://toph.co/contests/training/rxbqtb6/standings",
       org: "CUSS",
       workplace: "Offline",
-      desc: "Ranked 20th (Team - IIUC_ZeroPlan) with teammates Toshifur Rhaman and Shehabudowlla Rakib in the Divisional Programming Contest organized by the Chittagong University Scientific Society.",
+      desc: "Ranked 20th (Team - IIUC_ZeroPlan) with teammates Md. Toshifur Rahman and Shehabudowlla Rakib in the Divisional Programming Contest organized by the Chittagong University Scientific Society.",
     },
     {
-      date: "Dec 2024",
-      title: "ICPC Preliminary Contest",
+      date: "Nov 2024",
+      title: "ICPC Preliminary Contest 2024",
       org: "ICPC",
       workplace: "Online",
-      desc: "Ranked 288th (Team - IIUC_ZeroPlan) with teammates Toshifur Rhaman and Shehabudowlla Rakib in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
+      desc: "Ranked 288th (Team - IIUC_ZeroPlan) with teammates Md. Toshifur Rahman and Shehabudowlla Rakib in the Preliminary Contest of the International Collegiate Programming Contest (ICPC).",
     },
     {
-      date: "Mar 2024",
+      date: "Jul 2024",
+      title: "Inter University Programming Contest Preliminary",
+      org: "CUSS",
+      workplace: "Online",
+      desc: "Ranked 36th (Team - IIUC_ZeroPlan) in the online Preliminary Round of the Inter University Programming Contest organized by the Chittagong University Scientific Society.",
+    },
+    {
+      date: "Feb 2024",
       title: "NCPC Preliminary Contest",
       org: "JU",
       workplace: "Online",
-      desc: "Ranked 241st (Team - IIUC_Groot) with teammates Toshifur Rhaman and Shehabudowlla Rakib in the National Programming Contest organized by Jahangirnagar University.",
+      desc: "Ranked 241st (Team - IIUC_Groot) with teammates Md. Toshifur Rahman and Shehabudowlla Rakib in the National Programming Contest organized by Jahangirnagar University.",
     },
     {
       date: "Jan 2024",
       title: "PU CSE IT FEST",
       org: "PU",
       workplace: "Offline",
-      desc: "Ranked 30th (Team - IIUC_Groot) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Divisional Programming Contest organized by Premier University.",
+      desc: "Ranked 30th (Team - IIUC_Groot) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Divisional Programming Contest organized by Premier University.",
     },
     {
       date: "Oct 2023",
       title: "ICPC Preliminary Contest 2023",
       org: "ICPC",
       workplace: "Online",
-      desc: "Ranked 191st (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC). Honorable Mention.",
+      desc: "Ranked 191st (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Preliminary Contest of the International Collegiate Programming Contest (ICPC). Honorable Mention.",
     },
     {
       date: "Sep 2023",
@@ -112,7 +136,7 @@ const Resume = () => {
       link: "https://toph.co/c/15th-iiuc-inter-university-2023/standings",
       org: "IIUC",
       workplace: "Offline",
-      desc: "Ranked 35th (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Divisional Programming Contest organized by the IIUC Computer Club & IIUCCPS.",
+      desc: "Ranked 35th (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Divisional Programming Contest organized by the IIUC Computer Club & IIUCCPS.",
     },
     {
       date: "Sep 2023",
@@ -120,14 +144,14 @@ const Resume = () => {
       link: "https://toph.co/contests/training/wf44wz8/standings",
       org: "IIUC",
       workplace: "Offline",
-      desc: "Ranked 19th (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Shehabudowlla Rakib in the Intra University Programming Contest organized by the International Islamic University Chittagong (IIUC).",
+      desc: "Ranked 19th (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Shehabudowlla Rakib in the Intra University Programming Contest organized by the International Islamic University Chittagong (IIUC).",
     },
     {
-      date: "Mar 2023",
+      date: "Feb 2023",
       title: "ICPC Preliminary Contest 2022",
       org: "ICPC",
       workplace: "Online",
-      desc: "Ranked 801st (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
+      desc: "Ranked 801st (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Preliminary Contest of the International Collegiate Programming Contest (ICPC).",
     },
     {
       date: "Nov 2022",
@@ -135,7 +159,7 @@ const Resume = () => {
       link: "https://toph.co/contests/training/x2c4mne/standings",
       org: "IIUCCPS",
       workplace: "Offline",
-      desc: "Ranked 12th (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Intra University Programming Contest of the International Islamic University Chittagong Competitive Programming Society.",
+      desc: "Ranked 12th (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Intra University Programming Contest of the International Islamic University Chittagong Competitive Programming Society.",
     },
     {
       date: "Oct 2022",
@@ -143,14 +167,21 @@ const Resume = () => {
       link: "https://toph.co/contests/training/mf23yf4/standings",
       org: "IIUC",
       workplace: "Offline",
-      desc: "Ranked 4th (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Baizid Kamrurzaman in the Intra University Programming Contest of the International Islamic University Chittagong (IIUC).",
+      desc: "Ranked 4th (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Intra University Programming Contest of the International Islamic University Chittagong (IIUC).",
     },
     {
       date: "Sep 2022",
       title: "ICPC Preliminary Contest 2021",
       org: "ICPC",
       workplace: "Online",
-      desc: "Ranked 361st (Team - IIUC_Synthroid) with teammates Toshifur Rhaman and Abrar Yasir in the Regional Programming Contest of the International Collegiate Programming Contest (ICPC).",
+      desc: "Ranked 361st (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Abrar Yasir in the Preliminary Contest of the International Collegiate Programming Contest (ICPC).",
+    },
+    {
+      date: "Aug 2022",
+      title: "CSE FEST Programming Contest (Solo)",
+      org: "IIUC",
+      workplace: "Offline",
+      desc: "Ranked 15th in the CSE FEST Programming Contest organized by the IIUC Computer Club & IIUCCPS.",
     },
     {
       date: "Aug 2022",
@@ -160,31 +191,31 @@ const Resume = () => {
       workplace: "Offline",
       desc: "Ranked 5th in the Solo Programming Contest organized by the International Islamic University Chittagong Competitive Programming Society.",
     },
-    {
-      date: "Aug 2022",
-      title: "CSE FEST Programming Contest (Solo)",
-      org: "IIUC",
-      workplace: "Offline",
-      desc: "Ranked 15th in the CSE FEST Programming Contest organized by the IIUC Computer Club & IIUCCPS.",
-    },
   ];
   const education = [
     {
-      date: "Jul 2021 - Dec 2025",
+      date: "Jul 2026 - Jul 2028",
+      title: "M.Eng. Degree",
+      link: "https://www.cuet.ac.bd/",
+      org: "CUET",
+      desc: "Pursuing M.Eng. in Computer Science and Engineering (part-time) at Chittagong University of Engineering & Technology.",
+    },
+    {
+      date: "Aug 2021 - Dec 2025",
       title: "B.Sc. Degree",
       link: "https://www.iiuc.ac.bd/",
       org: "IIUC",
       desc: "Completed B.Sc. in Computer Science and Engineering at International Islamic University Chittagong. Thesis: A Hybrid CNN-BiGRU Approach for Bangla Audio Deepfake Detection.",
     },
-    {
-      date: "Apr 2018 - Apr 2020",
-      title: "H.S.C. Exam",
-      link: "https://www.idc.w3schoolbd.org/",
-      org: "Islamia Degree College",
-      desc: "Completed Higher Secondary Certificate Exam at Islamia Degree College.",
-    },
   ];
   const achievements = [
+    {
+      date: "Feb 2026",
+      title: "Web Dev Intern Certificate",
+      org: "UIAS & UAN",
+      workplace: "Online",
+      desc: "Received a certificate for the Web Developer internship at the Universal Institute for Advanced Studies (UIAS).",
+    },
     {
       date: "Feb 2024, Jul 2025",
       title: "The Best Mentor Award",
@@ -193,11 +224,25 @@ const Resume = () => {
       desc: "Awarded for contributions as a mentor in the IIUCCPS Bootcamp Program.",
     },
     {
-      date: "Feb 2024",
-      title: "Trainer Certificate",
+      date: "May 2025",
+      title: "Ostad Courses Certificate",
+      org: "Ostad",
+      workplace: "Online",
+      desc: 'Certificate for courses: "Webflow Crash Course" and "JavaScript Workshop for Absolute Beginners".',
+    },
+    {
+      date: "Mar 2025",
+      title: "Road to FAANG Seminar",
       org: "IIUCCPS",
       workplace: "Offline",
-      desc: "Received a certificate recognizing my role as a trainer at IIUCCPS Bootcamp Program Autumn 2023.",
+      desc: 'Certificate of participation for the seminar "Road to FAANG Companies", organized by the IIUC Competitive Programming Society at the IIUC Central Auditorium.',
+    },
+    {
+      date: "2021, 2022, 2023, 2024",
+      title: "Certificate of Achievement",
+      org: "ICPC",
+      workplace: "Online",
+      desc: "Awarded for achievements in the International Collegiate Programming Contest.",
     },
     {
       date: "Sep 2024",
@@ -207,18 +252,25 @@ const Resume = () => {
       desc: "Participated in the NASA International Space Apps Challenge 2024.",
     },
     {
-      date: "2022, 2023, 2024",
-      title: "Certificate of Achievement",
-      org: "ICPC",
-      workplace: "Online",
-      desc: "Awarded for achievements in the International Collegiate Programming Contest.",
+      date: "Feb 2024",
+      title: "Trainer Certificate",
+      org: "IIUCCPS",
+      workplace: "Offline",
+      desc: "Received a certificate recognizing my role as a trainer at IIUCCPS Bootcamp Program Autumn 2023.",
     },
     {
-      date: "May 2025",
-      title: "Ostad Courses Certificate",
-      org: "Ostad",
-      workplace: "Online",
-      desc: 'Certificate for courses: "Webflow Crash Course" and "Javascript Workshop for Beginners".',
+      date: "Jan 2024",
+      title: "PU CSE IT FEST Certificate",
+      org: "PU",
+      workplace: "Offline",
+      desc: "Certificate of participation for the Programming Contest at PU-CSE IT FEST 2024, organized by the Department of CSE, Premier University.",
+    },
+    {
+      date: "Feb 2023",
+      title: "Hult Prize Certificate",
+      org: "Hult Prize",
+      workplace: "Offline",
+      desc: "Participated as a competitor (Innovators) in the Hult Prize at International Islamic University Chittagong.",
     },
   ];
 
