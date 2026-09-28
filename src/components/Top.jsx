@@ -3,11 +3,13 @@ import "./Top.css";
 
 const Top = () => {
   const [showButton, setShowButton] = useState(false);
+  const [hasBeenShown, setHasBeenShown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
         setShowButton(true);
+        setHasBeenShown(true);
       } else {
         setShowButton(false);
       }
@@ -21,10 +23,13 @@ const Top = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // "idle" until the first reveal, so the exit animation does not play on page load
+  const visibility = showButton ? "visible" : hasBeenShown ? "hidden" : "idle";
+
   return (
     <button
       onClick={goTop}
-      className={`top-button ${showButton ? "visible" : "hidden"}`}
+      className={`top-button ${visibility}`}
       title="Go to top"
       aria-label="Scroll to top"
     >
