@@ -1,0 +1,55 @@
+/* Theme toggle: sun and moon icons swap when the checkbox changes */
+.theme-toggle {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.25rem;
+  border-radius: 9999px;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+.theme-toggle-label {
+  position: relative;
+  display: inline-grid;
+  place-content: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.theme-toggle-label > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-property: transform, opacity;
+}
+
+.theme-toggle-input {
+  appearance: none;
+}
+
+.theme-toggle-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor;
+}
+
+.theme-toggle-on {
+  color: #000;
+  opacity: 0;
+  transform: rotate(45deg);
+}
+
+.theme-toggle-off {
+  color: #fff;
+}
+
+.theme-toggle-input:checked ~ .theme-toggle-off {
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+
+.theme-toggle-input:checked ~ .theme-toggle-on {
+  opacity: 1;
+  transform: rotate(0deg);
+}

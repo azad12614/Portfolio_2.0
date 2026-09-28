@@ -30,7 +30,7 @@ My second-generation portfolio built with **React.js** serves as a centralized s
 
 | Category        | Technologies                |
 | --------------- | --------------------------- |
-| **Frontend**    | React.js, CSS, Tailwind CSS |
+| **Frontend**    | React.js, CSS               |
 | **Build Tools** | Vite                        |
 | **Deployment**  | Render                      |
 
@@ -79,7 +79,7 @@ npm run dev        # starts React development server (usually http://localhost:3
 
 ## Keywords for Visibility
 
-- **Frontend:** React.js, Vite, Tailwind CSS, Responsive Design, Component-Based UI, Portfolio Site
+- **Frontend:** React.js, Vite, CSS, Responsive Design, Component-Based UI, Portfolio Site
 - **Concepts:** Personal Branding, Developer Portfolio, UX/UI Design, Modern Web Development
 
 ---

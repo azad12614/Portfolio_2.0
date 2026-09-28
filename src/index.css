@@ -2,9 +2,279 @@
       Index CSS
 ============================= */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Plain CSS copy of the base reset the site used to get from Tailwind, so the layout stays the same */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+
+html,
+:host {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: var(--font-sans);
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+}
+
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}
+
+abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+input:where([type="button"]),
+input:where([type="reset"]),
+input:where([type="submit"]) {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+:-moz-focusring {
+  outline: auto;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+dialog {
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+:disabled {
+  cursor: default;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+/* Page surface and scrollbar colors the site used to get from daisyUI */
+:root {
+  color-scheme: light;
+  background-color: oklch(1 0 0);
+  color: oklch(0.278078 0.029596 256.848);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    background-color: oklch(0.253267 0.015896 252.418);
+    color: oklch(0.746477 0.0216 264.436);
+  }
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  background-color: oklch(1 0 0);
+  color: oklch(0.278078 0.029596 256.848);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  background-color: oklch(0.253267 0.015896 252.418);
+  color: oklch(0.746477 0.0216 264.436);
+}
+
+* {
+  scrollbar-color: color-mix(in oklch, currentColor 35%, transparent) transparent;
+}
+
+*:hover {
+  scrollbar-color: color-mix(in oklch, currentColor 60%, transparent) transparent;
+}
 
 /* =============================
       🌐 Design Tokens
@@ -171,4 +441,123 @@
   /* 🌐 Brightness control */
   --bright: 90%;
   --shadow-soft: 0 6px 16px rgba(10, 50, 80, 0.18);
+}
+
+/* =============================
+    Buttons
+    Values daisyUI used to add on top of the App.css .btn rules, kept so the look stays the same
+============================= */
+:root,
+[data-theme="light"] {
+  --cta-primary: oklch(0.4912 0.3096 275.75);
+  --cta-primary-text: oklch(0.89824 0.06192 275.75);
+  --cta-secondary: oklch(0.6971 0.329 342.55);
+  --cta-secondary-text: oklch(0.9871 0.0106 342.55);
+  --cta-accent: oklch(0.7676 0.184 183.61);
+  --cta-accent-text: oklch(0.15352 0.0368 183.61);
+}
+
+[data-theme="dark"] {
+  --cta-primary: oklch(0.6569 0.196 275.75);
+  --cta-primary-text: oklch(0.13138 0.0392 275.75);
+  --cta-secondary: oklch(0.748 0.26 342.55);
+  --cta-secondary-text: oklch(0.1496 0.052 342.55);
+  --cta-accent: oklch(0.7451 0.167 183.61);
+  --cta-accent-text: oklch(0.14902 0.0334 183.61);
+}
+
+.btn {
+  display: inline-flex;
+  height: 3rem;
+  min-height: 3rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: var(--btn-tone, transparent);
+  background-color: var(--btn-tone, transparent);
+  color: var(--btn-tone-text, inherit);
+  outline-color: var(--btn-tone, currentColor);
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1em;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-property: color, background-color, border-color, opacity,
+    box-shadow, transform;
+}
+
+.btn-primary {
+  --btn-tone: var(--cta-primary);
+  --btn-tone-text: var(--cta-primary-text);
+}
+
+.btn-secondary {
+  --btn-tone: var(--cta-secondary);
+  --btn-tone-text: var(--cta-secondary-text);
+}
+
+.btn-accent {
+  --btn-tone: var(--cta-accent);
+  --btn-tone-text: var(--cta-accent-text);
+}
+
+.btn:hover {
+  background-color: color-mix(in oklab, var(--btn-tone, transparent) 90%, black);
+  border-color: color-mix(in oklab, var(--btn-tone, transparent) 90%, black);
+}
+
+.btn:active:hover,
+.btn:active:focus {
+  transform: scale(0.95);
+}
+
+.btn:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+/* =============================
+    daisyUI used to style three class names this site also uses (hero-content, navbar, stat-value).
+    Its values are kept here so the layout stays the same.
+============================= */
+.hero-content {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  min-height: 4rem;
+  width: 100%;
+}
+
+:where(.navbar > *:not(script, style)) {
+  display: inline-flex;
+  align-items: center;
+}
+
+.stat-value {
+  grid-column-start: 1;
+  white-space: nowrap;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 800;
 }
