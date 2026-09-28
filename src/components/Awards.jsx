@@ -6,12 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./Awards.css";
 
 import hultPrize2023 from "../assets/Awards/2023_HULT.png";
-import mentorAward2023 from "../assets/Awards/2023_Mentor.png";
+import mentorAward2023 from "../assets/Awards/2023_Mentor.webp";
 import trainerCert2023 from "../assets/Awards/2023_Trainer.jpg";
-import mentorAward2024 from "../assets/Awards/2024_Mentor.png";
-import nasa2024 from "../assets/Awards/2024_NASA.png";
+import mentorAward2024 from "../assets/Awards/2024_Mentor.webp";
+import nasa2024 from "../assets/Awards/2024_NASA.webp";
 import puProgramming2024 from "../assets/Awards/2024_PU.jpg";
-import cadetCoordinator2025 from "../assets/Awards/2025_Coordinator.jpg";
 import thesis from "../assets/Awards/2025_Thesis.jpg";
 import faangSeminar from "../assets/Awards/FAANG.png";
 import icpc from "../assets/Awards/ICPC.png";
@@ -23,11 +22,11 @@ const awards = [
     image: hultPrize2023,
   },
   {
-    title: "2023 Mentor Awards",
+    title: "Best Mentor Award, Autumn 2023",
     image: mentorAward2023,
   },
   {
-    title: "2023 Trainer Certification",
+    title: "Trainer Certification, Autumn 2023",
     image: trainerCert2023,
   },
   {
@@ -39,12 +38,8 @@ const awards = [
     image: puProgramming2024,
   },
   {
-    title: "2024 Mentor Award",
+    title: "Best Mentor Award, Spring 2024",
     image: mentorAward2024,
-  },
-  {
-    title: "2025 Cadet Bootcamp Coordinator",
-    image: cadetCoordinator2025,
   },
   {
     title: "FAANG Seminar Certification",
@@ -55,7 +50,7 @@ const awards = [
     image: thesis,
   },
   {
-    title: "ICPC Certificate of Achievement (2022, 2023, 2024)",
+    title: "ICPC Certificate of Achievement (2021, 2022, 2023, 2024)",
     image: icpc,
   },
   {
