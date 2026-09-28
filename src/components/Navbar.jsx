@@ -13,10 +13,11 @@ const sections = [
   { id: "Contact", label: "Contact" },
 ];
 
+const sectionIds = sections.map((s) => s.id);
+
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("Hero");
-  const sectionIds = sections.map((s) => s.id);
 
   const toggleMenu = useCallback(() => setShowMobileMenu((prev) => !prev), []);
 

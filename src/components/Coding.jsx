@@ -37,8 +37,8 @@ const profiles = [
     name: "LeetCode",
     rating: "1573",
     maxRating: "1573",
-    rank: "Top 27%",
-    maxRank: "Top 27%",
+    rank: "Top 28.6%",
+    maxRank: "Top 28.6%",
     solve: "90+",
     contests: "25+",
     logo: LC,
@@ -47,7 +47,7 @@ const profiles = [
   },
   {
     link: "https://atcoder.jp/users/azad12614",
-    name: "Atcoder",
+    name: "AtCoder",
     rating: "316",
     maxRating: "316",
     rank: "9 Kyu",
@@ -64,7 +64,7 @@ const getRankColor = (rank) => {
   const rankColors = {
     pupil: "var(--success-dark)",
     "3 star": "var(--highlight)",
-    "top 27%": "var(--warning-light)",
+    "top 28.6%": "var(--warning-light)",
     "9 kyu": "var(--info-light)",
   };
   return rankColors[rank.toLowerCase()] || "var(--info-light)";

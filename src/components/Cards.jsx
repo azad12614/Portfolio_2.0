@@ -20,8 +20,8 @@ const Cards = ({ item, animateGrid, type }) => {
   const getWorkTypeColor = (workType) => {
     const colors = {
       intern: "var(--text-accent)",
-      parttime: "var(--primary)",
-      fulltime: "var(--highlight)",
+      "part-time": "var(--primary)",
+      "full-time": "var(--highlight)",
       volunteer: "var(--info)",
     };
     return colors[workType] || "var(--text-muted)";

@@ -38,8 +38,8 @@ function Contact() {
               <div className="contact-icon">📞</div>
               <div className="contact-text">
                 <span className="contact-label">Phone</span>
-                <a href="tel:01630440005" className="contact-link">
-                  +880 1630 440005
+                <a href="tel:+8801630440005" className="contact-link">
+                  +880 1630-440005
                 </a>
               </div>
             </div>

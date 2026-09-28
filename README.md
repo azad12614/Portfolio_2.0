@@ -30,7 +30,7 @@ My second-generation portfolio built with **React.js** serves as a centralized s
 
 | Category        | Technologies                |
 | --------------- | --------------------------- |
-| **Frontend**    | React.js, CSS, Tailwind CSS |
+| **Frontend**    | React.js, CSS               |
 | **Build Tools** | Vite                        |
 | **Deployment**  | Render                      |
 
@@ -43,12 +43,13 @@ My second-generation portfolio built with **React.js** serves as a centralized s
   ├─ components/         – Reusable React components (e.g., Navbar, Hero, ContactForm)
   ├─ pages/              – Page-level views (e.g., Home)
   ├─ assets/             – Images, icons, and static assets
-  └─ App.jsx             – Primary app container and router
+  └─ App.jsx             – Primary app container
 
 public/
-  └─ index.html          – HTML template
+  └─ og-image.png        – Link preview card (1200 x 630)
 
 Configuration:
+  ├─ index.html          – HTML template
   ├─ package.json        – Project metadata & dependencies
   └─ LICENSE             – MIT licensing
 ```
@@ -60,7 +61,7 @@ Configuration:
 - **Personal Branding**: A curated, professional hub representing your capabilities and journey.
 - **Customizable & Scalable**: Easily tweak or expand sections as your profile evolves.
 - **Responsive Design**: Ensures accessibility across devices and screen sizes.
-- **Builds Technical Credibility**: Demonstrates you understand React component structure, routing, and modern frontend architecture.
+- **Builds Technical Credibility**: Demonstrates you understand React component structure and modern frontend architecture.
 
 ---
 
@@ -79,7 +80,7 @@ npm run dev        # starts React development server (usually http://localhost:3
 
 ## Keywords for Visibility
 
-- **Frontend:** React.js, Vite, Tailwind CSS, Responsive Design, Component-Based UI, Portfolio Site
+- **Frontend:** React.js, Vite, CSS, Responsive Design, Component-Based UI, Portfolio Site
 - **Concepts:** Personal Branding, Developer Portfolio, UX/UI Design, Modern Web Development
 
 ---

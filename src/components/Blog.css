@@ -29,6 +29,7 @@
 }
 
 .blog-swiper {
+  --swiper-navigation-sides-offset: 10px;
   max-width: 480px;
   margin: 0 auto;
   padding-bottom: 3rem !important;
@@ -47,10 +48,11 @@
   transition: all 0.3s ease;
 }
 
-.blog-swiper .swiper-button-prev::after,
-.blog-swiper .swiper-button-next::after {
-  font-size: 1rem;
-  font-weight: 700;
+/* Swiper 12 and later draw the arrows as inline SVG, sized here to match the old glyph. */
+.blog-swiper .swiper-button-prev svg,
+.blog-swiper .swiper-button-next svg {
+  width: auto;
+  height: 1rem;
 }
 
 .blog-swiper .swiper-button-prev:hover,

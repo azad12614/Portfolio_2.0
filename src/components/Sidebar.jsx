@@ -27,6 +27,7 @@ const LinksData = [
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [hasBeenShown, setHasBeenShown] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
@@ -41,6 +42,7 @@ const Sidebar = () => {
         scrollPosition < documentHeight - windowHeight * 1.5
       ) {
         setShowSidebar(true);
+        setHasBeenShown(true);
       } else {
         setShowSidebar(false);
         setIsHovered(false);
@@ -56,9 +58,12 @@ const Sidebar = () => {
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
+  // "idle" until the first reveal, so the exit animation does not play on page load
+  const visibility = showSidebar ? "visible" : hasBeenShown ? "hidden" : "idle";
+
   return (
     <div
-      className={`sidebar ${showSidebar ? "visible" : "hidden"} ${
+      className={`sidebar ${visibility} ${
         isHovered ? "expanded" : ""
       }`}
       onMouseEnter={handleMouseEnter}

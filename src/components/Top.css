@@ -48,9 +48,25 @@
   pointer-events: all;
 }
 
+/* Before the first reveal: hidden, and no exit animation on page load. */
+.top-button.idle {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .top-button.hidden {
   animation: fadeOutDown 0.3s ease-out forwards;
   pointer-events: none;
+  /* Hide (and leave the tab order) only after the exit animation ends. */
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .top-button.hidden {
+    animation: none;
+    transition: none;
+  }
 }
 
 .top-button:hover {
