@@ -79,7 +79,7 @@
 }
 
 .lang:hover > h1 {
-  color: var(--skill-color);
+  color: var(--primary);
 }
 
 .lang > img {

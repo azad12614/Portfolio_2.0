@@ -93,7 +93,9 @@
 }
 
 .team-badge {
-  background: rgba(0, 196, 230, 0.18);
+  background: var(--badge-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--text-accent);
   padding: 0.3rem 0.7rem;
   border-radius: 50px;
@@ -123,7 +125,9 @@
 
 .category-tag {
   display: inline-block;
-  background: rgba(2, 169, 247, 0.12);
+  background: var(--badge-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--primary);
   padding: 0.3rem 0.7rem;
   border-radius: 50px;
