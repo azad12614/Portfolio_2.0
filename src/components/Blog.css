@@ -32,7 +32,16 @@
   --swiper-navigation-sides-offset: 10px;
   max-width: 544px;
   margin: 0 auto;
-  padding: 2rem 2rem 3rem !important;
+  padding: 2rem 0 3rem !important;
+}
+
+/* Horizontal shadow clearance lives on the slide, not the swiper: the
+   swiper keeps overflow:hidden clipped tight to its content width so
+   the adjacent slide stays fully off-screen. Padding directly on the
+   swiper would widen the clip window past the slide boundary and
+   reveal slivers of the neighbor slide instead. */
+.blog-swiper .swiper-slide {
+  padding: 0 2rem;
 }
 
 /* Swiper nav button overrides */
@@ -220,7 +229,11 @@
 
   .blog-swiper {
     max-width: 100%;
-    padding: 1.5rem 1rem 3rem !important;
+    padding: 1.5rem 0 3rem !important;
+  }
+
+  .blog-swiper .swiper-slide {
+    padding: 0 1rem;
   }
 
   .blog-content {
