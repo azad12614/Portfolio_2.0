@@ -10,7 +10,7 @@ const Resume = () => {
   const job = [
     {
       date: "Aug 2026 - Present",
-      title: "Software Engineer",
+      title: "Software Engineer Intern",
       org: "mtacademy.au",
       worktype: "Full-time",
       workplace: "Remote",
