@@ -43,7 +43,7 @@ const DarkMode = () => {
   useEffect(() => {
     const savedTheme = getSafeStorage("theme");
 
-    const themeToApply = savedTheme || "light";
+    const themeToApply = savedTheme || "dark";
 
     document.querySelector("body").setAttribute("data-theme", themeToApply);
 
