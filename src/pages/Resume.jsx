@@ -338,11 +338,15 @@ const Resume = () => {
             ))}
         </div>
 
-        <h4 className="resume-subtitle">My Skills 👩‍💻</h4>
-        <Skills />
+        <div id="Skills">
+          <h4 className="resume-subtitle">My Skills 👩‍💻</h4>
+          <Skills />
+        </div>
 
-        <h4 className="resume-subtitle">Coding Profiles 🎯</h4>
-        <Coding />
+        <div id="Coding">
+          <h4 className="resume-subtitle">Coding Profiles 🎯</h4>
+          <Coding />
+        </div>
       </div>
     </section>
   );
