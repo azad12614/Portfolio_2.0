@@ -8,10 +8,37 @@
 
 .award-swiper {
   width: 100%;
-  max-width: 800px;
+  max-width: 880px;
   margin: 2rem auto;
+  padding: 2.5rem;
   position: relative;
   border-radius: 1rem;
+}
+
+.award-play-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.award-play-toggle:hover {
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  color: var(--text-invert);
+  border-color: transparent;
 }
 
 .award-slide {
@@ -68,6 +95,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .award-swiper {
+    padding: 1rem;
+  }
+
   .award-slide {
     height: 280px;
   }

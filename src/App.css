@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=IBM+Plex+Sans:wght@300..700&family=Jost:wght@300..800&family=Fira+Mono&family=Orbitron:wght@700&family=Cormorant+Garamond:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300..800&family=Jost:wght@300..800&family=Fira+Mono&family=Orbitron:wght@700&family=Cormorant+Garamond:wght@400;600;700&display=swap");
 
 /* =============================
       ⚙️ Global Resets
@@ -8,7 +8,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  user-select: none;
   z-index: 1;
 }
 
@@ -106,6 +105,11 @@ strong {
   cursor: pointer;
 }
 
+.btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), var(--text-accent));
   color: var(--text-invert);
@@ -173,7 +177,9 @@ strong {
 .pill-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  min-height: 44px;
   font-family: var(--font-mono);
   font-size: 0.95rem;
   font-weight: 600;

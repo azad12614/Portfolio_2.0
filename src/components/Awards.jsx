@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
@@ -60,6 +61,20 @@ const awards = [
 ];
 
 function Awards() {
+  const swiperRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const toggleAutoplay = () => {
+    const swiper = swiperRef.current;
+    if (!swiper) return;
+    if (isPlaying) {
+      swiper.autoplay.stop();
+    } else {
+      swiper.autoplay.start();
+    }
+    setIsPlaying((prev) => !prev);
+  };
+
   return (
     <section className="award-section" id="Awards">
       <h2 className="header">🏆 My Achievements</h2>
@@ -78,8 +93,19 @@ function Awards() {
           pauseOnMouseEnter: true,
         }}
         pagination={{ clickable: true }}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         className="award-swiper"
       >
+        <button
+          type="button"
+          className="award-play-toggle"
+          onClick={toggleAutoplay}
+          aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
+        >
+          {isPlaying ? "⏸" : "▶"}
+        </button>
         {awards.map((award, index) => (
           <SwiperSlide key={index}>
             <div className="award-slide" title={award.title}>

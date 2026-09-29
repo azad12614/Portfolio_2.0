@@ -254,8 +254,10 @@
 
 .progress-fill {
   height: 100%;
+  width: 100%;
   border-radius: 4px;
-  transition: width 1s ease-in-out;
+  transform-origin: left;
+  transition: transform 1s ease-in-out;
   position: relative;
   background: linear-gradient(90deg, var(--primary), var(--text-accent));
 }

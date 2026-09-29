@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .env
+
+# Impeccable design-review snapshots (local tool output, not app code)
+.impeccable/

@@ -38,6 +38,18 @@ const Cards = ({ item, animateGrid, type }) => {
     return colors[workplace] || "var(--text-muted)";
   };
 
+  const renderDescription = (text) =>
+    text
+      .split(/(\*\*[^*]+\*\*)/g)
+      .filter(Boolean)
+      .map((part, i) =>
+        part.startsWith("**") && part.endsWith("**") ? (
+          <strong key={i}>{part.slice(2, -2)}</strong>
+        ) : (
+          part
+        )
+      );
+
   return (
     <div className={`experience-card ${animateGrid ? "animate-on-load" : ""}`}>
       <div className="card-glow"></div>
@@ -87,7 +99,7 @@ const Cards = ({ item, animateGrid, type }) => {
 
       {/* Description */}
       <div className="card-content">
-        <p className="description">{item.desc}</p>
+        <p className="description">{renderDescription(item.desc)}</p>
       </div>
 
       {/* Additional Info Footer */}

@@ -141,7 +141,7 @@ const Skills = () => {
                   style={{ "--skill-color": skill.color }}
                 >
                   <img loading="lazy" src={skill.image} alt={skill.name} />
-                  <h1>{skill.name}</h1>
+                  <p className="skill-name">{skill.name}</p>
                 </div>
               ))}
             </div>

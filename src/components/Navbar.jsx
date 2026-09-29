@@ -6,7 +6,9 @@ import "./Navbar.css";
 const sections = [
   { id: "Hero", label: "Home" },
   { id: "About", label: "About" },
-  { id: "Resume", label: "Journey" },
+  { id: "Resume", label: "Resume" },
+  { id: "Skills", label: "Skills" },
+  { id: "Coding", label: "Coding" },
   { id: "Project", label: "Projects" },
   { id: "Awards", label: "Awards" },
   { id: "Blog", label: "Blog" },
