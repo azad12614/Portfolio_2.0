@@ -184,7 +184,7 @@ const Coding = () => {
                 <div
                   className="progress-fill"
                   style={{
-                    width: `${Math.min((parseInt(p.rating) / p.maxScale) * 100, 100)}%`,
+                    transform: `scaleX(${Math.min(parseInt(p.rating) / p.maxScale, 1)})`,
                   }}
                 />
               </div>
