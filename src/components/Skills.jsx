@@ -10,6 +10,9 @@ import drizzle from "../assets/Lang/drizzle.svg";
 import eslint from "../assets/Lang/eslint.svg";
 import express from "../assets/Lang/express.svg";
 import fastapi from "../assets/Lang/fastapi.svg";
+import socketio from "../assets/Lang/socketio.svg";
+import stripe from "../assets/Lang/stripe.svg";
+import redis from "../assets/Lang/redis.svg";
 import git from "../assets/Lang/git.png";
 import hono from "../assets/Lang/hono.svg";
 import html from "../assets/Lang/html.svg";
@@ -73,6 +76,8 @@ const skillGroups = [
       { name: "RPC", image: rpc, color: "#ffffff" },
       { name: "REST API", image: restapi, color: "#6ab04c" },
       { name: "FastAPI", image: fastapi, color: "#009688" },
+      { name: "Socket.io", image: socketio, color: "#ffffff" },
+      { name: "Stripe", image: stripe, color: "#635bff" },
     ],
   },
   {
@@ -81,6 +86,7 @@ const skillGroups = [
       { name: "MongoDB", image: mongodb, color: "#62a53b" },
       { name: "PostgreSQL", image: postgresql, color: "#336791" },
       { name: "MySQL", image: sql, color: "#5485de" },
+      { name: "Redis", image: redis, color: "#ff4438" },
       { name: "Drizzle ORM", image: drizzle, color: "#c5f74f" },
     ],
   },
@@ -98,7 +104,7 @@ const skillGroups = [
       { name: "Git", image: git, color: "#ff5820" },
       { name: "GitHub", image: github, color: "#646664" },
       { name: "Docker", image: docker, color: "#2496ed" },
-      { name: "AWS SQS", image: awssqs, color: "#ff9900" },
+      { name: "SQS (LocalStack)", image: awssqs, color: "#ff9900" },
       { name: "Postman", image: postman, color: "#ff6c37" },
       { name: "Render", image: render, color: "#46e3b7" },
       { name: "ESLint", image: eslint, color: "#4b32c3" },
