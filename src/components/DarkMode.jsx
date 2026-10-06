@@ -21,7 +21,9 @@ const setSafeStorage = (key, value) => {
 
 // --- DarkMode Component ---
 const DarkMode = () => {
-  const [isLightMode, setIsLightMode] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(
+    () => getSafeStorage("theme") === "light",
+  );
 
   const setDarkMode = () => {
     document.querySelector("body").setAttribute("data-theme", "dark");
@@ -41,13 +43,9 @@ const DarkMode = () => {
   };
 
   useEffect(() => {
-    const savedTheme = getSafeStorage("theme");
-
-    const themeToApply = savedTheme || "dark";
+    const themeToApply = getSafeStorage("theme") || "dark";
 
     document.querySelector("body").setAttribute("data-theme", themeToApply);
-
-    setIsLightMode(themeToApply === "light");
   }, []);
 
   return (

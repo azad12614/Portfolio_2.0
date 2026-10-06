@@ -41,7 +41,7 @@ const Resume = () => {
       org: "MentorBhai",
       worktype: "Part-time training",
       workplace: "Remote",
-      desc: "Completed a structured full-stack engineering training program. Built **GhorBazar** and **AI Ticket Pipeline** as part of the curriculum, alongside a **HackerNews clone**, a **7GUIs benchmark implementation**, and a **static GenZ fashion website**. Contributed to the open-source **Bigcapital** accounting platform.",
+      desc: "Completed a structured full-stack engineering training program. Built **GhorBazar** and **Ticket Pipeline** as part of the curriculum, alongside a **HackerNews clone**, a **7GUIs benchmark implementation**, and a **static GenZ fashion website**. Contributed to the open-source **Bigcapital** accounting platform.",
     },
     {
       date: "2024 - Present",

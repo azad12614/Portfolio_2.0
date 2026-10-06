@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300..800&family=Jost:wght@300..800&family=Fira+Mono&family=Orbitron:wght@700&family=Cormorant+Garamond:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300..800&family=Jost:wght@300..800&family=Fira+Mono&family=Orbitron:wght@700&display=swap");
 
 /* =============================
       ⚙️ Global Resets
@@ -7,13 +7,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   z-index: 1;
 }
 
 html {
   cursor: var(--cursor-default);
   overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 a,

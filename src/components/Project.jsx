@@ -7,6 +7,7 @@ import FlyHigh from "../assets/Projects/FlyHigh.png";
 import GhorBazar from "../assets/Projects/GhorBazar.webp";
 import HackerNews from "../assets/Projects/Hacker_News.webp";
 import Ladder from "../assets/Projects/Ladder.png";
+import MTAcademy from "../assets/Projects/MTAcademy.webp";
 import NASA from "../assets/Projects/NASA.jpeg";
 import Portfolio from "../assets/Projects/Portfolio.png";
 import Rating from "../assets/Projects/Rating.png";
@@ -19,6 +20,18 @@ import "./Project.css";
 
 const ProjectList = [
   {
+    imgSrc: MTAcademy,
+    title: "MTAcademy",
+    tech: "Next.js, React, TypeScript, Python, FastAPI, PostgreSQL, Playwright, Stripe",
+    description:
+      "A production SaaS platform for corporate training sales, covering modular training sales and membership and quote-request flows. Contract work on a client product (private repository).",
+    live: "https://mtacademy.au/",
+    github: null,
+    tag: "Client Product",
+    team: false,
+    category: "Full Stack",
+  },
+  {
     imgSrc: GhorBazar,
     title: "GhorBazar",
     tech: "React, TanStack Start, Hono, RPC, Bun, Better Auth, Drizzle ORM, PostgreSQL, Docker, TypeScript, Tailwind CSS",
@@ -28,6 +41,18 @@ const ProjectList = [
     github: "https://github.com/azad12614/GhorBazar",
     tag: "Featured",
     team: true,
+    category: "Full Stack",
+  },
+  {
+    imgSrc: TicketPipeline,
+    title: "Ticket Pipeline",
+    tech: "Node.js, TypeScript, Express 5, PostgreSQL, SQS, Portkey AI, Socket.io, Zod, Docker",
+    description:
+      "Async AI-powered customer support ticket pipeline with 2-phase AI (triage + draft), queue-based worker (SQS on LocalStack), real-time Socket.io events via PG LISTEN/NOTIFY.",
+    live: null,
+    github: "https://github.com/azad12614/Ticket_Pipeline",
+    tag: "Featured",
+    team: false,
     category: "Full Stack",
   },
   {
@@ -75,18 +100,6 @@ const ProjectList = [
     live: "https://tasktracker12614.onrender.com/",
     github: "https://github.com/azad12614/TaskTracker",
     tag: "Personal Project",
-    team: false,
-    category: "Full Stack",
-  },
-  {
-    imgSrc: TicketPipeline,
-    title: "AI Ticket Pipeline",
-    tech: "Node.js, TypeScript, Express 5, PostgreSQL, SQS, Portkey AI, Socket.io, Zod, Docker",
-    description:
-      "Async AI-powered customer support ticket pipeline with 2-phase AI (triage + draft), queue-based worker (SQS on LocalStack), real-time Socket.io events via PG LISTEN/NOTIFY.",
-    live: null,
-    github: "https://github.com/azad12614/Ticket_Pipeline",
-    tag: "Featured",
     team: false,
     category: "Full Stack",
   },
@@ -139,18 +152,6 @@ const ProjectList = [
     category: "Frontend",
   },
   {
-    imgSrc: Sleepyheads,
-    title: "Sleepy Heads",
-    tech: "HTML, CSS, Python, ML",
-    description:
-      "A sleep health prediction tool that analyzes user input to suggest better sleep patterns.",
-    live: null,
-    github: "https://github.com/azad12614/SleepyHeads",
-    tag: "Academic Task",
-    team: true,
-    category: "Machine Learning",
-  },
-  {
     imgSrc: AVGlobalPath,
     title: "AV Global Path",
     tech: "HTML, CSS, JavaScript",
@@ -163,18 +164,6 @@ const ProjectList = [
     category: "Frontend",
   },
   {
-    imgSrc: Rating,
-    title: "CF Rating",
-    tech: "HTML, CSS, JavaScript",
-    description:
-      "A leaderboard showcasing Codeforces ratings of IIUC CSE students.",
-    live: "https://azad12614.github.io/CF_Rating_IIUC/",
-    github: "https://github.com/azad12614/CF_Rating_IIUC",
-    tag: "Learning Task",
-    team: false,
-    category: "Frontend",
-  },
-  {
     imgSrc: FlyHigh,
     title: "FlyHigh",
     tech: "HTML, CSS",
@@ -183,6 +172,30 @@ const ProjectList = [
     live: "https://azad12614.github.io/FlyHigh/",
     github: "https://github.com/azad12614/FlyHigh",
     tag: "Internship Task",
+    team: false,
+    category: "Frontend",
+  },
+  {
+    imgSrc: Sleepyheads,
+    title: "Sleepy Heads",
+    tech: "HTML, CSS, Python, ML",
+    description:
+      "A sleep health prediction tool that analyzes user input to suggest better sleep patterns.",
+    live: null,
+    github: "https://github.com/azad12614/SleepyHeads",
+    tag: "Academic Task",
+    team: true,
+    category: "Machine Learning",
+  },
+  {
+    imgSrc: Rating,
+    title: "CF Rating",
+    tech: "HTML, CSS, JavaScript",
+    description:
+      "A leaderboard showcasing Codeforces ratings of IIUC CSE students.",
+    live: "https://azad12614.github.io/CF_Rating_IIUC/",
+    github: "https://github.com/azad12614/CF_Rating_IIUC",
+    tag: "Learning Task",
     team: false,
     category: "Frontend",
   },
@@ -242,17 +255,19 @@ function ProjectCard({ imgSrc, title, tech, description, live, github, tag, team
                 Visit Live
               </a>
             )}
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-accent"
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-              Source Code
-            </a>
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-accent"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                Source Code
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -266,7 +281,7 @@ ProjectCard.propTypes = {
   tech: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   live: PropTypes.string,
-  github: PropTypes.string.isRequired,
+  github: PropTypes.string,
   tag: PropTypes.string,
   team: PropTypes.bool,
   category: PropTypes.string.isRequired,
