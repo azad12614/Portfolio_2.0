@@ -16,6 +16,7 @@ import thesis from "../assets/Awards/2025_Thesis.jpg";
 import faangSeminar from "../assets/Awards/FAANG.png";
 import icpc from "../assets/Awards/ICPC.png";
 import uias from "../assets/Awards/UIAS.png";
+import Icon from "./Icon";
 
 const awards = [
   {
@@ -105,11 +106,11 @@ function Awards() {
       >
         <button
           type="button"
-          className="award-play-toggle"
+          className="award-play-toggle icon-btn icon-btn--on-image"
           onClick={toggleAutoplay}
           aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
         >
-          {isPlaying ? "⏸" : "▶"}
+          <Icon name={isPlaying ? "pause" : "play"} />
         </button>
         {awards.map((award, index) => (
           <SwiperSlide key={index}>
