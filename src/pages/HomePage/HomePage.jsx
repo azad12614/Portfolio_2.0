@@ -13,13 +13,15 @@ const HomePage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <Hero></Hero>
-      <About></About>
-      <Resume></Resume>
-      <Project></Project>
-      <Awards></Awards>
-      <Blog></Blog>
-      <Contact></Contact>
+      <main>
+        <Hero></Hero>
+        <About></About>
+        <Resume></Resume>
+        <Project></Project>
+        <Awards></Awards>
+        <Blog></Blog>
+        <Contact></Contact>
+      </main>
       <Sidebar></Sidebar>
       <Top></Top>
     </div>
