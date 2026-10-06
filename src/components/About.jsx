@@ -1,9 +1,12 @@
 import "./About.css";
+import Icon from "./Icon";
 
 const About = () => {
   return (
     <section className="about-section" id="About">
-      <h2 className="header">💫 About Me</h2>
+      <h2 className="header">
+        <Icon name="user" /> About Me
+      </h2>
       <p className="title">&quot;Who I Am?&quot;</p>
       <div className="about-content">
         <div className="about-intro">
@@ -17,7 +20,9 @@ const About = () => {
 
         <div className="about-highlights">
           <div className="highlight-item">
-            <span className="highlight-icon">💼</span>
+            <span className="highlight-icon">
+              <Icon name="briefcase" />
+            </span>
             <p className="highlight-text">
               <strong>Current Role</strong> — Software Engineer (Contract) on the client product{" "}
               <strong>mtacademy.au</strong>, previously Web Developer Intern at{" "}
@@ -26,7 +31,9 @@ const About = () => {
           </div>
 
           <div className="highlight-item">
-            <span className="highlight-icon">🚀</span>
+            <span className="highlight-icon">
+              <Icon name="rocket" />
+            </span>
             <p className="highlight-text">
               <strong>Project Experience</strong> — Delivered{" "}
               <strong>10+ projects</strong> (MERN, TypeScript) and completed a
@@ -39,7 +46,9 @@ const About = () => {
           </div>
 
           <div className="highlight-item">
-            <span className="highlight-icon">💻</span>
+            <span className="highlight-icon">
+              <Icon name="laptop" />
+            </span>
             <p className="highlight-text">
               <strong>Technical Expertise</strong> — Proficient in{" "}
               <strong>MERN Stack, TypeScript, and modern web stack</strong> with
@@ -48,7 +57,9 @@ const About = () => {
           </div>
 
           <div className="highlight-item">
-            <span className="highlight-icon">🧠</span>
+            <span className="highlight-icon">
+              <Icon name="target" />
+            </span>
             <p className="highlight-text">
               <strong>Competitive Programming</strong> —{" "}
               <strong>Codeforces Pupil, CodeChef 3 Star</strong>; solved{" "}
@@ -59,7 +70,9 @@ const About = () => {
           </div>
 
           <div className="highlight-item">
-            <span className="highlight-icon">🏆</span>
+            <span className="highlight-icon">
+              <Icon name="users" />
+            </span>
             <p className="highlight-text">
               <strong>Mentorship</strong> — Mentored{" "}
               <strong>200+ students</strong> as Teaching Assistant, Bootcamp

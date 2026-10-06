@@ -3,11 +3,14 @@ import "./Contact.css";
 import fb from "../assets/Social/FB.png";
 import git from "../assets/Social/Github.png";
 import ln from "../assets/Social/Linkdin.png";
+import Icon from "./Icon";
 
 function Contact() {
   return (
     <section className="contact-section" id="Contact">
-      <h2 className="header">🌐 CONTACT ME</h2>
+      <h2 className="header">
+        <Icon name="send" /> CONTACT ME
+      </h2>
       <p className="title">&quot;Get in Touch, Don&apos;t Be Shy!!&quot;</p>
 
       <div className="contact-container">
@@ -20,7 +23,9 @@ function Contact() {
 
           <div className="contact-details">
             <div className="contact-item">
-              <div className="contact-icon">📍</div>
+              <div className="contact-icon">
+                <Icon name="map-pin" />
+              </div>
               <div className="contact-text">
                 <span className="contact-label">Location</span>
                 <a
@@ -35,7 +40,9 @@ function Contact() {
             </div>
 
             <div className="contact-item">
-              <div className="contact-icon">📞</div>
+              <div className="contact-icon">
+                <Icon name="phone" />
+              </div>
               <div className="contact-text">
                 <span className="contact-label">Phone</span>
                 <a href="tel:+8801630440005" className="contact-link">
@@ -45,7 +52,9 @@ function Contact() {
             </div>
 
             <div className="contact-item">
-              <div className="contact-icon">✉️</div>
+              <div className="contact-icon">
+                <Icon name="mail" />
+              </div>
               <div className="contact-text">
                 <span className="contact-label">Email</span>
                 <a

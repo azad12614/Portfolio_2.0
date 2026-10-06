@@ -17,6 +17,7 @@ import TaskTracker from "../assets/Projects/Task_Tracker.png";
 import TicketPipeline from "../assets/Projects/Ticket_Pipeline.webp";
 import VibeCast from "../assets/Projects/Vibe_Cast.png";
 import "./Project.css";
+import Icon from "./Icon";
 
 const ProjectList = [
   {
@@ -305,7 +306,9 @@ const Project = () => {
 
   return (
     <section className="project-section" id="Project">
-      <h2 className="header">🚀 PROJECTS</h2>
+      <h2 className="header">
+        <Icon name="folder" /> PROJECTS
+      </h2>
       <p className="title">
         &quot;My Projects keep expanding over time to better address even more
         challenges.&quot;

@@ -4,6 +4,7 @@ import CC from "../assets/Code/CC.png";
 import CF from "../assets/Code/CF.png";
 import LC from "../assets/Code/LC.png";
 import "./Coding.css";
+import Icon from "./Icon";
 
 const profiles = [
   {
@@ -146,7 +147,9 @@ const Coding = () => {
             {/* Full stat cards — desktop only */}
             <div className="stats-grid">
               <div className="stat-card rating-card">
-                <div className="stat-icon">📊</div>
+                <div className="stat-icon">
+                  <Icon name="bar-chart" />
+                </div>
                 <div className="stat-info">
                   <span className="stat-label">Current Rating</span>
                   <span className="stat-value">{p.rating}</span>
@@ -156,7 +159,9 @@ const Coding = () => {
                 </div>
               </div>
               <div className="stat-card rank-card">
-                <div className="stat-icon">🏅</div>
+                <div className="stat-icon">
+                  <Icon name="award" />
+                </div>
                 <div className="stat-info">
                   <span className="stat-label">Current Rank</span>
                   <span className="stat-value rank-value" style={{ color: getRankColor(p.rank) }}>
@@ -168,7 +173,9 @@ const Coding = () => {
                 </div>
               </div>
               <div className="stat-card solve-card">
-                <div className="stat-icon">✅</div>
+                <div className="stat-icon">
+                  <Icon name="check-circle" />
+                </div>
                 <div className="stat-info">
                   <span className="stat-label">Problems Solved</span>
                   <span className="stat-value">{p.solve}</span>

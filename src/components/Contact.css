@@ -75,6 +75,7 @@
 }
 
 .contact-icon {
+  color: var(--primary);
   font-size: 1.25rem;
   flex-shrink: 0;
 }

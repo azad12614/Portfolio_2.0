@@ -82,7 +82,9 @@ function Awards() {
 
   return (
     <section className="award-section" id="Awards">
-      <h2 className="header">🏆 My Achievements</h2>
+      <h2 className="header">
+        <Icon name="trophy" /> My Achievements
+      </h2>
       <p className="title">
         &quot;Achievements empower through innovation.&quot;
       </p>

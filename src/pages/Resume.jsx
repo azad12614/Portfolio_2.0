@@ -3,6 +3,7 @@ import Cards from "../components/Cards";
 import Coding from "../components/Coding";
 import Skills from "../components/Skills";
 import "./Resume.css";
+import Icon from "../components/Icon";
 
 const Resume = () => {
   const [activeTab, setActiveTab] = useState("jobs");
@@ -275,7 +276,9 @@ const Resume = () => {
 
   return (
     <section className="resume" id="Resume">
-      <h2 className="header">📊 My Journey</h2>
+      <h2 className="header">
+        <Icon name="flag" /> My Journey
+      </h2>
       <p className="title">
         &quot;Showcasing my skills and achievements in tech.&quot;
       </p>
@@ -287,31 +290,31 @@ const Resume = () => {
             className={`pill-btn ${activeTab === "jobs" ? "active" : ""}`}
             onClick={() => setActiveTab("jobs")}
           >
-            💼 Jobs
+            <Icon name="briefcase" /> Jobs
           </button>
           <button
             className={`pill-btn ${activeTab === "academic" ? "active" : ""}`}
             onClick={() => setActiveTab("academic")}
           >
-            👨🏻‍🎓 Academic Roles
+            <Icon name="book-open" /> Academic Roles
           </button>
           <button
             className={`pill-btn ${activeTab === "programming" ? "active" : ""}`}
             onClick={() => setActiveTab("programming")}
           >
-            🏆 Programming
+            <Icon name="code" /> Programming
           </button>
           <button
             className={`pill-btn ${activeTab === "education" ? "active" : ""}`}
             onClick={() => setActiveTab("education")}
           >
-            🎓 Education
+            <Icon name="graduation-cap" /> Education
           </button>
           <button
             className={`pill-btn ${activeTab === "achievements" ? "active" : ""}`}
             onClick={() => setActiveTab("achievements")}
           >
-            🏅 Awards & Certs
+            <Icon name="award" /> Awards & Certs
           </button>
         </div>
         <div className="gridedu" key={activeTab}>
@@ -338,12 +341,12 @@ const Resume = () => {
         </div>
 
         <div id="Skills">
-          <h4 className="resume-subtitle">My Skills 👩‍💻</h4>
+          <h4 className="resume-subtitle">My Skills <Icon name="cpu" /></h4>
           <Skills />
         </div>
 
         <div id="Coding">
-          <h4 className="resume-subtitle">Coding Profiles 🎯</h4>
+          <h4 className="resume-subtitle">Coding Profiles <Icon name="target" /></h4>
           <Coding />
         </div>
       </div>

@@ -10,6 +10,7 @@ import OrbitalAI from "../assets/Blog/Orbital_AI.webp";
 import Tech from "../assets/Blog/Tech.webp";
 import TSMC from "../assets/Blog/TSMC_A14.webp";
 import Win from "../assets/Blog/Win10.webp";
+import Icon from "./Icon";
 
 const blogData = [
   {
@@ -61,7 +62,9 @@ const prefersReducedMotion = window.matchMedia(
 const Blog = () => {
   return (
     <section className="blog-section" id="Blog">
-      <h2 className="header">✍️ My Blog Insights</h2>
+      <h2 className="header">
+        <Icon name="pen" /> My Blog Insights
+      </h2>
       <p className="title">
         &quot;Software is about empowering people with technology.&quot;
       </p>

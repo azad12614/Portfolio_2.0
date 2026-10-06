@@ -189,6 +189,7 @@
 }
 
 .stat-icon {
+  color: var(--primary);
   font-size: 2rem;
   margin-bottom: 1rem;
   position: relative;
