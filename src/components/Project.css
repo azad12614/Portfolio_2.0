@@ -218,9 +218,21 @@
 }
 
 /* The card overlay stays dark in the light theme, so its buttons need light text. */
-[data-theme="light"] .project-card .btn-accent {
+[data-theme="light"] .project-card .btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-invert);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+[data-theme="light"] .project-card .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+/* The card stays dark in the light theme, so the main button keeps the bright blue. */
+[data-theme="light"] .project-card .btn-primary {
+  background: linear-gradient(135deg, #02a9f7, #00c4e6);
+  color: #0d0d0f;
 }
 
 /* Responsive */
