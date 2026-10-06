@@ -244,10 +244,10 @@ strong {
    on-photo: they sit on the raw photo, so the backing is stronger. */
 .tag--on-image,
 .tag--on-photo {
-  --tag-solid-bg: linear-gradient(135deg, #02a9f7, #00c4e6);
-  --tag-solid-text: #0d0d0f;
+  --tag-solid-bg: linear-gradient(135deg, var(--on-dark-primary), var(--on-dark-accent));
+  --tag-solid-text: var(--on-dark-ink);
   --tag-soft-border: rgba(2, 169, 247, 0.4);
-  --tag-soft-text: #5fd0ff;
+  --tag-soft-text: var(--on-dark-tint);
   --tag-neutral-border: rgba(255, 255, 255, 0.25);
   --tag-neutral-text: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
@@ -306,14 +306,14 @@ strong {
 [data-theme="light"] .icon-btn--on-image {
   background: rgba(4, 8, 18, 0.75);
   border-color: rgba(255, 255, 255, 0.4);
-  color: #5fd0ff;
+  color: var(--on-dark-tint);
 }
 
 .icon-btn--on-image:hover,
 [data-theme="light"] .icon-btn--on-image:hover {
-  background: linear-gradient(135deg, #02a9f7, #00c4e6);
+  background: linear-gradient(135deg, var(--on-dark-primary), var(--on-dark-accent));
   border-color: transparent;
-  color: #0d0d0f;
+  color: var(--on-dark-ink);
 }
 
 /* =============================

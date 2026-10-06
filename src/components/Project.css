@@ -111,7 +111,7 @@
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--on-dark-text);
   margin: 0;
   line-height: 1.25;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
@@ -183,8 +183,8 @@
 
 /* The card stays dark in the light theme, so the main button keeps the bright blue. */
 [data-theme="light"] .project-card .btn-primary {
-  background: linear-gradient(135deg, #02a9f7, #00c4e6);
-  color: #0d0d0f;
+  background: linear-gradient(135deg, var(--on-dark-primary), var(--on-dark-accent));
+  color: var(--on-dark-ink);
 }
 
 /* Responsive */

@@ -35,13 +35,13 @@
 }
 
 .theme-toggle-on {
-  color: #000;
+  color: var(--text-main);
   opacity: 0;
   transform: rotate(45deg);
 }
 
 .theme-toggle-off {
-  color: #fff;
+  color: var(--text-main);
 }
 
 .theme-toggle-input:checked ~ .theme-toggle-off {

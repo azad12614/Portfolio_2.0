@@ -287,6 +287,13 @@ video {
   --font-logo: "Orbitron", serif;
 
   /* 🎨 Backgrounds */
+  /* Colors for text and chips on dark images, the same in both themes */
+  --on-dark-text: #ffffff;
+  --on-dark-ink: #0d0d0f;
+  --on-dark-primary: #02a9f7;
+  --on-dark-accent: #00c4e6;
+  --on-dark-tint: #5fd0ff;
+
   --bg-main: #0d0d0f;
   --bg-subtle: #11161c;
   --bg-accent: #124e66;
