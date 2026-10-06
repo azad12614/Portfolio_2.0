@@ -2,6 +2,7 @@ import About from "../../components/About";
 import Awards from "../../components/Awards";
 import Blog from "../../components/Blog";
 import Contact from "../../components/Contact";
+import Footer from "../../components/Footer";
 import Hero from "../../components/Hero";
 import Navbar from "../../components/Navbar";
 import Project from "../../components/Project";
@@ -22,6 +23,7 @@ const HomePage = () => {
         <Blog></Blog>
         <Contact></Contact>
       </main>
+      <Footer></Footer>
       <Sidebar></Sidebar>
       <Top></Top>
     </div>

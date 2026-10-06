@@ -174,15 +174,6 @@
   transform: scale(1.1);
 }
 
-.copyright {
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  color: var(--text-muted);
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(102, 252, 241, 0.2);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .contact-section {

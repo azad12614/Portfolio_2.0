@@ -137,10 +137,6 @@ function Contact() {
             </div>
           </div>
 
-          <div className="copyright">
-            &copy; {new Date().getFullYear()} Abdullah Al Azad. All rights
-            reserved.
-          </div>
         </div>
       </div>
     </section>
