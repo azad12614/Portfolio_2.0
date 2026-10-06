@@ -52,7 +52,7 @@ const Hero = () => {
         <div className="hero-content">
           {/* Text Content */}
           <div className="hero-text">
-            <div className="hero-badge">
+            <div className="hero-badge tag tag--lg tag--soft">
               <span className="badge-dot"></span>
               Available for opportunities
             </div>

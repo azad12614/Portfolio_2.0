@@ -93,27 +93,7 @@
 }
 
 .team-badge {
-  background: var(--badge-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: var(--text-accent);
-  padding: 0.3rem 0.7rem;
-  border-radius: 50px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  border: 1px solid rgba(0, 196, 230, 0.35);
   margin-right: auto;
-}
-
-.tag-badge {
-  background: linear-gradient(135deg, var(--primary), var(--text-accent));
-  color: var(--text-invert);
-  padding: 0.3rem 0.75rem;
-  border-radius: 50px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
 }
 
 /* ── Bottom area: text content ── */
@@ -124,17 +104,6 @@
 }
 
 .category-tag {
-  display: inline-block;
-  background: var(--badge-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: var(--primary);
-  padding: 0.3rem 0.7rem;
-  border-radius: 50px;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  border: 1px solid rgba(2, 169, 247, 0.3);
   align-self: flex-start;
 }
 
@@ -164,23 +133,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
-}
-
-.tech-badge {
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.8);
-  padding: 0.25rem 0.6rem;
-  border-radius: 50px;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
-  transition: border-color 0.2s ease;
-}
-
-.project-card:hover .tech-badge {
-  border-color: rgba(2, 169, 247, 0.4);
 }
 
 /* ── Action buttons: ALWAYS row, never stack ── */

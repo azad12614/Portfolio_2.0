@@ -140,7 +140,7 @@ const Skills = () => {
           {group.chips ? (
             <div className="skill-chips">
               {group.chips.map((chip) => (
-                <span className="skill-chip" key={chip}>
+                <span className="tag tag--lg tag--neutral" key={chip}>
                   {chip}
                 </span>
               ))}

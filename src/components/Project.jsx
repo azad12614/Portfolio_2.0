@@ -222,18 +222,18 @@ function ProjectCard({ imgSrc, title, tech, description, live, github, tag, team
       <img src={imgSrc} alt={title} className="card-bg-img" loading="lazy" />
       <div className="card-overlay">
         <div className="card-top">
-          {team && <span className="team-badge">Team</span>}
-          <span className="tag-badge">{tag}</span>
+          {team && <span className="team-badge tag tag--soft tag--on-photo">Team</span>}
+          <span className="tag tag--solid tag--on-image">{tag}</span>
         </div>
 
         <div className="card-bottom">
-          <span className="category-tag">{category}</span>
+          <span className="category-tag tag tag--soft tag--on-image">{category}</span>
           <h3 className="project-title">{title}</h3>
           <p className="project-description">{description}</p>
 
           <div className="tech-stack">
             {tech.split(",").map((t) => (
-              <span key={t.trim()} className="tech-badge">
+              <span key={t.trim()} className="tag tag--sm tag--neutral tag--on-image">
                 {t.trim()}
               </span>
             ))}

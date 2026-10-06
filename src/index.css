@@ -475,3 +475,55 @@ video {
   line-height: 2.5rem;
   font-weight: 800;
 }
+
+/* =============================
+      🏷️ Tag tokens
+============================= */
+:root {
+  --tag-solid-bg: linear-gradient(135deg, var(--primary), var(--text-accent));
+  --tag-solid-text: var(--text-invert);
+  --tag-soft-bg: rgba(2, 169, 247, 0.14);
+  --tag-soft-border: rgba(2, 169, 247, 0.4);
+  --tag-soft-text: #4cc3fa;
+  --tag-neutral-bg: rgba(255, 255, 255, 0.08);
+  --tag-neutral-border: rgba(255, 255, 255, 0.2);
+  --tag-neutral-text: rgba(255, 255, 255, 0.8);
+
+  --status-success-text: #34d399;
+  --status-success-bg: rgba(16, 185, 129, 0.16);
+  --status-success-border: rgba(16, 185, 129, 0.45);
+  --status-info-text: #60a5fa;
+  --status-info-bg: rgba(59, 130, 246, 0.16);
+  --status-info-border: rgba(59, 130, 246, 0.45);
+  --status-neutral-text: #aab7bd;
+  --status-neutral-bg: rgba(138, 156, 163, 0.14);
+  --status-neutral-border: rgba(138, 156, 163, 0.4);
+  --status-warn-text: #fbbf24;
+  --status-warn-bg: rgba(245, 158, 11, 0.16);
+  --status-warn-border: rgba(245, 158, 11, 0.45);
+}
+
+[data-theme="light"] {
+  /* Re-declared so var() resolves with the light theme values */
+  --tag-solid-bg: linear-gradient(135deg, var(--primary), var(--text-accent));
+  --tag-solid-text: var(--text-invert);
+  --tag-soft-bg: rgba(0, 96, 143, 0.1);
+  --tag-soft-border: rgba(0, 96, 143, 0.4);
+  --tag-soft-text: #00557d;
+  --tag-neutral-bg: rgba(28, 46, 56, 0.06);
+  --tag-neutral-border: rgba(28, 46, 56, 0.25);
+  --tag-neutral-text: var(--text-main);
+
+  --status-success-text: #065f46;
+  --status-success-bg: rgba(5, 150, 105, 0.12);
+  --status-success-border: rgba(5, 150, 105, 0.45);
+  --status-info-text: #1d4ed8;
+  --status-info-bg: rgba(37, 99, 235, 0.1);
+  --status-info-border: rgba(37, 99, 235, 0.4);
+  --status-neutral-text: #3a4f5d;
+  --status-neutral-bg: rgba(74, 96, 112, 0.1);
+  --status-neutral-border: rgba(74, 96, 112, 0.35);
+  --status-warn-text: #92400e;
+  --status-warn-bg: rgba(217, 119, 6, 0.12);
+  --status-warn-border: rgba(217, 119, 6, 0.45);
+}

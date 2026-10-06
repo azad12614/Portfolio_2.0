@@ -173,6 +173,98 @@ strong {
 }
 
 /* =============================
+      🏷️ Tags: static labels
+      type: tag--solid | tag--soft | tag--neutral | tag--success | tag--info | tag--warn
+      size: (medium) | tag--sm | tag--lg
+============================= */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 1.75rem;
+  padding: 0 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.tag--sm {
+  min-height: 1.5rem;
+  padding: 0 0.6rem;
+  font-size: 0.72rem;
+}
+
+.tag--lg {
+  min-height: 2.5rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+}
+
+.tag--solid {
+  background: var(--tag-solid-bg);
+  color: var(--tag-solid-text);
+}
+
+.tag--soft {
+  background: var(--tag-soft-bg);
+  border-color: var(--tag-soft-border);
+  color: var(--tag-soft-text);
+}
+
+.tag--neutral {
+  background: var(--tag-neutral-bg);
+  border-color: var(--tag-neutral-border);
+  color: var(--tag-neutral-text);
+}
+
+.tag--success {
+  background: var(--status-success-bg);
+  border-color: var(--status-success-border);
+  color: var(--status-success-text);
+}
+
+.tag--info {
+  background: var(--status-info-bg);
+  border-color: var(--status-info-border);
+  color: var(--status-info-text);
+}
+
+.tag--warn {
+  background: var(--status-warn-bg);
+  border-color: var(--status-warn-border);
+  color: var(--status-warn-text);
+}
+
+/* Tags on a card image carry their own backing in both themes.
+   on-image: the dark gradient overlay is already behind them, so a light backing is enough.
+   on-photo: they sit on the raw photo, so the backing is stronger. */
+.tag--on-image,
+.tag--on-photo {
+  --tag-solid-bg: linear-gradient(135deg, #02a9f7, #00c4e6);
+  --tag-solid-text: #0d0d0f;
+  --tag-soft-border: rgba(2, 169, 247, 0.4);
+  --tag-soft-text: #5fd0ff;
+  --tag-neutral-border: rgba(255, 255, 255, 0.25);
+  --tag-neutral-text: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.tag--on-image {
+  --tag-soft-bg: rgba(4, 8, 18, 0.6);
+  --tag-neutral-bg: rgba(4, 8, 18, 0.6);
+}
+
+.tag--on-photo {
+  --tag-soft-bg: rgba(4, 8, 18, 0.8);
+  --tag-neutral-bg: rgba(4, 8, 18, 0.8);
+}
+
+/* =============================
       💊 Global Pill Tabs
 ============================= */
 .pill-group {

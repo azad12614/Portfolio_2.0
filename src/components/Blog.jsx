@@ -120,8 +120,8 @@ const Blog = () => {
                   />
                   <div className="blog-overlay">
                     <div className="blog-meta">
-                      <span className="blog-date">{item.date}</span>
-                      <span className="blog-read-time">{item.readTime}</span>
+                      <span className="tag tag--soft tag--on-photo">{item.date}</span>
+                      <span className="tag tag--neutral tag--on-photo">{item.readTime}</span>
                     </div>
                   </div>
                 </div>
@@ -149,7 +149,7 @@ const Blog = () => {
                         <path d="M7 17l9.2-9.2M17 17V7H7" />
                       </svg>
                     </a>
-                    <span className="blog-tag">Tech Blog</span>
+                    <span className="tag tag--solid">Tech Blog</span>
                   </div>
                 </div>
               </div>
