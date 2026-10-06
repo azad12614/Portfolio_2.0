@@ -32,7 +32,7 @@ npm run preview  # serve the production build
 npm run lint
 ```
 
-Node 20.19 or newer (or 22.12+) is needed for Vite 8.
+Vite 8 needs Node `^20.19.0` or `>=22.12.0`. Node 21 is not supported.
 
 ## Structure
 
