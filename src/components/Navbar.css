@@ -71,6 +71,9 @@
   color: var(--text-main);
   text-decoration: none;
   position: relative;
+  /* Padding grows the tap area to 44px, the negative margin keeps the layout */
+  padding-block: 0.6rem;
+  margin-block: -0.6rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -90,7 +93,7 @@
   height: 2px;
   background-color: var(--text-accent);
   left: 0;
-  bottom: -4px;
+  bottom: calc(0.6rem - 4px);
   border-radius: 2px;
 }
 
@@ -101,7 +104,7 @@
   height: 2px;
   background-color: var(--text-accent);
   left: 0;
-  bottom: -4px;
+  bottom: calc(0.6rem - 4px);
   border-radius: 2px;
   transform: scaleX(0);
   transform-origin: left;
