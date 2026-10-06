@@ -24,6 +24,7 @@ import nextjs from "../assets/Lang/nextjs.png";
 import node from "../assets/Lang/node.svg";
 import playwright from "../assets/Lang/playwright.svg";
 import python from "../assets/Lang/python.png";
+import pytest from "../assets/Lang/pytest.svg";
 import rpc from "../assets/Lang/rpc.svg";
 import docker from "../assets/Lang/docker.svg";
 import postgresql from "../assets/Lang/postgresql.svg";
@@ -105,11 +106,17 @@ const skillGroups = [
       { name: "GitHub", image: github, color: "#646664" },
       { name: "Docker", image: docker, color: "#2496ed" },
       { name: "SQS (LocalStack)", image: awssqs, color: "#ff9900" },
-      { name: "Postman", image: postman, color: "#ff6c37" },
       { name: "Render", image: render, color: "#46e3b7" },
       { name: "ESLint", image: eslint, color: "#4b32c3" },
       { name: "Prettier", image: prettier, color: "#f7b93e" },
+    ],
+  },
+  {
+    label: "Testing & QA",
+    skills: [
+      { name: "Postman", image: postman, color: "#ff6c37" },
       { name: "Playwright", image: playwright, color: "#2ead33" },
+      { name: "Pytest", image: pytest, color: "#0a9edc" },
     ],
   },
   {
