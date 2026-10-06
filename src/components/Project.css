@@ -217,6 +217,12 @@
   );
 }
 
+/* The card overlay stays dark in the light theme, so its buttons need light text. */
+[data-theme="light"] .project-card .btn-accent {
+  color: var(--text-invert);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 /* Responsive */
 @media (max-width: 1080px) {
   .project-grid {

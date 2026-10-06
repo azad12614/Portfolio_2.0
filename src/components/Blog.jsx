@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -54,7 +55,25 @@ const blogData = [
   },
 ];
 
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+
 const Blog = () => {
+  const swiperRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(!prefersReducedMotion);
+
+  const toggleAutoplay = () => {
+    const swiper = swiperRef.current;
+    if (!swiper) return;
+    if (isPlaying) {
+      swiper.autoplay.stop();
+    } else {
+      swiper.autoplay.start();
+    }
+    setIsPlaying((prev) => !prev);
+  };
+
   return (
     <section className="blog-section" id="Blog">
       <h2 className="header">✍️ My Blog Insights</h2>
@@ -75,8 +94,20 @@ const Blog = () => {
             pauseOnMouseEnter: true,
           }}
           pagination={{ clickable: true }}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+            if (prefersReducedMotion) swiper.autoplay.stop();
+          }}
           className="blog-swiper"
         >
+          <button
+            type="button"
+            className="blog-play-toggle"
+            onClick={toggleAutoplay}
+            aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
+          >
+            {isPlaying ? "⏸" : "▶"}
+          </button>
           {blogData.map((item) => (
             <SwiperSlide key={item.link}>
               <div className="blog-card">

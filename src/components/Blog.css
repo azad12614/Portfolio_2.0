@@ -35,6 +35,31 @@
   padding: 2rem 0 3rem !important;
 }
 
+/* Pause control for the autoplay carousel (WCAG 2.2.2). */
+.blog-play-toggle {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.5rem;
+  z-index: 10;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-play-toggle:hover {
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  color: var(--text-invert);
+  border-color: transparent;
+}
+
 /* Horizontal shadow clearance lives on the slide, not the swiper: the
    swiper keeps overflow:hidden clipped tight to its content width so
    the adjacent slide stays fully off-screen. Padding directly on the

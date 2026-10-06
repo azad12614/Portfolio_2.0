@@ -60,9 +60,13 @@ const awards = [
   },
 ];
 
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+
 function Awards() {
   const swiperRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(!prefersReducedMotion);
 
   const toggleAutoplay = () => {
     const swiper = swiperRef.current;
@@ -95,6 +99,7 @@ function Awards() {
         pagination={{ clickable: true }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
+          if (prefersReducedMotion) swiper.autoplay.stop();
         }}
         className="award-swiper"
       >
