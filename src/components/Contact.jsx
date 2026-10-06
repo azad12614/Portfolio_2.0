@@ -105,7 +105,7 @@ function Contact() {
           </div>
 
           <div className="contact-social-links">
-            <h4 className="social-title">Follow Me</h4>
+            <h3 className="social-title">Follow Me</h3>
             <div className="social-icons">
               <a
                 href="https://github.com/azad12614"

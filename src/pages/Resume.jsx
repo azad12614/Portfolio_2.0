@@ -284,7 +284,7 @@ const Resume = () => {
       </p>
 
       <div className="resume-container">
-        <h4 className="resume-subtitle">Experience Timeline</h4>
+        <h3 className="resume-subtitle">Experience Timeline <Icon name="clock" /></h3>
         <div className="pill-group">
           <button
             className={`pill-btn ${activeTab === "jobs" ? "active" : ""}`}
@@ -341,12 +341,12 @@ const Resume = () => {
         </div>
 
         <div id="Skills">
-          <h4 className="resume-subtitle">My Skills <Icon name="cpu" /></h4>
+          <h3 className="resume-subtitle">My Skills <Icon name="cpu" /></h3>
           <Skills />
         </div>
 
         <div id="Coding">
-          <h4 className="resume-subtitle">Coding Profiles <Icon name="target" /></h4>
+          <h3 className="resume-subtitle">Coding Profiles <Icon name="target" /></h3>
           <Coding />
         </div>
       </div>

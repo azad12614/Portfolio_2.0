@@ -57,11 +57,11 @@ const Cards = ({ item, animateGrid, type }) => {
       </div>
 
       {/* Position Title */}
-      <h2 className="position-title">{item.title}</h2>
+      <h4 className="position-title">{item.title}</h4>
 
       {/* Organization */}
       <div className="company-section">
-        <h3 className="company-name">
+        <p className="company-name">
           {item.link ? (
             <a href={item.link} target="_blank" rel="noopener noreferrer">
               {item.org}
@@ -69,7 +69,7 @@ const Cards = ({ item, animateGrid, type }) => {
           ) : (
             item.org
           )}
-        </h3>
+        </p>
       </div>
 
       {/* Description */}
