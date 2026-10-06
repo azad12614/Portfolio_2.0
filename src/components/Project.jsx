@@ -81,9 +81,9 @@ const ProjectList = [
   {
     imgSrc: TicketPipeline,
     title: "AI Ticket Pipeline",
-    tech: "Node.js, TypeScript, Express 5, PostgreSQL, AWS SQS, Portkey AI, Socket.io, Zod, Docker",
+    tech: "Node.js, TypeScript, Express 5, PostgreSQL, SQS, Portkey AI, Socket.io, Zod, Docker",
     description:
-      "Async AI-powered customer support ticket pipeline with 2-phase AI (triage + draft), queue-based worker, real-time Socket.io events via PG LISTEN/NOTIFY.",
+      "Async AI-powered customer support ticket pipeline with 2-phase AI (triage + draft), queue-based worker (SQS on LocalStack), real-time Socket.io events via PG LISTEN/NOTIFY.",
     live: null,
     github: "https://github.com/azad12614/Ticket_Pipeline",
     tag: "Featured",

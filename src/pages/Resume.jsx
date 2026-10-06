@@ -10,12 +10,11 @@ const Resume = () => {
   const job = [
     {
       date: "Aug 2026 - Present",
-      title: "Software Engineer Intern",
-      org: "mtacademy.au",
-      worktype: "Full-time",
+      title: "Software Engineer (Contract)",
+      org: "Independent",
+      worktype: "Contract",
       workplace: "Remote",
-      link: "https://mtacademy.au/",
-      desc: "Contributing full-stack engineer on a production SaaS platform for corporate training sales, covering modular training sales, membership and quote-request flows, and workflow automation. Shipped **certificate/PDF generation**, **admin search and access-control fixes**, and **Playwright end-to-end coverage** across a **Next.js and FastAPI** stack.",
+      desc: "Contract full-stack engineer, working with a senior engineer on a client product, **mtacademy.au**: a production SaaS platform for corporate training sales, covering modular training sales, membership and quote-request flows, and workflow automation. Shipped **certificate/PDF generation**, **admin search and access-control fixes**, and **Playwright end-to-end coverage** across a **Next.js and FastAPI** stack.",
     },
     {
       date: "Oct 2025 - Feb 2026",
@@ -37,10 +36,10 @@ const Resume = () => {
       desc: "Managing and enhancing **backend infrastructure** for IIUCCPS, supporting the society's web presence and technical operations.",
     },
     {
-      date: "Jan 2026 - Jul 2026",
-      title: "Trainee, Batch MB52",
-      org: "mentorbhai",
-      worktype: "Training",
+      date: "Nov 2025 - Jul 2026",
+      title: "Full-Stack Engineering Training (Batch MB52)",
+      org: "MentorBhai",
+      worktype: "Part-time training",
       workplace: "Remote",
       desc: "Completed a structured full-stack engineering training program. Built **GhorBazar** and **AI Ticket Pipeline** as part of the curriculum, alongside a **HackerNews clone**, a **7GUIs benchmark implementation**, and a **static GenZ fashion website**. Contributed to the open-source **Bigcapital** accounting platform.",
     },
