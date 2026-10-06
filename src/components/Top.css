@@ -173,6 +173,11 @@
   .top-button:hover {
     transform: none;
   }
+
+  /* Without the fade-in animation the button would stay at opacity: 0. */
+  .top-button.visible {
+    opacity: 1;
+  }
 }
 
 /* Focus states for accessibility */

@@ -52,7 +52,7 @@ const Navbar = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="navbar-logo">
-        <a href="/" className="logo-link" aria-label="Home">
+        <a href="#Hero" className="logo-link" aria-label="Home">
           <img src={logo} alt="Azad Logo" className="logo-img" />
         </a>
       </div>

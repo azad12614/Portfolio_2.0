@@ -1,102 +1,50 @@
-# Abdullah Al Azad – Portfolio 2.0
+# Abdullah Al Azad, Portfolio 2.0
 
-**A sleek, React-powered personal portfolio showcasing my projects, skills, and professional journey.**
+Personal portfolio of a full-stack developer. One page with my projects, skills, experience, awards and writing.
 
-[Live Demo](https://azad12614.onrender.com/) | [GitHub Repo](https://github.com/azad12614/Portfolio_2.0)
+[Live site](https://azad12614.onrender.com/) | [GitHub repo](https://github.com/azad12614/Portfolio_2.0)
 
----
+## Sections
 
-## Overview
+- **Hero and About**: short introduction and current role.
+- **Skills and Experience**: skills grouped by area, with a timeline of work and education. Links to the resume PDF.
+- **Projects**: filterable cards (All, Full Stack, Frontend, Machine Learning) with live and source links.
+- **Awards**: certificates and achievements in a slider.
+- **Blog**: latest posts from my blog feed.
+- **Contact**: email, phone, location and social links.
 
-My second-generation portfolio built with **React.js** serves as a centralized showcase for my work, academic background, and technical skills. Clean, responsive, and fully customizable, it helps me present my developer profile with clarity and style.
+## Tech stack
 
----
+| Area | Tools |
+| --- | --- |
+| UI | React 19, plain CSS, Swiper 14 |
+| Build | Vite 8 |
+| Lint | ESLint 10 (flat config) |
+| Hosting | Render |
 
-## Key Features
-
-- **Navigation Menu** – Smooth transitions between site sections.
-- **Hero Section** – High-impact introduction with visual focus.
-- **About Me** – Personal narrative and developer identity.
-- **Skills** – Organized display of technical proficiencies.
-- **Experience & Education** – Timeline of academic and professional milestones.
-- **Achievements** – Highlighted accomplishments and accolades.
-- **Projects** – Gallery of major works with descriptions and links.
-- **Blog** – Optional section for sharing insights or tutorials.
-- **Contact Form** – Built-in form for visitor inquiries.
-
----
-
-## Tech Stack
-
-| Category        | Technologies                |
-| --------------- | --------------------------- |
-| **Frontend**    | React.js, CSS               |
-| **Build Tools** | Vite                        |
-| **Deployment**  | Render                      |
-
----
-
-## Project Structure
-
-```
-/src
-  ├─ components/         – Reusable React components (e.g., Navbar, Hero, ContactForm)
-  ├─ pages/              – Page-level views (e.g., Home)
-  ├─ assets/             – Images, icons, and static assets
-  └─ App.jsx             – Primary app container
-
-public/
-  └─ og-image.png        – Link preview card (1200 x 630)
-
-Configuration:
-  ├─ index.html          – HTML template
-  ├─ package.json        – Project metadata & dependencies
-  └─ LICENSE             – MIT licensing
-```
-
----
-
-## Why It Matters
-
-- **Personal Branding**: A curated, professional hub representing your capabilities and journey.
-- **Customizable & Scalable**: Easily tweak or expand sections as your profile evolves.
-- **Responsive Design**: Ensures accessibility across devices and screen sizes.
-- **Builds Technical Credibility**: Demonstrates you understand React component structure and modern frontend architecture.
-
----
-
-## Getting Started
-
-Clone the repository and get it running locally:
+## Run it
 
 ```bash
-git clone https://github.com/azad12614/Portfolio_2.0.git
-cd Portfolio_2.0
-npm install        # installs dependencies
-npm run dev        # starts React development server (usually http://localhost:3000)
+npm install
+npm run dev      # Vite dev server, http://localhost:5173
+npm run build    # production build in dist/
+npm run preview  # serve the production build
+npm run lint
 ```
 
----
+Node 20.19 or newer (or 22.12+) is needed for Vite 8.
 
-## Keywords for Visibility
+## Structure
 
-- **Frontend:** React.js, Vite, CSS, Responsive Design, Component-Based UI, Portfolio Site
-- **Concepts:** Personal Branding, Developer Portfolio, UX/UI Design, Modern Web Development
+```
+src/
+  components/   page sections (Hero, Project, Skills, Blog, ...)
+  pages/        HomePage and Resume
+  assets/       images, icons, resume PDF
+public/
+  og-image.png  link preview card (1200 x 630)
+```
 
----
+## License
 
-## What’s Next
-
-- **Enhance with Blogging Platform**: Use Markdown or CMS integration for dynamic blog entries.
-- **SEO Improvements**: Add meta tags, Open Graph, and structured data for better discoverability.
-- **Integrate Analytics**: Add Google Analytics or similar to track visitor engagement.
-- **PWA Features**: Make your portfolio installable and available offline.
-
----
-
-## Credits & Contact
-
-**Created with passion by Abdullah Al Azad** – full-stack developer dedicated to clean design and functional presentation.
-Explore, critique, or connect anytime!
-
----
+MIT. See `LICENSE`.
