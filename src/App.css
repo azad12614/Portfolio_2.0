@@ -234,3 +234,12 @@ strong {
     font-size: clamp(1rem, 3vw, 1.5rem);
   }
 }
+
+/* Shared SVG icons: size with the surrounding text */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+}
