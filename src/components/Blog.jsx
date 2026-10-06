@@ -10,6 +10,7 @@ import OrbitalAI from "../assets/Blog/Orbital_AI.webp";
 import Tech from "../assets/Blog/Tech.webp";
 import TSMC from "../assets/Blog/TSMC_A14.webp";
 import Win from "../assets/Blog/Win10.webp";
+import Icon from "./Icon";
 
 const blogData = [
   {
@@ -54,10 +55,16 @@ const blogData = [
   },
 ];
 
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+
 const Blog = () => {
   return (
     <section className="blog-section" id="Blog">
-      <h2 className="header">✍️ My Blog Insights</h2>
+      <h2 className="header">
+        <Icon name="pen" /> My Blog Insights
+      </h2>
       <p className="title">
         &quot;Software is about empowering people with technology.&quot;
       </p>
@@ -75,6 +82,9 @@ const Blog = () => {
             pauseOnMouseEnter: true,
           }}
           pagination={{ clickable: true }}
+          onSwiper={(swiper) => {
+            if (prefersReducedMotion) swiper.autoplay.stop();
+          }}
           className="blog-swiper"
         >
           {blogData.map((item) => (
@@ -89,8 +99,8 @@ const Blog = () => {
                   />
                   <div className="blog-overlay">
                     <div className="blog-meta">
-                      <span className="blog-date">{item.date}</span>
-                      <span className="blog-read-time">{item.readTime}</span>
+                      <span className="tag tag--soft tag--on-photo">{item.date}</span>
+                      <span className="tag tag--neutral tag--on-photo">{item.readTime}</span>
                     </div>
                   </div>
                 </div>
@@ -118,7 +128,7 @@ const Blog = () => {
                         <path d="M7 17l9.2-9.2M17 17V7H7" />
                       </svg>
                     </a>
-                    <span className="blog-tag">Tech Blog</span>
+                    <span className="tag tag--solid">Tech Blog</span>
                   </div>
                 </div>
               </div>

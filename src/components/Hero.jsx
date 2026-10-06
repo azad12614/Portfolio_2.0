@@ -4,6 +4,7 @@ import fb from "../assets/Social/FB.png";
 import git from "../assets/Social/Github.png";
 import ln from "../assets/Social/Linkdin.png";
 import "./Hero.css";
+import Icon from "./Icon";
 
 const Hero = () => {
   const floatingItems = [
@@ -51,7 +52,7 @@ const Hero = () => {
         <div className="hero-content">
           {/* Text Content */}
           <div className="hero-text">
-            <div className="hero-badge">
+            <div className="hero-badge tag tag--lg tag--soft">
               <span className="badge-dot"></span>
               Available for opportunities
             </div>
@@ -79,7 +80,7 @@ const Hero = () => {
                 href={pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="primary-btn"
+                className="btn btn-secondary"
               >
                 <svg
                   width="18"
@@ -97,21 +98,8 @@ const Hero = () => {
                 </svg>
                 View Resume
               </a>
-              <a href="#Project" className="accent-btn">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"></polygon>
-                  <line x1="12" y1="22" x2="12" y2="15.5"></line>
-                  <polyline points="22,8.5 12,15.5 2,8.5"></polyline>
-                  <polyline points="12,15.5 12,8.5 22,8.5"></polyline>
-                  <polyline points="12,15.5 2,8.5 12,8.5"></polyline>
-                </svg>
+              <a href="#Project" className="btn btn-primary">
+                <Icon name="compass" size={18} />
                 Explore Projects
               </a>
             </div>

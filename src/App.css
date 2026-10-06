@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300..800&family=Jost:wght@300..800&family=Fira+Mono&family=Orbitron:wght@700&display=swap");
-
 /* =============================
       ⚙️ Global Resets
 ============================= */
@@ -105,7 +103,13 @@ strong {
   font-family: var(--font-mono);
   font-weight: 600;
   font-size: 0.9rem;
-  transition: all 0.2s ease;
+  min-height: 2.75rem;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
   border: 1px solid transparent;
   cursor: pointer;
 }
@@ -134,14 +138,14 @@ strong {
 .btn-secondary {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text-main);
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.55);
   transform: translateY(-1px);
 }
 
@@ -149,22 +153,167 @@ strong {
   transform: translateY(0);
 }
 
-.btn-accent {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text-main);
-  border-color: rgba(255, 255, 255, 0.12);
+/* Light theme: the white-on-white fill and border would be invisible */
+[data-theme="light"] .btn-secondary {
+  background: var(--bg-glass-2);
+  border-color: var(--text-muted);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: var(--bg-accent);
+  border-color: var(--text-main);
+}
+
+/* Touch screens: the theme toggle reaches the 44px target size */
+@media (pointer: coarse) {
+  .theme-toggle {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+/* =============================
+      🏷️ Tags: static labels
+      type: tag--solid | tag--soft | tag--neutral | tag--success | tag--info | tag--warn
+      size: (medium) | tag--sm | tag--lg
+============================= */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 1.75rem;
+  padding: 0 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.tag--sm {
+  min-height: 1.5rem;
+  padding: 0 0.6rem;
+  font-size: 0.72rem;
+}
+
+.tag--lg {
+  min-height: 2.5rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+}
+
+.tag--solid {
+  background: var(--tag-solid-bg);
+  color: var(--tag-solid-text);
+}
+
+.tag--soft {
+  background: var(--tag-soft-bg);
+  border-color: var(--tag-soft-border);
+  color: var(--tag-soft-text);
+}
+
+.tag--neutral {
+  background: var(--tag-neutral-bg);
+  border-color: var(--tag-neutral-border);
+  color: var(--tag-neutral-text);
+}
+
+.tag--success {
+  background: var(--status-success-bg);
+  border-color: var(--status-success-border);
+  color: var(--status-success-text);
+}
+
+.tag--info {
+  background: var(--status-info-bg);
+  border-color: var(--status-info-border);
+  color: var(--status-info-text);
+}
+
+.tag--warn {
+  background: var(--status-warn-bg);
+  border-color: var(--status-warn-border);
+  color: var(--status-warn-text);
+}
+
+/* Tags on a card image carry their own backing in both themes.
+   on-image: the dark gradient overlay is already behind them, so a light backing is enough.
+   on-photo: they sit on the raw photo, so the backing is stronger. */
+.tag--on-image,
+.tag--on-photo {
+  --tag-solid-bg: linear-gradient(135deg, var(--on-dark-primary), var(--on-dark-accent));
+  --tag-solid-text: var(--on-dark-ink);
+  --tag-soft-border: rgba(2, 169, 247, 0.4);
+  --tag-soft-text: var(--on-dark-tint);
+  --tag-neutral-border: rgba(255, 255, 255, 0.25);
+  --tag-neutral-text: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
-.btn-accent:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.22);
+.tag--on-image {
+  --tag-soft-bg: rgba(4, 8, 18, 0.6);
+  --tag-neutral-bg: rgba(4, 8, 18, 0.6);
+}
+
+.tag--on-photo {
+  --tag-soft-bg: rgba(4, 8, 18, 0.8);
+  --tag-neutral-bg: rgba(4, 8, 18, 0.8);
+}
+
+/* =============================
+      ⭕ Icon buttons (44px circle)
+============================= */
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg-glass);
+  color: var(--primary);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.icon-btn:hover {
+  background: linear-gradient(135deg, var(--primary), var(--text-accent));
+  border-color: transparent;
+  color: var(--text-invert);
   transform: translateY(-1px);
 }
 
-.btn-accent:active {
-  transform: translateY(0);
+.icon-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+[data-theme="light"] .icon-btn {
+  border-color: var(--border-hover);
+}
+
+/* On a slide image: dark backing and a bright icon in both themes */
+.icon-btn--on-image,
+[data-theme="light"] .icon-btn--on-image {
+  background: rgba(4, 8, 18, 0.75);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--on-dark-tint);
+}
+
+.icon-btn--on-image:hover,
+[data-theme="light"] .icon-btn--on-image:hover {
+  background: linear-gradient(135deg, var(--on-dark-primary), var(--on-dark-accent));
+  border-color: transparent;
+  color: var(--on-dark-ink);
 }
 
 /* =============================
@@ -194,13 +343,31 @@ strong {
   background: transparent;
   color: var(--text-main);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
 }
 
 .pill-btn:hover {
   border-color: var(--primary);
   color: var(--primary);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .pill-btn:not(.active) {
+  border-color: var(--border-hover);
+}
+
+[data-theme="light"] .pill-btn:not(.active):hover {
+  border-color: var(--primary);
+}
+
+.pill-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .pill-btn.active {
@@ -235,4 +402,13 @@ strong {
   .title {
     font-size: clamp(1rem, 3vw, 1.5rem);
   }
+}
+
+/* Shared SVG icons: size with the surrounding text */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
 }

@@ -136,11 +136,11 @@ const Skills = () => {
     <div className="skills-wrapper">
       {skillGroups.map((group) => (
         <div key={group.label} className="skill-group">
-          <h3 className="skill-group-label">{group.label}</h3>
+          <h4 className="skill-group-label">{group.label}</h4>
           {group.chips ? (
             <div className="skill-chips">
               {group.chips.map((chip) => (
-                <span className="skill-chip" key={chip}>
+                <span className="tag tag--lg tag--neutral" key={chip}>
                   {chip}
                 </span>
               ))}

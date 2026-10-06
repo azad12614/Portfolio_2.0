@@ -75,6 +75,7 @@
 }
 
 .contact-icon {
+  color: var(--primary);
   font-size: 1.25rem;
   flex-shrink: 0;
 }
@@ -100,6 +101,9 @@
   text-decoration: none;
   transition: all 0.3s ease;
   display: block;
+  /* Padding grows the tap area to 44px, the negative margin keeps the layout */
+  padding-block: 0.65rem;
+  margin-block: -0.65rem;
 }
 
 .contact-link:hover {
@@ -171,15 +175,6 @@
 
 .contact-social-link:hover img {
   transform: scale(1.1);
-}
-
-.copyright {
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  color: var(--text-muted);
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(102, 252, 241, 0.2);
 }
 
 /* Responsive */

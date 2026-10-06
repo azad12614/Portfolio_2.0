@@ -16,6 +16,7 @@ import thesis from "../assets/Awards/2025_Thesis.jpg";
 import faangSeminar from "../assets/Awards/FAANG.png";
 import icpc from "../assets/Awards/ICPC.png";
 import uias from "../assets/Awards/UIAS.png";
+import Icon from "./Icon";
 
 const awards = [
   {
@@ -60,9 +61,13 @@ const awards = [
   },
 ];
 
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+
 function Awards() {
   const swiperRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(!prefersReducedMotion);
 
   const toggleAutoplay = () => {
     const swiper = swiperRef.current;
@@ -77,7 +82,9 @@ function Awards() {
 
   return (
     <section className="award-section" id="Awards">
-      <h2 className="header">🏆 My Achievements</h2>
+      <h2 className="header">
+        <Icon name="trophy" /> My Achievements
+      </h2>
       <p className="title">
         &quot;Achievements empower through innovation.&quot;
       </p>
@@ -95,16 +102,17 @@ function Awards() {
         pagination={{ clickable: true }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
+          if (prefersReducedMotion) swiper.autoplay.stop();
         }}
         className="award-swiper"
       >
         <button
           type="button"
-          className="award-play-toggle"
+          className="award-play-toggle icon-btn icon-btn--on-image"
           onClick={toggleAutoplay}
           aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
         >
-          {isPlaying ? "⏸" : "▶"}
+          <Icon name={isPlaying ? "pause" : "play"} />
         </button>
         {awards.map((award, index) => (
           <SwiperSlide key={index}>
