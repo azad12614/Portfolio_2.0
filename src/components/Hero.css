@@ -248,6 +248,13 @@
   height: 70px;
   padding: 10px;
   font-size: 0.9rem;
+.floating-card.social::after {
+  /* Grows the tap area to 44px or more without changing the look */
+  content: "";
+  position: absolute;
+  inset: -0.4rem;
+}
+
   animation: float 6s ease-in-out infinite;
 }
 
@@ -570,6 +577,17 @@
   }
 
   .hero-description {
+/* The cards sit on the dark photo, so they need a dark chip with light text. */
+[data-theme="light"] .floating-card:not(.social) {
+  background: rgba(10, 20, 40, 0.78);
+  color: var(--text-invert);
+  border-color: var(--border);
+}
+
+[data-theme="light"] .floating-card.social {
+  background: rgba(240, 244, 247, 0.9);
+}
+
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
   }
