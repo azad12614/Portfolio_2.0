@@ -177,6 +177,7 @@
   padding: 0.3rem 0.8rem;
   border-radius: 50px;
   border: 1px solid rgba(2, 169, 247, 0.3);
+  min-height: 2.75rem;
 }
 
 .blog-read-time {
