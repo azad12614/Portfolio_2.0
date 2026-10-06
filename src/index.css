@@ -383,7 +383,7 @@ video {
   --text-main: #1c2e38;
   --text-muted: #4a6070;
   --text-heading: #0a4055;
-  --text-accent: #0070a0;
+  --text-accent: #00557d;
   --text-invert: #f0f4f7;
 
   /* 🎨 Borders */
@@ -397,7 +397,7 @@ video {
   --btn-hover-text: #a0e4e2;
 
   /* 🎨 UI Highlights */
-  --primary: #0088cc;
+  --primary: #00608f;
   --secondary: #024060;
   --highlight: #8a3d2e;
   --link: #0066aa;
