@@ -55,7 +55,7 @@ const Resume = () => {
     },
     {
       date: "Jan 2025 - Aug 2025",
-      title: "Bootcamp Co-ordinator",
+      title: "Bootcamp Coordinator",
       org: "IIUCCPS",
       worktype: "Volunteer",
       workplace: "Remote",
@@ -89,7 +89,7 @@ const Resume = () => {
   const programming = [
     {
       date: "Nov 2024",
-      title: "Inter University Programming Contest",
+      title: "Inter-University Programming Contest",
       link: "https://toph.co/contests/training/rxbqtb6/standings",
       org: "CUSS",
       workplace: "Offline",
@@ -104,10 +104,10 @@ const Resume = () => {
     },
     {
       date: "Jul 2024",
-      title: "Inter University Programming Contest Preliminary",
+      title: "Inter-University Programming Contest Preliminary",
       org: "CUSS",
       workplace: "Online",
-      desc: "**Ranked 36th** (Team - IIUC_ZeroPlan) in the online Preliminary Round of the Inter University Programming Contest organized by the Chittagong University Scientific Society.",
+      desc: "**Ranked 36th** (Team - IIUC_ZeroPlan) in the online Preliminary Round of the Inter-University Programming Contest organized by the Chittagong University Scientific Society.",
     },
     {
       date: "Feb 2024",
@@ -132,7 +132,7 @@ const Resume = () => {
     },
     {
       date: "Sep 2023",
-      title: "15th Inter University Programming Contest",
+      title: "15th Inter-University Programming Contest",
       link: "https://toph.co/c/15th-iiuc-inter-university-2023/standings",
       org: "IIUC",
       workplace: "Offline",
@@ -140,11 +140,11 @@ const Resume = () => {
     },
     {
       date: "Sep 2023",
-      title: "Intra University Programming Contest Aut'23 (Male)",
+      title: "Intra-University Programming Contest Aut'23 (Male)",
       link: "https://toph.co/contests/training/wf44wz8/standings",
       org: "IIUC",
       workplace: "Offline",
-      desc: "**Ranked 19th** (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Shehabudowlla Rakib in the Intra University Programming Contest organized by the International Islamic University Chittagong (IIUC).",
+      desc: "**Ranked 19th** (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Shehabudowlla Rakib in the Intra-University Programming Contest organized by the International Islamic University Chittagong (IIUC).",
     },
     {
       date: "Feb 2023",
@@ -155,19 +155,19 @@ const Resume = () => {
     },
     {
       date: "Nov 2022",
-      title: "Intra University Programming Contest",
+      title: "Intra-University Programming Contest",
       link: "https://toph.co/contests/training/x2c4mne/standings",
       org: "IIUCCPS",
       workplace: "Offline",
-      desc: "**Ranked 12th** (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Intra University Programming Contest of the International Islamic University Chittagong Competitive Programming Society.",
+      desc: "**Ranked 12th** (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Intra-University Programming Contest of the International Islamic University Chittagong Competitive Programming Society.",
     },
     {
       date: "Oct 2022",
-      title: "Intra University Programming Contest (Junior)",
+      title: "Intra-University Programming Contest (Junior)",
       link: "https://toph.co/contests/training/mf23yf4/standings",
       org: "IIUC",
       workplace: "Offline",
-      desc: "**Ranked 4th** (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Intra University Programming Contest of the International Islamic University Chittagong (IIUC).",
+      desc: "**Ranked 4th** (Team - IIUC_Synthroid) with teammates Md. Toshifur Rahman and Baizid Kamruzzaman in the Intra-University Programming Contest of the International Islamic University Chittagong (IIUC).",
     },
     {
       date: "Sep 2022",
@@ -185,7 +185,7 @@ const Resume = () => {
     },
     {
       date: "Aug 2022",
-      title: "Intra University Programming Contest Aut'22 (Junior/Solo)",
+      title: "Intra-University Programming Contest Aut'22 (Junior/Solo)",
       link: "https://toph.co/contests/training/ctjhhnj/standings",
       org: "IIUCCPS",
       workplace: "Offline",
