@@ -171,6 +171,10 @@
 .archive-head h3 {
   font-size: 1.1rem;
 }
+.archive-count {
+  font: 400 13px var(--mono);
+  color: var(--muted);
+}
 .archive {
   list-style: none;
   margin: 0;

@@ -49,7 +49,7 @@ const Contact = () => {
         <div className="contact-grid">
           <div>
             <h3>Let&apos;s build something.</h3>
-            <p className="muted prose" style={{ marginBottom: 24 }}>
+            <p className="contact-lead muted prose">
               Open to full-stack roles, remote or onsite. I can join right away.
             </p>
             <a className="btn solid" href={hiringInquiry}>

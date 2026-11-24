@@ -111,7 +111,7 @@ const Projects = () => {
 
         <div className="archive-head">
           <h3>Archive</h3>
-          <span className="mono muted" style={{ fontSize: 13 }}>
+          <span className="archive-count">
             {archive.length} smaller builds
           </span>
         </div>

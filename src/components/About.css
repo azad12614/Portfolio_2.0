@@ -83,6 +83,9 @@ ul.archive > li {
   font: 500 12px var(--mono);
   color: var(--muted);
 }
+.code-bar .code-file {
+  margin-left: 8px;
+}
 .code-bar i {
   width: 10px;
   height: 10px;

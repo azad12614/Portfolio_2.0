@@ -34,7 +34,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <figure className="photo glass" style={{ margin: 0 }}>
+          <figure className="photo glass">
             <span className="corner c1" aria-hidden="true"></span>
             <span className="corner c2" aria-hidden="true"></span>
             <span className="corner c3" aria-hidden="true"></span>

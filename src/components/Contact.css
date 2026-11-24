@@ -9,6 +9,9 @@
     align-items: start;
   }
 }
+.contact-lead {
+  margin-bottom: 24px;
+}
 .contact-grid h3 {
   font-size: clamp(1.6rem, 3.5vw, 2.2rem);
   margin-bottom: 14px;

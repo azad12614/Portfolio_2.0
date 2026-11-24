@@ -19,7 +19,7 @@ const About = () => {
               <i></i>
               <i></i>
               <i></i>
-              <span style={{ marginLeft: 8 }}>availability.ts</span>
+              <span className="code-file">availability.ts</span>
             </div>
             {/* Whitespace inside <pre> is part of the layout, so each line is written out */}
             <pre>

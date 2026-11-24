@@ -96,6 +96,7 @@
   margin-left: 4px;
 }
 .photo {
+  margin: 0;
   padding: 14px;
   justify-self: center;
   width: min(100%, 380px);
