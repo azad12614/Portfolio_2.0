@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="./src/assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abdullah Al Azad | Full-Stack Developer</title>
     <meta
       name="description"
       content="Portfolio of Abdullah Al Azad, a Full-Stack Developer from Chattogram, Bangladesh. TypeScript and modern web stack, projects, experience and contests."
     />
-    <meta name="theme-color" content="#0d0d0f" />
+    <meta name="theme-color" content="#0b0f17" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300..800&family=Jost:wght@300..800&family=Fira+Mono&family=Orbitron:wght@700&display=swap" />
-    <link rel="canonical" href="https://azad12614.onrender.com/" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+    <script>
+      /* Before first paint: the saved theme, and the "js" class that arms the fade-up (only when motion is allowed) */
+      (function () {
+        var root = document.documentElement;
+        try {
+          var saved = localStorage.getItem("theme");
+          if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+        } catch (e) {
+          /* storage blocked: keep the dark default */
+        }
+        if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches)
+          root.classList.add("js");
+      })();
+    </script>
+    <link rel="canonical" href="https://azad12614.me/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Abdullah Al Azad" />
@@ -22,14 +36,11 @@
       property="og:description"
       content="Portfolio of Abdullah Al Azad, a Full-Stack Developer from Chattogram, Bangladesh. TypeScript and modern web stack, projects, experience and contests."
     />
-    <meta property="og:url" content="https://azad12614.onrender.com/" />
-    <meta property="og:image" content="https://azad12614.onrender.com/og-image.png" />
+    <meta property="og:url" content="https://azad12614.me/" />
+    <meta property="og:image" content="https://azad12614.me/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Abdullah Al Azad, Full-Stack Developer. TypeScript and modern web stack, competitive programmer."
-    />
+    <meta property="og:image:alt" content="Abdullah Al Azad, Full-Stack Developer. TypeScript and modern web stack, competitive programmer." />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Abdullah Al Azad | Full-Stack Developer" />
@@ -37,11 +48,8 @@
       name="twitter:description"
       content="Portfolio of Abdullah Al Azad, a Full-Stack Developer from Chattogram, Bangladesh. TypeScript and modern web stack, projects, experience and contests."
     />
-    <meta name="twitter:image" content="https://azad12614.onrender.com/og-image.png" />
-    <meta
-      name="twitter:image:alt"
-      content="Abdullah Al Azad, Full-Stack Developer. TypeScript and modern web stack, competitive programmer."
-    />
+    <meta name="twitter:image" content="https://azad12614.me/og-image.png" />
+    <meta name="twitter:image:alt" content="Abdullah Al Azad, Full-Stack Developer. TypeScript and modern web stack, competitive programmer." />
   </head>
 
   <body>
