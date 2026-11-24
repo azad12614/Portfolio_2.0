@@ -59,6 +59,21 @@
     rgba(245, 247, 250, 0.9)
   );
 }
+/* Self-hosted variable fonts (public/fonts), latin subset: one file covers weights 400 to 700 */
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/geist-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono-latin.woff2") format("woff2");
+}
 :root {
   --mono: "JetBrains Mono", ui-monospace, monospace;
   --sans: "Geist", system-ui, sans-serif;
