@@ -1,12 +1,12 @@
 import mentor2023 from "../assets/Awards/2023_Mentor.webp";
 import trainer2023 from "../assets/Awards/2023_Trainer.jpg";
-import hult2023 from "../assets/Awards/2023_HULT.png";
+import hult2023 from "../assets/Awards/2023_HULT.webp";
 import mentor2024 from "../assets/Awards/2024_Mentor.webp";
 import nasa2024 from "../assets/Awards/2024_NASA.webp";
 import pu2024 from "../assets/Awards/2024_PU.jpg";
-import faang from "../assets/Awards/FAANG.png";
-import icpc from "../assets/Awards/ICPC.png";
-import uias from "../assets/Awards/UIAS.png";
+import faang from "../assets/Awards/FAANG.webp";
+import icpc from "../assets/Awards/ICPC.webp";
+import uias from "../assets/Awards/UIAS.webp";
 
 // Large award cards
 export const awards = [
