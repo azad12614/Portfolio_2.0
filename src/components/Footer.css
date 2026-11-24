@@ -1,7 +1,67 @@
-.site-footer {
-  padding: 2rem 1rem;
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  color: var(--text-muted);
+/* ===== Footer, back to top ===== */
+/* Footer: a large outlined wordmark across the content width, then one small row */
+footer {
+  padding: 40px 0 28px;
+  overflow: hidden;
+}
+.wordmark {
+  /* 9 mono characters at -0.05em spacing take about 5em, so the size fits the content width */
+  font: 700
+    min(calc((100vw - 2 * var(--pad) - 2 * var(--inset)) / 5), 220px)/0.9
+    var(--mono);
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  padding: 0 var(--inset);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--border);
+  margin: 0 0 28px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.wordmark span {
+  -webkit-text-stroke-color: var(--cyan);
+}
+.foot-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  border-top: 1px solid var(--frame);
+  padding: 12px var(--inset) 0;
+}
+@media (max-width: 1099px) {
+  .foot-row {
+    justify-content: center;
+    text-align: center;
+  }
+  .foot-links {
+    justify-content: center;
+  }
+}
+.foot-row > p {
+  font: 500 13px var(--mono);
+  color: var(--muted);
+}
+.foot-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.foot-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 8px;
+  font: 500 13px var(--mono);
+  color: var(--muted);
+  text-decoration: none;
+}
+.foot-links a:hover {
+  color: var(--text);
+}
+footer .socials {
+  margin-left: 0;
 }

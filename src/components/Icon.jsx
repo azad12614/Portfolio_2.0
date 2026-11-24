@@ -1,186 +1,79 @@
-import PropTypes from "prop-types";
-
-// One icon set: 24px grid, 2px round stroke, drawn in currentColor.
-const paths = {
-  award: (
-    <>
-      <circle cx="12" cy="8" r="6" />
-      <path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5" />
-    </>
-  ),
-  "bar-chart": (
-    <>
-      <line x1="12" y1="20" x2="12" y2="10" />
-      <line x1="18" y1="20" x2="18" y2="4" />
-      <line x1="6" y1="20" x2="6" y2="16" />
-    </>
-  ),
-  briefcase: (
-    <>
-      <rect x="2" y="7" width="20" height="14" rx="2" />
-      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-    </>
-  ),
-  "book-open": (
-    <>
-      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-    </>
-  ),
-  calendar: (
-    <>
-      <rect x="3" y="4" width="18" height="18" rx="2" />
-      <line x1="16" y1="2" x2="16" y2="6" />
-      <line x1="8" y1="2" x2="8" y2="6" />
-      <line x1="3" y1="10" x2="21" y2="10" />
-    </>
-  ),
-  "check-circle": (
-    <>
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-      <polyline points="22 4 12 14 9 11" />
-    </>
-  ),
-  clock: (
-    <>
-      <circle cx="12" cy="12" r="10" />
-      <polyline points="12 6 12 12 16 14" />
-    </>
-  ),
-  code: (
-    <>
-      <polyline points="16 18 22 12 16 6" />
-      <polyline points="8 6 2 12 8 18" />
-    </>
-  ),
-  compass: (
-    <>
-      <circle cx="12" cy="12" r="10" />
-      <polygon points="16.2 7.8 14.1 14.1 7.8 16.2 9.9 9.9 16.2 7.8" />
-    </>
-  ),
-  cpu: (
-    <>
-      <rect x="4" y="4" width="16" height="16" rx="2" />
-      <rect x="9" y="9" width="6" height="6" />
-      <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" />
-    </>
-  ),
-  "graduation-cap": (
-    <>
-      <path d="M22 10 12 5 2 10l10 5 10-5z" />
-      <path d="M6 12v5c3 3 9 3 12 0v-5" />
-    </>
-  ),
-  flag: (
-    <>
-      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
-      <line x1="4" y1="22" x2="4" y2="15" />
-    </>
-  ),
-  folder: (
-    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-  ),
-  laptop: (
-    <>
-      <rect x="3" y="4" width="18" height="12" rx="2" />
-      <path d="M2 20h20" />
-    </>
-  ),
-  mail: (
-    <>
-      <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
-      <polyline points="22 6 12 13 2 6" />
-    </>
-  ),
-  "map-pin": (
-    <>
-      <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
-      <circle cx="12" cy="10" r="3" />
-    </>
-  ),
-  pause: (
-    <>
-      <rect x="6" y="4" width="4" height="16" />
-      <rect x="14" y="4" width="4" height="16" />
-    </>
-  ),
-  pen: (
-    <>
-      <path d="M12 20h9" />
-      <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z" />
-    </>
-  ),
-  phone: (
-    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
-  ),
-  play: <polygon points="6 3 20 12 6 21 6 3" />,
-  rocket: (
-    <>
-      <path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z" />
-      <path d="M12 15 9 12a22 22 0 0 1 2-4A13 13 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2z" />
-      <path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5" />
-    </>
-  ),
-  send: (
-    <>
-      <line x1="22" y1="2" x2="11" y2="13" />
-      <polygon points="22 2 15 22 11 13 2 9 22 2" />
-    </>
-  ),
-  target: (
-    <>
-      <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="12" r="6" />
-      <circle cx="12" cy="12" r="2" />
-    </>
-  ),
-  trophy: (
-    <>
-      <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-      <path d="M4 22h16M10 15v2.5c0 .6-.5 1-1.8 1.6-.7.4-1.2 1-1.2 1.9V22M14 15v2.5c0 .6.5 1 1.8 1.6.7.4 1.2 1 1.2 1.9V22" />
-      <path d="M18 2H6v7a6 6 0 0 0 12 0V2z" />
-    </>
-  ),
-  user: (
-    <>
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-      <circle cx="12" cy="7" r="4" />
-    </>
-  ),
-  users: (
-    <>
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" />
-    </>
-  ),
-};
-
-function Icon({ name, size = "1em", className = "" }) {
+// One SVG sprite for the whole page: icons (i-*) and contest chart marks (m-*).
+// Render <IconSprite /> once; <Icon name="gh" /> and <Mark type="icpc" /> point into it.
+export function IconSprite() {
   return (
-    <svg
-      className={className ? `icon ${className}` : "icon"}
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      focusable="false"
-    >
-      {paths[name]}
+    <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden="true">
+      <symbol id="i-gh" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"
+        />
+      </symbol>
+      <symbol id="i-in" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21h-4V9Z"
+        />
+      </symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M14 8V6.5c0-.8.2-1.5 1.5-1.5H17V2h-2.6C11.5 2 10.6 3.8 10.6 6.3V8H8.5v3h2.1v11H14V11h2.6l.4-3H14Z"
+        />
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" strokeWidth="2" d="M9 9h11v11H9zM5 15H4V4h11v1" />
+      </symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" strokeWidth="2" d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+        </g>
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" strokeWidth="2" d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" strokeWidth="2" d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" strokeWidth="2" d="M6 6l12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="i-up" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" strokeWidth="2" d="M12 19V5M6 11l6-6 6 6" />
+      </symbol>
+      <symbol id="m-icpc" viewBox="0 0 12 12">
+        <path d="M6 1 11 6 6 11 1 6Z" />
+      </symbol>
+      <symbol id="m-ncpc" viewBox="0 0 12 12">
+        <rect x="1.5" y="1.5" width="9" height="9" />
+      </symbol>
+      <symbol id="m-inter" viewBox="0 0 12 12">
+        <circle cx="6" cy="6" r="4.5" />
+      </symbol>
+      <symbol id="m-intra" viewBox="0 0 12 12">
+        <path d="M6 1.5 11 10.5H1Z" />
+      </symbol>
     </svg>
   );
 }
 
-Icon.propTypes = {
-  name: PropTypes.oneOf(Object.keys(paths)).isRequired,
-  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  className: PropTypes.string,
-};
+// Decorative by default: the control that holds the icon carries the accessible name
+export function Icon({ name, size }) {
+  return (
+    <svg width={size} height={size} aria-hidden="true">
+      <use href={`#i-${name}`} />
+    </svg>
+  );
+}
 
-export default Icon;
+export function Mark({ type, style }) {
+  return (
+    <svg aria-hidden="true" style={style}>
+      <use href={`#m-${type}`} />
+    </svg>
+  );
+}

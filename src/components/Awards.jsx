@@ -1,135 +1,79 @@
 import { useRef, useState } from "react";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
-import { Autoplay, EffectFade, Keyboard, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { awards, certificates } from "../data/awards";
 import "./Awards.css";
+import { Icon } from "./Icon";
+import SectionHead from "./SectionHead";
 
-import hultPrize2023 from "../assets/Awards/2023_HULT.png";
-import mentorAward2023 from "../assets/Awards/2023_Mentor.webp";
-import trainerCert2023 from "../assets/Awards/2023_Trainer.jpg";
-import mentorAward2024 from "../assets/Awards/2024_Mentor.webp";
-import nasa2024 from "../assets/Awards/2024_NASA.webp";
-import puProgramming2024 from "../assets/Awards/2024_PU.jpg";
-import thesis from "../assets/Awards/2025_Thesis.jpg";
-import faangSeminar from "../assets/Awards/FAANG.png";
-import icpc from "../assets/Awards/ICPC.png";
-import uias from "../assets/Awards/UIAS.png";
-import Icon from "./Icon";
+// A click opens the image full size in a modal dialog. Esc closes it (native), and focus
+// returns to the item that opened it.
+const Awards = () => {
+  const dialogRef = useRef(null);
+  const triggerRef = useRef(null);
+  const [viewing, setViewing] = useState(null);
 
-const awards = [
-  {
-    title: "2023 HULT PRIZE Certification",
-    image: hultPrize2023,
-  },
-  {
-    title: "Best Mentor Award, Autumn 2023",
-    image: mentorAward2023,
-  },
-  {
-    title: "Trainer Certification, Autumn 2023",
-    image: trainerCert2023,
-  },
-  {
-    title: "2024 NASA Space Apps Challenge Certification",
-    image: nasa2024,
-  },
-  {
-    title: "2024 PU Programming Contest Certification",
-    image: puProgramming2024,
-  },
-  {
-    title: "Best Mentor Award, Spring 2024",
-    image: mentorAward2024,
-  },
-  {
-    title: "FAANG Seminar Certification",
-    image: faangSeminar,
-  },
-  {
-    title: "B.Sc Thesis Paper",
-    image: thesis,
-  },
-  {
-    title: "ICPC Certificate of Achievement (2021, 2022, 2023, 2024)",
-    image: icpc,
-  },
-  {
-    title: "Web Dev Intern Certificate — UIAS & UAN, Feb 2026",
-    image: uias,
-  },
-];
-
-const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)",
-).matches;
-
-function Awards() {
-  const swiperRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(!prefersReducedMotion);
-
-  const toggleAutoplay = () => {
-    const swiper = swiperRef.current;
-    if (!swiper) return;
-    if (isPlaying) {
-      swiper.autoplay.stop();
-    } else {
-      swiper.autoplay.start();
-    }
-    setIsPlaying((prev) => !prev);
+  const open = (image, title, trigger) => {
+    triggerRef.current = trigger;
+    setViewing({ image, title });
+    const dialog = dialogRef.current;
+    if (typeof dialog.showModal === "function") dialog.showModal();
+    else window.open(image, "_blank");
   };
 
   return (
-    <section className="award-section" id="Awards">
-      <h2 className="header">
-        <Icon name="trophy" /> My Achievements
-      </h2>
-      <p className="title">
-        &quot;Achievements empower through innovation.&quot;
-      </p>
-      <Swiper
-        modules={[Autoplay, Keyboard, Pagination, EffectFade]}
-        slidesPerView={1}
-        loop={true}
-        effect="fade"
-        keyboard={{ enabled: true }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        pagination={{ clickable: true }}
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper;
-          if (prefersReducedMotion) swiper.autoplay.stop();
-        }}
-        className="award-swiper"
+    <section id="awards" aria-labelledby="aw-h">
+      <div className="wrap reveal">
+        <SectionHead number="06" label="awards" title="Awards" id="aw-h" />
+        <div className="awards">
+          {awards.map((a) => (
+            <button
+              key={a.detail}
+              className="award glass hoverable"
+              type="button"
+              aria-label={`View ${a.title}, ${a.detail} full size`}
+              onClick={(e) => open(a.image, `${a.title}, ${a.detail}`, e.currentTarget)}
+            >
+              <img src={a.image} alt="" loading="lazy" />
+              <div className="cap">
+                <b>{a.title}</b>
+                <span>{a.detail}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+        <div className="certs-head">CERTIFICATES</div>
+        <div className="certs">
+          {certificates.map((c) => (
+            <button
+              key={c.title}
+              className="cert glass hoverable"
+              type="button"
+              aria-label={`View certificate: ${c.title}, full size`}
+              onClick={(e) => open(c.image, c.title, e.currentTarget)}
+            >
+              <img src={c.image} alt="" loading="lazy" />
+              <span>{c.title}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <dialog
+        ref={dialogRef}
+        className="viewer"
+        aria-labelledby="viewer-title"
+        onClose={() => triggerRef.current?.focus()}
+        onClick={(e) => e.target === dialogRef.current && dialogRef.current.close()}
       >
-        <button
-          type="button"
-          className="award-play-toggle icon-btn icon-btn--on-image"
-          onClick={toggleAutoplay}
-          aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
-        >
-          <Icon name={isPlaying ? "pause" : "play"} />
-        </button>
-        {awards.map((award, index) => (
-          <SwiperSlide key={index}>
-            <div className="award-slide" title={award.title}>
-              <img
-                src={award.image}
-                alt={award.title}
-                className="award-slide-image"
-                loading="lazy"
-              />
-              <div className="award-label">{award.title}</div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <div className="v-bar">
+          <span id="viewer-title">{viewing?.title}</span>
+          <button className="icon-btn" type="button" aria-label="Close" onClick={() => dialogRef.current.close()}>
+            <Icon name="x" />
+          </button>
+        </div>
+        {viewing && <img src={viewing.image} alt={viewing.title} />}
+      </dialog>
     </section>
   );
-}
+};
 
 export default Awards;

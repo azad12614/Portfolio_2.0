@@ -1,151 +1,78 @@
-import pdf from "../assets/Abdullah_Al_Azad.pdf";
-import avater from "../assets/Abdullah_Al_Azad.webp";
-import fb from "../assets/Social/FB.png";
-import git from "../assets/Social/Github.png";
-import ln from "../assets/Social/Linkdin.png";
+import portrait from "../assets/Abdullah_Al_Azad.webp";
+import { profiles, resumeUrl } from "../data/profile";
+import { Icon } from "./Icon";
 import "./Hero.css";
-import Icon from "./Icon";
 
 const Hero = () => {
-  const floatingItems = [
-    {
-      type: "tech",
-      content: "MERN",
-      class: "mern",
-    },
-    {
-      type: "tech",
-      content: "TS",
-      class: "typescript",
-    },
-    {
-      type: "tech",
-      content: "<CP>",
-      class: "cp",
-    },
-    {
-      type: "social",
-      content: git,
-      class: "github",
-      link: "https://github.com/azad12614",
-      name: "GitHub",
-    },
-    {
-      type: "social",
-      content: ln,
-      class: "linkedin",
-      link: "https://www.linkedin.com/in/abdullah-al-azad-12614-jishan",
-      name: "LinkedIn",
-    },
-    {
-      type: "social",
-      content: fb,
-      class: "facebook",
-      link: "https://www.facebook.com/abdullah.2003.azad/",
-      name: "Facebook",
-    },
-  ];
-
   return (
-    <section className="hero-section" id="Hero">
-      <div className="hero-container">
-        <div className="hero-content">
-          {/* Text Content */}
-          <div className="hero-text">
-            <div className="hero-badge tag tag--lg tag--soft">
-              <span className="badge-dot"></span>
-              Available for opportunities
+    <section className="hero" id="top" aria-labelledby="hero-name">
+      <div className="wrap">
+        <div className="hero-grid">
+          <div>
+            <span className="badge">
+              <i aria-hidden="true"></i>Available for opportunities
+            </span>
+            <div className="name-row">
+              <img className="avatar" src={portrait} alt="Abdullah Al Azad" />
+              <h1 id="hero-name">Abdullah Al Azad</h1>
             </div>
-
-            <h1 className="hero-title">
-              <span className="title-gradient">Abdullah Al Azad</span>
-            </h1>
-
-            <div className="hero-subtitle">
-              <span className="subtitle-text">
-                <strong>Full-Stack Developer</strong>,{" "}
-                <strong>TypeScript & Modern Web Stack</strong>,{" "}
-                <strong>Competitive Programmer</strong>
-              </span>
-            </div>
-
-            <p className="hero-description">
-              Crafting digital experiences with modern web technologies.
-              Passionate about building scalable applications and solving
-              complex problems through code.
+            <p className="roles">
+              Full-Stack Developer <span>·</span> TypeScript &amp; Modern Web Stack <span>·</span>{" "}
+              Competitive Programmer
             </p>
-
-            <div className="hero-actions">
-              <a
-                href={pdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-              >
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14,2 14,8 20,8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10,9 9,9 8,9"></polyline>
-                </svg>
-                View Resume
-              </a>
-              <a href="#Project" className="btn btn-primary">
-                <Icon name="compass" size={18} />
+            <p className="lead">
+              I build TypeScript products end to end, from Next.js frontends to queue-backed Node and
+              FastAPI services. Years of competitive programming shape how I design them.
+            </p>
+            <div className="cta">
+              <a className="btn solid" href="#projects">
                 Explore Projects
               </a>
+              <a className="btn" href={resumeUrl}>
+                View Resume
+              </a>
             </div>
           </div>
-
-          {/* Avatar Section with Floating Bubbles */}
-          <div className="hero-visual">
-            <div className="avatar-container">
-              <div className="avatar-wrapper">
-                <img
-                  src={avater}
-                  alt="Abdullah Al Azad"
-                  className="avatar-image"
-                />
-                <div className="avatar-glow"></div>
-              </div>
-
-              {/* Floating Bubbles - Both Tech and Social */}
-              <div className="floating-elements">
-                {floatingItems.map((item, index) =>
-                  item.type === "tech" ? (
-                    <div key={index} className={`floating-card ${item.class}`}>
-                      <span>{item.content}</span>
-                    </div>
-                  ) : (
-                    <a
-                      key={index}
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`floating-card social ${item.class}`}
-                      title={item.name}
-                    >
-                      <img src={item.content} alt={item.name} />
-                    </a>
-                  )
-                )}
-              </div>
-            </div>
+          <figure className="photo glass" style={{ margin: 0 }}>
+            <span className="corner c1" aria-hidden="true"></span>
+            <span className="corner c2" aria-hidden="true"></span>
+            <span className="corner c3" aria-hidden="true"></span>
+            <span className="corner c4" aria-hidden="true"></span>
+            <img src={portrait} alt="Portrait of Abdullah Al Azad" />
+            <figcaption>
+              <span>azad.webp</span>
+              <span>Chattogram, BD</span>
+            </figcaption>
+          </figure>
+          <div className="socials hero-socials" aria-label="Profiles">
+            {profiles.map((p) => (
+              <a key={p.icon} className="icon-btn" href={p.href} aria-label={p.label}>
+                <Icon name={p.icon} />
+              </a>
+            ))}
           </div>
         </div>
-
-        <div className="scroll-indicator">
-          <div className="scroll-line"></div>
-          <span>Scroll to explore</span>
-        </div>
+        <ul className="proof" aria-label="Highlights">
+          <li>
+            <b>342</b>
+            <span>commits on a paid client contract</span>
+          </li>
+          <li>
+            <b>1400+</b>
+            <span>problems solved on 4 platforms</span>
+          </li>
+          <li>
+            <b>4×</b>
+            <span>
+              <abbr title="International Collegiate Programming Contest">ICPC</abbr> Preliminary
+              Contest, 2021 to 2024
+            </span>
+          </li>
+          <li>
+            <b>2×</b>
+            <span>Best Mentor Award, IIUCCPS</span>
+          </li>
+        </ul>
       </div>
     </section>
   );

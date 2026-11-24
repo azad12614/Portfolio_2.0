@@ -1,616 +1,227 @@
-/* Hero.css */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ===== Hero ===== */
+.hero {
+  padding: 72px 0 80px;
 }
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-10px) rotate(2deg);
-  }
-  66% {
-    transform: translateY(5px) rotate(-2deg);
-  }
-}
-
-@keyframes floatReverse {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-8px) rotate(-2deg);
-  }
-  66% {
-    transform: translateY(6px) rotate(2deg);
-  }
-}
-
-@keyframes pulseGlow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(2, 169, 247, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(2, 169, 247, 0.5);
-  }
-}
-
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  padding-top: 5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* =============================
-   DESKTOP LAYOUT
-============================= */
-.hero-content {
+.hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 4rem; /* Increased gap between image and text */
+  gap: 48px;
   align-items: center;
-  margin-bottom: 3rem;
 }
-
-.hero-text {
-  animation: fadeInUp 0.8s ease-out;
+@media (min-width: 720px) {
+  .hero-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+  }
 }
-
-.hero-badge {
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-  animation: fadeInUp 0.8s ease-out 0.2s both;
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1.35fr 1fr;
+    gap: 48px;
+  }
 }
-
-.badge-dot {
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+  padding: 0 12px;
+  font: 500 13px var(--mono);
+  color: var(--amber);
+  background: var(--amber-soft);
+  border: 1px solid var(--amber-line);
+  border-radius: 999px;
+}
+.badge i {
   width: 8px;
   height: 8px;
-  background: var(--success);
   border-radius: 50%;
-  animation: pulseGlow 2s infinite;
+  background: var(--amber);
+  box-shadow: 0 0 0 0 var(--amber);
+  animation: pulse 2s infinite;
 }
-
-.hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--amber-line);
+  }
+  70% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 22px 0 14px;
+}
+/* Sized to the text column (about 55% of the width), so the full name stays on one line from 720 px up */
+.hero h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.7rem);
   font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  animation: fadeInUp 0.8s ease-out 0.4s both;
 }
-
-.title-gradient {
-  background: linear-gradient(135deg, var(--text-heading), var(--primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-subtitle {
-  margin-bottom: 1.5rem;
-  animation: fadeInUp 0.8s ease-out 0.6s both;
-}
-
-.subtitle-text {
-  font-family: var(--font-sans);
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  font-weight: 500;
-  color: var(--text-main);
-  line-height: 1.4;
-}
-
-.subtitle-text strong {
-  background: linear-gradient(135deg, var(--primary), var(--text-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-description {
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-  max-width: 500px;
-  animation: fadeInUp 0.8s ease-out 0.8s both;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  animation: fadeInUp 0.8s ease-out 1s both;
-}
-
-/* Avatar Section */
-.hero-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeInUp 0.8s ease-out 0.6s both;
-}
-
-.avatar-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.avatar-wrapper {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: var(--bg-glass);
-  border: 2px solid var(--border);
-  padding: 8px;
-  box-shadow: var(--shadow-soft);
-  z-index: 1;
-}
-
-.avatar-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+.avatar {
+  display: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
   object-fit: cover;
-  border: 2px solid var(--border);
-  transition: all 0.3s ease;
-}
-
-.avatar-glow {
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    var(--primary),
-    var(--text-accent),
-    transparent
-  );
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.avatar-wrapper:hover .avatar-image {
-  transform: scale(1.05);
-  border-color: var(--primary);
-}
-
-/* Floating Elements - Combined Tech and Social */
-.floating-elements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-}
-
-.floating-card {
-  position: absolute;
-  background: var(--bg-glass);
   border: 1px solid var(--border);
-  border-radius: 50%;
+  flex: none;
+}
+.roles {
+  font: 500 clamp(1rem, 2vw, 1.15rem) var(--mono);
+  color: var(--cyan);
+  margin-bottom: 18px;
+}
+.roles span {
+  color: var(--muted);
+}
+.hero .lead {
+  font-size: 1.12rem;
+  color: var(--muted);
+  max-width: 60ch;
+  margin-bottom: 28px;
+}
+.cta {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-soft);
-  transition: all 0.3s ease;
-  pointer-events: all;
-  cursor: pointer;
 }
-
-/* Tech Cards */
-.floating-card:not(.social) {
-  width: 70px;
-  height: 70px;
-  padding: 10px;
-  font-size: 0.9rem;
-  animation: float 6s ease-in-out infinite;
+.socials {
+  display: flex;
+  gap: 8px;
+  margin-left: 4px;
 }
-
-.floating-card.social {
-  width: 50px;
-  height: 50px;
-  padding: 8px;
-  animation: floatReverse 7s ease-in-out infinite;
+.photo {
+  padding: 14px;
+  justify-self: center;
+  width: min(100%, 380px);
 }
-
-.floating-card.social::after {
-  /* Grows the tap area to 44px or more without changing the look */
-  content: "";
-  position: absolute;
-  inset: -0.4rem;
+@media (min-width: 720px) and (max-width: 959px) {
+  .photo {
+    padding: 10px;
+  }
+  .photo figcaption {
+    font-size: 11px;
+  }
 }
-
-.floating-card.social img {
+.photo img {
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  border-radius: 6px;
 }
-
-.floating-card:hover {
-  transform: scale(1.15) !important;
-  border-color: var(--primary);
-  box-shadow: 0 8px 25px rgba(2, 169, 247, 0.4);
-  z-index: 10;
+.photo .corner {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--cyan);
+  background: var(--bg);
 }
-
-/* Positioning for all floating items - Randomized without overlapping */
-.floating-card.mern {
-  top: 10%;
-  right: 10%;
-  background: linear-gradient(
-    135deg,
-    rgba(2, 169, 247, 0.1),
-    rgba(0, 196, 230, 0.1)
-  );
-  color: var(--primary);
-  animation-delay: 0s;
+.photo .c1 {
+  top: -5px;
+  left: -5px;
 }
-
-.floating-card.typescript {
-  top: 70%;
-  right: 8%;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05)
-  );
-  color: var(--text-main);
-  animation-delay: 2s;
+.photo .c2 {
+  top: -5px;
+  right: -5px;
 }
-
-.floating-card.cp {
-  bottom: 25%;
-  left: 0%;
-  background: linear-gradient(
-    135deg,
-    rgba(52, 150, 150, 0.1),
-    rgba(150, 71, 52, 0.05)
-  );
-  color: var(--success);
-  animation-delay: 4s;
+.photo .c3 {
+  bottom: -5px;
+  left: -5px;
 }
-
-.floating-card.github {
-  top: 15%;
-  left: 15%;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05)
-  );
-  animation-delay: 1s;
+.photo .c4 {
+  bottom: -5px;
+  right: -5px;
 }
-
-.floating-card.linkedin {
-  top: 80%;
-  left: 35%;
-  background: linear-gradient(
-    135deg,
-    rgba(10, 102, 194, 0.1),
-    rgba(10, 102, 194, 0.05)
-  );
-  animation-delay: 3s;
-}
-
-.floating-card.facebook {
-  bottom: 45%;
-  right: 0%;
-  background: linear-gradient(
-    135deg,
-    rgba(24, 119, 242, 0.1),
-    rgba(24, 119, 242, 0.05)
-  );
-  animation-delay: 5s;
-}
-
-/* Scroll Indicator */
-.scroll-indicator {
+.photo figcaption {
+  font: 500 12px var(--mono);
+  color: var(--muted);
+  margin-top: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  animation: fadeInUp 0.8s ease-out 1.2s both;
+  justify-content: space-between;
 }
-
-.scroll-line {
-  width: 2px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--primary), transparent);
-  border-radius: 2px;
-  animation: float 2s ease-in-out infinite;
+/* Proof strip: no boxes. Cells split by thin lines; at 4 columns the 25% and 75% dividers sit on the grid guides */
+.proof {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 64px 0 0;
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid var(--frame);
+  border-bottom: 1px solid var(--frame);
 }
-
-/* =============================
-   MOBILE LAYOUT (768px and down)
-============================= */
-@media (max-width: 768px) {
-  .hero-section {
-    min-height: 100vh;
-    padding: 1rem;
-    padding-top: 5rem;
-    display: flex;
-    align-items: center;
+.proof li {
+  padding: 22px 24px 24px;
+  border-left: 1px solid var(--frame);
+}
+.proof li:nth-child(odd) {
+  border-left: 0;
+  padding-left: 0;
+}
+.proof li:nth-child(n + 3) {
+  border-top: 1px solid var(--frame);
+}
+@media (min-width: 860px) {
+  .proof {
+    grid-template-columns: repeat(4, 1fr);
   }
-
-  .hero-container {
-    width: 100%;
+  .proof li:nth-child(odd) {
+    border-left: 1px solid var(--frame);
+    padding-left: 24px;
   }
-
-  /* Stack layout with increased gap */
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem; /* Increased gap for mobile */
-    margin-bottom: 0;
-    text-align: center;
+  .proof li:first-child {
+    border-left: 0;
+    padding-left: 0;
   }
-
-  /* Avatar Section - Mobile */
-  .hero-visual {
-    order: 1;
+  .proof li:nth-child(n + 3) {
+    border-top: 0;
   }
-
-  .avatar-wrapper {
-    width: 220px;
-    height: 220px;
-    margin: 0 auto;
-  }
-
-  /* Adjust floating items for mobile */
-  .floating-card:not(.social) {
-    width: 55px;
-    height: 55px;
-    padding: 8px;
-    font-size: 0.8rem;
-  }
-
-  .floating-card.social {
-    width: 45px;
-    height: 45px;
-    padding: 6px;
-  }
-
-  /* Reposition for mobile */
-  .floating-card.mern {
-    top: 10%;
-    left: 8%;
-  }
-
-  .floating-card.typescript {
-    top: 70%;
-    right: 10%;
-  }
-
-  .floating-card.cp {
-    bottom: 40%;
-    left: 80%;
-  }
-
-  .floating-card.github {
-    top: 0%;
-    left: 65%;
-  }
-
-  .floating-card.linkedin {
-    top: 80%;
-    left: 15%;
-  }
-
-  .floating-card.facebook {
-    bottom: 35%;
-    left: 10%;
-  }
-
-  /* Text Content - Mobile */
-  .hero-text {
-    order: 2;
-    padding: 0 0.5rem;
-  }
-
-  .hero-badge {
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .hero-subtitle {
-    margin-bottom: 1rem;
-  }
-
-  .subtitle-text {
-    font-size: 1.2rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .scroll-indicator {
+}
+.proof b {
+  display: block;
+  font: 700 clamp(2rem, 4vw, 2.8rem)/1.05 var(--mono);
+  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+}
+.proof span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+@media (max-width: 719px) {
+  .photo {
     display: none;
   }
-}
-
-/* =============================
-   SMALL MOBILE (480px and down)
-============================= */
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 0.5rem;
-    padding-top: 5rem;
-  }
-
-  .hero-content {
-    gap: 2.5rem; /* Maintain good gap on small mobile */
-  }
-
-  .avatar-wrapper {
-    width: 180px;
-    height: 180px;
-  }
-
-  /* Smaller floating items for small mobile */
-  .floating-card:not(.social) {
-    width: 50px;
-    height: 50px;
-    padding: 7px;
-    font-size: 0.75rem;
-  }
-
-  .floating-card.social {
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-  }
-
-  /* Adjust positions for small mobile */
-  .floating-card.mern {
-    top: 39%;
-    left: 5%;
-  }
-
-  .floating-card.typescript {
-    top: 70%;
-    right: 10%;
-  }
-
-  .floating-card.cp {
-    top: 0%;
-    left: 65%;
-  }
-
-  .floating-card.github {
-    top: 10%;
-    left: 20%;
-  }
-
-  .floating-card.linkedin {
-    top: 80%;
-    left: 30%;
-  }
-
-  .floating-card.facebook {
-    bottom: 40%;
-    right: 10%;
-  }
-
-  .hero-badge {
-    margin-bottom: 1rem;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .subtitle-text {
-    font-size: 1.1rem;
-  }
-
-  .hero-description {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+  .avatar {
+    display: block;
   }
 }
 
-/* Light theme adjustments */
-[data-theme="light"] .avatar-wrapper {
-  background: var(--bg-glass);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-color: var(--glass-border);
-  box-shadow: var(--glass-shadow);
+/* Hero layout: text | photo with the profile icons under it. Phones: centered text, icons under the buttons. */
+.hero-grid > div:first-child { grid-area: text; }
+.hero-grid .photo { grid-area: photo; }
+.hero-socials { grid-area: socials; justify-self: center; margin: 0; }
+.hero-grid { grid-template-areas: "text" "socials"; }
+@media (min-width: 720px) {
+  .hero-grid { grid-template-areas: "text photo" "text socials"; row-gap: 16px; }
+  .hero-grid .photo { align-self: end; }
+  .hero-socials { align-self: start; }
+}
+@media (max-width: 719px) {
+  .hero-grid { row-gap: 20px; }
+  .hero-grid > div:first-child { padding-left: 0; text-align: center; }
+  .hero .name-row { flex-direction: column; gap: 12px; justify-content: center; margin-inline: auto; } /* avatar above the name, so the name fits one line */
+  .hero .roles, .hero .lead { margin-inline: auto; }
+  .hero .cta { justify-content: center; margin-inline: auto; }
+  /* Proof cells center too */
+  .proof li, .proof li:nth-child(odd) { text-align: center; padding-left: 12px; padding-right: 12px; }
+  .proof li > * { margin-inline: auto; }
 }
 
-/* The cards sit on the dark photo, so they need a dark chip with light text. */
-[data-theme="light"] .floating-card:not(.social) {
-  background: rgba(10, 20, 40, 0.78);
-  color: var(--text-invert);
-  border-color: var(--border);
-}
-
-[data-theme="light"] .floating-card.social {
-  background: rgba(240, 244, 247, 0.9);
-}
-
-[data-theme="light"] .floating-card {
-  background: var(--bg-glass);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-color: var(--glass-border);
-  box-shadow: var(--glass-shadow);
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .hero-section * {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  .avatar-wrapper,
-  .floating-card,
-  .scroll-line,
-  .badge-dot {
-    animation: none !important;
-  }
-
-  .floating-card:hover {
-    transform: scale(1.05) !important;
-  }
+/* Phones: the name is sized to the screen width so it stays on one line down to 360 px */
+@media (max-width: 719px) {
+  .hero h1 { font-size: min(2.1rem, 8.6vw); }
 }

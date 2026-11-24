@@ -1,93 +1,109 @@
-import { useCallback, useEffect, useState } from "react";
-import logo from "../assets/logo.png";
-import DarkMode from "./DarkMode";
+import { useEffect, useState } from "react";
+import { resumeUrl, sections } from "../data/profile";
+import { Icon } from "./Icon";
 import "./Navbar.css";
 
-const sections = [
-  { id: "Hero", label: "Home" },
-  { id: "About", label: "About" },
-  { id: "Resume", label: "Resume" },
-  { id: "Skills", label: "Skills" },
-  { id: "Coding", label: "Coding" },
-  { id: "Project", label: "Projects" },
-  { id: "Awards", label: "Awards" },
-  { id: "Blog", label: "Blog" },
-  { id: "Contact", label: "Contact" },
-];
+const root = document.documentElement;
 
-const sectionIds = sections.map((s) => s.id);
+// index.html sets the saved theme before first paint; read it back from the page
+function currentTheme() {
+  return root.getAttribute("data-theme") === "light" ? "light" : "dark";
+}
+
+// The section whose top has passed under the nav bar
+function sectionInView() {
+  let current = null;
+  for (const { id } of sections) {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top < 140) current = id;
+  }
+  return current;
+}
 
 const Navbar = () => {
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [activeSection, setActiveSection] = useState("Hero");
-
-  const toggleMenu = useCallback(() => setShowMobileMenu((prev) => !prev), []);
-
-  const handleLinkClick = useCallback(() => {
-    if (showMobileMenu) {
-      setShowMobileMenu(false);
-    }
-  }, [showMobileMenu]);
+  const [theme, setTheme] = useState(currentTheme);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.05, rootMargin: "0px" }
-    );
+    root.setAttribute("data-theme", theme);
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {
+      // storage blocked: the theme still applies for this visit
+    }
+  }, [theme]);
 
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
+  useEffect(() => {
+    const onScroll = () => setActive(sectionInView());
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return (
-    <nav className="navbar" role="navigation" aria-label="Main navigation">
-      <div className="navbar-logo">
-        <a href="#Hero" className="logo-link" aria-label="Home">
-          <img src={logo} alt="Azad Logo" className="logo-img" />
-        </a>
-      </div>
+  const isDark = theme === "dark";
 
-      <div className={`navbar-links ${showMobileMenu ? "open" : ""}`}>
-        <ul>
-          {sections.map(({ id, label }) => (
-            <li key={id}>
-              <a
-                href={`#${id}`}
-                className={activeSection === id ? "active" : ""}
-                aria-current={activeSection === id ? "page" : undefined}
-                onClick={handleLinkClick}
-              >
-                {label}
+  return (
+    <header className="site">
+      <div className="wrap">
+        <div className="pill glass">
+          <a className="brand" href="#top">
+            azad<span>12614</span>
+          </a>
+          <nav aria-label="Main">
+            <ul className="nav-links">
+              {sections.map((s) => (
+                <li key={s.id}>
+                  <a href={`#${s.id}`} aria-current={active === s.id ? "true" : undefined}>
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="nav-actions">
+            <a className="btn nav-resume" href={resumeUrl}>
+              Resume
+            </a>
+            <button
+              className="icon-btn"
+              type="button"
+              aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+              onClick={() => setTheme(isDark ? "light" : "dark")}
+            >
+              <Icon name={isDark ? "sun" : "moon"} />
+            </button>
+            <button
+              className="icon-btn menu-btn"
+              type="button"
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              onClick={() => setMenuOpen((o) => !o)}
+            >
+              <Icon name="menu" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className={menuOpen ? "mobile-menu open" : "mobile-menu"} id="mobile-menu">
+        <div className="wrap">
+          {/* Any link closes the menu */}
+          <ul onClick={(e) => e.target.closest("a") && setMenuOpen(false)}>
+            {sections.map((s) => (
+              <li key={s.id}>
+                <a href={`#${s.id}`}>{s.label}</a>
+              </li>
+            ))}
+            <li>
+              <a href={resumeUrl} className="nav-file">
+                resume<span className="sr-only"> (PDF)</span>
               </a>
             </li>
-          ))}
-        </ul>
+          </ul>
+        </div>
       </div>
-
-      <div className="navbar-right">
-        <button
-          className={`hamburger ${showMobileMenu ? "open" : ""}`} // Add conditional class
-          onClick={toggleMenu}
-          aria-label="Toggle mobile menu"
-          aria-expanded={showMobileMenu}
-        >
-          <span className="bar top-bar"></span>
-          <span className="bar middle-bar"></span>
-          <span className="bar bottom-bar"></span>
-        </button>
-        <DarkMode />
-      </div>
-    </nav>
+    </header>
   );
 };
 

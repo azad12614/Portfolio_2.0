@@ -1,92 +1,55 @@
 import "./About.css";
-import Icon from "./Icon";
+import SectionHead from "./SectionHead";
 
 const About = () => {
   return (
-    <section className="about-section" id="About">
-      <h2 className="header">
-        <Icon name="user" /> About Me
-      </h2>
-      <p className="title">&quot;Who I Am?&quot;</p>
-      <div className="about-content">
-        <div className="about-intro">
-          <p className="about-description">
-            I&apos;m <strong>Abdullah Al Azad</strong>, a passionate{" "}
-            <strong>Full-Stack Developer</strong> specializing in building{" "}
-            <strong>scalable, secure, and user-focused web applications</strong>{" "}
-            with <strong>modern full-stack technologies</strong>.
+    <section id="about" aria-labelledby="about-h">
+      <div className="wrap reveal">
+        <SectionHead number="01" label="about" title="About" id="about-h" />
+        <div className="about-grid">
+          <p className="story prose">
+            I grew up in <abbr title="competitive programming">CP</abbr> and teaching at IIUC: four
+            seasons of the ICPC Preliminary Contest, 1400+ problems, and a CP bootcamp where I went
+            from trainer to coordinator. Now I ship: a UIAS internship, full-stack builds, and a paid
+            client contract. Next, I want to grow as a full-stack engineer. I work remotely but will
+            relocate, and I can join right away.
           </p>
-        </div>
-
-        <div className="about-highlights">
-          <div className="highlight-item">
-            <span className="highlight-icon">
-              <Icon name="briefcase" />
-            </span>
-            <p className="highlight-text">
-              <strong>Current Role</strong> — Software Engineer (Contract) on the client product{" "}
-              <strong>mtacademy.au</strong>, previously Web Developer Intern at{" "}
-              <strong>UIAS</strong>.
-            </p>
+          <div className="code glass" aria-label="Availability">
+            <div className="code-bar" aria-hidden="true">
+              <i></i>
+              <i></i>
+              <i></i>
+              <span style={{ marginLeft: 8 }}>availability.ts</span>
+            </div>
+            {/* Whitespace inside <pre> is part of the layout, so each line is written out */}
+            <pre>
+              <code>
+                <span className="kw">export const</span> availability <span className="p">=</span>{" "}
+                <span className="p">{"{"}</span>
+                {"\n  "}
+                <span className="k">location</span>
+                <span className="p">:</span> <span className="s">&quot;Chattogram, Bangladesh&quot;</span>
+                <span className="p">,</span>
+                {"\n  "}
+                <span className="k">relocate</span>
+                <span className="p">:</span> <span className="kw">true</span>
+                <span className="p">,</span>
+                {"\n  "}
+                <span className="k">workMode</span>
+                <span className="p">:</span> <span className="p">[</span>
+                <span className="s">&quot;remote&quot;</span>
+                <span className="p">,</span> <span className="s">&quot;onsite&quot;</span>
+                <span className="p">],</span>
+                {"\n  "}
+                <span className="k">notice</span>
+                <span className="p">:</span> <span className="s">&quot;immediate&quot;</span>
+                <span className="p">,</span>
+                {"\n"}
+                <span className="p">{"}"}</span> <span className="kw">as const</span>
+                <span className="p">;</span>
+              </code>
+            </pre>
           </div>
-
-          <div className="highlight-item">
-            <span className="highlight-icon">
-              <Icon name="rocket" />
-            </span>
-            <p className="highlight-text">
-              <strong>Project Experience</strong> — Delivered{" "}
-              <strong>10+ projects</strong> (MERN, TypeScript) and completed a
-              B.Sc. thesis on{" "}
-              <strong>
-                Bangla Audio Deepfake Detection using CNN-BiGRU
-              </strong>
-              .
-            </p>
-          </div>
-
-          <div className="highlight-item">
-            <span className="highlight-icon">
-              <Icon name="laptop" />
-            </span>
-            <p className="highlight-text">
-              <strong>Technical Expertise</strong> — Proficient in{" "}
-              <strong>MERN Stack, TypeScript, and modern web stack</strong> with
-              focus on clean code and robust architecture.
-            </p>
-          </div>
-
-          <div className="highlight-item">
-            <span className="highlight-icon">
-              <Icon name="target" />
-            </span>
-            <p className="highlight-text">
-              <strong>Competitive Programming</strong> —{" "}
-              <strong>Codeforces Pupil, CodeChef 3 Star</strong>; solved{" "}
-              <strong>1400+ problems</strong> across{" "}
-              <strong>140+ contests</strong> on CF, CodeChef, LeetCode &amp;
-              AtCoder.
-            </p>
-          </div>
-
-          <div className="highlight-item">
-            <span className="highlight-icon">
-              <Icon name="users" />
-            </span>
-            <p className="highlight-text">
-              <strong>Mentorship</strong> — Mentored{" "}
-              <strong>200+ students</strong> as Teaching Assistant, Bootcamp
-              Coordinator &amp; Trainer.
-            </p>
-          </div>
-        </div>
-
-        <div className="about-cta">
-          <p>
-            With a passion for collaboration and open-source, I enjoy building
-            impactful projects. Check out my <a href="#Project">projects</a> or{" "}
-            <a href="#Contact">connect with me</a> to learn more!
-          </p>
         </div>
       </div>
     </section>

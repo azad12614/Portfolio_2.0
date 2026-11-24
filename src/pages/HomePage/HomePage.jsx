@@ -1,60 +1,86 @@
-import { lazy, Suspense, useEffect } from "react";
+import { useEffect } from "react";
+// Imported in page order: each import brings its CSS, so the cascade keeps the design's order
+import Navbar from "../../components/Navbar";
+import Hero from "../../components/Hero";
 import About from "../../components/About";
+import Experience from "../../components/Experience";
+import Skills from "../../components/Skills";
+import Projects from "../../components/Projects";
+import ProblemSolving from "../../components/ProblemSolving";
+import Awards from "../../components/Awards";
+import Blog from "../../components/Blog";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
-import Hero from "../../components/Hero";
-import Navbar from "../../components/Navbar";
-import Project from "../../components/Project";
-import Sidebar from "../../components/Sidebar";
 import Top from "../../components/Top";
-import Resume from "../Resume";
+import { IconSprite } from "../../components/Icon";
 
-// Awards and Blog use Swiper and sit below the fold, so they load after the first paint.
-const loadAwards = () => import("../../components/Awards");
-const loadBlog = () => import("../../components/Blog");
-const Awards = lazy(loadAwards);
-const Blog = lazy(loadBlog);
+// A section frame: a full-width rule with square markers on the outer guide lines
+const Frame = () => <div className="frame" aria-hidden="true"></div>;
+
+// Fade each section up once, on first view. index.html adds the "js" class only when
+// motion is allowed, so with reduced motion everything is simply visible.
+function useRevealOnView() {
+  useEffect(() => {
+    if (!document.documentElement.classList.contains("js")) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { rootMargin: "0px 0px -10% 0px" },
+    );
+    document.querySelectorAll(".reveal").forEach((n) => io.observe(n));
+    return () => io.disconnect();
+  }, []);
+}
 
 const HomePage = () => {
-  // Start both downloads once the browser is idle, so an anchor link finds the section ready.
-  useEffect(() => {
-    const preload = () => {
-      loadAwards();
-      loadBlog();
-    };
-    if ("requestIdleCallback" in window) {
-      const id = window.requestIdleCallback(preload);
-      return () => window.cancelIdleCallback(id);
-    }
-    const id = window.setTimeout(preload, 1500);
-    return () => window.clearTimeout(id);
-  }, []);
+  useRevealOnView();
 
   return (
-    <div>
-      <Navbar></Navbar>
-      <main>
-        <Hero></Hero>
-        <About></About>
-        <Resume></Resume>
-        <Project></Project>
-        {/* The placeholders keep the anchor ids and the page height while a chunk loads. */}
-        <Suspense
-          fallback={<div id="Awards" style={{ minHeight: "71rem" }} aria-busy="true"></div>}
-        >
-          <Awards></Awards>
-        </Suspense>
-        <Suspense
-          fallback={<div id="Blog" style={{ minHeight: "55rem" }} aria-busy="true"></div>}
-        >
-          <Blog></Blog>
-        </Suspense>
-        <Contact></Contact>
+    <>
+      <IconSprite />
+      <div className="guides" aria-hidden="true">
+        <div className="wrap">
+          <div className="cols">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+      </div>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <Navbar />
+      <main id="main">
+        <Hero />
+        <Frame />
+        <About />
+        <Frame />
+        <Experience />
+        <Frame />
+        <Skills />
+        <Frame />
+        <Projects />
+        <Frame />
+        <ProblemSolving />
+        <Frame />
+        <Awards />
+        <Frame />
+        <Blog />
+        <Frame />
+        <Contact />
       </main>
-      <Footer></Footer>
-      <Sidebar></Sidebar>
-      <Top></Top>
-    </div>
+      <Frame />
+      <Footer />
+      <Top />
+    </>
   );
 };
 

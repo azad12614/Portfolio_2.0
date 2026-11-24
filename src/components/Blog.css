@@ -1,252 +1,55 @@
-/* Blog.css */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+/* ===== Blog ===== */
+.blog {
+  display: grid;
+  gap: 20px;
+  align-items: stretch;
+}
+@media (min-width: 900px) {
+  .blog {
+    grid-template-columns: 1.1fr 1fr;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
-
-.blog-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.blog-card,
-.blog-content,
-.blog-footer,
-.blog-meta {
-  text-align: left;
-}
-
-.blog-container {
-  animation: fadeInUp 0.8s ease-out 0.4s both;
-}
-
-.blog-swiper {
-  --swiper-navigation-sides-offset: 10px;
-  max-width: 544px;
-  margin: 0 auto;
-  padding: 2rem 0 3rem !important;
-}
-
-/* Horizontal shadow clearance lives on the slide, not the swiper: the
-   swiper keeps overflow:hidden clipped tight to its content width so
-   the adjacent slide stays fully off-screen. Padding directly on the
-   swiper would widen the clip window past the slide boundary and
-   reveal slivers of the neighbor slide instead. */
-.blog-swiper .swiper-slide {
-  padding: 0 2rem;
-}
-
-/* Swiper nav button overrides */
-.blog-swiper .swiper-button-prev,
-.blog-swiper .swiper-button-next {
-  color: var(--primary);
-  background: var(--bg-glass);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  width: 2.8rem;
-  height: 2.8rem;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-/* Swiper 12 and later draw the arrows as inline SVG, sized here to match the old glyph. */
-.blog-swiper .swiper-button-prev svg,
-.blog-swiper .swiper-button-next svg {
-  width: auto;
-  height: 1rem;
-}
-
-.blog-swiper .swiper-button-prev:hover,
-.blog-swiper .swiper-button-next:hover {
-  background: linear-gradient(135deg, var(--primary), var(--text-accent));
-  color: var(--text-invert);
-  border-color: transparent;
-  box-shadow: 0 8px 25px rgba(2, 169, 247, 0.3);
-}
-
-.blog-swiper .swiper-pagination-bullet {
-  background: var(--bg-subtle);
-  border: 1px solid var(--border);
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-.blog-swiper .swiper-pagination-bullet-active {
-  background: linear-gradient(135deg, var(--primary), var(--text-accent));
-  border-color: transparent;
-  transform: scale(1.3);
-}
-
-.blog-card {
-  background: var(--bg-glass);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: var(--card-border-width) solid var(--border);
-  border-radius: 1.5rem;
-  box-shadow: var(--card-shadow);
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-.blog-card:hover {
-  border-color: var(--border-hover);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5px);
-}
-
-.blog-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1.5rem 1.5rem 0 0;
-}
-
 .blog-img {
+  padding: 10px;
+  overflow: hidden;
+}
+.blog-img img {
   width: 100%;
-  height: 250px;
+  height: 100%;
+  min-height: 260px;
   object-fit: cover;
-  object-position: center;
-  transition: transform 0.3s ease;
+  border-radius: 6px;
+  transition: opacity 0.25s;
 }
-
-.blog-card:hover .blog-img {
-  transform: scale(1.05);
+.posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  align-content: start;
 }
-
-.blog-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, transparent, var(--overlay-bg));
-  display: flex;
-  align-items: flex-end;
-  padding: 1.5rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.blog-card:hover .blog-overlay {
-  opacity: 1;
-}
-
-.blog-meta {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  color: var(--text-main);
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-}
-
-.blog-content {
-  padding: 2rem;
-}
-
-.blog-title {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-heading);
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
-.blog-desc {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.blog-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.blog-link {
-  display: flex;
-  align-items: center;
-  min-height: 2.75rem;
-  gap: 0.5rem;
-  color: var(--link);
+.post a {
+  display: block;
+  padding: 18px 20px;
   text-decoration: none;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  border-left: 2px solid transparent;
 }
-
-.blog-link:hover {
-  color: var(--primary);
-  transform: translateX(5px);
+.post.active a {
+  border-left-color: var(--cyan);
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .blog-section {
-    padding: 2rem 1rem;
-  }
-
-  .blog-swiper {
-    max-width: 100%;
-    padding: 1.5rem 0 3rem !important;
-  }
-
-  .blog-swiper .swiper-slide {
-    padding: 0 1rem;
-  }
-
-  .blog-content {
-    padding: 1.5rem;
-  }
-
-  .blog-title {
-    font-size: 1.3rem;
-  }
+.post time {
+  font: 500 12px var(--mono);
+  color: var(--muted);
 }
-
-@media (max-width: 480px) {
-  .blog-section {
-    padding: 1.5rem 0.5rem;
-  }
-
-  .blog-img {
-    height: 200px;
-  }
-
-  .blog-content {
-    padding: 1.25rem;
-  }
-
-  .blog-title {
-    font-size: 1.2rem;
-  }
-
-  .blog-desc {
-    font-size: 0.9rem;
-  }
+.post h3 {
+  font-size: 1.05rem;
+  margin: 6px 0 4px;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .blog-section * {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  .blog-card:hover,
-  .blog-card:hover .blog-img,
-  .blog-link:hover {
-    transform: none;
-  }
+.post p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.all-posts {
+  margin-top: 16px;
 }
