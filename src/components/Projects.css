@@ -1,0 +1,210 @@
+/* ===== Projects ===== */
+.cards {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 720px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* 7 cards: one wide card on 2 columns (rows 2,2,2,2); two wide cards on 3 columns (rows 2+1, 1+2, 3) */
+@media (min-width: 720px) {
+  .card.wide-2 {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 1080px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card.wide-3 {
+    grid-column: span 2;
+  }
+}
+/* A wide card keeps the stacked layout with a banner image (32:9), so it stays the height of its row */
+@media (min-width: 720px) and (max-width: 1079px) {
+  .card.wide-2 .shot {
+    aspect-ratio: 32 / 9;
+  }
+}
+@media (min-width: 1080px) {
+  .card.wide-3 .shot {
+    aspect-ratio: 32 / 9;
+  }
+}
+.card.wide-2 .shot,
+.card.wide-3 .shot {
+  background: var(--line);
+}
+.card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card .shot {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--frame);
+}
+.card .shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .shot .kinds {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: flex;
+  gap: 6px;
+}
+.card .shot .kind {
+  font: 600 11px/1 var(--mono);
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: var(--bg); /* solid, so the photo never lowers tag contrast */
+  border: 1px solid var(--border);
+}
+/* Tech tag in cyan, type tag in amber, so the two kinds read apart at a glance */
+.card .shot .kind {
+  color: var(--cyan);
+  border-color: currentColor;
+}
+.card .shot .kind.type {
+  color: var(--amber);
+}
+.card .body {
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.card h3 {
+  font-size: 1.2rem;
+}
+.card .one {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+/* Card face: links on the left, the case study trigger on the right, pinned to the bottom */
+.face-actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 6px;
+}
+.face-actions .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.card .more {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 500 13px var(--mono);
+  color: var(--cyan);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.panel {
+  position: absolute;
+  inset: 0;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--glass-strong);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transform: translateY(101%);
+  transition: transform 0.32s ease;
+  visibility: hidden;
+  overflow-y: auto; /* a long case study scrolls inside the card, the card size stays fixed */
+  border-radius: var(--radius);
+}
+.card:hover .panel,
+.card.open .panel {
+  transform: none;
+  visibility: visible;
+}
+.panel h4 {
+  font: 600 13px var(--mono);
+  color: var(--cyan);
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+.panel ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+.panel .links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.panel .close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.archive-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 56px 0 12px;
+}
+.archive-head h3 {
+  font-size: 1.1rem;
+}
+.archive {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--frame);
+}
+.archive li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 16px;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--frame);
+}
+@media (min-width: 720px) {
+  .archive li {
+    grid-template-columns: 14rem 1fr auto;
+  }
+}
+.archive .nm {
+  font: 600 15px var(--mono);
+}
+.archive .ds {
+  color: var(--muted);
+  font-size: 0.92rem;
+  grid-column: 1 / -1;
+  order: 3;
+}
+@media (min-width: 720px) {
+  .archive .ds {
+    grid-column: auto;
+    order: 0;
+  }
+}
+.archive .lk {
+  display: flex;
+  gap: 6px;
+}

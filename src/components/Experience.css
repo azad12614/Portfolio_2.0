@@ -1,0 +1,151 @@
+/* ===== Experience ===== */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  max-width: 860px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--frame);
+}
+.timeline > li {
+  position: relative;
+  padding: 0 0 28px 40px;
+}
+/* Marker: a small terminal prompt box with ">", in the same color as the entry's tag */
+.timeline > li::before {
+  content: ">";
+  position: absolute;
+  left: -2px;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  font: 700 12px/1 var(--mono);
+  color: var(--cyan);
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  background: var(--bg);
+}
+.timeline > li[data-type="teaching"]::before {
+  color: var(--amber);
+}
+.timeline > li[data-type="education"]::before {
+  color: var(--muted);
+}
+.t-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  font: 500 13px var(--mono);
+  color: var(--muted);
+}
+.tag {
+  font: 600 10.5px/1 var(--mono);
+  padding: 5px 7px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.tag.work {
+  color: var(--cyan);
+}
+.tag.teaching {
+  color: var(--amber);
+}
+.tag.education {
+  color: var(--muted);
+}
+.timeline h3 {
+  font-size: 1.15rem;
+  margin: 6px 0 2px;
+}
+.timeline .org {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.timeline .line {
+  margin-top: 6px;
+  max-width: 70ch;
+}
+.timeline details {
+  margin-top: 6px;
+}
+.timeline summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 6px;
+  cursor: pointer;
+  font: 500 13px var(--mono);
+  color: var(--cyan);
+  list-style: none;
+}
+.timeline summary::-webkit-details-marker {
+  display: none;
+}
+.timeline summary::before {
+  content: "+";
+  width: 1ch;
+}
+.timeline details[open] summary::before {
+  content: "−";
+}
+.timeline details ul {
+  margin: 0 0 4px;
+  padding-left: 20px;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+/* Desktop: the line runs down the middle, entries alternate right and left of it */
+@media (min-width: 900px) {
+  .timeline {
+    max-width: none;
+  }
+  .timeline::before {
+    left: 50%;
+  }
+  .timeline > li {
+    width: 50%;
+    padding: 0 0 36px 40px;
+    margin-left: 50%;
+  }
+  .timeline > li::before {
+    left: -9px;
+  }
+  .timeline > li:nth-child(odd) {
+    margin-left: 0;
+    padding: 0 40px 36px 0;
+    text-align: right;
+  }
+  .timeline > li:nth-child(odd)::before {
+    left: auto;
+    right: -10px;
+    content: "<";
+  } /* left-side entries: the prompt points at its text */
+  .timeline > li:nth-child(odd) .t-meta {
+    justify-content: flex-end;
+  }
+  .timeline > li:nth-child(odd) .line {
+    margin-left: auto;
+  }
+  .timeline > li:nth-child(odd) details ul {
+    display: inline-block;
+    text-align: left;
+  }
+  /* Entries overlap in height, so each side reads as its own column */
+  .timeline > li + li {
+    margin-top: -64px;
+  }
+}

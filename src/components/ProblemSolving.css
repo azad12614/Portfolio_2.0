@@ -1,0 +1,288 @@
+/* ===== Problem solving ===== */
+/* Both charts take the full width, so the contest chart text stays readable */
+.ps-grid {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 900px) {
+  .bars {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 48px;
+  }
+}
+.ps-card {
+  padding: 22px;
+}
+.ps-card h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.ps-card .sub {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+.bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+.bars .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+.bars .row b {
+  font: 600 14px var(--mono);
+}
+.bars .track {
+  height: 12px;
+  background: var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.bars .fill {
+  height: 100%;
+  background: var(--cyan);
+  border-radius: 3px;
+  min-width: 6px;
+}
+.bars .lbl {
+  font: 500 12px var(--mono);
+  color: var(--muted);
+  margin-top: 6px;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  font: 500 12px var(--mono);
+  color: var(--muted);
+}
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.legend svg {
+  width: 12px;
+  height: 12px;
+}
+/* Contest chart: HTML so every point is a real button. Lane labels left, points evenly spaced in date order. */
+.cchart {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  margin-top: 8px;
+}
+/* The card is its own layer (backdrop-filter), so lift the whole card above the later page lines */
+.ps-card:has(.cchart) {
+  z-index: 2;
+}
+.c-lanes {
+  display: grid;
+  grid-template-rows: repeat(4, 72px);
+  padding-top: 30px;
+}
+.c-lanes span {
+  display: flex;
+  align-items: center;
+  font: 600 12px var(--mono);
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.cplot {
+  position: relative;
+  height: calc(30px + 4 * 72px + 36px);
+}
+.cplot .lane {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed var(--line);
+}
+.cplot .axis {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  border-top: 1px solid var(--frame);
+}
+.cplot .year {
+  position: absolute;
+  bottom: 0;
+  font: 500 12px var(--mono);
+  color: var(--muted);
+  border-left: 1px solid var(--frame);
+  padding: 8px 0 0 6px;
+  height: 36px;
+}
+.cpt {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--cyan);
+  cursor: pointer;
+  border-radius: 8px;
+}
+.cpt svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--bg);
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: transform 0.15s;
+}
+.cpt:hover svg,
+.cpt[aria-expanded="true"] svg {
+  transform: scale(1.35);
+  fill: currentColor;
+}
+.cpt.hm {
+  color: var(--amber);
+}
+.cpt.hm svg {
+  fill: currentColor;
+}
+.cpt .rk {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font: 600 13px var(--mono);
+  color: var(--text);
+}
+.cpt.hm .rk {
+  color: var(--amber);
+}
+.cpop {
+  position: absolute;
+  z-index: 6;
+  width: 300px;
+  padding: 14px 16px;
+  display: none;
+  background: var(--bg); /* solid, so chart labels never show through */
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+.cpop.show {
+  display: block;
+}
+.cpop .p-rank {
+  font: 700 15px var(--mono);
+  color: var(--cyan);
+}
+.cpop .p-rank.hm {
+  color: var(--amber);
+}
+.cpop h4 {
+  font: 600 15px var(--sans);
+  margin: 6px 0 4px;
+}
+.cpop p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.cpop a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font: 500 13px var(--mono);
+  color: var(--cyan);
+}
+/* Phone: vertical list, one contest per row with space between, details open on tap */
+.contest-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.contest-list details {
+  border: 1px solid var(--frame);
+  border-radius: 8px;
+  padding: 0 12px;
+}
+.contest-list summary {
+  display: grid;
+  grid-template-columns: 18px 1fr auto;
+  gap: 10px;
+  align-items: start;
+  padding: 12px 0;
+  cursor: pointer;
+  list-style: none;
+  min-height: 44px;
+}
+.contest-list summary::-webkit-details-marker {
+  display: none;
+}
+.contest-list svg {
+  width: 12px;
+  height: 12px;
+  margin-top: 5px;
+  fill: none;
+  stroke: var(--cyan);
+  stroke-width: 1.5;
+}
+.contest-list .hm svg {
+  fill: var(--amber);
+  stroke: var(--amber);
+}
+.contest-list .c-name {
+  font-size: 0.95rem;
+}
+.contest-list .c-date {
+  font: 500 12px var(--mono);
+  color: var(--muted);
+  display: block;
+}
+.contest-list .c-rank {
+  font: 600 14px var(--mono);
+  white-space: nowrap;
+}
+.contest-list .hm .c-rank {
+  color: var(--amber);
+}
+.contest-list .c-more {
+  padding: 0 0 12px 28px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.contest-list .c-more p {
+  margin: 0 0 4px;
+}
+.contest-list .c-more a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  font: 500 13px var(--mono);
+  color: var(--cyan);
+}
+.only-desktop {
+  display: none;
+}
+@media (min-width: 900px) {
+  /* the chart needs about 760 px to keep neighboring rank labels apart */
+  .only-desktop {
+    display: grid;
+  }
+  .only-phone {
+    display: none;
+  }
+}

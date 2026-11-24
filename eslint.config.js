@@ -19,5 +19,7 @@ export default [
       globals: globals.browser,
     },
     settings: { react: { version: "19.3" } },
+    // React 19 ignores propTypes, so this rule would only ask for dead code
+    rules: { "react/prop-types": "off" },
   },
 ];
