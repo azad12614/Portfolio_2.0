@@ -119,12 +119,11 @@ const ContestChart = () => {
             {y.year}
           </span>
         ))}
+        {/* A plain box, not a dialog: focus stays on the mark, whose label already names the contest */}
         <div
           ref={popRef}
           id="cpop"
           className={c ? "cpop show" : "cpop"}
-          role="dialog"
-          aria-label="Contest details"
           onMouseEnter={() => clearTimeout(hideTimer.current)}
           onMouseLeave={softHide}
         >

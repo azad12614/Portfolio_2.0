@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { resumeUrl, sections } from "../data/profile";
 import { Icon } from "./Icon";
 import "./Navbar.css";
@@ -27,6 +27,9 @@ const Navbar = () => {
 
   useEffect(() => {
     root.setAttribute("data-theme", theme);
+    // The phone's browser bar follows the page color
+    const bg = getComputedStyle(root).getPropertyValue("--bg").trim();
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", bg);
     try {
       localStorage.setItem("theme", theme);
     } catch {
@@ -40,6 +43,19 @@ const Navbar = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Esc closes the open menu and puts focus back on the button that opened it
+  const menuBtnRef = useRef(null);
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e) => {
+      if (e.key !== "Escape") return;
+      setMenuOpen(false);
+      menuBtnRef.current?.focus();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
 
   const isDark = theme === "dark";
 
@@ -74,6 +90,7 @@ const Navbar = () => {
               <Icon name={isDark ? "sun" : "moon"} />
             </button>
             <button
+              ref={menuBtnRef}
               className="icon-btn menu-btn"
               type="button"
               aria-expanded={menuOpen}
@@ -88,19 +105,21 @@ const Navbar = () => {
       </div>
       <div className={menuOpen ? "mobile-menu open" : "mobile-menu"} id="mobile-menu">
         <div className="wrap">
-          {/* Any link closes the menu */}
-          <ul onClick={(e) => e.target.closest("a") && setMenuOpen(false)}>
-            {sections.map((s) => (
-              <li key={s.id}>
-                <a href={`#${s.id}`}>{s.label}</a>
+          <nav aria-label="Menu">
+            {/* Any link closes the menu */}
+            <ul onClick={(e) => e.target.closest("a") && setMenuOpen(false)}>
+              {sections.map((s) => (
+                <li key={s.id}>
+                  <a href={`#${s.id}`}>{s.label}</a>
+                </li>
+              ))}
+              <li>
+                <a href={resumeUrl} className="nav-file">
+                  resume<span className="sr-only"> (PDF)</span>
+                </a>
               </li>
-            ))}
-            <li>
-              <a href={resumeUrl} className="nav-file">
-                resume<span className="sr-only"> (PDF)</span>
-              </a>
-            </li>
-          </ul>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>

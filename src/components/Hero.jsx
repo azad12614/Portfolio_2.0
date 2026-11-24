@@ -13,7 +13,8 @@ const Hero = () => {
               <i aria-hidden="true"></i>Available for opportunities
             </span>
             <div className="name-row">
-              <img className="avatar" src={portrait} alt="Abdullah Al Azad" />
+              {/* Decorative: the name is right next to it */}
+              <img className="avatar" src={portrait} alt="" />
               <h1 id="hero-name">Abdullah Al Azad</h1>
             </div>
             <p className="roles">

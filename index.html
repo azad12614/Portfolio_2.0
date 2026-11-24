@@ -14,12 +14,13 @@
     <link rel="preload" href="/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
     <script>
-      /* Before first paint: the saved theme, and the "js" class that arms the fade-up (only when motion is allowed) */
+      /* Before first paint: the saved theme (and the browser bar color), and the "js" class that arms the fade-up (only when motion is allowed) */
       (function () {
         var root = document.documentElement;
         try {
           var saved = localStorage.getItem("theme");
           if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+          if (saved === "light") document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f5f7fa");
         } catch (e) {
           /* storage blocked: keep the dark default */
         }
