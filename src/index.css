@@ -308,8 +308,7 @@ a.btn.all-posts {
   background: var(--glass);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  backdrop-filter: blur(10px) saturate(130%);
-  -webkit-backdrop-filter: blur(10px) saturate(130%);
+  /* No backdrop blur: the surface is opaque, so a blur would never show and only cost GPU time */
   transition:
     box-shadow 0.2s,
     border-color 0.2s;

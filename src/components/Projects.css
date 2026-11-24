@@ -124,8 +124,9 @@
   flex-direction: column;
   gap: 12px;
   background: var(--glass-strong);
-  backdrop-filter: blur(14px);
+  /* prefixed line first: the minifier keeps the last of the two */
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   transform: translateY(101%);
   transition: transform 0.32s ease;
   visibility: hidden;

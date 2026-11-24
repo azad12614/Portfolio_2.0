@@ -16,8 +16,9 @@ header.site .pill {
   height: 60px;
   padding: 0 8px 0 18px;
   background: color-mix(in srgb, var(--bg) 80%, transparent);
-  backdrop-filter: blur(12px);
+  /* prefixed line first: the minifier keeps the last of the two */
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 12px;
 }
