@@ -1,0 +1,172 @@
+// Problem solving: platform totals and the 14 contests (oldest first).
+
+export const platforms = [
+  { name: "Codeforces", solved: 1150, label: "1150+", detail: "peak 1313 · Pupil" },
+  { name: "CodeChef", solved: 104, label: "104", detail: "peak 1625 · 3 star" },
+  { name: "LeetCode", solved: 93, label: "93", detail: "peak 1573 · top 28.6%" },
+  { name: "AtCoder", solved: 70, label: "70+", detail: "peak 316 · 9 Kyu" },
+];
+
+// Lanes in chart order, top to bottom
+export const lanes = [
+  { type: "icpc", name: "ICPC Preli." },
+  { type: "ncpc", name: "NCPC Preli." },
+  { type: "inter", name: "Inter UNI." },
+  { type: "intra", name: "Intra UNI." },
+];
+
+const TS = "Md. Toshifur Rahman";
+const SR = "Shehabudowlla Rakib";
+const BK = "Baizid Kamruzzaman";
+
+export const contests = [
+  {
+    name: "Intra-University PC Aut'22 (Junior)",
+    date: "Aug 2022",
+    rank: "5th",
+    type: "intra",
+    org: "IIUCCPS",
+    mode: "Offline",
+    standings: "https://toph.co/contests/training/ctjhhnj/standings",
+  },
+  {
+    name: "CSE FEST Programming Contest",
+    date: "Aug 2022",
+    rank: "15th",
+    type: "intra",
+    org: "IIUC Computer Club & IIUCCPS",
+    mode: "Offline",
+  },
+  {
+    name: "ICPC Preliminary Contest 2021",
+    date: "Sep 2022",
+    rank: "361st",
+    type: "icpc",
+    org: "ICPC",
+    mode: "Online",
+    team: "IIUC_Synthroid",
+    mates: [TS, "Abrar Yasir"],
+  },
+  {
+    name: "Intra-University PC (Junior)",
+    date: "Oct 2022",
+    rank: "4th",
+    type: "intra",
+    org: "IIUC",
+    mode: "Offline",
+    team: "IIUC_Synthroid",
+    mates: [TS, BK],
+    standings: "https://toph.co/contests/training/mf23yf4/standings",
+  },
+  {
+    name: "Intra-University Programming Contest",
+    date: "Nov 2022",
+    rank: "12th",
+    type: "intra",
+    org: "IIUCCPS",
+    mode: "Offline",
+    team: "IIUC_Synthroid",
+    mates: [TS, BK],
+    standings: "https://toph.co/contests/training/x2c4mne/standings",
+  },
+  {
+    name: "ICPC Preliminary Contest 2022",
+    date: "Feb 2023",
+    rank: "801st",
+    type: "icpc",
+    org: "ICPC",
+    mode: "Online",
+    team: "IIUC_Synthroid",
+    mates: [TS, BK],
+  },
+  {
+    name: "Intra-University PC Aut'23",
+    date: "Sep 2023",
+    rank: "19th",
+    type: "intra",
+    org: "IIUC",
+    mode: "Offline",
+    team: "IIUC_Synthroid",
+    mates: [TS, SR],
+    standings: "https://toph.co/contests/training/wf44wz8/standings",
+  },
+  {
+    name: "15th Inter-University Programming Contest",
+    date: "Sep 2023",
+    rank: "35th",
+    type: "inter",
+    org: "IIUC Computer Club & IIUCCPS",
+    mode: "Offline",
+    team: "IIUC_Synthroid",
+    mates: [TS, BK],
+    standings: "https://toph.co/c/15th-iiuc-inter-university-2023/standings",
+  },
+  {
+    name: "ICPC Preliminary Contest 2023",
+    date: "Oct 2023",
+    rank: "191st",
+    honorableMention: true,
+    type: "icpc",
+    org: "ICPC",
+    mode: "Online",
+    team: "IIUC_Synthroid",
+    mates: [TS, BK],
+  },
+  {
+    name: "PU CSE IT FEST",
+    date: "Jan 2024",
+    rank: "30th",
+    type: "inter",
+    org: "Premier University",
+    mode: "Offline",
+    team: "IIUC_Groot",
+    mates: [TS, BK],
+  },
+  {
+    name: "NCPC Preliminary Contest",
+    date: "Feb 2024",
+    rank: "241st",
+    type: "ncpc",
+    org: "Jahangirnagar University",
+    mode: "Online",
+    team: "IIUC_Groot",
+    mates: [TS, SR],
+  },
+  {
+    name: "Inter-University PC (CUSS) Preliminary",
+    date: "Jul 2024",
+    rank: "36th",
+    type: "inter",
+    org: "Chittagong University Scientific Society",
+    mode: "Online",
+    team: "IIUC_ZeroPlan",
+  },
+  {
+    name: "ICPC Preliminary Contest 2024",
+    date: "Nov 2024",
+    rank: "288th",
+    type: "icpc",
+    org: "ICPC",
+    mode: "Online",
+    team: "IIUC_ZeroPlan",
+    mates: [TS, SR],
+  },
+  {
+    name: "Inter-University Programming Contest (CUSS)",
+    date: "Nov 2024",
+    rank: "20th",
+    type: "inter",
+    org: "Chittagong University Scientific Society",
+    mode: "Offline",
+    team: "IIUC_ZeroPlan",
+    mates: [TS, SR],
+    standings: "https://toph.co/contests/training/rxbqtb6/standings",
+  },
+];
+
+// Where each year starts, as an index into `contests`
+export const yearStarts = [
+  { year: "2022", index: 0 },
+  { year: "2023", index: 5 },
+  { year: "2024", index: 9 },
+];
